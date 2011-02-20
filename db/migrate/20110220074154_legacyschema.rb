@@ -1,6 +1,6 @@
 class Legacyschema < ActiveRecord::Migration
   def self.up
-    create_table "drivers", :force => true do |t|
+     create_table "drivers", :force => true do |t|
        t.integer "player",                :null => false
        t.string  "name",   :limit => 100, :null => false
      end
@@ -74,5 +74,18 @@ class Legacyschema < ActiveRecord::Migration
   end
 
   def self.down
+    drop_table "drivers"
+    drop_table "players"
+    drop_table "qualresults"
+    drop_table "racedrivers"
+    drop_table "raceresults"
+    drop_table "races"
+    drop_table "schedule"
+    drop_table "scoring"
+    drop_table "scoringschemes"
+    drop_table "seasondrivers"
+    drop_table "seasons"
+    drop_table "teams"
+    drop_table "tracks"
   end
 end
