@@ -1,7 +1,4 @@
 class SeasonsController < ApplicationController
-  
-  before_filter :authenticate, :except => [:index, :show]
-  
   # GET /seasons
   # GET /seasons.xml
   def index
