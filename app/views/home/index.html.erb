@@ -1,0 +1,14 @@
+<h1>Home#index</h1>
+<p>List of seasons should go here</p>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @seasons.each do |season| %>
+  <tr>
+    <td><%= season.name %></td>
+  </tr>
+<% end %>
+</table>
+<p><%= link_to "Edit seasons", seasons_path %></p>
