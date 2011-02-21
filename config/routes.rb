@@ -4,6 +4,8 @@ Bayougrandprix::Application.routes.draw do
   resources :seasons
   
   root :to => "home#index"
+  
+  match 'admin' => "admin#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
