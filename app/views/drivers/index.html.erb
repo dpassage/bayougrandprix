@@ -12,7 +12,7 @@
 <% @drivers.each do |driver| %>
   <tr>
     <td><%= driver.name %></td>
-    <td><%= driver.player %></td>
+    <td><%= driver.player.name %></td>
     <td><%= link_to 'Show', driver %></td>
     <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
     <td><%= link_to 'Destroy', driver, :confirm => 'Are you sure?', :method => :delete %></td>

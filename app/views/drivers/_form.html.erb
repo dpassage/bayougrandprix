@@ -15,10 +15,7 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :player %><br />
-    <%= f.text_field :player %>
-  </div>
+  <%= collection_select(:driver, :player_id, Player.all, :id, :name) %>
   <div class="actions">
     <%= f.submit %>
   </div>
