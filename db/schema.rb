@@ -10,11 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110223042501) do
+ActiveRecord::Schema.define(:version => 20110223055440) do
 
   create_table "drivers", :force => true do |t|
-    t.integer "player",                :null => false
-    t.string  "name",   :limit => 100, :null => false
+    t.integer  "player_id",                 :null => false
+    t.string   "name",       :limit => 100, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "players", :force => true do |t|

@@ -12,5 +12,7 @@ class AdminPageTestTest < ActionDispatch::IntegrationTest
     assert_select "a[href=/seasons]"
     # and to edit players
     assert_select "a[href=/players]"
+    # and to edit drivers
+    assert_select "a[href=/drivers]"
   end
 end

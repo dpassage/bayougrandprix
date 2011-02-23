@@ -1,4 +1,6 @@
 Bayougrandprix::Application.routes.draw do
+  resources :drivers
+
   resources :players
 
   get "home/index"
