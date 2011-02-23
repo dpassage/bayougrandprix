@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110220193021) do
+ActiveRecord::Schema.define(:version => 20110223042501) do
 
   create_table "drivers", :force => true do |t|
     t.integer "player",                :null => false
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(:version => 20110220193021) do
   end
 
   create_table "players", :force => true do |t|
-    t.string "name",  :limit => 100, :null => false
-    t.string "email", :limit => 100
+    t.string   "name",       :limit => 100, :null => false
+    t.string   "email",      :limit => 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "qualresults", :id => false, :force => true do |t|
