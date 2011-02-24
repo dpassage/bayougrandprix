@@ -1,4 +1,6 @@
 Bayougrandprix::Application.routes.draw do
+  resources :teams
+
   resources :drivers
 
   resources :players

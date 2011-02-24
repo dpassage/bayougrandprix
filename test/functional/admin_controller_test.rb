@@ -15,6 +15,8 @@ class AdminControllerTest < ActionController::TestCase
     assert_select "a[href=/players]"
     # and to edit drivers
     assert_select "a[href=/drivers]"
+    # and to edit teams
+    assert_select "a[href=/teams]"
 
     #list should contain seasons in order
     assert_select "tr:nth-of-type(2) td", "2001"
