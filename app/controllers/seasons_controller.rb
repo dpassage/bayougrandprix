@@ -13,7 +13,7 @@ class SeasonsController < ApplicationController
   # GET /seasons/1
   # GET /seasons/1.xml
   def show
-    @season = Season.find(params[:id])
+    @season = Season.where(:name=>params[:id]).first
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,6 +21,15 @@ class SeasonsController < ApplicationController
     end
   end
 
+  def results
+    @season = Season.where(:name=>params[:id]).first
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @season }
+    end
+  end
+    
   # GET /seasons/new
   # GET /seasons/new.xml
   def new
@@ -34,7 +43,7 @@ class SeasonsController < ApplicationController
 
   # GET /seasons/1/edit
   def edit
-    @season = Season.find(params[:id])
+    @season = Season.find_by_name(params[:id])
   end
 
   # POST /seasons
@@ -56,7 +65,7 @@ class SeasonsController < ApplicationController
   # PUT /seasons/1
   # PUT /seasons/1.xml
   def update
-    @season = Season.find(params[:id])
+    @season = Season.find_by_name(params[:id])
 
     respond_to do |format|
       if @season.update_attributes(params[:season])
@@ -72,7 +81,7 @@ class SeasonsController < ApplicationController
   # DELETE /seasons/1
   # DELETE /seasons/1.xml
   def destroy
-    @season = Season.find(params[:id])
+    @season = Season.find_by_name(params[:id])
     @season.destroy
 
     respond_to do |format|

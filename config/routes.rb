@@ -7,7 +7,9 @@ Bayougrandprix::Application.routes.draw do
 
   get "home/index"
 
-  resources :seasons
+  resources :seasons do
+    get 'results', :on => :member
+  end
   
   root :to => "home#index"
   

@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class SeasonTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  fixtures :seasons
+  test "to_param is name" do
+    season = seasons(:one)
+    assert_equal season.to_param, season.name
   end
 end

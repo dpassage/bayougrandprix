@@ -7,7 +7,7 @@
 
 <% @seasons.each do |season| %>
   <tr>
-    <td><%= season.name %></td>
+    <td><%= link_to season.name, results_season_path(season) %></td>
   </tr>
 <% end %>
 </table>

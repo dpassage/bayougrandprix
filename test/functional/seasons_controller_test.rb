@@ -24,8 +24,13 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_redirected_to season_path(assigns(:season))
   end
 
-  test "should show season" do
-    get :show, :id => @season.to_param
+  test "should show season by name" do
+    get :show, :id => @season.name
+    assert_response :success
+  end
+  
+  test "should show results" do
+    get :results, :id => @season.to_param
     assert_response :success
   end
 
