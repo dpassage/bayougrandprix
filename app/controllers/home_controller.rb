@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @seasons = Season.all
+    @seasons = Season.order(:name)
 
     respond_to do |format|
       format.html # index.html.erb
