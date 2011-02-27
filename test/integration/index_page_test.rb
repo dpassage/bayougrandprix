@@ -12,7 +12,5 @@ class IndexPageTest < ActionDispatch::IntegrationTest
       assert_select "tr", Season.count + 1
     end
     
-    # make sure there's a link to edit seasons
-    assert_select "a[href=/seasons]"
   end
 end
