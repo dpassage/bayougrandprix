@@ -15,8 +15,14 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <%= select("team", "color", Team::Colors) %>
-  <%= select_tag("team[fake]", options_for_select([["Yes", true], ["No", false]])) %>
+  <div class="field">
+    <%= f.label :color %>
+    <%= select("team", "color", Team::Colors) %>
+  </div>
+  <div class="field">
+    <%= f.label :fake %>
+    <%= select_tag("team[fake]", options_for_select([["Yes", true], ["No", false]])) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

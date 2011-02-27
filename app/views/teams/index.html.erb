@@ -3,8 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Color</th>
-    <th>Fake</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +11,6 @@
 <% @teams.each do |team| %>
   <tr>
     <td bgcolor="<%= team.color %>"><%= team.name %></td>
-    <td><%= team.color %></td>
-    <td><%= team.fake %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
