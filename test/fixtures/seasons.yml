@@ -1,13 +1,43 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  name: 2002
-
-two:
-  name: 2001
-  
-three:
-  name: 2003
-  
-four:
-  name: 2004
+--- 
+seasons_001: 
+  name: "2002"
+  created_at: 
+  updated_at: 
+  id: "1"
+  scheme: "1"
+seasons_002: 
+  name: "2001"
+  created_at: 
+  updated_at: 
+  id: "2"
+  scheme: "1"
+seasons_003: 
+  name: "2003"
+  created_at: 
+  updated_at: 
+  id: "4"
+  scheme: "2"
+seasons_004: 
+  name: "2004"
+  created_at: 
+  updated_at: 
+  id: "5"
+  scheme: "3"
+seasons_005: 
+  name: "2008"
+  created_at: 
+  updated_at: 
+  id: "6"
+  scheme: "3"
+seasons_006: 
+  name: "2005"
+  created_at: 
+  updated_at: 
+  id: "7"
+  scheme: "3"
+seasons_007: 
+  name: "2011"
+  created_at: 
+  updated_at: 
+  id: "8"
+  scheme: "3"

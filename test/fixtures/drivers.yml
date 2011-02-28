@@ -1,9 +1,181 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-mika:
+--- 
+drivers_026: 
+  name: Nino Farina
+  created_at: 
+  updated_at: 
+  player_id: "28"
+  id: "29"
+drivers_015: 
+  name: Dick Plunger
+  created_at: 
+  updated_at: 
+  player_id: "14"
+  id: "16"
+drivers_004: 
+  name: Ayrton Senna
+  created_at: 
+  updated_at: 
+  player_id: "4"
+  id: "4"
+drivers_027: 
+  name: Sebastian Vettel
+  created_at: 
+  updated_at: 
+  player_id: "27"
+  id: "30"
+drivers_016: 
+  name: Franz Liependorf
+  created_at: 
+  updated_at: 
+  player_id: "15"
+  id: "17"
+drivers_005: 
+  name: Jackie Stewart
+  created_at: 
+  updated_at: 
+  player_id: "5"
+  id: "5"
+drivers_028: 
+  name: Ricky Bobby
+  created_at: 
+  updated_at: 
+  player_id: "29"
+  id: "31"
+drivers_017: 
+  name: Veera Cola
+  created_at: 
+  updated_at: 
+  player_id: "18"
+  id: "20"
+drivers_006: 
+  name: Michael Schumacher
+  created_at: 
+  updated_at: 
+  player_id: "6"
+  id: "6"
+drivers_030: 
+  name: Angel Rayo
+  created_at: 
+  updated_at: 
+  player_id: "31"
+  id: "33"
+drivers_029: 
+  name: Sheila van Damm
+  created_at: 
+  updated_at: 
+  player_id: "30"
+  id: "32"
+drivers_018: 
+  name: Pedro de la Rosa
+  created_at: 
+  updated_at: 
+  player_id: "19"
+  id: "21"
+drivers_007: 
+  name: Kimi Raikkönen
+  created_at: 
+  updated_at: 
+  player_id: "7"
+  id: "7"
+drivers_020: 
+  name: Kit Quick
+  created_at: 
+  updated_at: 
+  player_id: "21"
+  id: "23"
+drivers_019: 
+  name: Fernando Alonso
+  created_at: 
+  updated_at: 
+  player_id: "20"
+  id: "22"
+mika: 
   name: Mika Häkkinen
-  player: tim
-
-max:
-  name: MyString
-  player: phil
+  created_at: 
+  updated_at: 
+  player_id: "8"
+  id: "8"
+drivers_021: 
+  name: Danica Patrick
+  created_at: 
+  updated_at: 
+  player_id: "22"
+  id: "24"
+drivers_010: 
+  name: A.J. Foyt
+  created_at: 
+  updated_at: 
+  player_id: "10"
+  id: "10"
+drivers_009: 
+  name: Lorenzo Bandini
+  created_at: 
+  updated_at: 
+  player_id: "9"
+  id: "9"
+drivers_022: 
+  name: Luca Badoer
+  created_at: 
+  updated_at: 
+  player_id: "23"
+  id: "25"
+drivers_011: 
+  name: Eileen Dover
+  created_at: 
+  updated_at: 
+  player_id: "11"
+  id: "11"
+drivers_023: 
+  name: Pedro de la Rosa
+  created_at: 
+  updated_at: 
+  player_id: "19"
+  id: "26"
+drivers_012: 
+  name: Eville Coulthard
+  created_at: 
+  updated_at: 
+  player_id: "12"
+  id: "13"
+drivers_001: 
+  name: Jazz
+  created_at: 
+  updated_at: 
+  player_id: "1"
+  id: "1"
+drivers_024: 
+  name: Rubens Barrichello
+  created_at: 
+  updated_at: 
+  player_id: "25"
+  id: "27"
+drivers_013: 
+  name: Mario Unser Jr.
+  created_at: 
+  updated_at: 
+  player_id: "13"
+  id: "14"
+drivers_002: 
+  name: David Coulthard
+  created_at: 
+  updated_at: 
+  player_id: "2"
+  id: "2"
+drivers_025: 
+  name: John Surtees
+  created_at: 
+  updated_at: 
+  player_id: "26"
+  id: "28"
+drivers_014: 
+  name: Ben Dover
+  created_at: 
+  updated_at: 
+  player_id: "7"
+  id: "15"
+drivers_003: 
+  name: Max Crash
+  created_at: 
+  updated_at: 
+  player_id: "3"
+  id: "3"

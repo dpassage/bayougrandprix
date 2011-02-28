@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TeamsControllerTest < ActionController::TestCase
   setup do
-    @team = teams(:one)
+    @team = teams(:teams_002)
   end
 
   test "should get index" do
