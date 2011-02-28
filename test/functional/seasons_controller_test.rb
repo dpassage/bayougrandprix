@@ -32,6 +32,15 @@ class SeasonsControllerTest < ActionController::TestCase
   test "should show results" do
     get :results, :id => @season.to_param
     assert_response :success
+    
+    assert_select "h1", /2002/
+    assert_select "table" do
+      assert_select "th", "Driver"
+      assert_select "th", "Player"
+      assert_select "th", "Team"
+      assert_select "tr:nth-of-type(2)[bgcolor=#{Team::Colors["Yellow"]}]"
+      assert_select "tr:nth-of-type(2) td:nth-of-type(3)", "Axle of Evil"
+    end
   end
 
   test "should get edit" do

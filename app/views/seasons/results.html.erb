@@ -1,9 +1,20 @@
+<h1>Bayou Grand Prix <%= @season.name %> Results</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Results for </b>
-  <%= @season.name %>
-</p>
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Driver</th>
+    <th>Team</th>
+  </tr>
+  <% @season.season_entries.joins(:defaultteam).select("*, teams.name").order("teams.name").each do |entry| %>
+    <tr bgcolor="<%= entry.defaultteam.color %>">
+      <td><%= entry.driver.player.name %></td>
+      <td><%= entry.driver.name %></td>
+      <td><%= entry.defaultteam.name %></td>
+    </tr>
+  <% end %>
+</table>
 
 
 <%= link_to 'Edit', edit_season_path(@season) %> |

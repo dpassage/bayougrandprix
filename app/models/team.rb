@@ -11,4 +11,5 @@ class Team < ActiveRecord::Base
   validates_presence_of :name
   validates_inclusion_of :fake, :in => [true, false]
   validates_inclusion_of :color, :in => Colors.values
+  has_many :season_entries
 end

@@ -210,7 +210,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20110220074154'),('20110220193021'),('20110223042501'),('20110223055440'),('20110224061050');
+INSERT INTO `schema_migrations` VALUES ('20110220074154'),('20110220193021'),('20110223042501'),('20110223055440'),('20110224061050'),('20110228014025');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,27 +263,29 @@ INSERT INTO `scoringschemes` VALUES (1,'10-6-4-3-2-1'),(2,'10-8-6-5-4-3-2-1'),(3
 UNLOCK TABLES;
 
 --
--- Table structure for table `seasondrivers`
+-- Table structure for table `season_entries`
 --
 
-DROP TABLE IF EXISTS `seasondrivers`;
+DROP TABLE IF EXISTS `season_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `seasondrivers` (
-  `season` int(11) NOT NULL,
-  `driver` int(11) NOT NULL,
-  `defaultteam` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `season_entries` (
+  `season_id` int(11) NOT NULL,
+  `driver_id` int(11) NOT NULL,
+  `defaultteam` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `seasondrivers`
+-- Dumping data for table `season_entries`
 --
 
-LOCK TABLES `seasondrivers` WRITE;
-/*!40000 ALTER TABLE `seasondrivers` DISABLE KEYS */;
-INSERT INTO `seasondrivers` VALUES (1,1,1),(1,2,2),(1,3,2),(1,4,1),(1,5,3),(1,6,3),(1,7,4),(1,8,4),(1,9,4),(1,10,5),(1,11,5),(1,13,1),(2,6,3),(2,14,3),(2,2,4),(2,8,4),(2,10,5),(2,5,5),(2,1,6),(2,3,6),(2,15,7),(2,16,7),(2,13,8),(2,11,8),(2,17,9),(4,6,3),(4,10,3),(4,2,5),(4,11,5),(4,3,2),(4,9,2),(4,8,4),(4,5,10),(4,14,4),(4,16,10),(4,20,3),(4,13,5),(5,2,5),(5,9,4),(5,3,2),(5,6,3),(5,5,3),(5,8,4),(5,21,2),(5,22,5),(5,10,11),(5,16,11),(5,14,8),(5,11,8),(7,14,2),(7,3,2),(7,16,3),(7,5,3),(7,10,11),(7,2,11),(7,17,4),(7,8,4),(7,24,13),(7,9,13),(7,25,13),(7,21,13),(7,27,13),(6,3,2),(6,28,2),(6,5,3),(6,23,3),(6,8,4),(6,29,4),(6,2,12),(6,30,12),(6,10,11),(6,24,11),(6,14,8),(8,10,11),(8,31,11),(8,3,2),(8,28,2),(8,8,4),(8,32,4),(8,29,14),(8,5,14),(8,30,3),(8,33,3),(8,23,8);
-/*!40000 ALTER TABLE `seasondrivers` ENABLE KEYS */;
+LOCK TABLES `season_entries` WRITE;
+/*!40000 ALTER TABLE `season_entries` DISABLE KEYS */;
+INSERT INTO `season_entries` VALUES (1,1,1,1),(1,2,2,2),(1,3,2,3),(1,4,1,4),(1,5,3,5),(1,6,3,6),(1,7,4,7),(1,8,4,8),(1,9,4,9),(1,10,5,10),(1,11,5,11),(1,13,1,12),(2,6,3,13),(2,14,3,14),(2,2,4,15),(2,8,4,16),(2,10,5,17),(2,5,5,18),(2,1,6,19),(2,3,6,20),(2,15,7,21),(2,16,7,22),(2,13,8,23),(2,11,8,24),(2,17,9,25),(4,6,3,26),(4,10,3,27),(4,2,5,28),(4,11,5,29),(4,3,2,30),(4,9,2,31),(4,8,4,32),(4,5,10,33),(4,14,4,34),(4,16,10,35),(4,20,3,36),(4,13,5,37),(5,2,5,38),(5,9,4,39),(5,3,2,40),(5,6,3,41),(5,5,3,42),(5,8,4,43),(5,21,2,44),(5,22,5,45),(5,10,11,46),(5,16,11,47),(5,14,8,48),(5,11,8,49),(7,14,2,50),(7,3,2,51),(7,16,3,52),(7,5,3,53),(7,10,11,54),(7,2,11,55),(7,17,4,56),(7,8,4,57),(7,24,13,58),(7,9,13,59),(7,25,13,60),(7,21,13,61),(7,27,13,62),(6,3,2,63),(6,28,2,64),(6,5,3,65),(6,23,3,66),(6,8,4,67),(6,29,4,68),(6,2,12,69),(6,30,12,70),(6,10,11,71),(6,24,11,72),(6,14,8,73),(8,10,11,74),(8,31,11,75),(8,3,2,76),(8,28,2,77),(8,8,4,78),(8,32,4,79),(8,29,14,80),(8,5,14,81),(8,30,3,82),(8,33,3,83),(8,23,8,84);
+/*!40000 ALTER TABLE `season_entries` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -375,4 +377,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-02-27 17:07:30
+-- Dump completed on 2011-02-27 19:05:06
