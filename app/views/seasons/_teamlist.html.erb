@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Driver</th>
+    <th>Team</th>
+  </tr>
+  <% teamlist.season_entries.joins(:defaultteam).select("*, teams.name").order("teams.name").each do |entry| %>
+    <tr bgcolor="<%= entry.defaultteam.color %>">
+      <td><%= entry.driver.player.name %></td>
+      <td><%= entry.driver.name %></td>
+      <td><%= entry.defaultteam.name %></td>
+    </tr>
+  <% end %>
+</table>
