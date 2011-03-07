@@ -21,6 +21,7 @@ class SeasonsController < ApplicationController
     end
   end
 
+  # GET /seasons/2002/results
   def results
     @season = Season.where(:name=>params[:id]).first
 

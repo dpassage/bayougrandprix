@@ -1,0 +1,217 @@
+--- 
+tracks_030: 
+  name: Daytona Beach
+  created_at: 
+  country: Florida
+  updated_at: 
+  id: "30"
+tracks_029: 
+  name: Atlanta
+  created_at: 
+  country: Georgia
+  updated_at: 
+  id: "29"
+tracks_018: 
+  name: Barcelona
+  created_at: 
+  country: Spain
+  updated_at: 
+  id: "18"
+tracks_007: 
+  name: Magny-Cours
+  created_at: 
+  country: France
+  updated_at: 
+  id: "7"
+tracks_031: 
+  name: Zhuhai
+  created_at: 
+  country: China
+  updated_at: 
+  id: "31"
+tracks_020: 
+  name: Melbourne
+  created_at: 
+  country: Australia
+  updated_at: 
+  id: "20"
+tracks_019: 
+  name: Suzuka
+  created_at: 
+  country: Japan
+  updated_at: 
+  id: "19"
+tracks_008: 
+  name: Monza
+  created_at: 
+  country: Italy
+  updated_at: 
+  id: "8"
+tracks_032: 
+  name: Sepang
+  created_at: 
+  country: Malaysia
+  updated_at: 
+  id: "32"
+tracks_021: 
+  name: Budapest
+  created_at: 
+  country: Hungary
+  updated_at: 
+  id: "21"
+tracks_010: 
+  name: Interlagos
+  created_at: 
+  country: Brazil
+  updated_at: 
+  id: "10"
+tracks_009: 
+  name: Estoril
+  created_at: 
+  country: Portugal
+  updated_at: 
+  id: "9"
+tracks_033: 
+  name: 10th Anniversary
+  created_at: 
+  country: ""
+  updated_at: 
+  id: "33"
+tracks_022: 
+  name: Nurburgring
+  created_at: 
+  country: Germany
+  updated_at: 
+  id: "22"
+tracks_011: 
+  name: Watkins Glen
+  created_at: 
+  country: USA
+  updated_at: 
+  id: "11"
+tracks_034: 
+  name: Bahrain
+  created_at: 
+  country: Bahrain
+  updated_at: 
+  id: "34"
+tracks_023: 
+  name: Laguna Seca
+  created_at: 
+  country: California
+  updated_at: 
+  id: "23"
+tracks_012: 
+  name: Silverstone
+  created_at: 
+  country: Great Britain
+  updated_at: 
+  id: "12"
+tracks_001: 
+  name: Monte Carlo
+  created_at: 
+  country: Monaco
+  updated_at: 
+  id: "1"
+tracks_035: 
+  name: Indianapolis Oval
+  created_at: 
+  country: Indiana
+  updated_at: 
+  id: "926"
+tracks_024: 
+  name: Portland
+  created_at: 
+  country: Oregon
+  updated_at: 
+  id: "24"
+tracks_013: 
+  name: Montreal
+  created_at: 
+  country: Canada
+  updated_at: 
+  id: "13"
+tracks_002: 
+  name: Zandvoort
+  created_at: 
+  country: Netherlands
+  updated_at: 
+  id: "2"
+tracks_036: 
+  name: Daytona Beach Oval
+  created_at: 
+  country: Florida
+  updated_at: 
+  id: "930"
+tracks_025: 
+  name: Elkhart Lake
+  created_at: 
+  country: Wisconsin
+  updated_at: 
+  id: "25"
+tracks_014: 
+  name: Long Beach
+  created_at: 
+  country: USA
+  updated_at: 
+  id: "14"
+tracks_003: 
+  name: Zandvoort 2
+  created_at: 
+  country: Netherlands
+  updated_at: 
+  id: "3"
+tracks_026: 
+  name: Indianapolis
+  created_at: 
+  country: Indiana
+  updated_at: 
+  id: "26"
+tracks_015: 
+  name: Hockenheim
+  created_at: 
+  country: Germany
+  updated_at: 
+  id: "15"
+tracks_004: 
+  name: Spa-Francorchamps
+  created_at: 
+  country: Belgium
+  updated_at: 
+  id: "4"
+tracks_027: 
+  name: Detroit
+  created_at: 
+  country: Michigan
+  updated_at: 
+  id: "27"
+tracks_016: 
+  name: Zeltweg
+  created_at: 
+  country: Austria
+  updated_at: 
+  id: "16"
+tracks_005: 
+  name: Kyalami
+  created_at: 
+  country: South Africa
+  updated_at: 
+  id: "5"
+tracks_028: 
+  name: Lexington
+  created_at: 
+  country: Ohio
+  updated_at: 
+  id: "28"
+tracks_017: 
+  name: Buenos Aires
+  created_at: 
+  country: Argentina
+  updated_at: 
+  id: "17"
+tracks_006: 
+  name: Imola
+  created_at: 
+  country: San Marino
+  updated_at: 
+  id: "6"

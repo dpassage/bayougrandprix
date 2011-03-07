@@ -34,12 +34,24 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_response :success
     
     assert_select "h1", /2002/
-    assert_select "table" do
+    assert_select "table:nth-of-type(1)" do
       assert_select "th", "Driver"
       assert_select "th", "Player"
       assert_select "th", "Team"
       assert_select "tr:nth-of-type(2)[bgcolor=#{Team::Colors["Yellow"]}]"
       assert_select "tr:nth-of-type(2) td:nth-of-type(3)", "Axle of Evil"
+    end
+    
+    assert_select "table:nth-of-type(2)" do
+      assert_select "tr:nth-of-type(1)" do
+        assert_select "th", "Date"
+        assert_select "th", "Track"
+        assert_select "th", "Country"
+        assert_select "th", "Winner"
+      end
+     # assert_select "tr:nth-of-type(2)" do
+      #  assert_select "td:nth-of-type(1)", "2002-02-12"
+      #end
     end
   end
 
