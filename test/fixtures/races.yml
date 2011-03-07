@@ -1,0 +1,519 @@
+--- 
+races_001: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-04-30"
+  id: "1"
+  track_id: "1"
+races_022: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-10-10"
+  id: "28"
+  track_id: "8"
+races_043: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-04-05"
+  id: "49"
+  track_id: "6"
+races_064: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-11-19"
+  id: "73"
+  track_id: "13"
+races_002: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-02-12"
+  id: "8"
+  track_id: "20"
+races_023: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-11-11"
+  id: "29"
+  track_id: "23"
+races_044: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-08-09"
+  id: "50"
+  track_id: "15"
+races_065: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-12-03"
+  id: "74"
+  track_id: "7"
+races_024: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-12-12"
+  id: "30"
+  track_id: "19"
+races_045: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-08-23"
+  id: "51"
+  track_id: "21"
+races_066: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-12-16"
+  id: "75"
+  track_id: "12"
+races_003: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-02-26"
+  id: "9"
+  track_id: "32"
+races_067: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-01-14"
+  id: "76"
+  track_id: "15"
+races_046: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-09-27"
+  id: "52"
+  track_id: "8"
+races_004: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-03-12"
+  id: "10"
+  track_id: "10"
+races_025: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-02-11"
+  id: "31"
+  track_id: "20"
+races_068: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-01-28"
+  id: "77"
+  track_id: "21"
+races_005: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-04-02"
+  id: "11"
+  track_id: "6"
+races_026: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-02-25"
+  id: "32"
+  track_id: "10"
+races_047: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-10-11"
+  id: "53"
+  track_id: "19"
+races_070: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-04-01"
+  id: "79"
+  track_id: "19"
+races_069: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-03-18"
+  id: "78"
+  track_id: "8"
+races_006: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-04-16"
+  id: "12"
+  track_id: "16"
+races_027: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-03-11"
+  id: "33"
+  track_id: "6"
+races_048: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-10-25"
+  id: "54"
+  track_id: "10"
+races_071: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-06-09"
+  id: "80"
+  track_id: "31"
+races_007: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-05-14"
+  id: "13"
+  track_id: "22"
+races_028: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-03-25"
+  id: "34"
+  track_id: "18"
+races_050: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-05-26"
+  id: "57"
+  track_id: "6"
+races_049: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-05-12"
+  id: "56"
+  track_id: "20"
+races_072: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2009-06-25"
+  id: "81"
+  track_id: "10"
+races_008: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-06-11"
+  id: "14"
+  track_id: "12"
+races_030: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-04-22"
+  id: "36"
+  track_id: "1"
+races_029: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-04-08"
+  id: "35"
+  track_id: "16"
+races_051: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-06-09"
+  id: "58"
+  track_id: "1"
+races_073: 
+  created_at: 
+  updated_at: 
+  season_id: "8"
+  date: "2011-01-26"
+  id: "82"
+  track_id: "34"
+races_010: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-07-09"
+  id: "16"
+  track_id: "21"
+races_009: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-06-25"
+  id: "15"
+  track_id: "15"
+races_031: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-05-06"
+  id: "37"
+  track_id: "13"
+races_052: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-07-07"
+  id: "59"
+  track_id: "22"
+races_074: 
+  created_at: 
+  updated_at: 
+  season_id: "8"
+  date: "2011-02-08"
+  id: "83"
+  track_id: "20"
+races_011: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-07-23"
+  id: "17"
+  track_id: "26"
+races_032: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-05-20"
+  id: "38"
+  track_id: "12"
+races_053: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-07-21"
+  id: "60"
+  track_id: "13"
+races_012: 
+  created_at: 
+  updated_at: 
+  season_id: "1"
+  date: "2002-08-06"
+  id: "18"
+  track_id: "19"
+races_033: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-06-03"
+  id: "39"
+  track_id: "15"
+races_054: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-08-04"
+  id: "61"
+  track_id: "11"
+races_013: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-01-01"
+  id: "19"
+  track_id: "20"
+races_034: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-06-17"
+  id: "40"
+  track_id: "8"
+races_055: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-09-15"
+  id: "62"
+  track_id: "24"
+races_035: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-07-15"
+  id: "41"
+  track_id: "23"
+races_056: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-09-29"
+  id: "63"
+  track_id: "12"
+races_014: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-02-02"
+  id: "20"
+  track_id: "10"
+races_057: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-10-13"
+  id: "64"
+  track_id: "15"
+races_015: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-03-03"
+  id: "21"
+  track_id: "17"
+races_036: 
+  created_at: 
+  updated_at: 
+  season_id: "4"
+  date: "2003-07-29"
+  id: "42"
+  track_id: "19"
+races_016: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-04-04"
+  id: "22"
+  track_id: "18"
+races_037: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-02-22"
+  id: "43"
+  track_id: "20"
+races_058: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-10-27"
+  id: "65"
+  track_id: "8"
+races_017: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-05-05"
+  id: "23"
+  track_id: "16"
+races_038: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-03-15"
+  id: "44"
+  track_id: "32"
+races_060: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-12-01"
+  id: "67"
+  track_id: "10"
+races_059: 
+  created_at: 
+  updated_at: 
+  season_id: "7"
+  date: "2005-11-10"
+  id: "66"
+  track_id: "17"
+races_018: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-06-06"
+  id: "24"
+  track_id: "1"
+races_040: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-06-14"
+  id: "46"
+  track_id: "1"
+races_039: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-05-24"
+  id: "45"
+  track_id: "18"
+races_061: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-09-23"
+  id: "70"
+  track_id: "18"
+races_020: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-08-08"
+  id: "26"
+  track_id: "12"
+races_019: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-07-07"
+  id: "25"
+  track_id: "7"
+races_041: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-07-12"
+  id: "47"
+  track_id: "29"
+races_062: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-09-10"
+  id: "71"
+  track_id: "20"
+races_021: 
+  created_at: 
+  updated_at: 
+  season_id: "2"
+  date: "2001-09-09"
+  id: "27"
+  track_id: "15"
+races_042: 
+  created_at: 
+  updated_at: 
+  season_id: "5"
+  date: "2004-07-26"
+  id: "48"
+  track_id: "12"
+races_063: 
+  created_at: 
+  updated_at: 
+  season_id: "6"
+  date: "2008-10-22"
+  id: "72"
+  track_id: "1"

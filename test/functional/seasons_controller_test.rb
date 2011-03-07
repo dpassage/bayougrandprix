@@ -49,9 +49,9 @@ class SeasonsControllerTest < ActionController::TestCase
         assert_select "th", "Country"
         assert_select "th", "Winner"
       end
-     # assert_select "tr:nth-of-type(2)" do
-      #  assert_select "td:nth-of-type(1)", "2002-02-12"
-      #end
+      assert_select "tr:nth-of-type(2)" do
+        assert_select "td:nth-of-type(1)", "2002-02-12"
+      end
     end
   end
 

@@ -11,5 +11,12 @@
     <th>Country</th>
     <th>Winner</th>
   </tr>
+  <% @season.races.order("date").each do |race| %>
+    <tr>
+      <td><%= race.date %></td>
+      <td><%= race.track.name %></td>
+      <td><%= race.track.country %></td>
+    </tr>
+  <% end %>
   
 </table>
