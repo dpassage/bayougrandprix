@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110307013624) do
+ActiveRecord::Schema.define(:version => 20110308061324) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -33,10 +33,14 @@ ActiveRecord::Schema.define(:version => 20110307013624) do
     t.boolean "dnf",    :null => false
   end
 
-  create_table "racedrivers", :id => false, :force => true do |t|
-    t.integer "race",   :null => false
-    t.integer "driver", :null => false
-    t.integer "team",   :null => false
+  create_table "race_entries", :force => true do |t|
+    t.integer  "race_id"
+    t.integer  "driver_id"
+    t.integer  "team_id"
+    t.integer  "finish"
+    t.boolean  "dnf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "raceresults", :id => false, :force => true do |t|
