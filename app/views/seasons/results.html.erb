@@ -9,7 +9,9 @@
     <th>Date</th>
     <th>Track</th>
     <th>Country</th>
-    <th>Winner</th>
+    <% for i in 1..10 do %>
+      <th><%= ordinal(i) %></th>
+    <% end %>
   </tr>
   <% @season.races.order("date").each do |race| %>
     <tr>
