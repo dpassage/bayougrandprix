@@ -16,6 +16,9 @@
       <td><%= race.date %></td>
       <td><%= race.track.name %></td>
       <td><%= race.track.country %></td>
+      <% race.race_entries.order("finish").each do |entry| %>
+        <td bgcolor="<%= entry.team.color %>"><%= entry.driver.name %></td>
+      <% end %>
     </tr>
   <% end %>
   

@@ -51,6 +51,8 @@ class SeasonsControllerTest < ActionController::TestCase
       end
       assert_select "tr:nth-of-type(2)" do
         assert_select "td:nth-of-type(1)", "2002-02-12"
+        assert_select "td:nth-of-type(4)", "Michael Schumacher"
+        assert_select "td:nth-of-type(4)[bgcolor=#FF0000]"
       end
     end
   end
