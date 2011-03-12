@@ -33,6 +33,7 @@ class SeasonsControllerTest < ActionController::TestCase
     get :results, :id => @season.to_param
     assert_response :success
     
+    # team table
     assert_select "h1", /2002/
     assert_select "table:nth-of-type(1)" do
       assert_select "th", "Driver"
@@ -42,6 +43,7 @@ class SeasonsControllerTest < ActionController::TestCase
       assert_select "tr:nth-of-type(2) td:nth-of-type(3)", "Axle of Evil"
     end
     
+    # results grid
     assert_select "table:nth-of-type(2)" do
       assert_select "tr:nth-of-type(1)" do
         assert_select "th", "Date"
@@ -53,6 +55,14 @@ class SeasonsControllerTest < ActionController::TestCase
         assert_select "td:nth-of-type(1)", "2002-02-12"
         assert_select "td:nth-of-type(4)", "Michael Schumacher"
         assert_select "td:nth-of-type(4)[bgcolor=#FF0000]"
+      end
+    end
+    
+    # driver points standings
+    assert_select "table:nth-of-type(3)" do
+      assert_select "tr:nth-of-type(2)" do
+        assert_select "td:nth-of-type(1)", "1"
+        assert_select "td:nth-of-type(4)", "47"
       end
     end
   end
