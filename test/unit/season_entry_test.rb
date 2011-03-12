@@ -3,11 +3,8 @@ require 'test_helper'
 class SeasonEntryTest < ActiveSupport::TestCase
   fixtures :all
   # Replace this with your real tests.
-  test "the truth" do
-    entry = season_entries(:season_entries_015)
-    assert_not_nil entry
-    assert_not_nil entry.driver.name
-    assert_not_nil entry.season.name
-    assert_not_nil entry.defaultteam.name
+  test "compute points" do
+    entry = season_entries(:season_entries_002) # david coulthard 2002 season
+    assert_equal entry.total_points, 42
   end
 end

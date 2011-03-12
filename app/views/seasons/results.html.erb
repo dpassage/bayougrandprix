@@ -29,3 +29,23 @@
   <% end %>
   
 </table>
+
+<h2>Points Standings</h2>
+
+<h3>Driver's Championship</h3>
+<table>
+  <tr>
+    <th>Place</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Points</th>
+  </tr>
+  <% @season.season_entries.each do |se| %>
+    <tr>
+      <td>1</td>
+      <td><%= se.driver.name %></td>
+      <td><%= se.defaultteam.name %></td>
+      <td><%= se.total_points %></td>
+    </tr>
+  <% end %>
+</table>
