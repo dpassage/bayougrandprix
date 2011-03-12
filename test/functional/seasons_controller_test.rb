@@ -32,10 +32,15 @@ class SeasonsControllerTest < ActionController::TestCase
   test "should show results" do
     get :results, :id => @season.to_param
     assert_response :success
+    assert_select "h1", /2002/
+  end
+
+  test "should show team table on results page" do
+    get :results, :id => @season.to_param
+    assert_response :success
     
     # team table
-    assert_select "h1", /2002/
-    assert_select "table:nth-of-type(1)" do
+    assert_select "table#team_table" do
       assert_select "th", "Driver"
       assert_select "th", "Player"
       assert_select "th", "Team"
@@ -44,7 +49,7 @@ class SeasonsControllerTest < ActionController::TestCase
     end
     
     # results grid
-    assert_select "table:nth-of-type(2)" do
+    assert_select "table#results_grid" do
       assert_select "tr:nth-of-type(1)" do
         assert_select "th", "Date"
         assert_select "th", "Track"
@@ -59,7 +64,7 @@ class SeasonsControllerTest < ActionController::TestCase
     end
     
     # driver points standings
-    assert_select "table:nth-of-type(3)" do
+    assert_select "table#driver_points_standings" do
       assert_select "tr:nth-of-type(2)" do
         assert_select "td:nth-of-type(1)", "1"
         assert_select "td:nth-of-type(4)", "47"
