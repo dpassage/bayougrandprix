@@ -33,11 +33,6 @@ class SeasonsControllerTest < ActionController::TestCase
     get :results, :id => @season.to_param
     assert_response :success
     assert_select "h1", /2002/
-  end
-
-  test "should show team table on results page" do
-    get :results, :id => @season.to_param
-    assert_response :success
     
     # team table
     assert_select "table#team_table" do
