@@ -41,7 +41,7 @@
     <th>Points</th>
   </tr>
   <%  @season.drivers_by_points.each_with_index do |de, place| %>
-    <tr>
+    <tr bgcolor="<%= de.entrant.default_team_for_season(@season).color %>">
       <td><%= place + 1 %></td>
       <td><%= de.entrant.name %></td>
       <td><%= de.entrant.default_team_for_season(@season).name %></td>
@@ -59,7 +59,7 @@
   </tr>
   <% entries = @season.teams_by_points
      entries.each_with_index do |team_entry, place| %>
-    <tr>
+    <tr bgcolor="<%= team_entry.entrant.color %>">
       <td><%= place + 1 %></td>
       <td><%= team_entry.entrant.name %></td>
       <td><%= team_entry.points %></td>

@@ -58,9 +58,9 @@ class SeasonsControllerTest < ActionController::TestCase
       end
     end
     
-    # driver points standings
+    # driver points standings, with colors
     assert_select "table#driver_points_standings" do
-      assert_select "tr:nth-of-type(2)" do
+      assert_select "tr:nth-of-type(2)[bgcolor=#FF0000]" do
         assert_select "td:nth-of-type(1)", "1"
         assert_select "td:nth-of-type(4)", "47"
       end
@@ -68,7 +68,7 @@ class SeasonsControllerTest < ActionController::TestCase
     
     # team points standings
     assert_select "table#team_points_standings" do
-      assert_select "tr:nth-of-type(2)" do
+      assert_select "tr:nth-of-type(2)[bgcolor=#0099FF]" do
         assert_select "td:nth-of-type(2)", "McLaren"
         assert_select "td:nth-of-type(3)", "85"
       end
