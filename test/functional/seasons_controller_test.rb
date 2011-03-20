@@ -73,6 +73,15 @@ class SeasonsControllerTest < ActionController::TestCase
         assert_select "td:nth-of-type(3)", "85"
       end
     end
+    
+    # qualifying by points
+    assert_select "table#qualifying_by_points" do
+      assert_select "tr:nth-of-type(2)[bgcolor=#FF0000]" do
+        assert_select "td:nth-of-type(2)", "Michael Schumacher"
+        assert_select "td:nth-of-type(3)", "Ferrari"
+        assert_select "td:nth-of-type(4)", "67"
+      end
+    end
   end
   
   test "2008 season should use 9-6-4-3-2-1" do

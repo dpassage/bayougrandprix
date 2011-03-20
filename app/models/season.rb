@@ -12,16 +12,17 @@ class Season < ActiveRecord::Base
     attr_accessor :points
   end
   
-  def results_table_by_points(entrant_type)
+  def results_table_by_points(entrant_type, points_type)
     entrant_hash = {}
     self.races.each do |r|
       r.race_entries.each do |re|
         entrant = re.send(entrant_type)
         cur = entrant_hash[entrant]
+        newpoints = re.send(points_type)
         if cur == nil
-          entrant_hash[entrant] = re.finish_points
+          entrant_hash[entrant] = newpoints
         else
-          entrant_hash[entrant] = cur + re.finish_points
+          entrant_hash[entrant] = cur + newpoints
         end
       end
     end
@@ -38,9 +39,12 @@ class Season < ActiveRecord::Base
   end
   
   def teams_by_points
-    self.results_table_by_points(:team)
+    self.results_table_by_points(:team, :finish_points)
   end
   def drivers_by_points
-    self.results_table_by_points(:driver)
+    self.results_table_by_points(:driver, :finish_points)
+  end
+  def drivers_by_qualifying_points
+    self.results_table_by_points(:driver, :qualifying_points)
   end
 end

@@ -24,4 +24,11 @@ class SeasonTest < ActiveSupport::TestCase
     assert_equal teams(:mclaren), results[0].entrant
     assert_equal 85, results[0].points
   end
+  test "drivers_by_qualifying_points is an array of team entries by qualifying points" do
+    season = seasons(:season_2002)
+    results = season.drivers_by_qualifying_points
+    assert_equal 12, results.length
+    assert_equal drivers(:schumacher), results[0].entrant
+    assert_equal 67, results[0].points
+  end
 end

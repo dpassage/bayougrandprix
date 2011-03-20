@@ -66,3 +66,22 @@
     </tr>
   <% end %>    
 </table>
+
+<h3>Qualifying by Points</h3>
+<table id="qualifying_by_points">
+  <tr>
+    <th>Place</th>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Points</th>
+  </tr>
+  <%  @season.drivers_by_qualifying_points.each_with_index do |de, place| %>
+    <tr bgcolor="<%= de.entrant.default_team_for_season(@season).color %>">
+      <td><%= place + 1 %></td>
+      <td><%= de.entrant.name %></td>
+      <td><%= de.entrant.default_team_for_season(@season).name %></td>
+      <td><%= de.points %></td>
+    </tr>
+  <% end %>
+</table>
+

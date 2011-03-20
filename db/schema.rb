@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110320030744) do
+ActiveRecord::Schema.define(:version => 20110320213434) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20110320030744) do
     t.boolean  "dnf"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "qualify"
+    t.boolean  "dnq"
   end
 
   create_table "raceresults", :id => false, :force => true do |t|

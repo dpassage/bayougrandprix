@@ -4,5056 +4,6180 @@ race_entries_466:
   race_id: "72"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "466"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_419: 
   driver_id: "25"
   race_id: "63"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "419"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_229: 
   driver_id: "3"
   race_id: "41"
   created_at: 
   finish: "1"
+  qualify: "6"
   updated_at: 
   id: "229"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_039: 
   driver_id: "1"
   race_id: "10"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "39"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_276: 
   driver_id: "10"
   race_id: "45"
   created_at: 
   finish: "2"
+  qualify: "4"
   updated_at: 
   id: "276"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_086: 
   driver_id: "9"
   race_id: "15"
   created_at: 
   finish: "8"
+  qualify: "2"
   updated_at: 
   id: "86"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_467: 
   driver_id: "29"
   race_id: "72"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "467"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_277: 
   driver_id: "6"
   race_id: "45"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "277"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_087: 
   driver_id: "5"
   race_id: "15"
   created_at: 
   finish: "9"
+  qualify: "9"
   updated_at: 
   id: "87"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_468: 
   driver_id: "3"
   race_id: "72"
   created_at: 
   finish: "8"
+  qualify: "2"
   updated_at: 
   id: "468"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_278: 
   driver_id: "2"
   race_id: "45"
   created_at: 
   finish: "4"
+  qualify: "2"
   updated_at: 
   id: "278"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_088: 
   driver_id: "1"
   race_id: "15"
   created_at: 
   finish: "10"
+  qualify: "4"
   updated_at: 
   id: "88"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_469: 
   driver_id: "8"
   race_id: "72"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "469"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_279: 
   driver_id: "14"
   race_id: "45"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "279"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_089: 
   driver_id: "8"
   race_id: "16"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "89"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_520: 
   driver_id: "2"
   race_id: "79"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "520"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_330: 
   driver_id: "16"
   race_id: "51"
   created_at: 
   finish: "10"
+  qualify: "7"
   updated_at: 
   id: "330"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_140: 
   driver_id: "14"
   race_id: "31"
   created_at: 
   finish: "9"
+  qualify: "8"
   updated_at: 
   id: "140"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_521: 
   driver_id: "8"
   race_id: "79"
   created_at: 
   finish: "3"
+  qualify: "3"
   updated_at: 
   id: "521"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_331: 
   driver_id: "21"
   race_id: "52"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "331"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_141: 
   driver_id: "9"
   race_id: "31"
   created_at: 
   finish: "10"
+  qualify: "6"
   updated_at: 
   id: "141"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_522: 
   driver_id: "10"
   race_id: "79"
   created_at: 
   finish: "4"
+  qualify: "1"
   updated_at: 
   id: "522"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_332: 
   driver_id: "3"
   race_id: "52"
   created_at: 
   finish: "2"
+  qualify: "4"
   updated_at: 
   id: "332"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_142: 
   driver_id: "8"
   race_id: "32"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "142"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_523: 
   driver_id: "24"
   race_id: "79"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "523"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_333: 
   driver_id: "5"
   race_id: "52"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "333"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_143: 
   driver_id: "10"
   race_id: "32"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "143"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_380: 
   driver_id: "10"
   race_id: "58"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "380"
   dnf: "1"
+  dnq: 
   team_id: "11"
 race_entries_190: 
   driver_id: "8"
   race_id: "36"
   created_at: 
   finish: "10"
+  qualify: "2"
   updated_at: 
   id: "190"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_524: 
   driver_id: "30"
   race_id: "79"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "524"
   dnf: "0"
+  dnq: "1"
   team_id: "12"
 race_entries_334: 
   driver_id: "22"
   race_id: "52"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "334"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_144: 
   driver_id: "11"
   race_id: "32"
   created_at: 
   finish: "3"
+  qualify: "7"
   updated_at: 
   id: "144"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_381: 
   driver_id: "8"
   race_id: "59"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "381"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_191: 
   driver_id: "8"
   race_id: "37"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "191"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_525: 
   driver_id: "23"
   race_id: "79"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "525"
   dnf: "0"
+  dnq: "1"
   team_id: "3"
 race_entries_335: 
   driver_id: "10"
   race_id: "52"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "335"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_145: 
   driver_id: "5"
   race_id: "32"
   created_at: 
   finish: "4"
+  qualify: "5"
   updated_at: 
   id: "145"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_382: 
   driver_id: "3"
   race_id: "59"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "382"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_192: 
   driver_id: "6"
   race_id: "37"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "192"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_526: 
   driver_id: "3"
   race_id: "79"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "526"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_336: 
   driver_id: "2"
   race_id: "52"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "336"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_146: 
   driver_id: "9"
   race_id: "32"
   created_at: 
   finish: "5"
+  qualify: "2"
   updated_at: 
   id: "146"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_383: 
   driver_id: "5"
   race_id: "59"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "383"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_193: 
   driver_id: "2"
   race_id: "37"
   created_at: 
   finish: "3"
+  qualify: "6"
   updated_at: 
   id: "193"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_527: 
   driver_id: "8"
   race_id: "80"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "527"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_337: 
   driver_id: "9"
   race_id: "52"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "337"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_147: 
   driver_id: "2"
   race_id: "32"
   created_at: 
   finish: "6"
+  qualify: "4"
   updated_at: 
   id: "147"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_384: 
   driver_id: "17"
   race_id: "59"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "384"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_194: 
   driver_id: "16"
   race_id: "37"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "194"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_528: 
   driver_id: "30"
   race_id: "80"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "528"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_338: 
   driver_id: "8"
   race_id: "52"
   created_at: 
   finish: "8"
+  qualify: "1"
   updated_at: 
   id: "338"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_148: 
   driver_id: "6"
   race_id: "32"
   created_at: 
   finish: "7"
+  qualify: "10"
   updated_at: 
   id: "148"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_385: 
   driver_id: "27"
   race_id: "59"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "385"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_195: 
   driver_id: "10"
   race_id: "37"
   created_at: 
   finish: "5"
+  qualify: "8"
   updated_at: 
   id: "195"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_529: 
   driver_id: "29"
   race_id: "80"
   created_at: 
   finish: "3"
+  qualify: "7"
   updated_at: 
   id: "529"
   dnf: "0"
+  dnq: "1"
   team_id: "4"
 race_entries_339: 
   driver_id: "16"
   race_id: "52"
   created_at: 
   finish: "9"
+  qualify: "10"
   updated_at: 
   id: "339"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_149: 
   driver_id: "14"
   race_id: "32"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "149"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_386: 
   driver_id: "10"
   race_id: "59"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "386"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_196: 
   driver_id: "14"
   race_id: "37"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "196"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_387: 
   driver_id: "16"
   race_id: "59"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "387"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_197: 
   driver_id: "3"
   race_id: "37"
   created_at: 
   finish: "7"
+  qualify: "4"
   updated_at: 
   id: "197"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_200: 
   driver_id: "5"
   race_id: "37"
   created_at: 
   finish: "10"
+  qualify: "2"
   updated_at: 
   id: "200"
   dnf: "1"
+  dnq: "0"
   team_id: "10"
 race_entries_010: 
   driver_id: "6"
   race_id: "1"
   created_at: 
   finish: "10"
+  qualify: "1"
   updated_at: 
   id: "10"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_388: 
   driver_id: "10"
   race_id: "60"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "388"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_198: 
   driver_id: "13"
   race_id: "37"
   created_at: 
   finish: "8"
+  qualify: "10"
   updated_at: 
   id: "198"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_201: 
   driver_id: "3"
   race_id: "38"
   created_at: 
   finish: "1"
+  qualify: "9"
   updated_at: 
   id: "201"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_011: 
   driver_id: "6"
   race_id: "8"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "11"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_389: 
   driver_id: "16"
   race_id: "60"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "389"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_199: 
   driver_id: "9"
   race_id: "37"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "199"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_202: 
   driver_id: "10"
   race_id: "38"
   created_at: 
   finish: "2"
+  qualify: "5"
   updated_at: 
   id: "202"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_012: 
   driver_id: "10"
   race_id: "8"
   created_at: 
   finish: "2"
+  qualify: "5"
   updated_at: 
   id: "12"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_440: 
   driver_id: "8"
   race_id: "67"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "440"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_250: 
   driver_id: "22"
   race_id: "43"
   created_at: 
   finish: "4"
+  qualify: "10"
   updated_at: 
   id: "250"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_060: 
   driver_id: "8"
   race_id: "13"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "60"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_203: 
   driver_id: "2"
   race_id: "38"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "203"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_013: 
   driver_id: "2"
   race_id: "8"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "13"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_441: 
   driver_id: "16"
   race_id: "67"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "441"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_251: 
   driver_id: "3"
   race_id: "43"
   created_at: 
   finish: "9"
+  qualify: "9"
   updated_at: 
   id: "251"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_061: 
   driver_id: "2"
   race_id: "13"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "61"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_204: 
   driver_id: "8"
   race_id: "38"
   created_at: 
   finish: "4"
+  qualify: "1"
   updated_at: 
   id: "204"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_014: 
   driver_id: "5"
   race_id: "8"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "14"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_442: 
   driver_id: "14"
   race_id: "67"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "442"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_252: 
   driver_id: "6"
   race_id: "43"
   created_at: 
   finish: "10"
+  qualify: "5"
   updated_at: 
   id: "252"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_062: 
   driver_id: "5"
   race_id: "13"
   created_at: 
   finish: "3"
+  qualify: "4"
   updated_at: 
   id: "62"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_205: 
   driver_id: "6"
   race_id: "38"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "205"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_015: 
   driver_id: "3"
   race_id: "8"
   created_at: 
   finish: "5"
+  qualify: "8"
   updated_at: 
   id: "15"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_490: 
   driver_id: "24"
   race_id: "75"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "490"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_443: 
   driver_id: "10"
   race_id: "67"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "443"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_253: 
   driver_id: "10"
   race_id: "43"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "253"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_063: 
   driver_id: "7"
   race_id: "13"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "63"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_206: 
   driver_id: "9"
   race_id: "38"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "206"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_016: 
   driver_id: "7"
   race_id: "8"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "16"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_491: 
   driver_id: "3"
   race_id: "75"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "491"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_444: 
   driver_id: "3"
   race_id: "67"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "444"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_254: 
   driver_id: "9"
   race_id: "43"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "254"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_064: 
   driver_id: "3"
   race_id: "13"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "64"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_207: 
   driver_id: "16"
   race_id: "38"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "207"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_017: 
   driver_id: "4"
   race_id: "8"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "17"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_492: 
   driver_id: "28"
   race_id: "75"
   created_at: 
   finish: "8"
+  qualify: "7"
   updated_at: 
   id: "492"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_445: 
   driver_id: "3"
   race_id: "70"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "445"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_255: 
   driver_id: "2"
   race_id: "43"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "255"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_065: 
   driver_id: "11"
   race_id: "13"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "65"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_208: 
   driver_id: "14"
   race_id: "38"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "208"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_018: 
   driver_id: "11"
   race_id: "8"
   created_at: 
   finish: "8"
+  qualify: "10"
   updated_at: 
   id: "18"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_493: 
   driver_id: "8"
   race_id: "75"
   created_at: 
   finish: "9"
+  qualify: "1"
   updated_at: 
   id: "493"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_446: 
   driver_id: "28"
   race_id: "70"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "446"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_256: 
   driver_id: "21"
   race_id: "43"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "256"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_066: 
   driver_id: "1"
   race_id: "13"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "66"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_209: 
   driver_id: "11"
   race_id: "38"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "209"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_019: 
   driver_id: "1"
   race_id: "8"
   created_at: 
   finish: "9"
+  qualify: "4"
   updated_at: 
   id: "19"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_494: 
   driver_id: "10"
   race_id: "76"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "494"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_447: 
   driver_id: "10"
   race_id: "70"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "447"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_257: 
   driver_id: "9"
   race_id: "44"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "257"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_067: 
   driver_id: "4"
   race_id: "13"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "67"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_495: 
   driver_id: "5"
   race_id: "76"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "495"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_448: 
   driver_id: "24"
   race_id: "70"
   created_at: 
   finish: "4"
+  qualify: "8"
   updated_at: 
   id: "448"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_258: 
   driver_id: "2"
   race_id: "44"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "258"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_068: 
   driver_id: "10"
   race_id: "13"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "68"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_496: 
   driver_id: "3"
   race_id: "76"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "496"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_449: 
   driver_id: "23"
   race_id: "70"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "449"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_259: 
   driver_id: "10"
   race_id: "44"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "259"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_069: 
   driver_id: "6"
   race_id: "14"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "69"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_497: 
   driver_id: "30"
   race_id: "76"
   created_at: 
   finish: "4"
+  qualify: "3"
   updated_at: 
   id: "497"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_500: 
   driver_id: "28"
   race_id: "76"
   created_at: 
   finish: "7"
+  qualify: "4"
   updated_at: 
   id: "500"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_498: 
   driver_id: "2"
   race_id: "76"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "498"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_310: 
   driver_id: "21"
   race_id: "47"
   created_at: 
   finish: "9"
+  qualify: "3"
   updated_at: 
   id: "310"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_120: 
   driver_id: "5"
   race_id: "19"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "120"
   dnf: "0"
+  dnq: 
   team_id: "5"
 race_entries_501: 
   driver_id: "8"
   race_id: "76"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "501"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_499: 
   driver_id: "24"
   race_id: "76"
   created_at: 
   finish: "6"
+  qualify: "5"
   updated_at: 
   id: "499"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_311: 
   driver_id: "6"
   race_id: "47"
   created_at: 
   finish: "10"
+  qualify: "4"
   updated_at: 
   id: "311"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_121: 
   driver_id: "2"
   race_id: "19"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "121"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_502: 
   driver_id: "29"
   race_id: "76"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "502"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_312: 
   driver_id: "9"
   race_id: "50"
   created_at: 
   finish: "1"
+  qualify: "7"
   updated_at: 
   id: "312"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_122: 
   driver_id: "16"
   race_id: "19"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "122"
   dnf: "0"
+  dnq: 
   team_id: "7"
 race_entries_550: 
   driver_id: "28"
   race_id: "82"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "550"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_503: 
   driver_id: "28"
   race_id: "77"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "503"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_360: 
   driver_id: "14"
   race_id: "56"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "360"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_170: 
   driver_id: "14"
   race_id: "34"
   created_at: 
   finish: "10"
+  qualify: "8"
   updated_at: 
   id: "170"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_313: 
   driver_id: "8"
   race_id: "50"
   created_at: 
   finish: "2"
+  qualify: "1"
   updated_at: 
   id: "313"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_123: 
   driver_id: "1"
   race_id: "19"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "123"
   dnf: "0"
+  dnq: 
   team_id: "6"
 race_entries_551: 
   driver_id: "33"
   race_id: "82"
   created_at: 
   finish: "8"
+  qualify: "1"
   updated_at: 
   id: "551"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_504: 
   driver_id: "29"
   race_id: "77"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "504"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_361: 
   driver_id: "8"
   race_id: "56"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "361"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_171: 
   driver_id: "9"
   race_id: "35"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "171"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_314: 
   driver_id: "2"
   race_id: "50"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "314"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_124: 
   driver_id: "6"
   race_id: "19"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "124"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_552: 
   driver_id: "5"
   race_id: "82"
   created_at: 
   finish: "9"
+  qualify: "6"
   updated_at: 
   id: "552"
   dnf: "1"
+  dnq: "0"
   team_id: "14"
 race_entries_505: 
   driver_id: "3"
   race_id: "77"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "505"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_362: 
   driver_id: "17"
   race_id: "56"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "362"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_172: 
   driver_id: "2"
   race_id: "35"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "172"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_315: 
   driver_id: "5"
   race_id: "50"
   created_at: 
   finish: "4"
+  qualify: "2"
   updated_at: 
   id: "315"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_125: 
   driver_id: "14"
   race_id: "20"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "125"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_553: 
   driver_id: "29"
   race_id: "82"
   created_at: 
   finish: "10"
+  qualify: "9"
   updated_at: 
   id: "553"
   dnf: "1"
+  dnq: "0"
   team_id: "14"
 race_entries_506: 
   driver_id: "30"
   race_id: "77"
   created_at: 
   finish: "4"
+  qualify: "4"
   updated_at: 
   id: "506"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_363: 
   driver_id: "16"
   race_id: "56"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "363"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_173: 
   driver_id: "8"
   race_id: "35"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "173"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_316: 
   driver_id: "3"
   race_id: "50"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "316"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_126: 
   driver_id: "10"
   race_id: "20"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "126"
   dnf: "0"
+  dnq: 
   team_id: "5"
 race_entries_554: 
   driver_id: "8"
   race_id: "83"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "554"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_507: 
   driver_id: "10"
   race_id: "77"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "507"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_364: 
   driver_id: "21"
   race_id: "56"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "364"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_174: 
   driver_id: "3"
   race_id: "35"
   created_at: 
   finish: "4"
+  qualify: "9"
   updated_at: 
   id: "174"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_317: 
   driver_id: "21"
   race_id: "50"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "317"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_127: 
   driver_id: "1"
   race_id: "20"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "127"
   dnf: "0"
+  dnq: 
   team_id: "6"
 race_entries_555: 
   driver_id: "31"
   race_id: "83"
   created_at: 
   finish: "2"
+  qualify: "8"
   updated_at: 
   id: "555"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_365: 
   driver_id: "3"
   race_id: "56"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "365"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_175: 
   driver_id: "14"
   race_id: "35"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "175"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_318: 
   driver_id: "22"
   race_id: "50"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "318"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_128: 
   driver_id: "3"
   race_id: "20"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "128"
   dnf: "0"
+  dnq: 
   team_id: "6"
 race_entries_556: 
   driver_id: "30"
   race_id: "83"
   created_at: 
   finish: "3"
+  qualify: "6"
   updated_at: 
   id: "556"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_508: 
   driver_id: "8"
   race_id: "77"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "508"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_366: 
   driver_id: "10"
   race_id: "56"
   created_at: 
   finish: "8"
+  qualify: 
   updated_at: 
   id: "366"
   dnf: "1"
+  dnq: 
   team_id: "11"
 race_entries_176: 
   driver_id: "20"
   race_id: "35"
   created_at: 
   finish: "6"
+  qualify: "10"
   updated_at: 
   id: "176"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_319: 
   driver_id: "16"
   race_id: "50"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "319"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_129: 
   driver_id: "5"
   race_id: "20"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "129"
   dnf: "0"
+  dnq: 
   team_id: "5"
 race_entries_557: 
   driver_id: "32"
   race_id: "83"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "557"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_509: 
   driver_id: "2"
   race_id: "77"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "509"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_367: 
   driver_id: "14"
   race_id: "57"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "367"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_177: 
   driver_id: "11"
   race_id: "35"
   created_at: 
   finish: "7"
+  qualify: "4"
   updated_at: 
   id: "177"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_558: 
   driver_id: "28"
   race_id: "83"
   created_at: 
   finish: "5"
+  qualify: "2"
   updated_at: 
   id: "558"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_368: 
   driver_id: "3"
   race_id: "57"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "368"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_178: 
   driver_id: "5"
   race_id: "35"
   created_at: 
   finish: "8"
+  qualify: "3"
   updated_at: 
   id: "178"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_559: 
   driver_id: "23"
   race_id: "83"
   created_at: 
   finish: "6"
+  qualify: "5"
   updated_at: 
   id: "559"
   dnf: "0"
+  dnq: "0"
   team_id: "14"
 race_entries_369: 
   driver_id: "2"
   race_id: "57"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "369"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_179: 
   driver_id: "16"
   race_id: "35"
   created_at: 
   finish: "9"
+  qualify: "8"
   updated_at: 
   id: "179"
   dnf: "1"
+  dnq: "0"
   team_id: "10"
 race_entries_420: 
   driver_id: "3"
   race_id: "64"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "420"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_230: 
   driver_id: "6"
   race_id: "41"
   created_at: 
   finish: "2"
+  qualify: "1"
   updated_at: 
   id: "230"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_040: 
   driver_id: "4"
   race_id: "10"
   created_at: 
   finish: "10"
+  qualify: "10"
   updated_at: 
   id: "40"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_421: 
   driver_id: "10"
   race_id: "64"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "421"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_231: 
   driver_id: "10"
   race_id: "41"
   created_at: 
   finish: "3"
+  qualify: "3"
   updated_at: 
   id: "231"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_041: 
   driver_id: "6"
   race_id: "11"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "41"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_422: 
   driver_id: "14"
   race_id: "64"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "422"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_232: 
   driver_id: "14"
   race_id: "41"
   created_at: 
   finish: "4"
+  qualify: "10"
   updated_at: 
   id: "232"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_042: 
   driver_id: "7"
   race_id: "11"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "42"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_470: 
   driver_id: "3"
   race_id: "73"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "470"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_423: 
   driver_id: "17"
   race_id: "64"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "423"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_280: 
   driver_id: "11"
   race_id: "45"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "280"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_090: 
   driver_id: "10"
   race_id: "16"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "90"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_233: 
   driver_id: "16"
   race_id: "41"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "233"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_043: 
   driver_id: "3"
   race_id: "11"
   created_at: 
   finish: "3"
+  qualify: "4"
   updated_at: 
   id: "43"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_471: 
   driver_id: "30"
   race_id: "73"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "471"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_424: 
   driver_id: "5"
   race_id: "64"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "424"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_281: 
   driver_id: "8"
   race_id: "45"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "281"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_091: 
   driver_id: "11"
   race_id: "16"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "91"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_234: 
   driver_id: "5"
   race_id: "41"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "234"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_044: 
   driver_id: "10"
   race_id: "11"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "44"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_472: 
   driver_id: "8"
   race_id: "73"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "472"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_425: 
   driver_id: "8"
   race_id: "64"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "425"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_282: 
   driver_id: "3"
   race_id: "45"
   created_at: 
   finish: "8"
+  qualify: "3"
   updated_at: 
   id: "282"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_092: 
   driver_id: "5"
   race_id: "16"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "92"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_235: 
   driver_id: "11"
   race_id: "41"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "235"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_045: 
   driver_id: "8"
   race_id: "11"
   created_at: 
   finish: "5"
+  qualify: "1"
   updated_at: 
   id: "45"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_473: 
   driver_id: "24"
   race_id: "73"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "473"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_426: 
   driver_id: "27"
   race_id: "64"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "426"
   dnf: "1"
+  dnq: 
   team_id: "3"
 race_entries_283: 
   driver_id: "9"
   race_id: "45"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "283"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_093: 
   driver_id: "3"
   race_id: "16"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "93"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_236: 
   driver_id: "8"
   race_id: "41"
   created_at: 
   finish: "8"
+  qualify: "2"
   updated_at: 
   id: "236"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_046: 
   driver_id: "1"
   race_id: "11"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "46"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_474: 
   driver_id: "10"
   race_id: "73"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "474"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_427: 
   driver_id: "17"
   race_id: "65"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "427"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_284: 
   driver_id: "6"
   race_id: "46"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "284"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_094: 
   driver_id: "4"
   race_id: "16"
   created_at: 
   finish: "6"
+  qualify: "10"
   updated_at: 
   id: "94"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_237: 
   driver_id: "9"
   race_id: "41"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "237"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_047: 
   driver_id: "2"
   race_id: "11"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "47"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_475: 
   driver_id: "23"
   race_id: "73"
   created_at: 
   finish: "6"
+  qualify: "5"
   updated_at: 
   id: "475"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_428: 
   driver_id: "14"
   race_id: "65"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "428"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_285: 
   driver_id: "22"
   race_id: "46"
   created_at: 
   finish: "2"
+  qualify: "5"
   updated_at: 
   id: "285"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_095: 
   driver_id: "1"
   race_id: "16"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "95"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_238: 
   driver_id: "2"
   race_id: "41"
   created_at: 
   finish: "10"
+  qualify: "4"
   updated_at: 
   id: "238"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_048: 
   driver_id: "4"
   race_id: "11"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "48"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_476: 
   driver_id: "28"
   race_id: "73"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "476"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_429: 
   driver_id: "2"
   race_id: "65"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "429"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_286: 
   driver_id: "10"
   race_id: "46"
   created_at: 
   finish: "3"
+  qualify: "6"
   updated_at: 
   id: "286"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_096: 
   driver_id: "2"
   race_id: "16"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "96"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_239: 
   driver_id: "6"
   race_id: "42"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "239"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_049: 
   driver_id: "11"
   race_id: "11"
   created_at: 
   finish: "9"
+  qualify: "2"
   updated_at: 
   id: "49"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_477: 
   driver_id: "3"
   race_id: "74"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "477"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_287: 
   driver_id: "3"
   race_id: "46"
   created_at: 
   finish: "4"
+  qualify: "1"
   updated_at: 
   id: "287"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_097: 
   driver_id: "6"
   race_id: "16"
   created_at: 
   finish: "9"
+  qualify: "1"
   updated_at: 
   id: "97"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_478: 
   driver_id: "8"
   race_id: "74"
   created_at: 
   finish: "2"
+  qualify: "5"
   updated_at: 
   id: "478"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_100: 
   driver_id: "9"
   race_id: "17"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "100"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_288: 
   driver_id: "8"
   race_id: "46"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "288"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_098: 
   driver_id: "9"
   race_id: "16"
   created_at: 
   finish: "10"
+  qualify: "5"
   updated_at: 
   id: "98"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_479: 
   driver_id: "10"
   race_id: "74"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "479"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_101: 
   driver_id: "3"
   race_id: "17"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "101"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_289: 
   driver_id: "21"
   race_id: "46"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "289"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_099: 
   driver_id: "6"
   race_id: "17"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "99"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_102: 
   driver_id: "11"
   race_id: "17"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "102"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_530: 
   driver_id: "10"
   race_id: "80"
   created_at: 
   finish: "4"
+  qualify: "3"
   updated_at: 
   id: "530"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_103: 
   driver_id: "5"
   race_id: "17"
   created_at: 
   finish: "5"
+  qualify: "10"
   updated_at: 
   id: "103"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_340: 
   driver_id: "6"
   race_id: "52"
   created_at: 
   finish: "10"
+  qualify: "9"
   updated_at: 
   id: "340"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_150: 
   driver_id: "3"
   race_id: "32"
   created_at: 
   finish: "9"
+  qualify: "8"
   updated_at: 
   id: "150"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_531: 
   driver_id: "28"
   race_id: "80"
   created_at: 
   finish: "5"
+  qualify: "5"
   updated_at: 
   id: "531"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_104: 
   driver_id: "2"
   race_id: "17"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "104"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_341: 
   driver_id: "10"
   race_id: "53"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "341"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_151: 
   driver_id: "16"
   race_id: "32"
   created_at: 
   finish: "10"
+  qualify: "6"
   updated_at: 
   id: "151"
   dnf: "1"
+  dnq: "0"
   team_id: "10"
 race_entries_532: 
   driver_id: "5"
   race_id: "80"
   created_at: 
   finish: "6"
+  qualify: "4"
   updated_at: 
   id: "532"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_105: 
   driver_id: "4"
   race_id: "17"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "105"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_342: 
   driver_id: "16"
   race_id: "53"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "342"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_152: 
   driver_id: "5"
   race_id: "33"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "152"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_533: 
   driver_id: "2"
   race_id: "80"
   created_at: 
   finish: "7"
+  qualify: "2"
   updated_at: 
   id: "533"
   dnf: "1"
+  dnq: "0"
   team_id: "12"
 race_entries_106: 
   driver_id: "10"
   race_id: "17"
   created_at: 
   finish: "8"
+  qualify: "2"
   updated_at: 
   id: "106"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_390: 
   driver_id: "3"
   race_id: "60"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "390"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_343: 
   driver_id: "21"
   race_id: "53"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "343"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_153: 
   driver_id: "6"
   race_id: "33"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "153"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_534: 
   driver_id: "3"
   race_id: "81"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "534"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_107: 
   driver_id: "8"
   race_id: "17"
   created_at: 
   finish: "9"
+  qualify: "6"
   updated_at: 
   id: "107"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_391: 
   driver_id: "24"
   race_id: "60"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "391"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_344: 
   driver_id: "2"
   race_id: "53"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "344"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_154: 
   driver_id: "14"
   race_id: "33"
   created_at: 
   finish: "3"
+  qualify: "9"
   updated_at: 
   id: "154"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_535: 
   driver_id: "29"
   race_id: "81"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "535"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_108: 
   driver_id: "1"
   race_id: "17"
   created_at: 
   finish: "10"
+  qualify: "9"
   updated_at: 
   id: "108"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_392: 
   driver_id: "5"
   race_id: "60"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "392"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_345: 
   driver_id: "5"
   race_id: "53"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "345"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_155: 
   driver_id: "8"
   race_id: "33"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "155"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_536: 
   driver_id: "23"
   race_id: "81"
   created_at: 
   finish: "3"
+  qualify: "10"
   updated_at: 
   id: "536"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_109: 
   driver_id: "9"
   race_id: "18"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "109"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_393: 
   driver_id: "8"
   race_id: "60"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "393"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_346: 
   driver_id: "8"
   race_id: "53"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "346"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_156: 
   driver_id: "16"
   race_id: "33"
   created_at: 
   finish: "5"
+  qualify: "2"
   updated_at: 
   id: "156"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_537: 
   driver_id: "24"
   race_id: "81"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "537"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_394: 
   driver_id: "14"
   race_id: "60"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "394"
   dnf: "1"
+  dnq: 
   team_id: "2"
 race_entries_347: 
   driver_id: "3"
   race_id: "53"
   created_at: 
   finish: "7"
+  qualify: "2"
   updated_at: 
   id: "347"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_157: 
   driver_id: "10"
   race_id: "33"
   created_at: 
   finish: "6"
+  qualify: "5"
   updated_at: 
   id: "157"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_538: 
   driver_id: "10"
   race_id: "81"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "538"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_395: 
   driver_id: "27"
   race_id: "60"
   created_at: 
   finish: "8"
+  qualify: 
   updated_at: 
   id: "395"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_348: 
   driver_id: "9"
   race_id: "53"
   created_at: 
   finish: "8"
+  qualify: "3"
   updated_at: 
   id: "348"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_158: 
   driver_id: "11"
   race_id: "33"
   created_at: 
   finish: "7"
+  qualify: "8"
   updated_at: 
   id: "158"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_539: 
   driver_id: "28"
   race_id: "81"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "539"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_396: 
   driver_id: "3"
   race_id: "61"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "396"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_349: 
   driver_id: "3"
   race_id: "54"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "349"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_159: 
   driver_id: "9"
   race_id: "33"
   created_at: 
   finish: "8"
+  qualify: "1"
   updated_at: 
   id: "159"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_397: 
   driver_id: "8"
   race_id: "61"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "397"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_400: 
   driver_id: "24"
   race_id: "61"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "400"
   dnf: "0"
+  dnq: 
   team_id: "13"
 race_entries_210: 
   driver_id: "8"
   race_id: "39"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "210"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_020: 
   driver_id: "8"
   race_id: "8"
   created_at: 
   finish: "10"
+  qualify: "6"
   updated_at: 
   id: "20"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_398: 
   driver_id: "2"
   race_id: "61"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "398"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_401: 
   driver_id: "14"
   race_id: "61"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "401"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_211: 
   driver_id: "9"
   race_id: "39"
   created_at: 
   finish: "2"
+  qualify: "9"
   updated_at: 
   id: "211"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_021: 
   driver_id: "7"
   race_id: "9"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "21"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_399: 
   driver_id: "16"
   race_id: "61"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "399"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_402: 
   driver_id: "5"
   race_id: "61"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "402"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_212: 
   driver_id: "6"
   race_id: "39"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "212"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_022: 
   driver_id: "3"
   race_id: "9"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "22"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_450: 
   driver_id: "30"
   race_id: "70"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "450"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_403: 
   driver_id: "27"
   race_id: "61"
   created_at: 
   finish: "8"
+  qualify: 
   updated_at: 
   id: "403"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_213: 
   driver_id: "10"
   race_id: "39"
   created_at: 
   finish: "4"
+  qualify: "3"
   updated_at: 
   id: "213"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_023: 
   driver_id: "2"
   race_id: "9"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "23"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_260: 
   driver_id: "5"
   race_id: "44"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "260"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_070: 
   driver_id: "3"
   race_id: "14"
   created_at: 
   finish: "2"
+  qualify: "3"
   updated_at: 
   id: "70"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_451: 
   driver_id: "14"
   race_id: "70"
   created_at: 
   finish: "7"
+  qualify: "9"
   updated_at: 
   id: "451"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_404: 
   driver_id: "10"
   race_id: "61"
   created_at: 
   finish: "9"
+  qualify: 
   updated_at: 
   id: "404"
   dnf: "1"
+  dnq: 
   team_id: "11"
 race_entries_214: 
   driver_id: "11"
   race_id: "39"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "214"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_024: 
   driver_id: "11"
   race_id: "9"
   created_at: 
   finish: "4"
+  qualify: "10"
   updated_at: 
   id: "24"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_261: 
   driver_id: "3"
   race_id: "44"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "261"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_071: 
   driver_id: "8"
   race_id: "14"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "71"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_452: 
   driver_id: "8"
   race_id: "70"
   created_at: 
   finish: "8"
+  qualify: "4"
   updated_at: 
   id: "452"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_405: 
   driver_id: "3"
   race_id: "62"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "405"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_215: 
   driver_id: "3"
   race_id: "39"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "215"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_025: 
   driver_id: "6"
   race_id: "9"
   created_at: 
   finish: "5"
+  qualify: "7"
   updated_at: 
   id: "25"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_262: 
   driver_id: "8"
   race_id: "44"
   created_at: 
   finish: "6"
+  qualify: "4"
   updated_at: 
   id: "262"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_072: 
   driver_id: "9"
   race_id: "14"
   created_at: 
   finish: "4"
+  qualify: "4"
   updated_at: 
   id: "72"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_453: 
   driver_id: "29"
   race_id: "70"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "453"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_406: 
   driver_id: "8"
   race_id: "62"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "406"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_216: 
   driver_id: "16"
   race_id: "39"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "216"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_026: 
   driver_id: "8"
   race_id: "9"
   created_at: 
   finish: "6"
+  qualify: "2"
   updated_at: 
   id: "26"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_263: 
   driver_id: "6"
   race_id: "44"
   created_at: 
   finish: "7"
+  qualify: "8"
   updated_at: 
   id: "263"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_073: 
   driver_id: "1"
   race_id: "14"
   created_at: 
   finish: "5"
+  qualify: "8"
   updated_at: 
   id: "73"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_454: 
   driver_id: "10"
   race_id: "71"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "454"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_407: 
   driver_id: "10"
   race_id: "62"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "407"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_217: 
   driver_id: "13"
   race_id: "39"
   created_at: 
   finish: "10"
+  qualify: "10"
   updated_at: 
   id: "217"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_027: 
   driver_id: "1"
   race_id: "9"
   created_at: 
   finish: "7"
+  qualify: "8"
   updated_at: 
   id: "27"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_264: 
   driver_id: "21"
   race_id: "44"
   created_at: 
   finish: "8"
+  qualify: "10"
   updated_at: 
   id: "264"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_074: 
   driver_id: "5"
   race_id: "14"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "74"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_455: 
   driver_id: "2"
   race_id: "71"
   created_at: 
   finish: "2"
+  qualify: "5"
   updated_at: 
   id: "455"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_408: 
   driver_id: "16"
   race_id: "62"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "408"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_218: 
   driver_id: "14"
   race_id: "39"
   created_at: 
   finish: "9"
+  qualify: "4"
   updated_at: 
   id: "218"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_028: 
   driver_id: "5"
   race_id: "9"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "28"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_265: 
   driver_id: "14"
   race_id: "44"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "265"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_075: 
   driver_id: "10"
   race_id: "14"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "75"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_456: 
   driver_id: "8"
   race_id: "71"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "456"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_029: 
   driver_id: "4"
   race_id: "9"
   created_at: 
   finish: "9"
+  qualify: "9"
   updated_at: 
   id: "29"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_266: 
   driver_id: "16"
   race_id: "44"
   created_at: 
   finish: "10"
+  qualify: "9"
   updated_at: 
   id: "266"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_076: 
   driver_id: "2"
   race_id: "14"
   created_at: 
   finish: "8"
+  qualify: "5"
   updated_at: 
   id: "76"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_219: 
   driver_id: "5"
   race_id: "39"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "219"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_457: 
   driver_id: "28"
   race_id: "71"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "457"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_409: 
   driver_id: "2"
   race_id: "62"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "409"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_267: 
   driver_id: "16"
   race_id: "49"
   created_at: 
   finish: "2"
+  qualify: "4"
   updated_at: 
   id: "267"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_077: 
   driver_id: "4"
   race_id: "14"
   created_at: 
   finish: "9"
+  qualify: "10"
   updated_at: 
   id: "77"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_458: 
   driver_id: "29"
   race_id: "71"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "458"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_268: 
   driver_id: "8"
   race_id: "49"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "268"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_078: 
   driver_id: "11"
   race_id: "14"
   created_at: 
   finish: "10"
+  qualify: "9"
   updated_at: 
   id: "78"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_459: 
   driver_id: "30"
   race_id: "71"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "459"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_269: 
   driver_id: "10"
   race_id: "49"
   created_at: 
   finish: "4"
+  qualify: "1"
   updated_at: 
   id: "269"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_079: 
   driver_id: "3"
   race_id: "15"
   created_at: 
   finish: "1"
+  qualify: "8"
   updated_at: 
   id: "79"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_510: 
   driver_id: "24"
   race_id: "77"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "510"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_320: 
   driver_id: "10"
   race_id: "50"
   created_at: 
   finish: "9"
+  qualify: "3"
   updated_at: 
   id: "320"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_130: 
   driver_id: "2"
   race_id: "20"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "130"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_511: 
   driver_id: "23"
   race_id: "77"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "511"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_321: 
   driver_id: "3"
   race_id: "51"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "321"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_131: 
   driver_id: "6"
   race_id: "20"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "131"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_512: 
   driver_id: "8"
   race_id: "78"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "512"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_322: 
   driver_id: "8"
   race_id: "51"
   created_at: 
   finish: "2"
+  qualify: "1"
   updated_at: 
   id: "322"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_132: 
   driver_id: "3"
   race_id: "31"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "132"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_560: 
   driver_id: "3"
   race_id: "83"
   created_at: 
   finish: "9"
+  qualify: "4"
   updated_at: 
   id: "560"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_513: 
   driver_id: "3"
   race_id: "78"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "513"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_323: 
   driver_id: "11"
   race_id: "51"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "323"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_133: 
   driver_id: "6"
   race_id: "31"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "133"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_370: 
   driver_id: "17"
   race_id: "57"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "370"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_180: 
   driver_id: "6"
   race_id: "35"
   created_at: 
   finish: "10"
+  qualify: "1"
   updated_at: 
   id: "180"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_561: 
   driver_id: "10"
   race_id: "83"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "561"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_514: 
   driver_id: "10"
   race_id: "78"
   created_at: 
   finish: "3"
+  qualify: "1"
   updated_at: 
   id: "514"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_324: 
   driver_id: "9"
   race_id: "51"
   created_at: 
   finish: "4"
+  qualify: "10"
   updated_at: 
   id: "324"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_134: 
   driver_id: "10"
   race_id: "31"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "134"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_371: 
   driver_id: "16"
   race_id: "57"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "371"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_181: 
   driver_id: "10"
   race_id: "36"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "181"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_562: 
   driver_id: "33"
   race_id: "83"
   created_at: 
   finish: "7"
+  qualify: "1"
   updated_at: 
   id: "562"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_515: 
   driver_id: "29"
   race_id: "78"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "515"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_325: 
   driver_id: "10"
   race_id: "51"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "325"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_135: 
   driver_id: "11"
   race_id: "31"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "135"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_372: 
   driver_id: "8"
   race_id: "57"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "372"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_182: 
   driver_id: "2"
   race_id: "36"
   created_at: 
   finish: "2"
+  qualify: "9"
   updated_at: 
   id: "182"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_516: 
   driver_id: "23"
   race_id: "78"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "516"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_136: 
   driver_id: "8"
   race_id: "31"
   created_at: 
   finish: "5"
+  qualify: "1"
   updated_at: 
   id: "136"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_373: 
   driver_id: "5"
   race_id: "57"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "373"
   dnf: "1"
+  dnq: 
   team_id: "3"
 race_entries_183: 
   driver_id: "9"
   race_id: "36"
   created_at: 
   finish: "3"
+  qualify: "4"
   updated_at: 
   id: "183"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_326: 
   driver_id: "2"
   race_id: "51"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "326"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_517: 
   driver_id: "30"
   race_id: "78"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "517"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_137: 
   driver_id: "5"
   race_id: "31"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "137"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_374: 
   driver_id: "16"
   race_id: "58"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "374"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_184: 
   driver_id: "6"
   race_id: "36"
   created_at: 
   finish: "4"
+  qualify: "1"
   updated_at: 
   id: "184"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_327: 
   driver_id: "22"
   race_id: "51"
   created_at: 
   finish: "7"
+  qualify: "9"
   updated_at: 
   id: "327"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_518: 
   driver_id: "24"
   race_id: "78"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "518"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_375: 
   driver_id: "2"
   race_id: "58"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "375"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_185: 
   driver_id: "5"
   race_id: "36"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "185"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_328: 
   driver_id: "5"
   race_id: "51"
   created_at: 
   finish: "8"
+  qualify: "2"
   updated_at: 
   id: "328"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_138: 
   driver_id: "16"
   race_id: "31"
   created_at: 
   finish: "7"
+  qualify: "10"
   updated_at: 
   id: "138"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_376: 
   driver_id: "5"
   race_id: "58"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "376"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_186: 
   driver_id: "3"
   race_id: "36"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "186"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_329: 
   driver_id: "21"
   race_id: "51"
   created_at: 
   finish: "9"
+  qualify: "5"
   updated_at: 
   id: "329"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_139: 
   driver_id: "2"
   race_id: "31"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "139"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_519: 
   driver_id: "29"
   race_id: "79"
   created_at: 
   finish: "1"
+  qualify: "5"
   updated_at: 
   id: "519"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_377: 
   driver_id: "27"
   race_id: "58"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "377"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_187: 
   driver_id: "16"
   race_id: "36"
   created_at: 
   finish: "7"
+  qualify: "8"
   updated_at: 
   id: "187"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_378: 
   driver_id: "9"
   race_id: "58"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "378"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_188: 
   driver_id: "14"
   race_id: "36"
   created_at: 
   finish: "8"
+  qualify: "10"
   updated_at: 
   id: "188"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_001: 
   driver_id: "1"
   race_id: "1"
   created_at: 
   finish: "1"
+  qualify: "4"
   updated_at: 
   id: "1"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_379: 
   driver_id: "8"
   race_id: "58"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "379"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_189: 
   driver_id: "11"
   race_id: "36"
   created_at: 
   finish: "9"
+  qualify: "7"
   updated_at: 
   id: "189"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_002: 
   driver_id: "2"
   race_id: "1"
   created_at: 
   finish: "3"
+  qualify: "3"
   updated_at: 
   id: "2"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_430: 
   driver_id: "10"
   race_id: "65"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "430"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_240: 
   driver_id: "5"
   race_id: "42"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "240"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_050: 
   driver_id: "5"
   race_id: "11"
   created_at: 
   finish: "10"
+  qualify: "10"
   updated_at: 
   id: "50"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_003: 
   driver_id: "5"
   race_id: "1"
   created_at: 
   finish: "2"
+  qualify: "8"
   updated_at: 
   id: "3"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_431: 
   driver_id: "3"
   race_id: "65"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "431"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_241: 
   driver_id: "3"
   race_id: "42"
   created_at: 
   finish: "3"
+  qualify: "3"
   updated_at: 
   id: "241"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_051: 
   driver_id: "2"
   race_id: "12"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "51"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_004: 
   driver_id: "7"
   race_id: "1"
   created_at: 
   finish: "4"
+  qualify: "10"
   updated_at: 
   id: "4"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_432: 
   driver_id: "16"
   race_id: "65"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "432"
   dnf: "1"
+  dnq: 
   team_id: "3"
 race_entries_242: 
   driver_id: "11"
   race_id: "42"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "242"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_052: 
   driver_id: "5"
   race_id: "12"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "52"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_005: 
   driver_id: "4"
   race_id: "1"
   created_at: 
   finish: "5"
+  qualify: "5"
   updated_at: 
   id: "5"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_480: 
   driver_id: "23"
   race_id: "74"
   created_at: 
   finish: "4"
+  qualify: "7"
   updated_at: 
   id: "480"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_433: 
   driver_id: "8"
   race_id: "65"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "433"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_243: 
   driver_id: "10"
   race_id: "42"
   created_at: 
   finish: "5"
+  qualify: "5"
   updated_at: 
   id: "243"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_053: 
   driver_id: "6"
   race_id: "12"
   created_at: 
   finish: "4"
+  qualify: "5"
   updated_at: 
   id: "53"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_006: 
   driver_id: "8"
   race_id: "1"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "6"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_290: 
   driver_id: "16"
   race_id: "46"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "290"
   dnf: "1"
+  dnq: "0"
   team_id: "11"
 race_entries_481: 
   driver_id: "5"
   race_id: "74"
   created_at: 
   finish: "5"
+  qualify: "1"
   updated_at: 
   id: "481"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_434: 
   driver_id: "16"
   race_id: "66"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "434"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_244: 
   driver_id: "8"
   race_id: "42"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "244"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_054: 
   driver_id: "10"
   race_id: "12"
   created_at: 
   finish: "3"
+  qualify: "4"
   updated_at: 
   id: "54"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_007: 
   driver_id: "3"
   race_id: "1"
   created_at: 
   finish: "7"
+  qualify: "9"
   updated_at: 
   id: "7"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_291: 
   driver_id: "9"
   race_id: "46"
   created_at: 
   finish: "8"
+  qualify: "3"
   updated_at: 
   id: "291"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_482: 
   driver_id: "30"
   race_id: "74"
   created_at: 
   finish: "6"
+  qualify: "4"
   updated_at: 
   id: "482"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_435: 
   driver_id: "10"
   race_id: "66"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "435"
   dnf: "1"
+  dnq: 
   team_id: "11"
 race_entries_055: 
   driver_id: "3"
   race_id: "12"
   created_at: 
   finish: "5"
+  qualify: "2"
   updated_at: 
   id: "55"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_008: 
   driver_id: "11"
   race_id: "1"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "8"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_292: 
   driver_id: "2"
   race_id: "46"
   created_at: 
   finish: "9"
+  qualify: "8"
   updated_at: 
   id: "292"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_245: 
   driver_id: "16"
   race_id: "42"
   created_at: 
   finish: "7"
+  qualify: "8"
   updated_at: 
   id: "245"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_483: 
   driver_id: "24"
   race_id: "74"
   created_at: 
   finish: "7"
+  qualify: "6"
   updated_at: 
   id: "483"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_436: 
   driver_id: "3"
   race_id: "66"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "436"
   dnf: "1"
+  dnq: 
   team_id: "2"
 race_entries_056: 
   driver_id: "8"
   race_id: "12"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "56"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_009: 
   driver_id: "10"
   race_id: "1"
   created_at: 
   finish: "9"
+  qualify: "2"
   updated_at: 
   id: "9"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_293: 
   driver_id: "8"
   race_id: "48"
   created_at: 
   finish: "1"
+  qualify: "7"
   updated_at: 
   id: "293"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_246: 
   driver_id: "9"
   race_id: "42"
   created_at: 
   finish: "8"
+  qualify: "4"
   updated_at: 
   id: "246"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_484: 
   driver_id: "29"
   race_id: "74"
   created_at: 
   finish: "8"
+  qualify: "3"
   updated_at: 
   id: "484"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_437: 
   driver_id: "2"
   race_id: "66"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "437"
   dnf: "1"
+  dnq: 
   team_id: "11"
 race_entries_294: 
   driver_id: "5"
   race_id: "48"
   created_at: 
   finish: "2"
+  qualify: "8"
   updated_at: 
   id: "294"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_247: 
   driver_id: "16"
   race_id: "43"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "247"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_057: 
   driver_id: "7"
   race_id: "12"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "57"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_485: 
   driver_id: "10"
   race_id: "75"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "485"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_438: 
   driver_id: "17"
   race_id: "66"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "438"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_295: 
   driver_id: "10"
   race_id: "48"
   created_at: 
   finish: "3"
+  qualify: "6"
   updated_at: 
   id: "295"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_248: 
   driver_id: "5"
   race_id: "43"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "248"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_058: 
   driver_id: "11"
   race_id: "12"
   created_at: 
   finish: "8"
+  qualify: "7"
   updated_at: 
   id: "58"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_486: 
   driver_id: "30"
   race_id: "75"
   created_at: 
   finish: "2"
+  qualify: "9"
   updated_at: 
   id: "486"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_439: 
   driver_id: "2"
   race_id: "67"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "439"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_296: 
   driver_id: "2"
   race_id: "48"
   created_at: 
   finish: "4"
+  qualify: "3"
   updated_at: 
   id: "296"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_249: 
   driver_id: "8"
   race_id: "43"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "249"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_059: 
   driver_id: "1"
   race_id: "12"
   created_at: 
   finish: "9"
+  qualify: "9"
   updated_at: 
   id: "59"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_487: 
   driver_id: "2"
   race_id: "75"
   created_at: 
   finish: "3"
+  qualify: "2"
   updated_at: 
   id: "487"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_297: 
   driver_id: "21"
   race_id: "48"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "297"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_488: 
   driver_id: "23"
   race_id: "75"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "488"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_300: 
   driver_id: "9"
   race_id: "48"
   created_at: 
   finish: "8"
+  qualify: "1"
   updated_at: 
   id: "300"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_110: 
   driver_id: "7"
   race_id: "18"
   created_at: 
   finish: "2"
+  qualify: "1"
   updated_at: 
   id: "110"
   dnf: "0"
+  dnq: "0"
   team_id: "1"
 race_entries_298: 
   driver_id: "3"
   race_id: "48"
   created_at: 
   finish: "6"
+  qualify: "4"
   updated_at: 
   id: "298"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_489: 
   driver_id: "29"
   race_id: "75"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "489"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_301: 
   driver_id: "22"
   race_id: "48"
   created_at: 
   finish: "9"
+  qualify: "2"
   updated_at: 
   id: "301"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_111: 
   driver_id: "11"
   race_id: "18"
   created_at: 
   finish: "3"
+  qualify: "4"
   updated_at: 
   id: "111"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_299: 
   driver_id: "16"
   race_id: "48"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "299"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_302: 
   driver_id: "5"
   race_id: "47"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "302"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_112: 
   driver_id: "2"
   race_id: "18"
   created_at: 
   finish: "4"
+  qualify: "8"
   updated_at: 
   id: "112"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_540: 
   driver_id: "30"
   race_id: "81"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "540"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_350: 
   driver_id: "2"
   race_id: "54"
   created_at: 
   finish: "2"
+  qualify: "10"
   updated_at: 
   id: "350"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_160: 
   driver_id: "3"
   race_id: "33"
   created_at: 
   finish: "9"
+  qualify: "6"
   updated_at: 
   id: "160"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_303: 
   driver_id: "10"
   race_id: "47"
   created_at: 
   finish: "2"
+  qualify: "7"
   updated_at: 
   id: "303"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_113: 
   driver_id: "10"
   race_id: "18"
   created_at: 
   finish: "5"
+  qualify: "6"
   updated_at: 
   id: "113"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_541: 
   driver_id: "2"
   race_id: "81"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "541"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_351: 
   driver_id: "8"
   race_id: "54"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "351"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_161: 
   driver_id: "16"
   race_id: "34"
   created_at: 
   finish: "1"
+  qualify: "10"
   updated_at: 
   id: "161"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_304: 
   driver_id: "14"
   race_id: "47"
   created_at: 
   finish: "3"
+  qualify: "10"
   updated_at: 
   id: "304"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_114: 
   driver_id: "8"
   race_id: "18"
   created_at: 
   finish: "6"
+  qualify: "5"
   updated_at: 
   id: "114"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_542: 
   driver_id: "5"
   race_id: "81"
   created_at: 
   finish: "9"
+  qualify: "3"
   updated_at: 
   id: "542"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_162: 
   driver_id: "11"
   race_id: "34"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "162"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_305: 
   driver_id: "3"
   race_id: "47"
   created_at: 
   finish: "4"
+  qualify: "8"
   updated_at: 
   id: "305"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_115: 
   driver_id: "3"
   race_id: "18"
   created_at: 
   finish: "7"
+  qualify: "9"
   updated_at: 
   id: "115"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_352: 
   driver_id: "5"
   race_id: "54"
   created_at: 
   finish: "4"
+  qualify: "2"
   updated_at: 
   id: "352"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_543: 
   driver_id: "8"
   race_id: "81"
   created_at: 
   finish: "10"
+  qualify: "8"
   updated_at: 
   id: "543"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_163: 
   driver_id: "2"
   race_id: "34"
   created_at: 
   finish: "3"
+  qualify: "7"
   updated_at: 
   id: "163"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_306: 
   driver_id: "22"
   race_id: "47"
   created_at: 
   finish: "5"
+  qualify: "9"
   updated_at: 
   id: "306"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_116: 
   driver_id: "5"
   race_id: "18"
   created_at: 
   finish: "8"
+  qualify: "10"
   updated_at: 
   id: "116"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_353: 
   driver_id: "22"
   race_id: "54"
   created_at: 
   finish: "5"
+  qualify: "8"
   updated_at: 
   id: "353"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_544: 
   driver_id: "30"
   race_id: "82"
   created_at: 
   finish: "1"
+  qualify: "2"
   updated_at: 
   id: "544"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_307: 
   driver_id: "8"
   race_id: "47"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "307"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_117: 
   driver_id: "6"
   race_id: "18"
   created_at: 
   finish: "9"
+  qualify: "2"
   updated_at: 
   id: "117"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_354: 
   driver_id: "10"
   race_id: "54"
   created_at: 
   finish: "6"
+  qualify: "7"
   updated_at: 
   id: "354"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_164: 
   driver_id: "6"
   race_id: "34"
   created_at: 
   finish: "4"
+  qualify: "2"
   updated_at: 
   id: "164"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_545: 
   driver_id: "31"
   race_id: "82"
   created_at: 
   finish: "2"
+  qualify: "4"
   updated_at: 
   id: "545"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_308: 
   driver_id: "9"
   race_id: "47"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "308"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_118: 
   driver_id: "1"
   race_id: "18"
   created_at: 
   finish: "10"
+  qualify: "7"
   updated_at: 
   id: "118"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_355: 
   driver_id: "11"
   race_id: "54"
   created_at: 
   finish: "7"
+  qualify: "4"
   updated_at: 
   id: "355"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_165: 
   driver_id: "5"
   race_id: "34"
   created_at: 
   finish: "5"
+  qualify: "4"
   updated_at: 
   id: "165"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_546: 
   driver_id: "3"
   race_id: "82"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "546"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_309: 
   driver_id: "16"
   race_id: "47"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "309"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_119: 
   driver_id: "10"
   race_id: "19"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "119"
   dnf: "0"
+  dnq: 
   team_id: "5"
 race_entries_356: 
   driver_id: "16"
   race_id: "54"
   created_at: 
   finish: "8"
+  qualify: "6"
   updated_at: 
   id: "356"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_166: 
   driver_id: "9"
   race_id: "34"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "166"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_547: 
   driver_id: "10"
   race_id: "82"
   created_at: 
   finish: "4"
+  qualify: "8"
   updated_at: 
   id: "547"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_357: 
   driver_id: "21"
   race_id: "54"
   created_at: 
   finish: "9"
+  qualify: "9"
   updated_at: 
   id: "357"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_167: 
   driver_id: "8"
   race_id: "34"
   created_at: 
   finish: "7"
+  qualify: "9"
   updated_at: 
   id: "167"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_548: 
   driver_id: "32"
   race_id: "82"
   created_at: 
   finish: "5"
+  qualify: "10"
   updated_at: 
   id: "548"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_358: 
   driver_id: "9"
   race_id: "54"
   created_at: 
   finish: "10"
+  qualify: "1"
   updated_at: 
   id: "358"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_168: 
   driver_id: "10"
   race_id: "34"
   created_at: 
   finish: "8"
+  qualify: "5"
   updated_at: 
   id: "168"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
 race_entries_549: 
   driver_id: "8"
   race_id: "82"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "549"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_359: 
   driver_id: "5"
   race_id: "56"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "359"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_169: 
   driver_id: "3"
   race_id: "34"
   created_at: 
   finish: "9"
+  qualify: "1"
   updated_at: 
   id: "169"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_410: 
   driver_id: "25"
   race_id: "62"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "410"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_220: 
   driver_id: "6"
   race_id: "40"
   created_at: 
   finish: "1"
+  qualify: "1"
   updated_at: 
   id: "220"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_030: 
   driver_id: "10"
   race_id: "9"
   created_at: 
   finish: "10"
+  qualify: "4"
   updated_at: 
   id: "30"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_411: 
   driver_id: "24"
   race_id: "62"
   created_at: 
   finish: "7"
+  qualify: 
   updated_at: 
   id: "411"
   dnf: "1"
+  dnq: 
   team_id: "2"
 race_entries_221: 
   driver_id: "2"
   race_id: "40"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "221"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_031: 
   driver_id: "2"
   race_id: "10"
   created_at: 
   finish: "1"
+  qualify: "3"
   updated_at: 
   id: "31"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_412: 
   driver_id: "9"
   race_id: "62"
   created_at: 
   finish: "8"
+  qualify: 
   updated_at: 
   id: "412"
   dnf: "1"
+  dnq: 
   team_id: "4"
 race_entries_222: 
   driver_id: "3"
   race_id: "40"
   created_at: 
   finish: "3"
+  qualify: "8"
   updated_at: 
   id: "222"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_032: 
   driver_id: "7"
   race_id: "10"
   created_at: 
   finish: "2"
+  qualify: "2"
   updated_at: 
   id: "32"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_460: 
   driver_id: "3"
   race_id: "71"
   created_at: 
   finish: "7"
+  qualify: "3"
   updated_at: 
   id: "460"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_413: 
   driver_id: "3"
   race_id: "63"
   created_at: 
   finish: "1"
+  qualify: 
   updated_at: 
   id: "413"
   dnf: "0"
+  dnq: 
   team_id: "2"
 race_entries_270: 
   driver_id: "21"
   race_id: "49"
   created_at: 
   finish: "5"
+  qualify: "3"
   updated_at: 
   id: "270"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_080: 
   driver_id: "11"
   race_id: "15"
   created_at: 
   finish: "2"
+  qualify: "6"
   updated_at: 
   id: "80"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_223: 
   driver_id: "8"
   race_id: "40"
   created_at: 
   finish: "4"
+  qualify: "4"
   updated_at: 
   id: "223"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_033: 
   driver_id: "3"
   race_id: "10"
   created_at: 
   finish: "3"
+  qualify: "5"
   updated_at: 
   id: "33"
   dnf: "0"
+  dnq: "0"
   team_id: "2"
 race_entries_461: 
   driver_id: "10"
   race_id: "72"
   created_at: 
   finish: "1"
+  qualify: "7"
   updated_at: 
   id: "461"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_414: 
   driver_id: "24"
   race_id: "63"
   created_at: 
   finish: "2"
+  qualify: 
   updated_at: 
   id: "414"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_081: 
   driver_id: "8"
   race_id: "15"
   created_at: 
   finish: "3"
+  qualify: "7"
   updated_at: 
   id: "81"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_224: 
   driver_id: "11"
   race_id: "40"
   created_at: 
   finish: "5"
+  qualify: "5"
   updated_at: 
   id: "224"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_034: 
   driver_id: "8"
   race_id: "10"
   created_at: 
   finish: "4"
+  qualify: "6"
   updated_at: 
   id: "34"
   dnf: "0"
+  dnq: "0"
   team_id: "4"
 race_entries_271: 
   driver_id: "22"
   race_id: "49"
   created_at: 
   finish: "6"
+  qualify: "8"
   updated_at: 
   id: "271"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_462: 
   driver_id: "5"
   race_id: "72"
   created_at: 
   finish: "2"
+  qualify: "1"
   updated_at: 
   id: "462"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_415: 
   driver_id: "10"
   race_id: "63"
   created_at: 
   finish: "3"
+  qualify: 
   updated_at: 
   id: "415"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_082: 
   driver_id: "10"
   race_id: "15"
   created_at: 
   finish: "4"
+  qualify: "3"
   updated_at: 
   id: "82"
   dnf: "1"
+  dnq: "0"
   team_id: "5"
 race_entries_225: 
   driver_id: "5"
   race_id: "40"
   created_at: 
   finish: "6"
+  qualify: "3"
   updated_at: 
   id: "225"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_035: 
   driver_id: "6"
   race_id: "10"
   created_at: 
   finish: "5"
+  qualify: "1"
   updated_at: 
   id: "35"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_272: 
   driver_id: "2"
   race_id: "49"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "272"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_463: 
   driver_id: "24"
   race_id: "72"
   created_at: 
   finish: "3"
+  qualify: "3"
   updated_at: 
   id: "463"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_416: 
   driver_id: "2"
   race_id: "63"
   created_at: 
   finish: "4"
+  qualify: 
   updated_at: 
   id: "416"
   dnf: "0"
+  dnq: 
   team_id: "11"
 race_entries_226: 
   driver_id: "10"
   race_id: "40"
   created_at: 
   finish: "7"
+  qualify: "7"
   updated_at: 
   id: "226"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_036: 
   driver_id: "5"
   race_id: "10"
   created_at: 
   finish: "6"
+  qualify: "9"
   updated_at: 
   id: "36"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_273: 
   driver_id: "9"
   race_id: "49"
   created_at: 
   finish: "8"
+  qualify: "7"
   updated_at: 
   id: "273"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_083: 
   driver_id: "13"
   race_id: "15"
   created_at: 
   finish: "5"
+  qualify: "10"
   updated_at: 
   id: "83"
   dnf: "1"
+  dnq: "0"
   team_id: "1"
 race_entries_464: 
   driver_id: "2"
   race_id: "72"
   created_at: 
   finish: "4"
+  qualify: "4"
   updated_at: 
   id: "464"
   dnf: "0"
+  dnq: "0"
   team_id: "12"
 race_entries_417: 
   driver_id: "27"
   race_id: "63"
   created_at: 
   finish: "5"
+  qualify: 
   updated_at: 
   id: "417"
   dnf: "0"
+  dnq: 
   team_id: "3"
 race_entries_227: 
   driver_id: "16"
   race_id: "40"
   created_at: 
   finish: "8"
+  qualify: "9"
   updated_at: 
   id: "227"
   dnf: "0"
+  dnq: "0"
   team_id: "10"
 race_entries_037: 
   driver_id: "10"
   race_id: "10"
   created_at: 
   finish: "7"
+  qualify: "4"
   updated_at: 
   id: "37"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_274: 
   driver_id: "5"
   race_id: "49"
   created_at: 
   finish: "1"
+  qualify: "6"
   updated_at: 
   id: "274"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_084: 
   driver_id: "2"
   race_id: "15"
   created_at: 
   finish: "6"
+  qualify: "1"
   updated_at: 
   id: "84"
   dnf: "1"
+  dnq: "0"
   team_id: "2"
 race_entries_465: 
   driver_id: "23"
   race_id: "72"
   created_at: 
   finish: "5"
+  qualify: "8"
   updated_at: 
   id: "465"
   dnf: "0"
+  dnq: "0"
   team_id: "3"
 race_entries_418: 
   driver_id: "8"
   race_id: "63"
   created_at: 
   finish: "6"
+  qualify: 
   updated_at: 
   id: "418"
   dnf: "0"
+  dnq: 
   team_id: "4"
 race_entries_228: 
   driver_id: "14"
   race_id: "40"
   created_at: 
   finish: "9"
+  qualify: "6"
   updated_at: 
   id: "228"
   dnf: "1"
+  dnq: "0"
   team_id: "4"
 race_entries_038: 
   driver_id: "11"
   race_id: "10"
   created_at: 
   finish: "8"
+  qualify: "8"
   updated_at: 
   id: "38"
   dnf: "0"
+  dnq: "0"
   team_id: "5"
 race_entries_275: 
   driver_id: "16"
   race_id: "45"
   created_at: 
   finish: "1"
+  qualify: "6"
   updated_at: 
   id: "275"
   dnf: "0"
+  dnq: "0"
   team_id: "11"
 race_entries_085: 
   driver_id: "6"
   race_id: "15"
   created_at: 
   finish: "7"
+  qualify: "5"
   updated_at: 
   id: "85"
   dnf: "1"
+  dnq: "0"
   team_id: "3"
