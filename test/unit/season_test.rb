@@ -12,4 +12,8 @@ class SeasonTest < ActiveSupport::TestCase
     assert_equal 12, results.length
     assert_equal drivers(:schumacher), results[0].driver
   end
+  test "2002 season uses 10-6-4-3-2-1 scheme" do
+    season = Season.where(:name =>"2002").first
+    assert_equal "10-6-4-3-2-1", season.scoring_scheme.name
+  end
 end

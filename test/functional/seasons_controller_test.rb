@@ -66,7 +66,20 @@ class SeasonsControllerTest < ActionController::TestCase
       end
     end
   end
-
+  
+  test "2008 season should use 9-6-4-3-2-1" do
+    season2008 = seasons(:seasons_005)
+    get :results, :id => season2008.to_param
+    assert_response :success
+    assert_select "h1", /2008/
+    
+    assert_select "table#driver_points_standings" do
+      assert_select "tr:nth-of-type(2)" do
+        assert_select "td:nth-of-type(4)", "60"
+      end
+    end
+  end
+  
   test "should get edit" do
     get :edit, :id => @season.to_param
     assert_response :success

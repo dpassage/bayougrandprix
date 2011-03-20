@@ -8,15 +8,7 @@ class SeasonEntry < ActiveRecord::Base
     self.season.races.each do |race|
       RaceEntry.where(:race_id => race, :driver_id => self.driver).each do |re|
         if !re.dnf
-          new_points = case re.finish
-            when 1: 10
-            when 2: 6
-            when 3: 4
-            when 4: 3
-            when 5: 2
-            when 6: 1
-            else 0
-          end
+          new_points = season.scoring_scheme.points_for_finishing(re.finish)
         else
           new_points = 0
         end
