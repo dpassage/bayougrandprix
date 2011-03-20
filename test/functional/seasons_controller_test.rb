@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SeasonsControllerTest < ActionController::TestCase
   setup do
-    @season = seasons(:seasons_001)
+    @season = seasons(:season_2002)
   end
 
   test "should get index" do

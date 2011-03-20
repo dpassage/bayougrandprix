@@ -8,7 +8,6 @@ class Season < ActiveRecord::Base
 
   class DriverEntry
     attr_accessor :driver
-    attr_accessor :defaultteam
     attr_accessor :points
   end
   
@@ -29,7 +28,6 @@ class Season < ActiveRecord::Base
     driver_hash.keys.each do |d|
       de = DriverEntry.new
       de.driver = d
-      de.defaultteam = self.season_entries.where(:driver_id => d.id).first.defaultteam
       de.points = driver_hash[d]
       results.push(de)
     end

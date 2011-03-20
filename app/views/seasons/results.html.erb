@@ -44,7 +44,7 @@
     <tr>
       <td><%= place + 1 %></td>
       <td><%= de.driver.name %></td>
-      <td><%= de.defaultteam.name %></td>
+      <td><%= de.driver.default_team_for_season(@season).name %></td>
       <td><%= de.points %></td>
     </tr>
   <% end %>
