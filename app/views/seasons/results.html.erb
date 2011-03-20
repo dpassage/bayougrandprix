@@ -49,3 +49,20 @@
     </tr>
   <% end %>
 </table>
+
+<h3>Constructor's Championship</h3>
+<table id="team_points_standings">
+  <tr>
+    <th>Place</th>
+    <th>Team</th>
+    <th>Points</th>
+  </tr>
+  <% entries = @season.teams_by_points
+     entries.each_with_index do |team_entry, place| %>
+    <tr>
+      <td><%= place + 1 %></td>
+      <td><%= team_entry.team.name %></td>
+      <td><%= team_entry.points %></td>
+    </tr>
+  <% end %>    
+</table>

@@ -27,7 +27,7 @@ teams_003:
   updated_at: 
   color: "#FF0000"
   id: "3"
-teams_004: 
+mclaren: 
   name: McLaren
   created_at: 
   fake: "0"

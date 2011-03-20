@@ -16,4 +16,11 @@ class SeasonTest < ActiveSupport::TestCase
     season = Season.where(:name =>"2002").first
     assert_equal "10-6-4-3-2-1", season.scoring_scheme.name
   end
+  test "teams_by_points is an array of team entries sorted by points scored" do
+    season = seasons(:seasons_001)
+    results = season.teams_by_points
+    assert_equal 5, results.length
+    assert_equal teams(:mclaren), results[0].team
+    assert_equal 85, results[0].points
+  end
 end

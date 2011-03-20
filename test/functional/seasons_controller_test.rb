@@ -65,6 +65,14 @@ class SeasonsControllerTest < ActionController::TestCase
         assert_select "td:nth-of-type(4)", "47"
       end
     end
+    
+    # team points standings
+    assert_select "table#team_points_standings" do
+      assert_select "tr:nth-of-type(2)" do
+        assert_select "td:nth-of-type(2)", "McLaren"
+        assert_select "td:nth-of-type(3)", "85"
+      end
+    end
   end
   
   test "2008 season should use 9-6-4-3-2-1" do
