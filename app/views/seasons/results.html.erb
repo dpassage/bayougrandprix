@@ -40,12 +40,12 @@
     <th>Team</th>
     <th>Points</th>
   </tr>
-  <%  @season.entries_by_points.each_with_index do |se, place| %>
+  <%  @season.drivers_by_points.each_with_index do |de, place| %>
     <tr>
       <td><%= place + 1 %></td>
-      <td><%= se.driver.name %></td>
-      <td><%= se.defaultteam.name %></td>
-      <td><%= se.total_points %></td>
+      <td><%= de.driver.name %></td>
+      <td><%= de.defaultteam.name %></td>
+      <td><%= de.points %></td>
     </tr>
   <% end %>
 </table>

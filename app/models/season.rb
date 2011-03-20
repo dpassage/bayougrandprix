@@ -5,9 +5,36 @@ class Season < ActiveRecord::Base
   def to_param
     name
   end
-  def entries_by_points
-    self.season_entries.sort_by { |e| -(e.total_points) }
-                                # reversing order of e1, e2 forces descending order
+
+  class DriverEntry
+    attr_accessor :driver
+    attr_accessor :defaultteam
+    attr_accessor :points
+  end
+  
+  def drivers_by_points
+    driver_hash = {}
+    self.races.each do |r|
+      r.race_entries.each do |re|
+        cur = driver_hash[re.driver]
+        if cur == nil
+          driver_hash[re.driver] = re.finish_points
+        else
+          driver_hash[re.driver] = cur + re.finish_points
+        end
+      end
+    end
+    
+    results = []
+    driver_hash.keys.each do |d|
+      de = DriverEntry.new
+      de.driver = d
+      de.defaultteam = self.season_entries.where(:driver_id => d.id).first.defaultteam
+      de.points = driver_hash[d]
+      results.push(de)
+    end
+    
+    results.sort_by { |de| -(de.points) }
   end
   
   class TeamEntry

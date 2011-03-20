@@ -6,11 +6,13 @@ class SeasonTest < ActiveSupport::TestCase
     season = seasons(:seasons_001)
     assert_equal season.to_param, season.name
   end
-  test "entries_by_points is array of season_entries sorted by points scored" do
+  test "drivers_by_points is array of driver entries sorted by points scored" do
     season = seasons(:seasons_001)
-    results = season.entries_by_points
+    results = season.drivers_by_points
     assert_equal 12, results.length
     assert_equal drivers(:schumacher), results[0].driver
+    assert_equal 47, results[0].points
+    assert_equal teams(:ferrari), results[0].defaultteam
   end
   test "2002 season uses 10-6-4-3-2-1 scheme" do
     season = Season.where(:name =>"2002").first
