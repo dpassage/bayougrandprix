@@ -6,8 +6,8 @@ class Season < ActiveRecord::Base
     name
   end
 
-  class DriverEntry
-    attr_accessor :driver
+  class TableEntry
+    attr_accessor :entrant
     attr_accessor :points
   end
   
@@ -26,8 +26,8 @@ class Season < ActiveRecord::Base
     
     results = []
     driver_hash.keys.each do |d|
-      de = DriverEntry.new
-      de.driver = d
+      de = TableEntry.new
+      de.entrant = d
       de.points = driver_hash[d]
       results.push(de)
     end
@@ -35,10 +35,6 @@ class Season < ActiveRecord::Base
     results.sort_by { |de| -(de.points) }
   end
   
-  class TeamEntry
-    attr_accessor :team
-    attr_accessor :points
-  end
   def teams_by_points
     team_hash = {}
     self.races.each do |r|
@@ -54,8 +50,8 @@ class Season < ActiveRecord::Base
     
     results = []
     team_hash.keys.each do |t|
-      te = TeamEntry.new
-      te.team = t
+      te = TableEntry.new
+      te.entrant = t
       te.points = team_hash[t]
       results.push(te)
     end

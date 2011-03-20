@@ -10,7 +10,7 @@ class SeasonTest < ActiveSupport::TestCase
     season = seasons(:season_2002)
     results = season.drivers_by_points
     assert_equal 12, results.length
-    assert_equal drivers(:schumacher), results[0].driver
+    assert_equal drivers(:schumacher), results[0].entrant
     assert_equal 47, results[0].points
   end
   test "2002 season uses 10-6-4-3-2-1 scheme" do
@@ -21,7 +21,7 @@ class SeasonTest < ActiveSupport::TestCase
     season = seasons(:season_2002)
     results = season.teams_by_points
     assert_equal 5, results.length
-    assert_equal teams(:mclaren), results[0].team
+    assert_equal teams(:mclaren), results[0].entrant
     assert_equal 85, results[0].points
   end
 end
