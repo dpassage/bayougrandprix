@@ -41,12 +41,7 @@
     <th>Points</th>
   </tr>
   <%  @drivers_by_points.each_with_index do |de, place| %>
-    <tr bgcolor="<%= de.entrant.default_team_for_season(@season).color %>">
-      <td><%= place + 1 %></td>
-      <td><%= de.entrant.name %></td>
-      <td><%= de.entrant.default_team_for_season(@season).name %></td>
-      <td><%= de.points %></td>
-    </tr>
+    <%= render :partial => "driver_result_points", :locals => { :de => de, :place => place } %>
   <% end %>
 </table>
 
@@ -75,12 +70,7 @@
     <th>Points</th>
   </tr>
   <%  @drivers_by_qualifying_points.each_with_index do |de, place| %>
-    <tr bgcolor="<%= de.entrant.default_team_for_season(@season).color %>">
-      <td><%= place + 1 %></td>
-      <td><%= de.entrant.name %></td>
-      <td><%= de.entrant.default_team_for_season(@season).name %></td>
-      <td><%= de.points %></td>
-    </tr>
+    <%= render :partial => "driver_result_points", :locals => { :de => de, :place => place } %>
   <% end %>
 </table>
 
