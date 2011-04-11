@@ -2,8 +2,8 @@ class RacesController < ApplicationController
   # GET /races
   # GET /races.xml
   def index
-    @races = Race.all
     @season = Season.where(:name => params[:season_id]).first
+    @races = @season.races.order("date")
 
     respond_to do |format|
       format.html # index.html.erb

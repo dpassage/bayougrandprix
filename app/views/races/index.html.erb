@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Date</th>
+    <th>Track</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +11,8 @@
 
 <% @races.each do |race| %>
   <tr>
+    <td><%= race.date %></td>
+    <td><%= race.track.name %></td>
     <td><%= link_to 'Show', season_race_path(@season, race) %></td>
     <td><%= link_to 'Edit', edit_season_race_path(@season, race) %></td>
     <td><%= link_to 'Destroy', season_race_path(@season, race), :confirm => 'Are you sure?', :method => :delete %></td>
