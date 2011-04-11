@@ -517,3 +517,19 @@ races_063:
   date: "2008-10-22"
   id: "72"
   track_id: "1"
+race_2011_monaco:
+  season_id: "8"
+  date: "2011-06-06"
+  id: "100"
+  track_id: "1"
+race_test_monaco:
+  season_id: "100"
+  date: "2012-06-06"
+  id: "1000"
+  track_id: "1"
+race_test_daytona:
+  season_id: "100"
+  date: "2012-07-04"
+  id: "1001"
+  track_id: "30"
+  

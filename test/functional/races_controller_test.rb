@@ -1,9 +1,11 @@
 require 'test_helper'
 
 class RacesControllerTest < ActionController::TestCase
+  fixtures :all
+  
   setup do
-    @race = races(:races_001)
-    @season = seasons(:season_2011)
+    @race = races(:race_test_monaco)
+    @season = seasons(:season_test)
   end
 
   test "should get index" do
@@ -40,11 +42,25 @@ class RacesControllerTest < ActionController::TestCase
     assert_redirected_to season_race_path(assigns(:season), assigns(:race))
   end
 
-  test "should destroy race" do
+  test "should remove race" do
     assert_difference('Race.count', -1) do
       delete :destroy, :season_id => @season.to_param, :id => @race.to_param
     end
 
+    assert_redirected_to season_races_path(assigns(:season))
+  end
+  
+  test "cant remove a race from the wrong season" do
+    assert_difference('Race.count', 0) do
+      delete :destroy, :season_id => @season.to_param, :id => races(:races_001).to_param
+    end
+    assert_redirected_to season_races_path(assigns(:season))
+  end
+  
+  test "cant remove a race with entrants" do
+    assert_difference('Race.count', 0) do
+      delete :destroy, :season_id => @season.to_param, :id => races(:race_test_daytona).to_param
+    end
     assert_redirected_to season_races_path(assigns(:season))
   end
 end

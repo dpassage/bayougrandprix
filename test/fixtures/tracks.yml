@@ -1,5 +1,5 @@
 --- 
-tracks_030: 
+daytona: 
   name: Daytona Beach
   created_at: 
   country: Florida
@@ -41,7 +41,7 @@ tracks_019:
   country: Japan
   updated_at: 
   id: "19"
-tracks_008: 
+monza: 
   name: Monza
   created_at: 
   country: Italy

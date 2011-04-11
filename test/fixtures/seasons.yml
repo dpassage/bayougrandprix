@@ -41,3 +41,10 @@ season_2011:
   updated_at: 
   id: "8"
   scoring_scheme_id: "3"
+season_test:
+  name: "2012"
+  created_at: 
+  updated_at: 
+  id: "100"
+  scoring_scheme_id: "3"
+

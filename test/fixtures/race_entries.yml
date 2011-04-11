@@ -1,4 +1,8 @@
 --- 
+race_entry_test_daytona_mika:
+  driver: mika
+  race_id: "1001"
+  team: mclaren
 race_entries_466: 
   driver_id: "28"
   race_id: "72"

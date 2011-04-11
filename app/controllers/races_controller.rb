@@ -80,8 +80,16 @@ class RacesController < ApplicationController
   def destroy
     @season = Season.where(:name => params[:season_id]).first
     @race = Race.find(params[:id])
-    @race.destroy
 
+    if @race.season != @season
+      notice = "Error: race with id #{@race.id} not part of season #{@season.name}"
+    elsif @race.race_entries.count != 0
+      notice = "Error: race with id #{@race.id} has entrants"
+    else
+      @race.destroy
+      notice = 'Race was removed'
+    end
+    
     respond_to do |format|
       format.html { redirect_to(season_races_url(@season)) }
       format.xml  { head :ok }

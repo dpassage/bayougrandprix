@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+<p>Date: <%= @race.date %></p>
+<p>Track: <%= @race.track.name %></p>
+
+<h3>Entrants</h3>
+<table id="races_race_entries">
+  <tr>
+    <th>Driver</th>
+    <th>Team</th>
+  </tr>
+  <% @race.race_entries.each do |re| %>
+  <tr bgcolor="<%= re.team.color %>">
+    <td><%= re.driver.name %></td>
+    <td><%= re.team.name %></td>
+  </tr>
+  <% end %>
+</table>  
 
 <%= link_to 'Edit', edit_season_race_path(@season, @race) %> |
 <%= link_to 'Back', season_races_path(@season) %>

@@ -1,4 +1,4 @@
-<h1>Listing races</h1>
+<h1><%= @season.name %> Races</h1>
 
 <table>
   <tr>
@@ -15,7 +15,7 @@
     <td><%= race.track.name %></td>
     <td><%= link_to 'Show', season_race_path(@season, race) %></td>
     <td><%= link_to 'Edit', edit_season_race_path(@season, race) %></td>
-    <td><%= link_to 'Destroy', season_race_path(@season, race), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Remove', season_race_path(@season, race), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
