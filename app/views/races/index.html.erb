@@ -1,0 +1,21 @@
+<h1>Listing races</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= link_to 'Show', season_race_path(@season, race) %></td>
+    <td><%= link_to 'Edit', edit_season_race_path(@season, race) %></td>
+    <td><%= link_to 'Destroy', season_race_path(@season, race), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Race', new_season_race_path(@season) %>

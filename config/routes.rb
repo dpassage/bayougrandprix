@@ -5,11 +5,12 @@ Bayougrandprix::Application.routes.draw do
 
   resources :players
 
-  get "home/index"
-
   resources :seasons do
+    resources :races
     get 'results', :on => :member
   end
+
+  get "home/index"
   
   root :to => "home#index"
   
