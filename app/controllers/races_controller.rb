@@ -91,7 +91,7 @@ class RacesController < ApplicationController
     end
     
     respond_to do |format|
-      format.html { redirect_to(season_races_url(@season)) }
+      format.html { redirect_to(season_races_url(@season), :notice => notice) }
       format.xml  { head :ok }
     end
   end

@@ -1,4 +1,4 @@
-<%= form_for(season_races_path(@season)) do |f| %>
+<%= form_for(@race, :url => season_races_path(@season)) do |f| %>
   <% if @race.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@race.errors.count, "error") %> prohibited this race from being saved:</h2>
@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <%= collection_select(:race, :track_id, Track.all, :id, :name) %>
+  <%= hidden_field_tag(:season_id, @season.id) %>
   <div class="actions">
     <%= f.submit %>
   </div>
