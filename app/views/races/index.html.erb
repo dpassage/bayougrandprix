@@ -13,7 +13,7 @@
 
 <% @races.each do |race| %>
   <tr>
-    <td><%= race.date %></td>
+    <td><%= race.date.to_formatted_s(:rfc822) %></td>
     <td><%= race.track.name %></td>
     <td><%= link_to 'Show', season_race_path(@season, race) %></td>
     <td><%= link_to 'Edit', edit_season_race_path(@season, race) %></td>
@@ -26,3 +26,4 @@
 
 
 <%= link_to 'New Race', new_season_race_path(@season) %>
+<%= link_to 'Back to Season', season_path(@season) %>

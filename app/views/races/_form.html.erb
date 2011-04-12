@@ -11,11 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.text_field :date %>
-  </div>
-  <%= collection_select(:race, :track_id, Track.all, :id, :name) %>
+  <%= date_select :race, :date %>
+  <%= collection_select(:race, :track_id, Track.order(:name), :id, :name) %>
   <div class="actions">
     <%= f.submit %>
   </div>
