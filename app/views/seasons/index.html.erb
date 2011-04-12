@@ -6,12 +6,14 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @seasons.each do |season| %>
   <tr>
     <td><%= season.name %></td>
     <td><%= link_to 'Show', season %></td>
+    <td><%= link_to 'Results', results_season_path(season) %>
     <td><%= link_to 'Edit', edit_season_path(season) %></td>
     <td><%= link_to 'Destroy', season, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
