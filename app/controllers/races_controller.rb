@@ -46,6 +46,7 @@ class RacesController < ApplicationController
   def create
     @season = Season.where(:name => params[:season_id]).first
     @race = Race.new(params[:race])
+    @race.season = @season
 
     respond_to do |format|
       if @race.save

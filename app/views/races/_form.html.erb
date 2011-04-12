@@ -16,7 +16,6 @@
     <%= f.text_field :date %>
   </div>
   <%= collection_select(:race, :track_id, Track.all, :id, :name) %>
-  <%= hidden_field_tag(:season_id, @season.id) %>
   <div class="actions">
     <%= f.submit %>
   </div>
