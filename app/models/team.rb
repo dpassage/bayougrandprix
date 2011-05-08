@@ -7,7 +7,7 @@ class Team < ActiveRecord::Base
              "Grey"   => "#999999",
              "Pink"   => "#9900CC"
           }
-      
+
   validates_presence_of :name
   validates_inclusion_of :fake, :in => [true, false]
   validates_inclusion_of :color, :in => Colors.values

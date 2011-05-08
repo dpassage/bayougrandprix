@@ -20,14 +20,14 @@
       <td><%= race.track.country %></td>
       <% race.race_entries.order("finish").each do |entry| %>
         <td bgcolor="<%= entry.team.color %>">
-          <%= entry.driver.name %> 
+          <%= entry.driver.name %>
           <% if entry.dnf %>
-            <%= "(DNF)" %> 
+            <%= "(DNF)" %>
           <% end %></td>
       <% end %>
     </tr>
   <% end %>
-  
+
 </table>
 
 <h2>Points Standings</h2>
@@ -58,7 +58,7 @@
       <td><%= team_entry.entrant.name %></td>
       <td><%= team_entry.points %></td>
     </tr>
-  <% end %>    
+  <% end %>
 </table>
 
 <h3>Qualifying by Points</h3>

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if params[:password] == 'foobar'
       session[:role] = 'admin'
       flash[:notice] = 'Successfully logged in'
-      redirect_to root_path   
+      redirect_to root_path
     else
       session[:role] = nil
       flash[:error] = 'Incorrect password'

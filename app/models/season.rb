@@ -11,7 +11,7 @@ class Season < ActiveRecord::Base
     attr_accessor :entrant
     attr_accessor :points
   end
-  
+
   def results_table_by_points(entrant_type, points_type)
     entrant_hash = {}
     self.races.each do |r|
@@ -26,7 +26,7 @@ class Season < ActiveRecord::Base
         end
       end
     end
-    
+
     results = []
     entrant_hash.keys.each do |t|
       te = TableEntry.new
@@ -34,10 +34,10 @@ class Season < ActiveRecord::Base
       te.points = entrant_hash[t]
       results.push(te)
     end
-    
+
     results.sort_by { |te| -(te.points) } # negating forces descending sort
   end
-  
+
   def teams_by_points
     self.results_table_by_points(:team, :finish_points)
   end

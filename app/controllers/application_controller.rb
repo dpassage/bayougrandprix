@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+
   helper_method :admin?
   helper_method :logged_in_as
-  
+
   def authorize
     unless admin?
       flash[:error] = "unauthorized access"
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       false
     end
   end
-  
+
   def admin?
     session[:role] == 'admin'
   end

@@ -27,13 +27,13 @@ class SeasonsController < ApplicationController
     @drivers_by_points = @season.drivers_by_points
     @drivers_by_qualifying_points = @season.drivers_by_qualifying_points
     @teams_by_points = @season.teams_by_points
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @season }
     end
   end
-    
+
   # GET /seasons/new
   # GET /seasons/new.xml
   def new

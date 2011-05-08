@@ -2,7 +2,7 @@ class RailsifyRaceEntries < ActiveRecord::Migration
   def self.up
     # rename racedrivers to race_entries
     rename_table :racedrivers, :race_entries
-    
+
     change_table :race_entries do |t|
       t.column :id, :primary_key
       # rename columns to match _id format
@@ -16,12 +16,12 @@ class RailsifyRaceEntries < ActiveRecord::Migration
       t.timestamps
     end
     # populate new columns from raceresults
-    execute "update race_entries, raceresults 
-             set race_entries.finish = raceresults.place, 
-                race_entries.dnf = raceresults.dnf  
-             where race_entries.race_id = raceresults.race 
+    execute "update race_entries, raceresults
+             set race_entries.finish = raceresults.place,
+                race_entries.dnf = raceresults.dnf
+             where race_entries.race_id = raceresults.race
                and race_entries.driver_id = raceresults.driver"
-               
+
   end
 
   def self.down
