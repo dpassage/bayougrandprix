@@ -1,5 +1,4 @@
 <h1>Bayou Grand Prix Racing League</h1>
-<div>Role: <%= session[:role] %></div>
 <h2>Results by Season</h2>
 <table>
   <tr>
@@ -12,3 +11,8 @@
   </tr>
 <% end %>
 </table>
+<% if admin? %>
+  <%= link_to "Edit Seasons", seasons_path %>
+  <%= link_to "Edit Drivers", drivers_path %>
+  <%= link_to "Edit Players", players_path %>
+<% end %>
