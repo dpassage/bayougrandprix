@@ -48,7 +48,7 @@ class DriversController < ApplicationController
         format.html { redirect_to(@driver, :notice => 'Driver was successfully created.') }
         format.xml  { render :xml => @driver, :status => :created, :location => @driver }
       else
-        format.html { render :action => "new" }
+        format.html { render :new }
         format.xml  { render :xml => @driver.errors, :status => :unprocessable_entity }
       end
     end
@@ -64,7 +64,7 @@ class DriversController < ApplicationController
         format.html { redirect_to(@driver, :notice => 'Driver was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :edit }
         format.xml  { render :xml => @driver.errors, :status => :unprocessable_entity }
       end
     end
