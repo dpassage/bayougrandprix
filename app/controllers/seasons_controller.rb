@@ -1,4 +1,5 @@
 class SeasonsController < ApplicationController
+  before_filter :authorize, :only => [:create, :update, :destroy]
   # GET /seasons
   # GET /seasons.xml
   def index

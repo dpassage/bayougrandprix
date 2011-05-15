@@ -1,4 +1,5 @@
 class RacesController < ApplicationController
+  before_filter :authorize, :only => [:create, :update, :destroy]
   # GET /races
   # GET /races.xml
   def index

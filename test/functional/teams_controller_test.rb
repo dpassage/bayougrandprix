@@ -16,12 +16,22 @@ class TeamsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create team" do
+  test "admin should create team" do
+    user_is_admin
     assert_difference('Team.count') do
       post :create, :team => @team.attributes
     end
 
     assert_redirected_to team_path(assigns(:team))
+  end
+  test "guest should not create team" do
+    user_is_guest
+    assert_difference('Team.count', 0) do
+      post :create, :team => @team.attributes
+    end
+
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
   end
 
   test "should show team" do
@@ -41,16 +51,35 @@ class TeamsControllerTest < ActionController::TestCase
     assert_select "select#team_fake"
   end
 
-  test "should update team" do
+  test "admin should update team" do
+    user_is_admin
     put :update, :id => @team.to_param, :team => @team.attributes
     assert_redirected_to team_path(assigns(:team))
   end
+  
+  test "guest should not update team" do
+    user_is_guest
+    put :update, :id => @team.to_param, :team => @team.attributes
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
+  end
 
-  test "should destroy team" do
+  test "admin should destroy team" do
+    user_is_admin
     assert_difference('Team.count', -1) do
       delete :destroy, :id => @team.to_param
     end
 
     assert_redirected_to teams_path
+  end
+
+  test "guest should not destroy team" do
+    user_is_guest
+    assert_difference('Team.count', 0) do
+      delete :destroy, :id => @team.to_param
+    end
+
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
   end
 end

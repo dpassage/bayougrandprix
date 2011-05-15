@@ -16,12 +16,23 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create season" do
+  test "admin should create season" do
+    user_is_admin
     assert_difference('Season.count') do
       post :create, :season => @season.attributes
     end
 
     assert_redirected_to season_path(assigns(:season))
+  end
+
+  test "guest should not create season" do
+    user_is_guest
+    assert_difference('Season.count',0) do
+      post :create, :season => @season.attributes
+    end
+
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
   end
 
   test "should show season by name" do
@@ -102,16 +113,35 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update season" do
+  test "admin should update season" do
+    user_is_admin
     put :update, :id => @season.to_param, :season => @season.attributes
     assert_redirected_to season_path(assigns(:season))
   end
 
-  test "should destroy season" do
+  test "guest should not update season" do
+    user_is_guest
+    put :update, :id => @season.to_param, :season => @season.attributes
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
+  end
+
+  test "admin should destroy season" do
+    user_is_admin
     assert_difference('Season.count', -1) do
       delete :destroy, :id => @season.to_param
     end
 
     assert_redirected_to seasons_path
+  end
+  
+  test "guest should not destroy season" do
+    user_is_guest
+    assert_difference('Season.count', 0) do
+      delete :destroy, :id => @season.to_param
+    end
+    
+    assert_redirected_to root_path
+    assert_not_nil flash[:error]
   end
 end
