@@ -10,4 +10,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def user_is_admin
+    @request.session[:role] = "admin"
+  end
+
+  def user_is_guest
+    @request.session[:role] = "guest"
+  end
 end

@@ -17,7 +17,7 @@ class DriversControllerTest < ActionController::TestCase
   end
 
   test "admin should create driver" do
-    @request.session[:role] = "admin"
+    user_is_admin
     assert_difference('Driver.count') do
       post :create, :driver => @driver.attributes
     end
@@ -26,7 +26,7 @@ class DriversControllerTest < ActionController::TestCase
   end
   
   test "non-admin should not create driver" do
-    @request.session[:role] = "foo"
+    user_is_guest
     assert_difference('Driver.count', 0) do
       post :create, :driver => @driver.attributes
     end
@@ -46,20 +46,20 @@ class DriversControllerTest < ActionController::TestCase
   end
 
   test "admin should update driver" do
-    @request.session[:role] = "admin"
+    user_is_admin
     put :update, :id => @driver.to_param, :driver => @driver.attributes
     assert_redirected_to driver_path(assigns(:driver))
   end
   
   test "non- admin should not update driver" do
-    @request.session[:role] = "foobar"
+    user_is_guest
     put :update, :id => @driver.to_param, :driver => @driver.attributes
     assert_redirected_to root_path
     assert_not_nil flash[:error]
   end
 
   test "admin should destroy driver" do
-    @request.session[:role] = "admin"
+    user_is_admin
     assert_difference('Driver.count', -1) do
       delete :destroy, :id => @driver.to_param
     end
@@ -68,7 +68,7 @@ class DriversControllerTest < ActionController::TestCase
   end
   
   test "non admin should not destroy driver" do
-    @request.session[:role] = "foobar"
+    user_is_guest
     assert_difference('Driver.count', 0) do
       delete :destroy, :id => @driver.to_param
     end
