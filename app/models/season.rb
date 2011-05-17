@@ -2,6 +2,8 @@ class Season < ActiveRecord::Base
   has_many :season_entries
   has_many :races
   belongs_to :scoring_scheme
+  validates_presence_of :name
+  validates_presence_of :scoring_scheme
 
   def to_param
     self.name
