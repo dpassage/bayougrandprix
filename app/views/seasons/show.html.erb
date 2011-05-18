@@ -4,7 +4,15 @@
   <b>Name:</b>
   <%= @season.name %>
 </p>
+<p>
+  <b>Scoring Scheme:</b>
+  <%= @season.scoring_scheme.name %>
+</p>
 
+<%= link_to 'Edit', edit_season_path(@season) %>
 
-<%= link_to 'Edit', edit_season_path(@season) %> |
-<%= link_to 'Back', seasons_path %>
+<%= render(:partial => "teamlist", :object => @season) %>
+
+<%= link_to 'Races', season_races_path(@season) %><br />
+
+<%= link_to 'Back to Seasons', seasons_path %>
