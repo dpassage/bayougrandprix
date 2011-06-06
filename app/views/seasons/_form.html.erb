@@ -17,8 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :scoring_scheme %><br />
-  <%= collection_select(:driver, :scoring_scheme_id, 
-                        ScoringScheme.all, :id, :name) %>  </div>
+    <%= collection_select(:driver, :scoring_scheme_id, 
+                          ScoringScheme.all, :id, :name) %>  
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

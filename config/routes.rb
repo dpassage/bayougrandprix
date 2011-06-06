@@ -11,6 +11,7 @@ Bayougrandprix::Application.routes.draw do
 
   resources :seasons do
     resources :races
+    resources :season_entries
     get 'results', :on => :member
   end
 

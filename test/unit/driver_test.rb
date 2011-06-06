@@ -5,6 +5,8 @@ class DriverTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "driver knows its default team for a season" do
     driver = drivers(:mika)
-    assert_equal teams(:mclaren), driver.default_team_for_season(seasons(:season_2002))
+    season = seasons(:season_2002)
+    team = driver.default_team_for_season(season)
+    assert_equal teams(:mclaren), team
   end
 end

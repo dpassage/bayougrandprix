@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110320213434) do
+ActiveRecord::Schema.define(:version => 20110518061556) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -78,9 +78,9 @@ ActiveRecord::Schema.define(:version => 20110320213434) do
   end
 
   create_table "season_entries", :force => true do |t|
-    t.integer "season_id",   :null => false
-    t.integer "driver_id",   :null => false
-    t.integer "defaultteam", :null => false
+    t.integer "season_id",      :null => false
+    t.integer "driver_id",      :null => false
+    t.integer "defaultteam_id", :null => false
   end
 
   create_table "seasons", :force => true do |t|
