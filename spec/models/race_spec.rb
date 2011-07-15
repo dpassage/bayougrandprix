@@ -1,9 +1,26 @@
 require 'spec_helper'
 
 describe Race do
-  it "is valid with valid parameters"
-  it "is invalid without a season"
-  it "is invalid without a track"
-  it "is invalid without a date"
-  it "is invalid with a badly formatted date"
+  before(:each) do
+    @race = Race.new(
+      :track => mock_model("Track"),
+      :season => mock_model("Season"),
+      :date => Date.today
+    )
+  end
+  it "is valid with valid parameters" do
+    @race.should be_valid
+  end
+  it "is invalid without a season" do
+    @race.season = nil
+    @race.should_not be_valid
+  end
+  it "is invalid without a track" do
+    @race.track = nil
+    @race.should_not be_valid
+  end
+  it "is invalid without a date" do
+    @race.date = nil
+    @race.should_not be_valid
+  end
 end
