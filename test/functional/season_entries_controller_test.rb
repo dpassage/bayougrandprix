@@ -19,6 +19,7 @@ class SeasonEntriesControllerTest < ActionController::TestCase
 
   test "admin should create season_entry" do
     user_is_admin
+    @season_entry.season_id = nil
     assert_difference('SeasonEntry.count') do
       post :create, :season_id => @season.to_param, 
         :season_entry => @season_entry.attributes

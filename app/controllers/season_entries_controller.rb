@@ -44,8 +44,10 @@ class SeasonEntriesController < ApplicationController
   # POST /season_entries
   # POST /season_entries.xml
   def create
-    @season_entry = SeasonEntry.new(params[:season_entry])
     @season = Season.where(:name => params[:season_id]).first
+    @season_entry = SeasonEntry.new(
+      params[:season_entry].merge({:season_id => @season.id})
+    )
 
     respond_to do |format|
       if @season_entry.save
