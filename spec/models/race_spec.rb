@@ -23,4 +23,7 @@ describe Race do
     @race.date = nil
     @race.should_not be_valid
   end
+  describe "#points_for_finishing" do
+    it "asks the season what the place is worth"
+  end
 end
