@@ -24,6 +24,11 @@ describe Race do
     @race.should_not be_valid
   end
   describe "#points_for_finishing" do
-    it "asks the season what the place is worth"
+    it "asks the season what the place is worth" do
+      season = mock_model('Season')
+      season.should_receive(:points_for_finishing).with(1).and_return(9)
+      @race.season = season
+      @race.points_for_finishing(1).should == 9
+    end
   end
 end

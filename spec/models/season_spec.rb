@@ -16,4 +16,7 @@ describe "Season" do
   describe "#drivers_by_qualifying_points" do
     it "returns an array of driver entries by qualifying points"
   end
+  describe "#points_for_finishing" do
+    it "asks the scoring scheme what the place is worth"
+  end
 end
