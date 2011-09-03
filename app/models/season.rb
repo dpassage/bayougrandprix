@@ -49,4 +49,8 @@ class Season < ActiveRecord::Base
   def drivers_by_qualifying_points
     self.results_table_by_points(:driver, :qualifying_points)
   end
+  
+  def points_for_finishing(place)
+    self.scoring_scheme.points_for_finishing(place)
+  end
 end

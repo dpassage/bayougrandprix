@@ -17,6 +17,12 @@ describe "Season" do
     it "returns an array of driver entries by qualifying points"
   end
   describe "#points_for_finishing" do
-    it "asks the scoring scheme what the place is worth"
+    it "asks the scoring scheme what the place is worth" do
+      @season = Season.new
+      scheme = mock_model('ScoringScheme')
+      scheme.should_receive(:points_for_finishing).with(1).and_return(9)
+      @season.scoring_scheme = scheme
+      @season.points_for_finishing(1).should == 9
+    end
   end
 end
