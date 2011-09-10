@@ -17,12 +17,6 @@ class SeasonTest < ActiveSupport::TestCase
     season = Season.where(:name =>"2002").first
     assert_equal "10-6-4-3-2-1", season.scoring_scheme.name
   end
-  test "season must have a name" do
-    season = Season.new
-    assert !season.save
-    season.name = "Bob"
-    assert season.save
-  end
   test "teams_by_points is an array of team entries sorted by points scored" do
     season = seasons(:season_2002)
     results = season.teams_by_points

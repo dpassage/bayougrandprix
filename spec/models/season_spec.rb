@@ -1,14 +1,30 @@
 require 'spec_helper'
 
 describe "Season" do
-  it "is valid with valid parameters"
-  it "is not valid without a name"
-  it "is not valid without a scoring scheme"
+  before(:each) do
+    @season = Season.new(
+      :scoring_scheme => mock_model('ScoringScheme'),
+      :name => "1999"
+    )
+  end
+  it "is valid with valid parameters" do
+    @season.should be_valid
+  end
+  it "is not valid without a name" do
+    @season.name = nil
+    @season.should_not be_valid
+  end
+  it "is not valid without a scoring scheme" do
+    @season.scoring_scheme = nil
+    @season.should_not be_valid
+  end
   describe "#drivers_by_points" do
     it "returns an array of driver entries sorted by points scored"
   end
   describe "#to_param" do
-    it "returns its name"
+    it "returns its name" do
+      @season.to_param.should == @season.name
+    end
   end
   describe "#teams_by_points" do
     it "returns an array of team entries sorted by points scored"
