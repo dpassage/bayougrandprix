@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Season" do
+  fixtures :all
   before(:each) do
     @season = Season.new(
       :scoring_scheme => mock_model('ScoringScheme'),
@@ -19,7 +20,14 @@ describe "Season" do
     @season.should_not be_valid
   end
   describe "#drivers_by_points" do
-    it "returns an array of driver entries sorted by points scored"
+    it "returns an array of driver entries sorted by points scored" do
+      pending "figure out the deal with fixtures"
+      season = seasons(:season_2002)
+      results = season.drivers_by_points
+      results.length.should == 12
+      results[0].entrant.should == drivers(:schumacher)
+      results[0].points.should == 47
+    end
   end
   describe "#to_param" do
     it "returns its name" do
@@ -27,7 +35,9 @@ describe "Season" do
     end
   end
   describe "#teams_by_points" do
-    it "returns an array of team entries sorted by points scored"
+    it "returns an array of team entries sorted by points scored" do
+      pending
+    end
   end
   describe "#drivers_by_qualifying_points" do
     it "returns an array of driver entries by qualifying points"
