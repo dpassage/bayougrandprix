@@ -11,7 +11,7 @@ describe "drivers/index" do
   context "when the user is not an admin" do
     before(:each) do
       assign(:drivers, [])
-      view.should_receive(:admin?).and_return(false)
+      view.stub(:admin?) { false }
     end
     include_examples "driver common admin and guest"
     it "does not have a new driver link" do
@@ -22,7 +22,7 @@ describe "drivers/index" do
   context "when the user is an administrator" do
     before(:each) do
       assign(:drivers, [])
-      view.should_receive(:admin?).and_return(true)
+      view.stub(:admin?) { true }
     end
     include_examples "driver common admin and guest"
     it "has a new driver link" do
