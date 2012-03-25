@@ -5,17 +5,6 @@ class DriversControllerTest < ActionController::TestCase
     @driver = drivers(:mika)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:drivers)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "admin should create driver" do
     user_is_admin
     assert_difference('Driver.count') do
@@ -34,11 +23,6 @@ class DriversControllerTest < ActionController::TestCase
     assert_not_nil flash[:error]
   end
   
-
-  test "should show driver" do
-    get :show, :id => @driver.to_param
-    assert_response :success
-  end
 
   test "should get edit" do
     get :edit, :id => @driver.to_param
