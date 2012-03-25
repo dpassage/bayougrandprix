@@ -31,7 +31,7 @@ describe "home/index" do
     end
     it "does not have a link to the seasons manager page" do
       render
-      rendered.should_not have_selector("a", :text => "Edit Seasons")
+      rendered.should_not have_link("Edit Seasons", :href => seasons_path)
     end
   end
   context "when the user is an administrator" do
@@ -41,7 +41,7 @@ describe "home/index" do
     end
     it "has a link to the seasons manager page" do
       render
-      rendered.should have_selector("a", :text => "Edit Seasons")
+      rendered.should have_link("Edit Seasons", :href => seasons_path)
     end
   end
 end
