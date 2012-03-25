@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bayougrandprix</title>
+  <title>Bayou Grand Prix</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div class="header">
+  <%= link_to "Bayou Grand Prix", root_path %>
+</div>
 
 <%= yield %>
 
