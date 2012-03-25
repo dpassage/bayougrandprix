@@ -1,0 +1,99 @@
+--- 
+teams_013: 
+  name: Toyota
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFFFF"
+  id: "13"
+teams_002: 
+  name: Axle of Evil
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFF00"
+  id: "2"
+teams_014: 
+  name: BMW/Sauber
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFFFF"
+  id: "14"
+ferrari: 
+  name: Ferrari
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FF0000"
+  id: "3"
+mclaren: 
+  name: McLaren
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#0099FF"
+  id: "4"
+teams_005: 
+  name: Williams
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFFFF"
+  id: "5"
+teams_006: 
+  name: PowerBran
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#00FF00"
+  id: "6"
+teams_007: 
+  name: Mediocrity
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFF00"
+  id: "7"
+teams_008: 
+  name: Substitutes
+  created_at: 
+  fake: "1"
+  updated_at: 
+  color: "#999999"
+  id: "8"
+teams_009: 
+  name: Rogue
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#9900CC"
+  id: "9"
+teams_010: 
+  name: Acura
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#00FF00"
+  id: "10"
+teams_011: 
+  name: Lotus-Tesla
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#00FF00"
+  id: "11"
+teams_012: 
+  name: Brabham
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#FFFFFF"
+  id: "12"
+teams_001: 
+  name: Jaguar
+  created_at: 
+  fake: "0"
+  updated_at: 
+  color: "#00FF00"
+  id: "1"

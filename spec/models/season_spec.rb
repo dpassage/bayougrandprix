@@ -21,7 +21,6 @@ describe "Season" do
   end
   describe "#drivers_by_points" do
     it "returns an array of driver entries sorted by points scored" do
-      pending "figure out the deal with fixtures"
       season = seasons(:season_2002)
       results = season.drivers_by_points
       results.length.should == 12
@@ -36,11 +35,21 @@ describe "Season" do
   end
   describe "#teams_by_points" do
     it "returns an array of team entries sorted by points scored" do
-      pending
+      season = seasons(:season_2002)
+      results = season.teams_by_points
+      results.length.should == 5
+      results[0].entrant.should == teams(:mclaren)
+      results[0].points.should == 85
     end
   end
   describe "#drivers_by_qualifying_points" do
-    it "returns an array of driver entries by qualifying points"
+    it "returns an array of driver entries by qualifying points" do
+      season = seasons(:season_2002)
+      results = season.drivers_by_qualifying_points
+      results.length.should == 12
+      results[0].entrant.should == drivers(:schumacher)
+      results[0].points.should == 67
+    end
   end
   describe "#points_for_finishing" do
     it "asks the scoring scheme what the place is worth" do
