@@ -3,7 +3,7 @@ require 'test_helper'
 class LoginSequenceTest < ActionDispatch::IntegrationTest
   fixtures :all
 
-  test "user can log in" do
+  test "user can log in and log out" do
     get "/login"
     assert_response :success
     
