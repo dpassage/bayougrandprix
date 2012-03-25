@@ -43,6 +43,14 @@ describe RaceEntry do
         @re.race = race
         @re.qualifying_points.should == 9
       end
+      it "returns 0 without asking the race if racer did not qualify" do
+        @re.qualify = 1
+        @re.dnq = true
+        race = mock_model('Race')
+        race.should_not_receive(:points_for_finishing)
+        @re.race = race
+        @re.qualifying_points.should == 0
+      end
     end
   end
 end
