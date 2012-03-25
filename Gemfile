@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'simplecov', :require => false, :group => :test
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
