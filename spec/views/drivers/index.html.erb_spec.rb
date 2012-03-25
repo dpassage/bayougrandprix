@@ -7,6 +7,24 @@ describe "drivers/index" do
       render
       rendered.should have_selector("table#drivers")
     end
+    context "with an example driver" do
+      let(:player) { stub_model(Player, :name => "David") }
+      let(:driver) { stub_model(Driver, 
+                                :name => "Mario",
+                                :player => player) }
+      let(:drivers) { [ driver ] }            
+                    
+      it "links the driver name to the driver page" do
+        assign(:drivers, drivers)
+        render
+        rendered.should have_link("Mario", :href => driver_path(driver))
+      end
+      it "links the player name to the player page" do
+        assign(:drivers, drivers)
+        render
+        rendered.should have_link("David", :href => player_path(player))
+      end
+    end
   end
   context "when the user is not an admin" do
     before(:each) do
