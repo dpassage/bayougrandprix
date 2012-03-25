@@ -1,0 +1,33 @@
+require 'spec_helper'
+
+describe "drivers/index" do
+  shared_examples "driver common admin and guest" do
+    it "shows a table of drivers" do
+      assign(:drivers, [])
+      render
+      rendered.should have_selector("table#drivers")
+    end
+  end
+  context "when the user is not an admin" do
+    before(:each) do
+      assign(:drivers, [])
+      view.should_receive(:admin?).and_return(false)
+    end
+    include_examples "driver common admin and guest"
+    it "does not have a new driver link" do
+      render
+      rendered.should_not have_link("New Driver")
+    end
+  end
+  context "when the user is an administrator" do
+    before(:each) do
+      assign(:drivers, [])
+      view.should_receive(:admin?).and_return(true)
+    end
+    include_examples "driver common admin and guest"
+    it "has a new driver link" do
+      render
+      rendered.should have_link("New Driver", :href => new_driver_path)
+    end
+  end
+end
