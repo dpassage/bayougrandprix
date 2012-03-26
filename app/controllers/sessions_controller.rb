@@ -20,7 +20,11 @@ class SessionsController < ApplicationController
   def destroy
     session[:role] = nil
     flash[:notice] = 'Logged out'
-    redirect_to root_path
+    if params[:originpath]
+      redirect_to params[:originpath]
+    else
+      redirect_to root_path
+    end
   end
 
 end
