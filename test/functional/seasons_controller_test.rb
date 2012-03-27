@@ -16,15 +16,6 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "admin should create season" do
-    user_is_admin
-    assert_difference('Season.count') do
-      post :create, :season => @season.attributes
-    end
-
-    assert_redirected_to season_path(assigns(:season))
-  end
-
   test "guest should not create season" do
     user_is_guest
     assert_difference('Season.count',0) do

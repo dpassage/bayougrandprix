@@ -56,14 +56,10 @@ class SeasonsController < ApplicationController
   def create
     @season = Season.new(params[:season])
 
-    respond_to do |format|
-      if @season.save
-        format.html { redirect_to(@season, :notice => 'Season was successfully created.') }
-        format.xml  { render :xml => @season, :status => :created, :location => @season }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @season.errors, :status => :unprocessable_entity }
-      end
+    if @season.save
+      redirect_to seasons_path
+    else
+      render :action => "new"
     end
   end
 
