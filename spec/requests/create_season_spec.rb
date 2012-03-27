@@ -8,6 +8,7 @@ describe "Seasons" do
     click_button 'Login'
   end      
   it "Creates the season" do
+    pending "link on seasons page named 'Manage' goes to season page"
     visit root_path
     login
     click_link 'Edit Seasons'
@@ -22,6 +23,10 @@ describe "Seasons" do
     current_path.should == seasons_path
     
     page.should have_content "2025"
+    
+    page.find(:xpath, '//tr[contains(., "2025")]').find_link('Manage').click
+    current_path.should == '/seasons/2025'
+    puts current_path
   end
 end
       

@@ -1,6 +1,6 @@
-As an admin, I want to create a new season.
+x As an admin, I want to create a new season.
 
-I create the season, giving it a name and selecting a scoring scheme.
+x I create the season, giving it a name and selecting a scoring scheme.
 I then add drivers as entrants, with teams.
 I can go directly to the driver, player, and team management pages from here.
 
