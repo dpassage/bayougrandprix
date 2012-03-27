@@ -1,0 +1,4 @@
+
+Future ideas:
+
+* Use cancan for authorization?
