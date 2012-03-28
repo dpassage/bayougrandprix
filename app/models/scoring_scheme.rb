@@ -1,5 +1,6 @@
 class ScoringScheme < ActiveRecord::Base
   has_many :seasons
+  attr_accessible :name
 
   def points_for_finishing(place)
     points_by_place = self.name.split('-')

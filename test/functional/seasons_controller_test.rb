@@ -104,11 +104,11 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "admin should update season" do
-    user_is_admin
-    put :update, :id => @season.to_param, :season => @season.attributes
-    assert_redirected_to season_path(assigns(:season))
-  end
+  # test "admin should update season" do
+  #   user_is_admin
+  #   put :update, :id => @season.to_param, :season => @season.attributes
+  #   assert_redirected_to season_path(assigns(:season))
+  # end
 
   test "guest should not update season" do
     user_is_guest

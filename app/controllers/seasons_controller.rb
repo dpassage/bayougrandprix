@@ -54,7 +54,9 @@ class SeasonsController < ApplicationController
   # POST /seasons
   # POST /seasons.xml
   def create
-    @season = Season.new(params[:season])
+    scoring_scheme = ScoringScheme.find(params[:season][:scoring_scheme])
+    @season = Season.new(:name => params[:season][:name],
+                         :scoring_scheme => scoring_scheme)
 
     if @season.save
       redirect_to seasons_path

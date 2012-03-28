@@ -5,14 +5,14 @@ class DriversControllerTest < ActionController::TestCase
     @driver = drivers(:mika)
   end
 
-  test "admin should create driver" do
-    user_is_admin
-    assert_difference('Driver.count') do
-      post :create, :driver => @driver.attributes
-    end
-
-    assert_redirected_to driver_path(assigns(:driver))
-  end
+  # test "admin should create driver" do
+  #   user_is_admin
+  #   assert_difference('Driver.count') do
+  #     post :create, :driver => @driver.attributes
+  #   end
+  # 
+  #   assert_redirected_to driver_path(assigns(:driver))
+  # end
   
   test "non-admin should not create driver" do
     user_is_guest
@@ -29,11 +29,11 @@ class DriversControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "admin should update driver" do
-    user_is_admin
-    put :update, :id => @driver.to_param, :driver => @driver.attributes
-    assert_redirected_to driver_path(assigns(:driver))
-  end
+  # test "admin should update driver" do
+  #   user_is_admin
+  #   put :update, :id => @driver.to_param, :driver => @driver.attributes
+  #   assert_redirected_to driver_path(assigns(:driver))
+  # end
   
   test "non- admin should not update driver" do
     user_is_guest

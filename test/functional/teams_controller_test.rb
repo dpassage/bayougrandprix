@@ -16,14 +16,14 @@ class TeamsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "admin should create team" do
-    user_is_admin
-    assert_difference('Team.count') do
-      post :create, :team => @team.attributes
-    end
-
-    assert_redirected_to team_path(assigns(:team))
-  end
+  # test "admin should create team" do
+  #   user_is_admin
+  #   assert_difference('Team.count') do
+  #     post :create, :team => @team.attributes
+  #   end
+  # 
+  #   assert_redirected_to team_path(assigns(:team))
+  # end
   test "guest should not create team" do
     user_is_guest
     assert_difference('Team.count', 0) do
@@ -51,11 +51,11 @@ class TeamsControllerTest < ActionController::TestCase
     assert_select "select#team_fake"
   end
 
-  test "admin should update team" do
-    user_is_admin
-    put :update, :id => @team.to_param, :team => @team.attributes
-    assert_redirected_to team_path(assigns(:team))
-  end
+  # test "admin should update team" do
+  #   user_is_admin
+  #   put :update, :id => @team.to_param, :team => @team.attributes
+  #   assert_redirected_to team_path(assigns(:team))
+  # end
   
   test "guest should not update team" do
     user_is_guest

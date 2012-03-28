@@ -17,10 +17,11 @@ describe SeasonsController do
       before (:each) do
         user_is_admin
         Season.stub(:new).and_return(season)
+        ScoringScheme.stub(:find).and_return(scoringscheme)
       end
       it "creates a new season" do
-        Season.should_receive(:new).with("name" => name, 
-                                         "scoring_scheme" => scoringscheme.to_param )
+        Season.should_receive(:new).with(:name => name, 
+                                         :scoring_scheme => scoringscheme )
                                    .and_return(season)
         post :create, :season => { "name" => "2035", "scoring_scheme" => scoringscheme }
       end
@@ -29,7 +30,7 @@ describe SeasonsController do
         post :create, :season => { "name" => "2035", "scoring_scheme" => scoringscheme }
       end      
       it "redirects to index" do
-        post :create
+        post :create, :season => { "name" => "2035", "scoring_scheme" => scoringscheme }
         response.should redirect_to(seasons_path)
       end
     end

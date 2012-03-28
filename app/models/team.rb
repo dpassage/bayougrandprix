@@ -13,4 +13,5 @@ class Team < ActiveRecord::Base
   validates_inclusion_of :color, :in => Colors.values
   has_many :season_entries
   has_many :race_entries
+  attr_accessible :name, :fake, :color
 end

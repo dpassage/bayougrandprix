@@ -4,6 +4,7 @@ class Season < ActiveRecord::Base
   belongs_to :scoring_scheme
   validates_presence_of :name
   validates_presence_of :scoring_scheme
+  attr_accessible :name, :scoring_scheme
 
   def to_param
     self.name

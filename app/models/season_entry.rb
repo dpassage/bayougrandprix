@@ -5,4 +5,5 @@ class SeasonEntry < ActiveRecord::Base
   validates_presence_of :defaultteam
   validates_presence_of :driver
   validates_presence_of :season
+  attr_accessible :defaultteam, :driver, :season
 end

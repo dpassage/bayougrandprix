@@ -4,6 +4,7 @@ class RaceEntry < ActiveRecord::Base
   belongs_to :team
   validates_presence_of :race
   validates_presence_of :driver
+  attr_accessible :race, :driver
   
   def finish_points
     if self.dnf
