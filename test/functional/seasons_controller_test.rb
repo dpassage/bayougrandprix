@@ -98,14 +98,5 @@ class SeasonsControllerTest < ActionController::TestCase
       end
     end
   end
-
-  test "admin should destroy season" do
-    user_is_admin
-    assert_difference('Season.count', -1) do
-      delete :destroy, :id => @season.to_param
-    end
-
-    assert_redirected_to seasons_path
-  end
   
 end
