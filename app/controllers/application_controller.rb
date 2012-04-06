@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
       flash[:error] = "unauthorized access"
       redirect_to root_path
       false
+    else
+      true
     end
   end
 

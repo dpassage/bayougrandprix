@@ -98,24 +98,6 @@ class SeasonsControllerTest < ActionController::TestCase
       end
     end
   end
-  
-  test "should get edit" do
-    get :edit, :id => @season.to_param
-    assert_response :success
-  end
-
-  # test "admin should update season" do
-  #   user_is_admin
-  #   put :update, :id => @season.to_param, :season => @season.attributes
-  #   assert_redirected_to season_path(assigns(:season))
-  # end
-
-  test "guest should not update season" do
-    user_is_guest
-    put :update, :id => @season.to_param, :season => @season.attributes
-    assert_redirected_to root_path
-    assert_not_nil flash[:error]
-  end
 
   test "admin should destroy season" do
     user_is_admin
@@ -126,13 +108,4 @@ class SeasonsControllerTest < ActionController::TestCase
     assert_redirected_to seasons_path
   end
   
-  test "guest should not destroy season" do
-    user_is_guest
-    assert_difference('Season.count', 0) do
-      delete :destroy, :id => @season.to_param
-    end
-    
-    assert_redirected_to root_path
-    assert_not_nil flash[:error]
-  end
 end
