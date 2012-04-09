@@ -35,4 +35,30 @@ describe SeasonsController do
       end
     end
   end
+  describe "GET show" do
+    before(:each) do 
+      @season = mock_model('Season').as_null_object
+      Season.stub(:where).and_return( [ @season ] ) 
+    end
+    it "should pass an array of season entries" do
+      @season.should_receive(:season_entries).and_return( [ ] )
+      get 'show'
+      assigns[:season_entries].should_not == nil
+    end
+    it "should pass an array of unused drivers" do
+      @season.should_receive(:unused_drivers).and_return ( [ ] )
+      get 'show'
+      assigns[:unused_drivers].should_not == nil
+    end
+    it "should pass a list of races in the season" do
+      @season.should_receive(:races).and_return ( [ ] )
+      get 'show'
+      assigns[:races].should_not == nil
+    end
+    it "should pass a list of all tracks" do
+      Track.should_receive(:all).and_return ( [ ] )
+      get 'show'
+      assigns[:tracks].should_not == nil
+    end
+  end
 end

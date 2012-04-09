@@ -7,7 +7,12 @@ class SeasonsController < ApplicationController
 
   # GET /seasons/1
   def show
-    @season = Season.where(:name=>params[:id]).first
+    seasons = Season.where(:name=>params[:id])
+    @season = seasons.first
+    @season_entries = @season.season_entries
+    @unused_drivers = @season.unused_drivers
+    @races = @season.races
+    @tracks = Track.all
   end
 
   # GET /seasons/2002/results
