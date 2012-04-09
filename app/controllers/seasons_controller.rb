@@ -10,9 +10,11 @@ class SeasonsController < ApplicationController
     seasons = Season.where(:name=>params[:id])
     @season = seasons.first
     @season_entries = @season.season_entries
-    @unused_drivers = @season.unused_drivers
     @races = @season.races
-    @tracks = Track.all
+    if admin?
+      @drivers = Driver.all
+      @tracks = Track.all
+    end
   end
 
   # GET /seasons/2002/results

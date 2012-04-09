@@ -26,5 +26,15 @@ describe "Seasons" do
     page.find(:xpath, '//tr[contains(., "2025")]').find_link('Manage').click
     current_path.should == '/seasons/2025'
   end
+  context "when the 2025 season already exists" do
+    before(:all) do
+      visit new_season_path
+      fill_in('season_name', :with => "2025")
+      select('9-6-4-3-2-1', :from => 'season_scoring_scheme')
+      click_button 'Create Season'
+    end     
+    it "adds a driver to the season" do
+    end
+  end
 end
       

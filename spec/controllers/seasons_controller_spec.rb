@@ -40,25 +40,43 @@ describe SeasonsController do
       @season = mock_model('Season').as_null_object
       Season.stub(:where).and_return( [ @season ] ) 
     end
-    it "should pass an array of season entries" do
-      @season.should_receive(:season_entries).and_return( [ ] )
-      get 'show'
-      assigns[:season_entries].should_not == nil
+    shared_examples "always passes some variables" do
+      it "should pass an array of season entries" do
+        @season.should_receive(:season_entries).and_return( [ ] )
+        get 'show'
+        assigns[:season_entries].should_not == nil
+      end
+      it "should pass a list of races in the season" do
+        @season.should_receive(:races).and_return ( [ ] )
+        get 'show'
+        assigns[:races].should_not == nil
+      end      
     end
-    it "should pass an array of unused drivers" do
-      @season.should_receive(:unused_drivers).and_return ( [ ] )
-      get 'show'
-      assigns[:unused_drivers].should_not == nil
+    context "when the user is an admin" do
+      before (:each) { user_is_admin }
+      include_examples "always passes some variables"
+      it "should pass an array of drivers" do
+        Driver.should_receive(:all).and_return ( [ ] )
+        get 'show'
+        assigns[:drivers].should_not == nil
+      end
+      it "should pass a list of all tracks" do
+        Track.should_receive(:all).and_return ( [ ] )
+        get 'show'
+        assigns[:tracks].should_not == nil
+      end
     end
-    it "should pass a list of races in the season" do
-      @season.should_receive(:races).and_return ( [ ] )
-      get 'show'
-      assigns[:races].should_not == nil
-    end
-    it "should pass a list of all tracks" do
-      Track.should_receive(:all).and_return ( [ ] )
-      get 'show'
-      assigns[:tracks].should_not == nil
+    context "when the user is not an admin" do
+      before (:each) { user_is_guest }
+      include_examples "always passes some variables"
+      it "should not pass an array of drivers" do
+        get 'show'
+        assigns[:drivers].should be_nil
+      end
+      it "should not pass a list of all tracks" do
+        get 'show'
+        assigns[:tracks].should be_nil
+      end
     end
   end
 end
