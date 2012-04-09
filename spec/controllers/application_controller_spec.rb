@@ -29,7 +29,7 @@ describe ApplicationController do
         flash[:error].should_not be_nil
       end
       it "redirects to the root path" do
-        controller.should_receive(:redirect_to).and_return(root_path)
+        controller.should_receive(:redirect_to).with(root_path)
         controller.authorize
       end
     end
