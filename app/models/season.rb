@@ -54,4 +54,14 @@ class Season < ActiveRecord::Base
   def points_for_finishing(place)
     self.scoring_scheme.points_for_finishing(place)
   end
+  
+  def add_driver(driver, defaultteam)
+    begin
+      SeasonEntry.create(:season => self,
+                        :driver => driver,
+                        :defaultteam => defaultteam)
+    rescue ActiveRecord::RecordNotUnique => ex
+      return false
+    end                  
+  end
 end
