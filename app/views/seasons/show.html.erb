@@ -28,7 +28,6 @@
       <td><%= entry.driver.player.name %></td>
       <td><%= entry.driver.name %></td>
       <td><%= entry.defaultteam.name %></td>
-      <td><%= entry.id %></td>
       <% if admin? %>
         <td>
           <%= link_to 'Remove', season_season_entry_path(@season, entry.id), :confirm => 'Are you sure?', :method => :delete %>
