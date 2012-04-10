@@ -11,6 +11,7 @@ Bayougrandprix::Application.routes.draw do
 
   resources :seasons do
     resources :races
+    resources :season_entries, :only => [ :destroy ]
     get 'results', :on => :member
     post 'add_driver', :on => :member
   end

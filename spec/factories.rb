@@ -17,4 +17,8 @@ FactoryGirl.define do
     name "Team Name"
     color Team::Colors["White"]
   end
+  factory :season_entry do
+    driver
+    association :defaultteam, factory: :team
+  end
 end
