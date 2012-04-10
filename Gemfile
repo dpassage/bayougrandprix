@@ -46,4 +46,5 @@ gem 'debugger'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem "factory_girl_rails", "~> 3.0"
 end
