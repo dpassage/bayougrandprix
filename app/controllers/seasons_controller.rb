@@ -1,5 +1,5 @@
 class SeasonsController < ApplicationController
-  before_filter :authorize, :only => [:create, :update, :destroy]
+  before_filter :authorize, :only => [:create, :update, :destroy, :add_driver]
   # GET /seasons
   def index
     @seasons = Season.order(:name)
@@ -12,7 +12,7 @@ class SeasonsController < ApplicationController
     @season_entries = @season.season_entries
     @races = @season.races
     if admin?
-      @drivers = Driver.all
+      @drivers = Driver.order(:name)
       @tracks = Track.all
     end
   end
@@ -30,6 +30,14 @@ class SeasonsController < ApplicationController
     end
   end
 
+  # POST /seasons/1/add_driver
+  def add_driver
+    season = Season.find(params[:season_id])
+    driver = Driver.find(params[:season_entry][:driver_id])
+    team = Team.find(params[:season_entry][:defaultteam_id])
+    season.add_driver(driver, team)
+    redirect_to season_path(season)
+  end
   # GET /seasons/new
   # GET /seasons/new.xml
   def new

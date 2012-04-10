@@ -56,7 +56,7 @@ describe SeasonsController do
       before (:each) { user_is_admin }
       include_examples "always passes some variables"
       it "should pass an array of drivers" do
-        Driver.should_receive(:all).and_return ( [ ] )
+        Driver.should_receive(:order).and_return ( [ ] )
         get 'show'
         assigns[:drivers].should_not == nil
       end
@@ -76,6 +76,31 @@ describe SeasonsController do
       it "should not pass a list of all tracks" do
         get 'show'
         assigns[:tracks].should be_nil
+      end
+    end
+  end
+  describe "POST add_driver" do
+    context "when the user is an admin" do
+      let(:season) { FactoryGirl.create(:season) }
+      let(:driver) { FactoryGirl.create(:driver) }
+      let(:team) { FactoryGirl.create(:team) }
+      before(:each) { user_is_admin }
+      it "asks the season to add a driver and team" do
+        season.should_receive(:add_driver)
+        Season.should_receive(:find).with(season.id.to_s).and_return(season)
+        post 'add_driver',  :season_id => season.id, 
+                                       :season_entry => { :driver_id => driver.id,
+                                                         :defaultteam_id => team.id }
+                                                               
+      end
+      context "with an unused driver" do
+        it "creates a new entry for that driver in the season"
+        it "sets the notice flash"
+        it "redirects to the season again"
+      end
+      context "with a driver who's already in the season" do
+        it "sets the error flash"
+        it "redirects to the season again"
       end
     end
   end
