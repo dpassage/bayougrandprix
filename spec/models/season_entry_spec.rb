@@ -3,9 +3,10 @@ require 'spec_helper'
 describe SeasonEntry do
   before (:each) do
     @se = SeasonEntry.new(
-      :season => mock_model("Season"),
+      { :season => mock_model("Season"),
       :defaultteam => mock_model("Team"),
-      :driver => mock_model("Driver")
+      :driver => mock_model("Driver") },
+      :without_protection => true
     )
   end
   it "is valid with valid parameters" do

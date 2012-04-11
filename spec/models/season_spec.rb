@@ -60,19 +60,4 @@ describe "Season" do
       @season.points_for_finishing(1).should == 9
     end
   end
-  describe "#add_driver" do
-    let(:season) { FactoryGirl.create(:season) }
-    let(:driver) { FactoryGirl.create(:driver) }
-    let(:team)   { FactoryGirl.create(:team) }
-    it "adds a season entry with the specified driver and team" do
-      season.add_driver(driver, team).should be_true
-      season.season_entries.length.should == 1
-    end      
-    it "returns false if the driver is already entered" do
-      season.add_driver(driver, team)
-      season.add_driver(driver, team).should be_false
-      season.season_entries.length.should == 1
-    end
-      
-  end
 end

@@ -79,49 +79,4 @@ describe SeasonsController do
       end
     end
   end
-  describe "POST add_driver" do
-    context "when the user is an admin" do
-      let(:season) { FactoryGirl.create(:season) }
-      let(:driver) { FactoryGirl.create(:driver) }
-      let(:team) { FactoryGirl.create(:team) }
-      before(:each) { user_is_admin }
-      it "asks the season to add a driver and team" do
-        season.should_receive(:add_driver).with(driver, team)
-        Season.should_receive(:find).with(season.id.to_s).and_return(season)
-        post 'add_driver',  :season_id => season.id, 
-                            :season_entry => { :driver_id => driver.id,
-                                               :defaultteam_id => team.id }
-                                                               
-      end
-      context "with an unused driver" do
-        it "sets the notice flash" do
-          post 'add_driver',  :season_id => season.id, 
-                              :season_entry => { :driver_id => driver.id,
-                                                 :defaultteam_id => team.id }
-          flash[:notice].should_not be_nil
-        end
-        it "redirects to the season again" do
-          post 'add_driver',  :season_id => season.id, 
-                              :season_entry => { :driver_id => driver.id,
-                                                 :defaultteam_id => team.id }
-          response.should redirect_to(season_path(season))
-        end
-      end
-      context "with a driver who's already in the season" do
-        before(:each) { season.add_driver(driver, team) }
-        it "sets the error flash" do
-          post 'add_driver',  :season_id => season.id, 
-                              :season_entry => { :driver_id => driver.id,
-                                                 :defaultteam_id => team.id }
-          flash[:error].should_not be_nil
-        end
-        it "redirects to the season again" do
-          post 'add_driver',  :season_id => season.id, 
-                              :season_entry => { :driver_id => driver.id,
-                                                 :defaultteam_id => team.id }
-          response.should redirect_to(season_path(season))
-        end
-      end
-    end
-  end
 end

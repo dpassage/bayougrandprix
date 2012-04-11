@@ -38,7 +38,7 @@
 </table><br />
 
 <% if admin? %>
-  <%= form_tag(add_driver_season_path(@season)) do %>
+  <%= form_tag(season_season_entries_path(@season)) do %>
     <%= hidden_field_tag(:season_id, @season.id) %>
     <%= collection_select :season_entry, :driver_id, @drivers, :id, :name %>  
     <%= collection_select :season_entry, :defaultteam_id, Team.order(:name), :id, :name %>

@@ -9,9 +9,10 @@ describe Driver do
       driver = Driver.create!(:name => "David", :player => player)
       team = Team.create!(:name => "Mclaren", :color => Team::Colors["Blue"])
       season_entry = SeasonEntry.create!( 
-        :season => season,
-        :driver => driver,
-        :defaultteam => team
+        { :season => season,
+          :driver => driver,
+          :defaultteam => team },
+        :without_protection => true
       )
       driver.default_team_for_season(season).should == team
     end

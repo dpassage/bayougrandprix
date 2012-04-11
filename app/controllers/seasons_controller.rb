@@ -30,20 +30,7 @@ class SeasonsController < ApplicationController
     end
   end
 
-  # POST /seasons/1/add_driver
-  def add_driver
-    season = Season.find(params[:season_id])
-    driver = Driver.find(params[:season_entry][:driver_id])
-    team = Team.find(params[:season_entry][:defaultteam_id])
-    if season.add_driver(driver, team)
-      flash[:notice] = "Driver #{driver.name} entered"
-    else
-      flash[:error] = "Driver #{driver.name} already entered!"
-    end
-    redirect_to season_path(season)
-  end
   # GET /seasons/new
-  # GET /seasons/new.xml
   def new
     @season = Season.new
   end
