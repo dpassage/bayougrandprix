@@ -3,9 +3,10 @@ require 'spec_helper'
 describe Race do
   before(:each) do
     @race = Race.new(
-      :track => mock_model("Track"),
+      { :track => mock_model("Track"),
       :season => mock_model("Season"),
-      :date => Date.today
+      :date => Date.today },
+      :without_protection => true
     )
   end
   it "is valid with valid parameters" do

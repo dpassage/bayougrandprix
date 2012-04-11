@@ -63,4 +63,12 @@
 
 </table>
 
+<% if admin? %>
+  <%= form_tag(season_races_path(@season)) do %>
+    <%= date_select :race, :date, :default => Date.today %>
+    <%= collection_select :race, :track_id, Track.order(:name), :id, :name %>
+    <%= submit_tag("Add Race")%>
+  <% end %>
+<% end %>
+
 <%= link_to 'Back to Seasons', seasons_path %>

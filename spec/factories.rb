@@ -22,4 +22,8 @@ FactoryGirl.define do
     driver
     association :defaultteam, factory: :team
   end
+  factory :track do
+    name "Embarcadero"
+    country "California"
+  end
 end

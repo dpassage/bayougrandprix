@@ -10,10 +10,9 @@ Bayougrandprix::Application.routes.draw do
   resources :players
 
   resources :seasons do
-    resources :races
+    resources :races, :only => [ :create ]
     resources :season_entries, :only => [ :create, :destroy ]
     get 'results', :on => :member
-    post 'add_driver', :on => :member
   end
 
   get "home/index"
