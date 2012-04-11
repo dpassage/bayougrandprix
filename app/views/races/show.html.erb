@@ -17,5 +17,20 @@
   <% end %>
 </table>
 
-<%= link_to 'Edit', edit_season_race_path(@season, @race) %> |
-<%= link_to 'Back', season_races_path(@season) %>
+<h3>Add Drivers</h3>
+<table id="race_add_drivers">
+  <tr>
+    <th>Driver</th>
+    <th>Team</th>
+  </tr>
+  <% @season.season_entries.each do |se| %>
+    <% unless @race.race_entries.exists?(:driver_id => se.driver) %>
+      <tr>
+        <td><%= se.driver.name %></td>
+        <td><%= se.defaultteam.name %></td>
+      </tr>
+    <% end %>    
+  <% end %>
+</table>
+<br />
+<%= link_to 'Season', season_path(@season) %>

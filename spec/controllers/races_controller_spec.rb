@@ -39,4 +39,8 @@ describe RacesController do
     it "redirects to the season page"
     it "sets the flash notice"
   end
+  describe "GET 'show'" do
+    it "passes the race"
+    it "passes the season"
+  end
 end

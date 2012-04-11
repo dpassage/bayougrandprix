@@ -7,4 +7,8 @@ class RacesController < ApplicationController
     flash[:notice] = "Race added"
     redirect_to season_path(@race.season)
   end
+  def show
+    @race = Race.find(params[:id])
+    @season = Season.find_by_name(params[:season_id])
+  end
 end
