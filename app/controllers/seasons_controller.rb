@@ -7,8 +7,7 @@ class SeasonsController < ApplicationController
 
   # GET /seasons/1
   def show
-    seasons = Season.where(:name=>params[:id])
-    @season = seasons.first
+    @season = Season.find_by_name(params[:id])
     @season_entries = @season.season_entries
     @races = @season.races
     if admin?
@@ -19,15 +18,10 @@ class SeasonsController < ApplicationController
 
   # GET /seasons/2002/results
   def results
-    @season = Season.where(:name=>params[:id]).first
+    @season = Season.find_by_name(params[:id])
     @drivers_by_points = @season.drivers_by_points
     @drivers_by_qualifying_points = @season.drivers_by_qualifying_points
     @teams_by_points = @season.teams_by_points
-  
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @season }
-    end
   end
 
   # GET /seasons/new

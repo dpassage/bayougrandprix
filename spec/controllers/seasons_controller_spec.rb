@@ -38,7 +38,7 @@ describe SeasonsController do
   describe "GET show" do
     before(:each) do 
       @season = mock_model('Season').as_null_object
-      Season.stub(:where).and_return( [ @season ] ) 
+      Season.stub(:find_by_name).and_return( @season ) 
     end
     shared_examples "always passes some variables" do
       it "should pass an array of season entries" do
@@ -77,6 +77,25 @@ describe SeasonsController do
         get 'show'
         assigns[:tracks].should be_nil
       end
+    end
+  end
+  describe "GET results" do
+    let(:season) { FactoryGirl.create(:season) }
+    it "passes the season to the view" do
+      get 'results', :id => season.name
+      assigns[:season].should == season
+    end
+    it "passes drivers by points to the view" do
+      get 'results', :id => season.name
+      assigns[:drivers_by_points].should_not be_nil
+    end
+    it "passes teams by points to the view" do
+      get 'results', :id => season.name
+      assigns[:teams_by_points].should_not be_nil
+    end
+    it "passes drivers by qualifying points to the view" do
+      get 'results', :id => season.name
+      assigns[:drivers_by_qualifying_points].should_not be_nil
     end
   end
 end

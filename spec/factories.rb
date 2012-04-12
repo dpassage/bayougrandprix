@@ -26,4 +26,9 @@ FactoryGirl.define do
     name "Embarcadero"
     country "California"
   end
+  factory :race do
+    date "2012-04-01"
+    track
+    season
+  end
 end

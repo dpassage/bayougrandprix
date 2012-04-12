@@ -40,7 +40,16 @@ describe RacesController do
     it "sets the flash notice"
   end
   describe "GET 'show'" do
-    it "passes the race"
-    it "passes the season"
+    let (:race) { FactoryGirl.create(:race, :season => season) }
+    let (:params) { { "season_id" => season.to_param,
+                      "id" => race.to_param } }
+    it "passes the race" do
+      get 'show', params
+      assigns[:race].should == race
+    end
+    it "passes the season" do
+      get 'show', params
+      assigns[:season].should == season
+    end
   end
 end
