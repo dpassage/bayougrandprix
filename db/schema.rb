@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(:version => 20120410054540) do
   end
 
   create_table "race_entries", :force => true do |t|
-    t.integer  "race_id"
-    t.integer  "driver_id"
-    t.integer  "team_id"
+    t.integer  "race_id",    :null => false
+    t.integer  "driver_id",  :null => false
+    t.integer  "team_id",    :null => false
     t.integer  "finish"
     t.boolean  "dnf"
     t.datetime "created_at"
