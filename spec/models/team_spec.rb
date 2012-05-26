@@ -31,8 +31,24 @@ describe Team do
     @team.should_not be_valid
   end
   describe "#destroy" do
-    it "cannot be removed if used in a season entry"
-    it "cannot be removed if used in a race entry"
+    let (:team) { FactoryGirl.create(:team) }
+    let (:otherteam) { FactoryGirl.create(:team)}
+    let (:season) { FactoryGirl.create(:season) }
+    let (:driver) { FactoryGirl.create(:driver) }
+    let (:race) { FactoryGirl.create(:race) }
+    it "cannot be removed if used in a season entry" do
+      se = SeasonEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
+      expect {
+        team.destroy
+      }.to raise_error
+    end
+    it "cannot be removed if used in a race entry" do
+      se = SeasonEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
+      re = RaceEntry.create!( { race: race, season_entry: se, team: otherteam}, :without_protection => true)
+      expect {
+        otherteam.destroy
+      }.to raise_error
+    end
   end
 end
 

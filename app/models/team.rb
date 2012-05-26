@@ -11,7 +11,7 @@ class Team < ActiveRecord::Base
   validates_presence_of :name
   validates_inclusion_of :fake, :in => [true, false]
   validates_inclusion_of :color, :in => Colors.values
-  has_many :season_entries
+  has_many :season_entries, :dependent => :restrict
   has_many :race_entries
   attr_accessible :name, :fake, :color
 end

@@ -4,7 +4,8 @@ class RaceEntry < ActiveRecord::Base
   belongs_to :team
   validates_presence_of :race
   validates_presence_of :season_entry
-  attr_accessible :race, :season_entry
+  validates_presence_of :team
+  attr_accessible :race, :season_entry, :team
   
   def driver
     season_entry.driver
