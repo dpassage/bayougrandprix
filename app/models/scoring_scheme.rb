@@ -1,5 +1,5 @@
 class ScoringScheme < ActiveRecord::Base
-  has_many :seasons
+  has_many :seasons, :dependent => :restrict
   attr_accessible :name
 
   def points_for_finishing(place)

@@ -25,7 +25,15 @@ describe Race do
     @race.should_not be_valid
   end
   describe "#destroy" do
-    it "cannot be destroyed if someone has entered the race"
+    let (:race) { FactoryGirl.create(:race) }
+    let (:season_entry) { FactoryGirl.create(:season_entry) }
+    let (:team) { FactoryGirl.create(:team) }
+    it "cannot be destroyed if someone has entered the race" do
+      re = RaceEntry.create!({ race: race, season_entry: season_entry, team: team }, :without_protection => true)
+      expect {
+        race.destroy
+      }.to raise_error
+    end
   end
   describe "#points_for_finishing" do
     it "asks the season what the place is worth" do

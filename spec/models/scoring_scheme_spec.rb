@@ -2,7 +2,13 @@ require 'spec_helper'
 
 describe "ScoringScheme" do
   describe "#destroy" do
-    it "cannot be removed if it's in use in a season"
+    let (:scoring_scheme) { FactoryGirl.create(:scoring_scheme) }
+    it "cannot be removed if it's in use in a season" do
+      season = Season.create!( { scoring_scheme: scoring_scheme, name: "2037"}, :without_protection => true)
+      expect {
+        scoring_scheme.destroy
+      }.to raise_error
+    end
   end
   describe "#points_for_finishing" do
     context "with a scheme named 9-6-4-3-2-1" do
