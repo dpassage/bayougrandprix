@@ -15,9 +15,7 @@ describe Driver do
         Driver.find(saved_id)
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
-    it "cannot be removed if the driver has entered a race"
   end
-  it "cannot be removed if the driver has entered a race"
   describe "#default_team_for_season" do
     it "returns the default team for that driver in that season" do
       scheme = ScoringScheme.create!(:name => "2-1")

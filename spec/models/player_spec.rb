@@ -16,6 +16,10 @@ describe Player do
     @player.should be_valid
   end
   describe "#destroy" do
-    it "cannot be removed if there is a linked driver"
+    let (:player) { FactoryGirl.create("player") }
+    it "cannot be removed if there is a linked driver" do
+      driver = FactoryGirl.create("driver", player: player)
+      expect { player.destroy }.to raise_error
+    end
   end
 end
