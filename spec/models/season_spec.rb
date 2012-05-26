@@ -20,8 +20,22 @@ describe "Season" do
     @season.should_not be_valid
   end
   describe "#destroy" do
-    it "cannot be removed if there are races in the season"
-    it "cannot be removed if there are driveres entered in the season"
+    let (:season) { FactoryGirl.create(:season) }
+    let (:track) { FactoryGirl.create(:track) }
+    let (:team) { FactoryGirl.create(:team) }
+    let (:driver) { FactoryGirl.create(:driver)}
+    it "cannot be removed if there are races in the season" do
+      race = Race.create!({track: track, season: season, date:Time.new }, :without_protection => true)
+      expect {
+        season.destroy
+      }.to raise_error
+    end
+    it "cannot be removed if there are drivers entered in the season" do
+      se = SeasonEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
+      expect {
+        season.destroy
+      }.to raise_error
+    end
   end
   describe "#drivers_by_points" do
     it "returns an array of driver entries sorted by points scored" do
