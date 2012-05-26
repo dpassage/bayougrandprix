@@ -19,6 +19,10 @@ describe "Season" do
     @season.scoring_scheme = nil
     @season.should_not be_valid
   end
+  describe "#destroy" do
+    it "cannot be removed if there are races in the season"
+    it "cannot be removed if there are driveres entered in the season"
+  end
   describe "#drivers_by_points" do
     it "returns an array of driver entries sorted by points scored" do
       season = seasons(:season_2002)

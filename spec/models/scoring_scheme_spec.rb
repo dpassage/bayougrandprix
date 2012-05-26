@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe "ScoringScheme" do
+  describe "#destroy" do
+    it "cannot be removed if it's in use in a season"
+  end
   describe "#points_for_finishing" do
     context "with a scheme named 9-6-4-3-2-1" do
       before(:each) do

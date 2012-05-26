@@ -1,10 +1,14 @@
 class RaceEntry < ActiveRecord::Base
   belongs_to :race
-  belongs_to :driver
+  belongs_to :season_entry
   belongs_to :team
   validates_presence_of :race
-  validates_presence_of :driver
-  attr_accessible :race, :driver
+  validates_presence_of :season_entry
+  attr_accessible :race, :season_entry
+  
+  def driver
+    season_entry.driver
+  end
   
   def finish_points
     if self.dnf

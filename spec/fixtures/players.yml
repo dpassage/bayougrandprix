@@ -1,169 +1,187 @@
---- 
-players_019: 
-  name: Bridget Segurson
-  created_at: 
-  updated_at: 
-  id: "21"
-  email: ""
-tim: 
-  name: Tim Hayman
-  created_at: 
-  updated_at: 
-  id: "8"
-  email: ""
-players_020: 
-  name: Lisa Lutkenhouse
-  created_at: 
-  updated_at: 
-  id: "22"
-  email: ""
-players_009: 
-  name: Ian Toll
-  created_at: 
-  updated_at: 
-  id: "9"
-  email: ""
-players_021: 
-  name: Graah
-  created_at: 
-  updated_at: 
-  id: "23"
-  email: ""
-players_010: 
-  name: Robert Giedt
-  created_at: 
-  updated_at: 
-  id: "10"
-  email: ""
-players_022: 
-  name: Bryan Duffel
-  created_at: 
-  updated_at: 
-  id: "25"
-  email: ""
-players_011: 
-  name: Jen Rost
-  created_at: 
-  updated_at: 
-  id: "11"
-  email: ""
-players_023: 
-  name: Simon Ka
-  created_at: 
-  updated_at: 
-  id: "26"
-  email: ""
-players_012: 
-  name: David Ziring
-  created_at: 
-  updated_at: 
-  id: "12"
-  email: zeke@thebayou.net
-players_001: 
+---
+players_001:
+  id: 1
   name: Jeshua Rosestone
-  created_at: 
-  updated_at: 
-  id: "1"
   email: jeshuarosestone@hotmail.com
-players_024: 
-  name: Bill Roper
   created_at: 
   updated_at: 
-  id: "27"
-  email: ""
-players_013: 
-  name: Porter Venn
-  created_at: 
-  updated_at: 
-  id: "13"
-  email: ""
-players_002: 
+players_002:
+  id: 2
   name: David Paschich
-  created_at: 
-  updated_at: 
-  id: "2"
   email: dpassage@flophouse.com
-players_025: 
-  name: Kendrick Wright
   created_at: 
   updated_at: 
-  id: "28"
-  email: ""
-players_014: 
-  name: Eric Mueller
-  created_at: 
-  updated_at: 
-  id: "14"
-  email: ""
-players_003: 
+players_003:
+  id: 3
   name: Phil Sacks
+  email: ''
   created_at: 
   updated_at: 
-  id: "3"
-  email: ""
-players_026: 
-  name: Michael Weiss
-  created_at: 
-  updated_at: 
-  id: "29"
-  email: ""
-players_015: 
-  name: Martin Taber
-  created_at: 
-  updated_at: 
-  id: "15"
-  email: ""
-players_004: 
+players_004:
+  id: 4
   name: Peter Koning
+  email: ''
   created_at: 
   updated_at: 
-  id: "4"
-  email: ""
-players_027: 
-  name: Elspeth Golden
-  created_at: 
-  updated_at: 
-  id: "30"
-  email: ""
-players_016: 
-  name: Stacey Gould
-  created_at: 
-  updated_at: 
-  id: "18"
-  email: ""
-players_005: 
+players_005:
+  id: 5
   name: Andy Harris
+  email: ''
   created_at: 
   updated_at: 
-  id: "5"
-  email: ""
-players_028: 
-  name: Barak Engel
-  created_at: 
-  updated_at: 
-  id: "31"
-  email: ""
-players_017: 
-  name: Steve Miller
-  created_at: 
-  updated_at: 
-  id: "19"
-  email: s47miller@yahoo.com
-players_006: 
+players_006:
+  id: 6
   name: Ian Ricksecker
+  email: ''
   created_at: 
   updated_at: 
-  id: "6"
-  email: ""
-players_018: 
-  name: Solomon Gorlick
-  created_at: 
-  updated_at: 
-  id: "20"
-  email: solomongorlick@yahoo.com
-players_007: 
+players_007:
+  id: 7
   name: Adam Rappoport
+  email: ''
   created_at: 
   updated_at: 
-  id: "7"
-  email: ""
+players_008:
+  id: 8
+  name: Tim Hayman
+  email: ''
+  created_at: 
+  updated_at: 
+players_009:
+  id: 9
+  name: Ian Toll
+  email: ''
+  created_at: 
+  updated_at: 
+players_010:
+  id: 10
+  name: Robert Giedt
+  email: ''
+  created_at: 
+  updated_at: 
+players_011:
+  id: 11
+  name: Jen Rost
+  email: ''
+  created_at: 
+  updated_at: 
+players_012:
+  id: 12
+  name: David Ziring
+  email: zeke@thebayou.net
+  created_at: 
+  updated_at: 
+players_013:
+  id: 13
+  name: Porter Venn
+  email: ''
+  created_at: 
+  updated_at: 
+players_014:
+  id: 14
+  name: Eric Mueller
+  email: ''
+  created_at: 
+  updated_at: 
+players_015:
+  id: 15
+  name: Martin Taber
+  email: ''
+  created_at: 
+  updated_at: 
+players_016:
+  id: 18
+  name: Stacey Gould
+  email: ''
+  created_at: 
+  updated_at: 
+players_017:
+  id: 19
+  name: Steve Miller
+  email: s47miller@yahoo.com
+  created_at: 
+  updated_at: 
+players_018:
+  id: 20
+  name: Solomon Gorlick
+  email: solomongorlick@yahoo.com
+  created_at: 
+  updated_at: 
+players_019:
+  id: 21
+  name: Bridget Segurson
+  email: ''
+  created_at: 
+  updated_at: 
+players_020:
+  id: 22
+  name: Lisa Lutkenhouse
+  email: ''
+  created_at: 
+  updated_at: 
+players_021:
+  id: 23
+  name: Graah
+  email: ''
+  created_at: 
+  updated_at: 
+players_022:
+  id: 25
+  name: Bryan Duffel
+  email: ''
+  created_at: 
+  updated_at: 
+players_023:
+  id: 26
+  name: Simon Ka
+  email: ''
+  created_at: 
+  updated_at: 
+players_024:
+  id: 27
+  name: Bill Roper
+  email: ''
+  created_at: 
+  updated_at: 
+players_025:
+  id: 28
+  name: Kendrick Wright
+  email: ''
+  created_at: 
+  updated_at: 
+players_026:
+  id: 29
+  name: Michael Weiss
+  email: ''
+  created_at: 
+  updated_at: 
+players_027:
+  id: 30
+  name: Elspeth Golden
+  email: ''
+  created_at: 
+  updated_at: 
+players_028:
+  id: 31
+  name: Barak Engel
+  email: ''
+  created_at: 
+  updated_at: 
+players_029:
+  id: 32
+  name: Darek Kilian
+  email: ''
+  created_at: 
+  updated_at: 
+players_030:
+  id: 33
+  name: Scott Kaul
+  email: ''
+  created_at: 
+  updated_at: 
+players_031:
+  id: 34
+  name: Gino Daveggio
+  email: ''
+  created_at: 
+  updated_at: 

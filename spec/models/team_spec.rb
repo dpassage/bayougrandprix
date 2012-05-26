@@ -30,4 +30,9 @@ describe Team do
     @team.fake = nil
     @team.should_not be_valid
   end
+  describe "#destroy" do
+    it "cannot be removed if used in a season entry"
+    it "cannot be removed if used in a race entry"
+  end
 end
+

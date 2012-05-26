@@ -15,4 +15,7 @@ describe Player do
     @player.email = nil
     @player.should be_valid
   end
+  describe "#destroy" do
+    it "cannot be removed if there is a linked driver"
+  end
 end

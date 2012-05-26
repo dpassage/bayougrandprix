@@ -4,7 +4,7 @@ describe RaceEntry do
   before(:each) do
     @re = RaceEntry.new(
       :race => mock_model("Race"),
-      :driver => mock_model("Driver")
+      :season_entry => mock_model("SeasonEntry")
     )
   end
   it "is valid with valid parameters" do
@@ -14,8 +14,8 @@ describe RaceEntry do
     @re.race = nil
     @re.should_not be_valid
   end
-  it "is invalid without a driver" do
-    @re.driver = nil
+  it "is invalid without a season entry" do
+    @re.season_entry = nil
     @re.should_not be_valid
   end
   it "initially is nil for finishing place" do

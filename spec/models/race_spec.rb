@@ -24,6 +24,9 @@ describe Race do
     @race.date = nil
     @race.should_not be_valid
   end
+  describe "#destroy" do
+    it "cannot be destroyed if someone has entered the race"
+  end
   describe "#points_for_finishing" do
     it "asks the season what the place is worth" do
       season = mock_model('Season')

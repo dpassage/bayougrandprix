@@ -1,16 +1,16 @@
---- 
-scoring_schemes_001: 
+---
+scoring_schemes_001:
+  id: 1
   name: 10-6-4-3-2-1
   created_at: 
   updated_at: 
-  id: "1"
-scoring_schemes_002: 
+scoring_schemes_002:
+  id: 2
   name: 10-8-6-5-4-3-2-1
   created_at: 
   updated_at: 
-  id: "2"
-scoring_schemes_003: 
+scoring_schemes_003:
+  id: 3
   name: 9-6-4-3-2-1
   created_at: 
   updated_at: 
-  id: "3"

@@ -24,4 +24,5 @@ describe SeasonEntry do
     @se.driver = nil
     @se.should_not be_valid
   end
+  it "cannot be deleted if the driver has participated in a race that season"
 end
