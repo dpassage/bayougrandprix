@@ -24,10 +24,19 @@
     <th>Team</th>
   </tr>
   <% @season.season_entries.each do |se| %>
-    <% unless @race.race_entries.exists?(:driver_id => se.driver) %>
+    <% unless @race.race_entries.exists?(:season_entry_id => se.id) %>
       <tr>
-        <td><%= se.driver.name %></td>
-        <td><%= se.defaultteam.name %></td>
+        <%= form_tag(season_race_race_entries_path(@season, @race), :method => "post") do %>
+          <td><%= se.driver.name %></td>
+          <td><%= se.defaultteam.name %>
+              <%= hidden_field_tag(:team_id, se.defaultteam.id) %>
+              </td>
+          <td>
+            <%= hidden_field_tag(:season_entry_id, se.id) %>
+            <%= hidden_field_tag(:race_id, @race.id) %>
+            <%= submit_tag("Add") %>
+          </td>
+        <% end %>  
       </tr>
     <% end %>    
   <% end %>

@@ -10,7 +10,9 @@ Bayougrandprix::Application.routes.draw do
   resources :players
 
   resources :seasons do
-    resources :races, :only => [ :create, :show ]
+    resources :races, :only => [ :create, :show ] do
+      resources :race_entries, :only => [ :create ]
+    end
     resources :season_entries, :only => [ :create, :destroy ]
     get 'results', :on => :member
   end
