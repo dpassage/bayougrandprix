@@ -12,10 +12,10 @@
 </div>
 
 <% if flash[:notice] %>
-  <p class="notice"><%= flash[:notice] %></p>
+  <p id="notice" class="notice"><%= flash[:notice] %></p>
 <% end %>
 <% if flash[:error] %>
-  <p class="error"><%= flash[:error] %></p>
+  <p id="error" class="error"><%= flash[:error] %></p>
 <% end %>
 
 <%= yield %>
