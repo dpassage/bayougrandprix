@@ -53,14 +53,14 @@ describe SeasonEntriesController do
     let(:season_entry) { FactoryGirl.create(:season_entry, { :season => season }) }
     it "removes the season entry" do
       delete 'destroy', { :id => season_entry.id,
-                          :season_id => season.id }
+                          :season_id => season.to_param }
       expect { 
         SeasonEntry.find(season_entry.id)
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
     it "does not set the error flash" do
       delete 'destroy', { :id => season_entry.id,
-                          :season_id => season.id }
+                          :season_id => season.to_param }
       flash[:error].should be_nil
     end
     it "redirects to the season" do
