@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>Date: <%= @race.date %></p>
 <p>Track: <%= @race.track.name %></p>
 
@@ -10,36 +8,31 @@
     <th>Team</th>
   </tr>
   <% @race.race_entries.each do |re| %>
-  <tr bgcolor="<%= re.team.color %>">
+  <tr style="background-color: <%= re.team.color %>;">
     <td><%= re.driver.name %></td>
     <td><%= re.team.name %></td>
   </tr>
   <% end %>
 </table>
 
+<% if admin? %>
 <h3>Add Drivers</h3>
-<table id="race_add_drivers">
-  <tr>
-    <th>Driver</th>
-    <th>Team</th>
-  </tr>
   <% @season.season_entries.each do |se| %>
     <% unless @race.race_entries.exists?(:season_entry_id => se.id) %>
-      <tr>
         <%= form_tag(season_race_race_entries_path(@season, @race), :method => "post") do %>
-          <td><%= se.driver.name %></td>
-          <td><%= se.defaultteam.name %>
-              <%= hidden_field_tag(:team_id, se.defaultteam.id) %>
-              </td>
-          <td>
-            <%= hidden_field_tag(:season_entry_id, se.id) %>
-            <%= hidden_field_tag(:race_id, @race.id) %>
-            <%= submit_tag("Add") %>
-          </td>
+          <%= se.driver.name %>
+          <% if se.defaultteam.fake? %>
+            <%= select_tag "team_id", options_from_collection_for_select(Team.where(fake: false).order("name ASC"), "id", "name") %>
+          <% else %>
+            <%= se.defaultteam.name %>
+            <%= hidden_field_tag(:team_id, se.defaultteam.id) %>
+          <% end %>
+          <%= hidden_field_tag(:season_entry_id, se.id) %>
+          <%= hidden_field_tag(:race_id, @race.id) %>
+          <%= submit_tag("Add") %>
         <% end %>  
-      </tr>
     <% end %>    
   <% end %>
-</table>
+<% end %>
 <br />
 <%= link_to 'Season', season_path(@season) %>
