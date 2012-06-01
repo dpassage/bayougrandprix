@@ -36,6 +36,9 @@ describe "ScoringScheme" do
       it "returns 0 for 7th" do
         @scheme.points_for_finishing(7).should == 0
       end
+      it "returns 0 for nil" do
+        @scheme.points_for_finishing(nil).should == 0
+      end
     end
   end
 end
