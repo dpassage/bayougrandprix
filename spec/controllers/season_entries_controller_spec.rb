@@ -68,7 +68,29 @@ describe SeasonEntriesController do
                           :season_id => season.to_param }
       response.should redirect_to(season_path(season))
     end
-      
+    context "when the driver has been entered in a race that season" do
+      let(:race) { FactoryGirl.create(:race, season: season) }
+      before(:each) do
+        FactoryGirl.create(:race_entry, 
+                           race: race,
+                           season_entry: season_entry,
+                           team: season_entry.defaultteam) 
+      end
+      it "does not remove the season entry" do
+        delete 'destroy', { :id => season_entry.id,
+                            :season_id => season.to_param }
+        SeasonEntry.find(season_entry.id).should == season_entry
+      end
+      it "sets the error flash" do
+        delete 'destroy', { :id => season_entry.id,
+                            :season_id => season.to_param }
+        flash[:error].should_not be_nil
+      end
+      it "redirects to the season" do
+        delete 'destroy', { :id => season_entry.id,
+                            :season_id => season.to_param }
+        response.should redirect_to(season_path(season))
+      end
+    end
   end
-
 end

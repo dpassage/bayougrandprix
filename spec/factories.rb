@@ -31,4 +31,9 @@ FactoryGirl.define do
     track
     season
   end
+  factory :race_entry do
+    race
+    season_entry
+    team
+  end
 end
