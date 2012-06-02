@@ -6,13 +6,25 @@
   <tr>
     <th>Driver</th>
     <th>Team</th>
+    <th>Finished</th>
+    <th>Qualified</th>
   </tr>
-  <% @race.race_entries.order(:team_id).each do |re| %>
+  <% @race.race_entries.where("finish is not null").order(:finish).each do |re| %>
   <tr style="background-color: <%= re.team.color %>;">
     <td><%= re.driver.name %></td>
     <td><%= re.team.name %></td>
+    <td><%= re.finish %></td>
+    <td><%= re.qualify %></td>
   </tr>
   <% end %>
+  <% @race.race_entries.where("finish is null").order(:team_id).each do |re| %>
+  <tr style="background-color: <%= re.team.color %>;">
+    <td><%= re.driver.name %></td>
+    <td><%= re.team.name %></td>
+    <td><%= re.finish %></td>
+    <td><%= re.qualify %></td>
+  </tr>
+  <% end %>  
 </table>
 
 <% if admin? %>
