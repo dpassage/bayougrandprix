@@ -7,7 +7,7 @@
     <th>Driver</th>
     <th>Team</th>
   </tr>
-  <% @race.race_entries.each do |re| %>
+  <% @race.race_entries.order(:team_id).each do |re| %>
   <tr style="background-color: <%= re.team.color %>;">
     <td><%= re.driver.name %></td>
     <td><%= re.team.name %></td>
