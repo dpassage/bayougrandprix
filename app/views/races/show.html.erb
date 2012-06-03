@@ -2,30 +2,29 @@
 <p>Date: <%= @race.date %></p>
 
 <h3>Entrants</h3>
-<table id="races_race_entries">
-  <tr>
-    <th>Driver</th>
-    <th>Team</th>
-    <th>Finished</th>
-    <th>Qualified</th>
-  </tr>
-  <% @race.race_entries.where("finish is not null").order(:finish).each do |re| %>
-  <tr style="background-color: <%= re.team.color %>;">
-    <td><%= re.driver.name %></td>
-    <td><%= re.team.name %></td>
-    <td><%= re.finish %></td>
-    <td><%= re.qualify %></td>
-  </tr>
-  <% end %>
-  <% @race.race_entries.where("finish is null").order(:team_id).each do |re| %>
-  <tr style="background-color: <%= re.team.color %>;">
-    <td><%= re.driver.name %></td>
-    <td><%= re.team.name %></td>
-    <td><%= re.finish %></td>
-    <td><%= re.qualify %></td>
-  </tr>
-  <% end %>  
-</table>
+<%= form_for @race, :url => { :season_id => @season.to_param } do |f| %>
+  <fieldset>
+    <table id="races_race_entries">
+      <tr>
+        <th>Driver</th>
+        <th>Team</th>
+        <th>Finished</th>
+        <th>Qualified</th>
+      </tr>
+      <% @race.race_entries.order(:finish).each do |re| %>
+        <%= f.fields_for :race_entries, re do |re_fields| %>
+          <tr style="background-color: <%= re.team.color %>;">
+            <td><%= re.driver.name %></td>
+            <td><%= re.team.name %></td>
+            <td><%= re_fields.text_field :finish %></td>
+            <td><%= re_fields.text_field :qualify %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+    <%= f.submit "Update" %>
+  </fieldset>
+<% end %>
 
 <% if admin? %>
 <h3>Add Drivers</h3>

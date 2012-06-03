@@ -35,5 +35,7 @@ FactoryGirl.define do
     race
     season_entry
     team
+    finish nil
+    qualify nil
   end
 end

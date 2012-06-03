@@ -5,7 +5,8 @@ class RaceEntry < ActiveRecord::Base
   validates_presence_of :race
   validates_presence_of :season_entry
   validates_presence_of :team
-  attr_accessible :race, :season_entry, :team
+  validates :finish, :uniqueness => {:scope => :race_id}, :allow_nil => true
+  attr_accessible :race, :season_entry, :team, :finish, :qualify
   
   def driver
     season_entry.driver

@@ -3,7 +3,8 @@ class Race < ActiveRecord::Base
   belongs_to :season
   has_many :race_entries, :dependent => :restrict
   validates_presence_of :track, :season, :date
-  attr_accessible :track_id, :season_id, :date
+  accepts_nested_attributes_for :race_entries
+  attr_accessible :track_id, :season_id, :date, :race_entries_attributes
   
   def points_for_finishing(place)
     self.season.points_for_finishing(place)
