@@ -14,10 +14,11 @@ class RacesController < ApplicationController
   def update
     season = Season.find_by_name(params[:season_id])
     race = Race.find(params[:id])
-    if race.update_attributes(params[:race])
+    begin
+      race.update_attributes!(params[:race])
       flash[:notice] = "Race results updated"
-    else
-      flash[:error] = "Race results not updated"
+    rescue ActiveRecord::RecordNotUnique
+      flash[:error] = "Finishing and qualifying places must be unique"
     end
     redirect_to season_race_path(season, race)
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120526000513) do
+ActiveRecord::Schema.define(:version => 20120604224200) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20120526000513) do
     t.boolean  "dnq"
     t.integer  "season_entry_id"
   end
+
+  add_index "race_entries", ["race_id", "finish"], :name => "index_race_entries_on_race_id_and_finish", :unique => true
 
   create_table "raceresults", :id => false, :force => true do |t|
     t.integer "race",                      :null => false

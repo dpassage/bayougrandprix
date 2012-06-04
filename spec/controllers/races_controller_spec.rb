@@ -102,23 +102,17 @@ describe RacesController do
                         } 
                       }
         it "does not change the race entries" do
-          pending
           post 'update', params
           myre1 =  RaceEntry.find(re1.id)
           myre2 =  RaceEntry.find(re2.id)
-          puts "myre1.finish: #{myre1.inspect}"
-          puts "myre2.finish: #{myre2.inspect}"
-          
           myre1.finish.should be_nil
           myre2.finish.should be_nil
         end
         it "sets the flash error" do
-          pending
           post 'update', params
           flash[:error].should_not be_nil
         end
         it "redirects to the race page" do
-          pending
           post 'update', params
           response.should redirect_to(season_race_path(race.season, race))
         end
