@@ -34,11 +34,6 @@ describe RacesController do
       flash[:notice].should_not be_nil
     end
   end
-  describe "GET 'destroy'" do
-    it "removes the race from the season"
-    it "redirects to the season page"
-    it "sets the flash notice"
-  end
   describe "GET 'show'" do
     let (:race) { FactoryGirl.create(:race, :season => season) }
     let (:params) { { "season_id" => season.to_param,
