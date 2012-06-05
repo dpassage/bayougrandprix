@@ -1,4 +1,5 @@
 class RacesController < ApplicationController
+  before_filter :authorize, :only => [:create, :update]
   def create
     season = Season.find_by_name(params[:season_id])
     @race = Race.new(params[:race])

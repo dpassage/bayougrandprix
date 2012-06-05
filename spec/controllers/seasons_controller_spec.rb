@@ -13,6 +13,17 @@ describe SeasonsController do
     let(:name) { "2035" }
     let(:scoringscheme) { mock_model('ScoringScheme') }
     let(:season) { mock_model('Season').as_null_object }
+    let(:create_params) { { }}
+    context "when the user is not an admin" do
+      before (:each) do 
+        user_is_guest
+      end
+      it_should_behave_like "an unauthorized operation" do
+        before (:each) do
+          post :create, :season => { "name" => "2035", "scoring_scheme" => scoringscheme }
+        end
+      end
+    end
     context "when user is admin" do
       before (:each) do
         user_is_admin
