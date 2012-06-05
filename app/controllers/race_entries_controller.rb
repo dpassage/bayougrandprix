@@ -1,4 +1,6 @@
 class RaceEntriesController < ApplicationController
+  before_filter :authorize, :only => [:create]
+  
   def create
     se = SeasonEntry.find(params[:season_entry_id])
     race = Race.find(params[:race_id])
