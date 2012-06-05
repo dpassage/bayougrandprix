@@ -16,28 +16,25 @@ describe RaceEntriesController do
       before(:each) do
         controller.stub(:admin?).and_return(false)
       end
-      it "redirects to the root path" do
-        post 'create', race_entry_params
-        response.should redirect_to(root_path)
+      it_should_behave_like "an unauthorized operation" do
+        before(:each) do
+          post 'create', race_entry_params
+        end
       end
-      it "sets the error flash" do
-        post 'create', race_entry_params
-        flash[:error].should_not be_nil
+      it "does not create the race entry" do
+        expect {
+          post 'create', race_entry_params
+         }.to change(RaceEntry,:count).by(0)
       end
-     it "does not create the race entry" do
-       before = race.race_entries.all.length
-       post 'create', race_entry_params
-       race.race_entries.all.length.should == before
-     end
     end
     context "when the user is an admin" do
       before(:each) do
         controller.stub(:admin?).and_return(true)
       end      
       it "adds a driver to the race" do
-        before = race.race_entries.all.length
-        post 'create', race_entry_params
-        race.race_entries.all.length.should == before + 1
+        expect {
+          post 'create', race_entry_params
+        }.to change(RaceEntry,:count).by(1)
       end
       it "redirects to the race page" do
         post 'create', race_entry_params
