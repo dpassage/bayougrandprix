@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_filter :authorize, :only => [:update, :destroy]
+  before_filter :authorize, :only => [:update, :destroy, :create]
   def index
     @teams = Team.all
   end
@@ -8,6 +8,18 @@ class TeamsController < ApplicationController
   end
   def edit
     @team = Team.find(params[:id])
+  end
+  def new
+    @team = Team.new
+  end
+  def create
+    @team = Team.new(params[:team])
+    if @team.save
+      flash[:notice] = "Team #{@team.name} created"
+      redirect_to(teams_path)
+    else
+      render action: "new"
+    end
   end
   def update
     @team = Team.find(params[:id])

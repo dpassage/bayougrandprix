@@ -11,6 +11,13 @@ describe TeamsController do
     it ("should render the index template") { response.should render_template("index") }
     it ("should pass an array of teams") { assigns[:teams].should_not == nil }
   end
+  describe "GET 'new'" do
+    it "passes an unsaved team to the view" do
+      get 'new'
+      assigns[:team].should_not be_nil
+      assigns[:team].should be_new_record
+    end
+  end
   describe "GET 'show'" do
     before(:each) do
       get 'show', params
@@ -50,6 +57,51 @@ describe TeamsController do
         before(:each) { post 'update', update_params }
         it("should redirect to the show template") { response.should redirect_to(team_path(team)) }
         it("should change the team name") { Team.find(team.id).name.should == "Foo!" }
+      end
+    end
+  end
+  describe "POST 'create'" do
+    let (:create_params) { { team: { name: "New Team", color: Team::Colors["Pink"], fake: false } } }
+    describe "when user is not an admin" do
+      before(:each) do
+        controller.stub(:admin?).and_return(false)
+      end
+      it_should_behave_like "an unauthorized operation" do
+        before(:each) do
+          post 'create', create_params
+        end
+      end
+      it "should not create the team" do
+        expect {
+          post 'create', create_params
+        }.to change(Team, :count).by(0)
+      end
+    end
+    describe "when the user is an admin" do
+      before(:each) do
+        controller.stub(:admin?).and_return(true)
+      end
+      describe "with valid parameters" do
+        it "creates the new team" do
+          expect {
+            post 'create', create_params
+          }.to change(Team, :count).by(1)
+        end
+        it "sets the notice flash" do
+          post 'create', create_params
+          flash[:notice].should_not be_nil
+        end        
+        it "redirects to the teams page" do
+          post 'create', create_params
+          response.should redirect_to(teams_path)
+        end
+      end
+      describe "with invalid parameters" do
+        let(:invalid_params) { { team: {}}}
+        it "renders the new tempalte" do
+          post 'create', invalid_params
+          response.should render_template("new")
+        end
       end
     end
   end
