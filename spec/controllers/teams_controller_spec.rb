@@ -53,4 +53,62 @@ describe TeamsController do
       end
     end
   end
+  describe "DELETE 'destroy'" do
+    let (:delete_params) { { "id" => team.to_param } }
+    context "when the user is not an admin" do
+      before(:each) {
+        controller.stub(:admin?).and_return(false)
+      }
+      it_should_behave_like "an unauthorized operation" do
+        before(:each) do
+          delete 'destroy', delete_params
+        end
+      end
+      it("should not delete the team") do
+        delete 'destroy', delete_params
+        Team.find(team.id).should_not be_nil
+      end
+    end
+    context "when the user is an admin" do
+      before(:each) do 
+        controller.stub(:admin?).and_return(true)
+      end
+      context "when the team is not used" do
+        before (:each) do
+          delete 'destroy', delete_params 
+        end
+        it("deletes the team") { 
+          expect {
+            Team.find(team.id)
+          }.to raise_error ActiveRecord::RecordNotFound
+        }
+        it("redirects to teams page") { 
+          response.should redirect_to(teams_path) 
+        }
+        it("sets the notify flash") { 
+          flash[:notice].should_not be_nil 
+        }
+      end
+      context "when the team is used in a season_entry" do
+        before (:each) do
+          se = FactoryGirl.create(:season_entry, defaultteam: team) 
+          delete 'destroy', delete_params 
+        end
+        it("is not deleted") { Team.find(team.id).should == team }
+        it("redirects to teams page") { response.should redirect_to(teams_path) }
+        it("sets the error flash") { flash[:error].should_not be_nil }
+      end
+      context "when the team is used in a race_entry" do
+        before (:each) do
+          otherteam = FactoryGirl.create(:team) 
+          se = FactoryGirl.create(:season_entry, defaultteam: otherteam)
+          re = FactoryGirl.create(:race_entry, season_entry: se, team: team)
+          delete 'destroy', delete_params 
+        end
+        it("is not deleted") { Team.find(team.id).should == team }
+        it("redirects to teams page") { response.should redirect_to(teams_path) }
+        it("sets the error flash") { flash[:error].should_not be_nil }
+      end
+    end
+  end
 end
