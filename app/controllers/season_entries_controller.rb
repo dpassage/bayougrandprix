@@ -13,8 +13,6 @@ class SeasonEntriesController < ApplicationController
 
   def create
     season = Season.where(:name=>params[:season_id]).first
-    # driver = Driver.find(params[:season_entry][:driver_id])
-    # defaultteam = Team.find(params[:season_entry][:defaultteam_id])
     @se = SeasonEntry.new(params[:season_entry])
     @se.season = season
     begin

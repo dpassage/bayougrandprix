@@ -1,13 +1,14 @@
 require 'spec_helper'
 
 describe SeasonEntry do
+  let(:season) { FactoryGirl.create(:season) }
+  let(:team) { FactoryGirl.create(:team) }
+  let(:driver) { FactoryGirl.create(:driver) }
   before (:each) do
     @se = SeasonEntry.new(
-      { :season => mock_model("Season"),
-      :defaultteam => mock_model("Team"),
-      :driver => mock_model("Driver") },
-      :without_protection => true
-    )
+      :season_id => season.id,
+      :defaultteam_id => team.id,
+      :driver_id => driver.id)
   end
   it "is valid with valid parameters" do
     @se.should be_valid
