@@ -16,10 +16,9 @@ describe HomeController do
     end
     context "when there are three seasons" do
       before(:each) do
-        scheme = ScoringScheme.create!(:name => "2-1")
-        Season.create!(:name => "2001", :scoring_scheme => scheme)
-        Season.create!(:name => "2011", :scoring_scheme => scheme)
-        Season.create!(:name => "2003", :scoring_scheme => scheme)
+        FactoryGirl.create(:season, :name => "2001")
+        FactoryGirl.create(:season, :name => "2011")
+        FactoryGirl.create(:season, :name => "2003")
       end
       it "should pass all the seasons in the array" do
         get 'index'

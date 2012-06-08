@@ -17,7 +17,7 @@ describe "Seasons" do
     current_path.should == new_season_path
     
     fill_in('season_name', :with => "2025")
-    select('9-6-4-3-2-1', :from => 'season_scoring_scheme')
+    select('9-6-4-3-2-1', :from => 'season_scoring_scheme_id')
     click_button 'Create Season'
     current_path.should == seasons_path
     
@@ -30,7 +30,7 @@ describe "Seasons" do
     before(:all) do
       visit new_season_path
       fill_in('season_name', :with => "2025")
-      select('9-6-4-3-2-1', :from => 'season_scoring_scheme')
+      select('9-6-4-3-2-1', :from => 'season_scoring_scheme_id')
       click_button 'Create Season'
     end     
     it "adds a driver to the season" do

@@ -2,9 +2,10 @@ require 'spec_helper'
 
 describe "Season" do
   fixtures :all
+  let(:ss) { FactoryGirl.create(:scoring_scheme) }
   before(:each) do
     @season = Season.new(
-      :scoring_scheme => mock_model('ScoringScheme'),
+      :scoring_scheme_id => ss.to_param,
       :name => "1999"
     )
   end
@@ -16,7 +17,12 @@ describe "Season" do
     @season.should_not be_valid
   end
   it "is not valid without a scoring scheme" do
-    @season.scoring_scheme = nil
+    @season.scoring_scheme_id = nil
+    @season.should_not be_valid
+  end
+  it "is not valid if the scoring scheme id does not exist" do
+    invalid_id = ScoringScheme.maximum("id") + 1
+    @season.scoring_scheme_id = invalid_id
     @season.should_not be_valid
   end
   describe "#destroy" do

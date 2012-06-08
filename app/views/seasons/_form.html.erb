@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :scoring_scheme %><br />
-    <%= collection_select(:season, :scoring_scheme, 
+    <%= collection_select(:season, :scoring_scheme_id, 
                           ScoringScheme.all, :id, :name) %>  
   </div>
   <div class="actions">

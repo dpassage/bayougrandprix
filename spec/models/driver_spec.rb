@@ -19,7 +19,7 @@ describe Driver do
   describe "#default_team_for_season" do
     it "returns the default team for that driver in that season" do
       scheme = ScoringScheme.create!(:name => "2-1")
-      season = Season.create!(:name => "1973", :scoring_scheme => scheme)
+      season = Season.create!(:name => "1973", :scoring_scheme_id => scheme.to_param)
       player = Player.create!(:name => "David")
       driver = Driver.create!(:name => "David", :player => player)
       team = Team.create!(:name => "Mclaren", :color => Team::Colors["Blue"])

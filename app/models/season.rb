@@ -3,8 +3,15 @@ class Season < ActiveRecord::Base
   has_many :races, :dependent => :restrict
   belongs_to :scoring_scheme
   validates_presence_of :name
-  validates_presence_of :scoring_scheme
-  attr_accessible :name, :scoring_scheme
+  validates_presence_of :scoring_scheme_id
+  attr_accessible :name, :scoring_scheme_id
+  validate :scoring_scheme_must_exist
+  
+  def scoring_scheme_must_exist
+    if !ScoringScheme.exists?(scoring_scheme_id)
+      errors.add(:scoring_scheme_id, "must exist")
+    end
+  end
 
   def to_param
     self.name
