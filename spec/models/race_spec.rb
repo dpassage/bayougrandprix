@@ -1,23 +1,23 @@
 require 'spec_helper'
 
 describe Race do
+  let(:track) { FactoryGirl.create(:track) }
+  let(:season) { FactoryGirl.create(:season) }
   before(:each) do
     @race = Race.new(
-      { :track => mock_model("Track"),
-      :season => mock_model("Season"),
-      :date => Date.today },
-      :without_protection => true
-    )
+      :track_id => track.id,
+      :season_id => season.id,
+      :date => Date.today)
   end
   it "is valid with valid parameters" do
     @race.should be_valid
   end
   it "is invalid without a season" do
-    @race.season = nil
+    @race.season_id = nil
     @race.should_not be_valid
   end
   it "is invalid without a track" do
-    @race.track = nil
+    @race.track_id = nil
     @race.should_not be_valid
   end
   it "is invalid without a date" do
