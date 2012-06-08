@@ -1,14 +1,15 @@
 require 'spec_helper'
 
 describe RaceEntriesController do
-  let (:race) { FactoryGirl.create(:race) }
-  let (:season_entry) { FactoryGirl.create (:season_entry) }
+  let (:season) { FactoryGirl.create(:season) }
+  let (:race) { FactoryGirl.create(:race, season: season) }
+  let (:season_entry) { FactoryGirl.create(:season_entry, season: season) }
   let (:team) { FactoryGirl.create(:team) }
   let (:race_entry_params) {
-    { :season_entry_id => season_entry.to_param,
+    { "race_entry" => { :season_entry_id => season_entry.to_param,
       :race_id => race.to_param,
       :team_id => team.to_param
-    }
+    } }
   }
 
   describe "POST 'create'" do
