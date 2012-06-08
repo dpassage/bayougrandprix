@@ -1,6 +1,29 @@
 require 'spec_helper'
 
 describe Driver do
+  let(:player) { FactoryGirl.create(:player) }
+  before(:each) do
+    @driver = Driver.new(
+      :player_id => player.to_param,
+      :name => "1999"
+    )
+  end
+  it "is valid with valid parameters" do
+    @driver.should be_valid
+  end
+  it "is not valid without a name" do
+    @driver.name = nil
+    @driver.should_not be_valid
+  end
+  it "is not valid without a player" do
+    @driver.player_id = nil
+    @driver.should_not be_valid
+  end
+  it "is not valid if the player id does not exist" do
+    invalid_id = Player.maximum("id") + 1
+    @driver.player_id = invalid_id
+    @driver.should_not be_valid
+  end
   describe "#destroy" do
     let (:season) { FactoryGirl.create(:season) }
     let (:driver) { FactoryGirl.create(:driver) }
@@ -18,17 +41,14 @@ describe Driver do
   end
   describe "#default_team_for_season" do
     it "returns the default team for that driver in that season" do
-      scheme = ScoringScheme.create!(:name => "2-1")
-      season = Season.create!(:name => "1973", :scoring_scheme_id => scheme.to_param)
-      player = Player.create!(:name => "David")
-      driver = Driver.create!(:name => "David", :player => player)
-      team = Team.create!(:name => "Mclaren", :color => Team::Colors["Blue"])
-      season_entry = SeasonEntry.create!( 
-        { :season => season,
-          :driver => driver,
-          :defaultteam => team },
-        :without_protection => true
-      )
+      scheme = FactoryGirl.create(:scoring_scheme)
+      season = FactoryGirl.create(:season, :scoring_scheme => scheme)
+      player = FactoryGirl.create(:player)
+      driver = FactoryGirl.create(:driver, :player => player)
+      team = FactoryGirl.create(:team)
+      season_entry = FactoryGirl.create(:season_entry, :season => season,
+                                                       :driver => driver,
+                                                       :defaultteam => team )
       driver.default_team_for_season(season).should == team
     end
   end

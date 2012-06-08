@@ -26,21 +26,18 @@ describe DriversController do
     end
   end
   describe "GET show" do
-    before(:each) do
-      @driver = Driver.create! :name => "Hank", 
-                               :player => stub_model(Player, :name => "bob")
-    end
+    let(:driver) { FactoryGirl.create(:driver) }
     it "should be successful for a real driver" do
-      get 'show', :id => @driver.id
+      get 'show', :id => driver.to_param
       response.should be_success
     end
     it "should render the show template" do
-      get 'show', :id => @driver.id
+      get 'show', :id => driver.to_param
       response.should render_template("show")
     end
     it "should pass the driver to the template" do
-      get 'show', :id => @driver.id
-      assigns[:driver].should == @driver
+      get 'show', :id => driver.to_param
+      assigns[:driver].should == driver
     end
   end
 end
