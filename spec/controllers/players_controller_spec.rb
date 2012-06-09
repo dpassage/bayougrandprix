@@ -15,4 +15,7 @@ describe PlayersController do
       assigns[:players].should_not == nil
     end
   end
+  describe "GET 'new'" do
+    it_should_behave_like "standard new CRUD"
+  end
 end

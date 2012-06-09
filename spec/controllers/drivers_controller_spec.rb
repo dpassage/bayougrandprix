@@ -16,14 +16,7 @@ describe DriversController do
     end
   end
   describe "GET new" do
-    it "should be successful" do
-      get 'new'
-      response.should be_success
-    end
-    it "should show the new driver template" do
-      get 'new'
-      response.should render_template("new")
-    end
+    it_should_behave_like "standard new CRUD"
   end
   describe "GET show" do
     let(:driver) { FactoryGirl.create(:driver) }
