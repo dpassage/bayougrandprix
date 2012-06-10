@@ -34,4 +34,24 @@ describe ApplicationController do
       end
     end
   end
+  describe "#admin?" do
+    it "returns true when the session role is admin" do
+      session[:role] = 'admin'
+      controller.admin?.should be_true
+    end
+    it "returns false when the session role is something else" do
+      session[:role] = 'joe bob'
+      controller.admin?.should be_false
+    end
+  end
+  describe "#logged_in_as" do
+    it "returns 'admin' when the user is an admin" do
+      user_is_admin
+      controller.logged_in_as.should == 'admin'
+    end
+    it "returns 'guest' when the user is not an admin" do 
+      user_is_guest
+      controller.logged_in_as.should == 'guest'
+    end
+  end
 end
