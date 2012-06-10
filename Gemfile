@@ -5,8 +5,6 @@ gem 'rails', '3.2.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'mysql2'
 gem 'pg'
 
 # Gems used only for assets and not required
@@ -33,7 +31,6 @@ gem 'simplecov', :require => false, :group => :test
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-gem 'debugger'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -48,4 +45,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem "factory_girl_rails", "~> 3.0"
+  gem 'debugger'
 end
