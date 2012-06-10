@@ -131,6 +131,6 @@ describe SeasonsController do
     end
   end
   describe "GET 'new'" do
-    it_should_behave_like "standard new CRUD"
+    it_should_behave_like "standard new CRUD", :season
   end
 end

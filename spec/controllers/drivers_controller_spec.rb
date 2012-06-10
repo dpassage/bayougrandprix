@@ -16,7 +16,7 @@ describe DriversController do
     end
   end
   describe "GET new" do
-    it_should_behave_like "standard new CRUD"
+    it_should_behave_like "standard new CRUD", :driver
   end
   describe "GET show" do
     let(:driver) { FactoryGirl.create(:driver) }

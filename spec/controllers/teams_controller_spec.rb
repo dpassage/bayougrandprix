@@ -12,7 +12,7 @@ describe TeamsController do
     it ("should pass an array of teams") { assigns[:teams].should_not == nil }
   end
   describe "GET 'new'" do
-    it_should_behave_like "standard new CRUD"
+    it_should_behave_like "standard new CRUD", :team
     it "passes an unsaved team to the view" do
       get 'new'
       assigns[:team].should_not be_nil
