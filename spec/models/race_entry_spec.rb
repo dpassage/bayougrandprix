@@ -48,6 +48,14 @@ describe RaceEntry do
       @re.update_attributes( "finish" => 1, "qualify" => 3 )
     }.to_not raise_error
   end
+  describe "#driver" do
+    let(:driver) { FactoryGirl.create(:driver) }
+    let(:se) { FactoryGirl.create(:season_entry, driver: driver) }
+    let(:re) { FactoryGirl.create(:race_entry, season_entry: se) }
+    it "returns the driver from the season entry" do
+      re.driver.should == driver
+    end
+  end
   describe "enforces uniqueness of finishing places" do
     let(:re2) { FactoryGirl.create(:race_entry, race: race) }
     it "validates finishing place is unique in the same race" do
@@ -72,6 +80,14 @@ describe RaceEntry do
         race.should_receive(:points_for_finishing).with(1).and_return(9)
         @re.race = race
         @re.finish_points.should == 9
+      end
+      it "returns 0 without asking the race if the driver did not finish" do
+        @re.finish = 1
+        @re.dnf = true
+        race = mock_model('Race')
+        race.should_not_receive(:points_for_finishing)
+        @re.race = race
+        @re.finish_points.should == 0
       end
     end
     describe "#qualifying_points" do
