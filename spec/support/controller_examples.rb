@@ -5,7 +5,7 @@ shared_examples "standard new CRUD" do |model_name|
     get 'new'
     response.should be_success
   end
-  it "should show the new driver template" do
+  it "should show the new object template" do
     get 'new'
     response.should render_template("new")
   end
@@ -25,8 +25,38 @@ shared_examples "standard index CRUD" do |model_name_plural|
     get 'index'
     response.should render_template("index")
   end
-  it "should pass an array of drivers" do
+  it "should pass an array of objects" do
     get 'index'
     assigns[model_name_plural].should_not == nil
+  end
+end
+
+shared_examples "standard create CRUD" do
+  # expects: create_params, class, redirect_path, invalid_params
+  describe "with valid parameters" do
+    it "creates the new team" do
+      expect {
+        post 'create', create_params
+      }.to change(klass, :count).by(1)
+    end
+    it "sets the notice flash" do
+      post 'create', create_params
+      flash[:notice].should_not be_nil
+    end        
+    it "redirects to the teams page" do
+      post 'create', create_params
+      response.should redirect_to(redirect_path)
+    end
+  end
+  describe "with invalid parameters" do
+    it "renders the new tempalte" do
+      post 'create', invalid_params
+      response.should render_template("new")
+    end
+    it "does not create a new object" do
+      expect {
+        post 'create', invalid_params
+      }.to change(klass, :count).by(0)
+    end
   end
 end

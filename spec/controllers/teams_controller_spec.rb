@@ -53,6 +53,7 @@ describe TeamsController do
   end
   describe "POST 'create'" do
     let (:create_params) { { team: { name: "New Team", color: Team::Colors["Pink"], fake: false } } }
+    let(:invalid_params) { { team: {}}}
     describe "when user is not an admin" do
       before(:each) do
         controller.stub(:admin?).and_return(false)
@@ -70,29 +71,13 @@ describe TeamsController do
     end
     describe "when the user is an admin" do
       before(:each) do
+        @create_params = create_params
+        @teams_path = teams_path
         controller.stub(:admin?).and_return(true)
       end
-      describe "with valid parameters" do
-        it "creates the new team" do
-          expect {
-            post 'create', create_params
-          }.to change(Team, :count).by(1)
-        end
-        it "sets the notice flash" do
-          post 'create', create_params
-          flash[:notice].should_not be_nil
-        end        
-        it "redirects to the teams page" do
-          post 'create', create_params
-          response.should redirect_to(teams_path)
-        end
-      end
-      describe "with invalid parameters" do
-        let(:invalid_params) { { team: {}}}
-        it "renders the new tempalte" do
-          post 'create', invalid_params
-          response.should render_template("new")
-        end
+      it_should_behave_like "standard create CRUD" do
+        let(:klass) { Team }
+        let(:redirect_path) { teams_path }
       end
     end
   end
