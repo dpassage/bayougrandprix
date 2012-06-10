@@ -79,6 +79,12 @@ describe TeamsController do
         let(:klass) { Team }
         let(:redirect_path) { teams_path }
       end
+      describe "with invalid parameters" do
+        it "renders the new template" do
+          post 'create', invalid_params
+          response.should render_template("new")
+        end
+      end
     end
   end
   describe "DELETE 'destroy'" do

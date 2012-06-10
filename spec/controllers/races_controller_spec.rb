@@ -10,46 +10,58 @@ require 'spec_helper'
 describe RacesController do
   let (:season) { FactoryGirl.create(:season) }
   let (:track) { FactoryGirl.create (:track) }
-  let (:race_params) {
-    { :season_id => season.to_param,
-      :race => {
-        "date(1i)" => "2012",
-        "date(2i)" => "4",
-        "date(3i)" => "11",
-        "track_id" => track.id
-    } }
-  }
   describe "POST 'create'" do
+    let (:create_params) {
+      { :season_id => season.to_param,
+        :race => {
+          "date(1i)" => "2012",
+          "date(2i)" => "4",
+          "date(3i)" => "11",
+          "track_id" => track.id
+      } }
+    }
+    let(:invalid_params) { { "season_id" => season.to_param, "race" => {} } }
+    
     context "when the user is not an admin" do
       before(:each) do
         controller.stub(:admin?).and_return(false)
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
-          post 'create', race_params
+          post 'create', create_params
         end
       end
       it "does not create the race" do
         expect {
-          post 'create', race_params
+          post 'create', create_params
          }.to change(Race,:count).by(0)
       end
     end
     context "when the user is an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(true)
-      end        
+        user_is_admin
+      end   
+      it_should_behave_like "standard create CRUD" do
+        let(:klass) { Race }
+        let(:redirect_path) { season_path(season) }
+      end     
+      describe "with invalid parameters" do
+        it "renders the new template" do
+          post 'create', invalid_params
+          response.should redirect_to(season_path(season))
+        end
+      end
       it "adds a race to the season" do
         before = season.races.all.length
-        post 'create', race_params
+        post 'create', create_params
         season.races.all.length.should == before + 1
       end
       it "redirects to the season page" do
-        post 'create', race_params
-        response.should redirect_to(season_path(season))
+        post 'create', create_params
+        response.should 
       end
       it "sets the flash notice" do
-        post 'create', race_params
+        post 'create', create_params
         flash[:notice].should_not be_nil
       end
     end

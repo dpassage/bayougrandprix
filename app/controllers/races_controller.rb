@@ -4,8 +4,12 @@ class RacesController < ApplicationController
     season = Season.find_by_name(params[:season_id])
     @race = Race.new(params[:race])
     @race.season = season
-    @race.save!
-    flash[:notice] = "Race added"
+    begin
+      @race.save!
+      flash[:notice] = "Race added"
+    rescue ActiveRecord::RecordInvalid
+      flash[:error] = "Race not valid"
+    end
     redirect_to season_path(@race.season)
   end
   def show

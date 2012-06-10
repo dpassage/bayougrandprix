@@ -49,10 +49,6 @@ shared_examples "standard create CRUD" do
     end
   end
   describe "with invalid parameters" do
-    it "renders the new tempalte" do
-      post 'create', invalid_params
-      response.should render_template("new")
-    end
     it "does not create a new object" do
       expect {
         post 'create', invalid_params
