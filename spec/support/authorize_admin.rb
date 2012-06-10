@@ -9,4 +9,11 @@ shared_examples "an unauthorized operation" do
   end
 end
 
+def user_is_admin
+  controller.stub(:admin?).and_return(true)
+end
+
+def user_is_guest
+  controller.stub(:admin?).and_return(false)
+end
   
