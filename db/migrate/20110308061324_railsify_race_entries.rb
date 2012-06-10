@@ -16,9 +16,10 @@ class RailsifyRaceEntries < ActiveRecord::Migration
       t.timestamps
     end
     # populate new columns from raceresults
-    execute "update race_entries, raceresults
-             set race_entries.finish = raceresults.place,
-                race_entries.dnf = raceresults.dnf
+    execute "update race_entries
+             set finish = raceresults.place,
+                 dnf = raceresults.dnf
+             from raceresults
              where race_entries.race_id = raceresults.race
                and race_entries.driver_id = raceresults.driver"
 

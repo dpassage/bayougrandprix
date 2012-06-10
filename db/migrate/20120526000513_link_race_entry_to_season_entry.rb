@@ -6,8 +6,9 @@ class LinkRaceEntryToSeasonEntry < ActiveRecord::Migration
     end
     # populate new column
     execute <<-SQL
-    update race_entries, season_entries, races 
-      set race_entries.season_entry_id = season_entries.id 
+    update race_entries
+      set season_entry_id = season_entries.id 
+      from season_entries, races
       where race_entries.race_id = races.id and
         season_entries.season_id = races.season_id and
         season_entries.driver_id = race_entries.driver_id
@@ -20,8 +21,9 @@ class LinkRaceEntryToSeasonEntry < ActiveRecord::Migration
       t.references :driver
     end
     execute <<-SQL
-    update race_entries, season_entries 
-      set race_entries.driver_id = season_entries.driver_id 
+    update race_entries 
+      set driver_id = season_entries.driver_id 
+      from season_entries
       where race_entries.season_entry_id = season_entries.id
     SQL
     

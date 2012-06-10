@@ -7,7 +7,7 @@ class RailsifyRaces < ActiveRecord::Migration
       t.timestamps
     end
     # populate new column
-    execute "update races, schedule  set races.season_id = schedule.season where races.id = schedule.race"
+    execute "update races set season_id = schedule.season from schedule where races.id = schedule.race"
   end
 
   def self.down

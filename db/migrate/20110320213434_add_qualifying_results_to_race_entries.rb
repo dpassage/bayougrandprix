@@ -4,9 +4,10 @@ class AddQualifyingResultsToRaceEntries < ActiveRecord::Migration
       t.integer :qualify
       t.boolean :dnq
     end
-    execute "update race_entries, qualresults
-             set race_entries.qualify = qualresults.place,
-                race_entries.dnq = qualresults.dnf
+    execute "update race_entries
+             set qualify = qualresults.place,
+                dnq = qualresults.dnf
+             from qualresults
              where race_entries.race_id = qualresults.race
                and race_entries.driver_id = qualresults.driver"
   end
