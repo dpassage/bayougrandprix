@@ -30,7 +30,7 @@ describe TeamsController do
                              "team"=>{"name"=>"Foo!", "color"=>team.color, "fake"=>team.fake } } }
     context "the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -43,7 +43,7 @@ describe TeamsController do
       end
     end
     context "the user is an admin" do
-      before(:each) { controller.stub(:admin?).and_return(true) }
+      before(:each) { user_is_admin }
       context "with valid params" do
         before(:each) { post 'update', update_params }
         it("should redirect to the show template") { response.should redirect_to(team_path(team)) }
@@ -56,7 +56,7 @@ describe TeamsController do
     let(:invalid_params) { { team: {}}}
     describe "when user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -73,7 +73,7 @@ describe TeamsController do
       before(:each) do
         @create_params = create_params
         @teams_path = teams_path
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       it_should_behave_like "standard create CRUD" do
         let(:klass) { Team }
@@ -91,7 +91,7 @@ describe TeamsController do
     let (:delete_params) { { "id" => team.to_param } }
     context "when the user is not an admin" do
       before(:each) {
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       }
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -105,7 +105,7 @@ describe TeamsController do
     end
     context "when the user is an admin" do
       before(:each) do 
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       context "when the team is not used" do
         before (:each) do

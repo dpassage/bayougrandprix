@@ -11,7 +11,7 @@ describe SeasonEntriesController do
                             "defaultteam_id" => team.to_param } } }
     context "when the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -21,7 +21,7 @@ describe SeasonEntriesController do
     end
     context "when the user is an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       context "with an unused driver" do
         it "creates a new season_entry" do
@@ -69,7 +69,7 @@ describe SeasonEntriesController do
     let(:delete_params) { { id: season_entry.to_param, season_id: season.to_param }}
     context "when the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -79,7 +79,7 @@ describe SeasonEntriesController do
     end
     context "when the user is an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       it "removes the season entry" do
         delete 'destroy', delete_params

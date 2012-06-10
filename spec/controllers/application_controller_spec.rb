@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe ApplicationController do
-  describe "authorize" do
+  describe "#authorize" do
     context "when the user is the admin" do
       before (:each) do
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       it "returns true" do
         result = controller.authorize
@@ -17,7 +17,7 @@ describe ApplicationController do
     end
     context "when the user is not the admin" do
       before (:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
         controller.stub(:redirect_to)
       end
       it "returns false" do

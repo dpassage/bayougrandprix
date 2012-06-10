@@ -24,7 +24,7 @@ describe RacesController do
     
     context "when the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -83,7 +83,7 @@ describe RacesController do
     let (:race) { FactoryGirl.create(:race,) }
     context "when the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -93,7 +93,7 @@ describe RacesController do
     end
     context "when the user is an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end
       context "setting the qualifying and finishing" do
         let (:re1) { FactoryGirl.create(:race_entry, race: race) }

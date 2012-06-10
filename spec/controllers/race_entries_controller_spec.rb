@@ -15,7 +15,7 @@ describe RaceEntriesController do
   describe "POST 'create'" do
     context "when the user is not an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(false)
+        user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
@@ -30,7 +30,7 @@ describe RaceEntriesController do
     end
     context "when the user is an admin" do
       before(:each) do
-        controller.stub(:admin?).and_return(true)
+        user_is_admin
       end      
       it "adds a driver to the race" do
         expect {

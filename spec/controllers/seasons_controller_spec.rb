@@ -1,14 +1,6 @@
 require 'spec_helper'
 
 describe SeasonsController do
-  def user_is_admin
-    controller.stub(:admin?).and_return(true)
-  end
-
-  def user_is_guest
-    controller.stub(:admin?).and_return(false)
-  end
-  
   describe "POST create" do
     let(:name) { "2035" }
     let(:ss) { FactoryGirl.create(:scoring_scheme) }
