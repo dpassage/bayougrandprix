@@ -4,20 +4,10 @@ describe TeamsController do
   let (:team) { FactoryGirl.create(:team) }
   let (:params) { { id: team.to_param } }
   describe "GET index" do
-    before(:each) do
-      get 'index'
-    end
-    it ("should be successful") { response.should be_success }
-    it ("should render the index template") { response.should render_template("index") }
-    it ("should pass an array of teams") { assigns[:teams].should_not == nil }
+    it_should_behave_like "standard index CRUD", :teams
   end
   describe "GET 'new'" do
     it_should_behave_like "standard new CRUD", :team
-    it "passes an unsaved team to the view" do
-      get 'new'
-      assigns[:team].should_not be_nil
-      assigns[:team].should be_new_record
-    end
   end
   describe "GET 'show'" do
     before(:each) do

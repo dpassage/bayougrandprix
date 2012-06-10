@@ -133,4 +133,7 @@ describe SeasonsController do
   describe "GET 'new'" do
     it_should_behave_like "standard new CRUD", :season
   end
+  describe "GET index" do
+    it_should_behave_like "standard index CRUD", :seasons
+  end
 end
