@@ -1,0 +1,19 @@
+<h1>Listing scoring_schemes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+<% @scoring_schemes.each do |scoring_scheme| %>
+  <tr>
+    <td><%= scoring_scheme.name %></td>
+    <td><%= link_to 'Destroy', scoring_scheme, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scoring scheme', new_scoring_scheme_path %>

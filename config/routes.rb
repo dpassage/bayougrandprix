@@ -3,6 +3,7 @@ Bayougrandprix::Application.routes.draw do
   match "login" => "sessions#create", :as => :login
   match "logout" => "sessions#destroy", :as => :logout
 
+# index, new, create, show, edit, update, destroy
   resources :teams
 
   resources :drivers
@@ -17,6 +18,8 @@ Bayougrandprix::Application.routes.draw do
     get 'results', :on => :member
   end
 
+  resources :scoring_schemes, :only => [ :index, :new, :create, :destroy ]
+  
   get "home/index"
 
   root :to => "home#index"
