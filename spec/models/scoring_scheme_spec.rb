@@ -1,6 +1,20 @@
 require 'spec_helper'
 
 describe "ScoringScheme" do
+  before(:each) do
+    @ss = ScoringScheme.new(:name => "9-6-4-3-2-1")
+  end
+  it "is valid with valid parameters" do
+    @ss.should be_valid
+  end
+  it "is not valid without a name" do
+    @ss.name = nil
+    @ss.should_not be_valid
+  end
+  it "is not valid if the name is not properly formatted" do
+    @ss.name = "This is not a valid scoring scheme name"
+    @ss.should_not be_valid
+  end
   describe "#destroy" do
     let (:scoring_scheme) { FactoryGirl.create(:scoring_scheme) }
     it "cannot be removed if it's in use in a season" do
