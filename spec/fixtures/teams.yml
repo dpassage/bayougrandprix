@@ -3,104 +3,104 @@ teams_001:
   id: 1
   name: Jaguar
   color: ! '#00FF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_002:
   id: 2
   name: Axle of Evil
   color: ! '#FFFF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_003:
   id: 3
   name: Ferrari
   color: ! '#FF0000'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 mclaren:
   id: 4
   name: McLaren
   color: ! '#0099FF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_005:
   id: 5
   name: Williams
   color: ! '#FFFFFF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_006:
   id: 6
   name: PowerBran
   color: ! '#00FF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_007:
   id: 7
   name: Mediocrity
   color: ! '#FFFF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_008:
   id: 8
   name: Substitutes
   color: ! '#999999'
-  fake: 1
+  fake: true
   created_at: 
   updated_at: 
 teams_009:
   id: 9
   name: Rogue
   color: ! '#9900CC'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_010:
   id: 10
   name: Acura
   color: ! '#00FF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_011:
   id: 11
   name: Lotus-Tesla
   color: ! '#00FF00'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_012:
   id: 12
   name: Brabham
   color: ! '#FFFFFF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_013:
   id: 13
   name: Toyota
   color: ! '#FFFFFF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_014:
   id: 14
   name: BMW/Sauber
   color: ! '#FFFFFF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
 teams_015:
   id: 15
   name: Force India
   color: ! '#FFFFFF'
-  fake: 0
+  fake: false
   created_at: 
   updated_at: 
