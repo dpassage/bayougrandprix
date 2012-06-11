@@ -15,6 +15,14 @@ describe "ScoringScheme" do
     @ss.name = "This is not a valid scoring scheme name"
     @ss.should_not be_valid
   end
+  it "is valid with a 2-digit points value" do
+    @ss.name = "10-6-4-3-2-1"
+    @ss.should be_valid
+  end
+  it "is valid with the 20110 formula 1 points values" do
+    @ss.name = "25-18-15-12-10-8-6-4-2-1"
+    @ss.should be_valid
+  end
   describe "#destroy" do
     let (:scoring_scheme) { FactoryGirl.create(:scoring_scheme) }
     it "cannot be removed if it's in use in a season" do
