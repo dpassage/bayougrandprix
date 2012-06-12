@@ -1,5 +1,6 @@
 class DriversController < ApplicationController
   before_filter :authorize, :only => [:create, :update, :destroy]
+
   # GET /drivers
   def index
     @drivers = Driver.all
@@ -14,4 +15,16 @@ class DriversController < ApplicationController
   def new
     @driver = Driver.new
   end
+
+  def edit
+    @driver = Driver.find(params[:id])
+  end
+
+  def update
+    @driver = Driver.find(params[:id])
+    @driver.update_attributes!(params[:driver])
+    flash[:notice] = "Driver #{@driver.name} updated"
+    redirect_to(drivers_path)
+  end
+
 end
