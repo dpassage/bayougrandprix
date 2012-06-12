@@ -18,6 +18,7 @@ class TeamsController < ApplicationController
       flash[:notice] = "Team #{@team.name} created"
       redirect_to(teams_path)
     else
+      flash[:error] = "Team could not be created"
       render action: "new"
     end
   end

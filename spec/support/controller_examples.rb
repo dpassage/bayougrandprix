@@ -32,9 +32,9 @@ shared_examples "standard index CRUD" do |model_name_plural|
 end
 
 shared_examples "standard create CRUD" do
-  # expects: create_params, class, redirect_path, invalid_params
+  # expects: create_params, klass, redirect_path, invalid_params
   describe "with valid parameters" do
-    it "creates the new team" do
+    it "creates the new object" do
       expect {
         post 'create', create_params
       }.to change(klass, :count).by(1)
@@ -43,7 +43,7 @@ shared_examples "standard create CRUD" do
       post 'create', create_params
       flash[:notice].should_not be_nil
     end        
-    it "redirects to the teams page" do
+    it "redirects to the correct page" do
       post 'create', create_params
       response.should redirect_to(redirect_path)
     end
@@ -53,6 +53,10 @@ shared_examples "standard create CRUD" do
       expect {
         post 'create', invalid_params
       }.to change(klass, :count).by(0)
+    end
+    it "sets the error flash" do
+      post 'create', invalid_params
+      flash[:error].should_not be_nil
     end
   end
 end
