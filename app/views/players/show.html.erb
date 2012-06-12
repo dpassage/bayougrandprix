@@ -1,5 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>Name:</b>
+  <%= @player.name %>
+</p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
+<p>
+  <b>Email:</b>
+  <%= @player.email %>
+</p>
+
+<% if admin? %>
+ <%= link_to 'Edit', edit_player_path(@player) %> |
+<% end %>
 <%= link_to 'Back', players_path %>
