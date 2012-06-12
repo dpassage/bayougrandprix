@@ -18,7 +18,7 @@
     <% if admin? %>
       <td><%= link_to 'Manage', season %></td>
       <td><%= link_to 'Edit', edit_season_path(season) %></td>
-      <td><%= link_to 'Destroy', season, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to 'Destroy', season, :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
     <% end %>
   </tr>
 <% end %>

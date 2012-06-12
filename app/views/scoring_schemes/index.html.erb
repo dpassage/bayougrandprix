@@ -12,7 +12,7 @@
   <tr>
     <td><%= scoring_scheme.name %></td>
     <% if admin? %>
-    <td><%= link_to 'Destroy', scoring_scheme, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', scoring_scheme, :data => { :confirm => 'Are you sure?' }, method: :delete %></td>
     <% end %>
   </tr>
 <% end %>
