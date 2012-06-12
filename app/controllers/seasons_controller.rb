@@ -1,5 +1,5 @@
 class SeasonsController < ApplicationController
-  before_filter :authorize, :only => [:create, :update, :destroy, :add_driver]
+  before_filter :authorize, :only => [:create, :update, :destroy]
   # GET /seasons
   def index
     @seasons = Season.order(:name)

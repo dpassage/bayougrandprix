@@ -1,5 +1,5 @@
 class RaceEntriesController < ApplicationController
-  before_filter :authorize, :only => [:create]
+  before_filter :authorize, :only => [:create, :update, :destroy]
   
   def create
     @re = RaceEntry.new(params[:race_entry])

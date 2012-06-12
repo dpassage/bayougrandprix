@@ -1,5 +1,5 @@
 class SeasonEntriesController < ApplicationController
-  before_filter :authorize, :only => [:create, :destroy]
+  before_filter :authorize, :only => [:create, :update, :destroy]
   def destroy
     se = SeasonEntry.find(params[:id])
     begin
