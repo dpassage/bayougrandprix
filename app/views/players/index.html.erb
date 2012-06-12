@@ -3,19 +3,25 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
+    <% if admin? %>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    <% end %>
     <th></th>
   </tr>
 
 <% @players.each do |player| %>
   <tr>
     <td><%= player.name %></td>
-    <td><%= player.email %></td>
+    <% if admin? %>
+      <td><%= player.email %></td>
+    <% end %>
     <td><%= link_to 'Show', player %></td>
-    <td><%= link_to 'Edit', edit_player_path(player) %></td>
-    <td><%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if admin? %>
+      <td><%= link_to 'Edit', edit_player_path(player) %></td>
+      <td><%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
