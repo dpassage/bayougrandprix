@@ -12,8 +12,10 @@
   <tr>
     <td bgcolor="<%= team.color %>"><%= team.name %></td>
     <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if admin? %>
+      <td><%= link_to 'Edit', edit_team_path(team) %></td>
+      <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

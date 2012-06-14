@@ -20,11 +20,7 @@ Bayougrandprix::Application.routes.draw do
 
   resources :scoring_schemes, :only => [ :index, :new, :create, :destroy ]
   
-  get "home/index"
-
   root :to => "home#index"
-
-  match 'admin' => "admin#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

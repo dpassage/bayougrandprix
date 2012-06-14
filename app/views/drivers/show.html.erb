@@ -11,5 +11,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
+<% if admin? %>
+  <%= link_to 'Edit', edit_driver_path(@driver) %> |
+<% end %>
 <%= link_to 'Back', drivers_path %>

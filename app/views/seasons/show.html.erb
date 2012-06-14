@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @season.name %>
-</p>
+<h1>
+  <%= @season.name %> Season
+</h1>
 <p>
   <b>Scoring Scheme:</b>
   <%= @season.scoring_scheme.name %>
@@ -25,9 +24,13 @@
   </tr>
   <% @season.season_entries.joins(:defaultteam).order("teams.name").each do |entry| %>
     <tr bgcolor="<%= entry.defaultteam.color %>">
-      <td><%= entry.driver.player.name %></td>
-      <td><%= entry.driver.name %></td>
-      <td><%= entry.defaultteam.name %></td>
+      <td><%= link_to entry.driver.player.name, player_path(entry.driver.player) %></td>
+      <td><%= link_to entry.driver.name, driver_path(entry.driver) %></td>
+      <% if entry.defaultteam.fake? %>
+        <td><%= entry.defaultteam.name %></td>
+      <% else %>
+        <td><%= link_to entry.defaultteam.name, team_path(entry.defaultteam) %></td>
+      <% end %>
       <% if admin? %>
         <td>
           <%= link_to 'Remove', season_season_entry_path(@season, entry.id), :confirm => 'Are you sure?', :method => :delete %>
@@ -64,6 +67,10 @@
   <% end %>
 
 </table>
+
+<%= link_to 'Results', results_season_path(@season) %>
+
+<br />
 
 <% if admin? %>
   <%= form_tag(season_races_path(@season)) do %>

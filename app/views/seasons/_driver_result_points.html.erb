@@ -1,6 +1,11 @@
 <tr bgcolor="<%= de.entrant.default_team_for_season(@season).color %>">
   <td><%= place + 1 %></td>
-  <td><%= de.entrant.name %></td>
-  <td><%= de.entrant.default_team_for_season(@season).name %></td>
+  <td><%= link_to de.entrant.name, de.entrant %></td>
+  <% team = de.entrant.default_team_for_season(@season) %>
+  <% if team.fake? %>
+    <td><%= team.name %></td>
+  <% else %>
+    <td><%= link_to team.name, team %></td>
+  <% end %>
   <td><%= de.points %></td>
 </tr>
