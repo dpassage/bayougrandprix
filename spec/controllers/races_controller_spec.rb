@@ -102,9 +102,9 @@ describe RacesController do
         context "finishing places are unique" do
           let (:params) { { "race" => 
                             { "race_entries_attributes" =>
-                              { "0"=>{"finish"=>"1", "qualify"=>"3", "id"=> re1.to_param}, 
-                                "1"=>{"finish"=>"2", "qualify"=>"2", "id"=> re2.to_param}, 
-                                "2"=>{"finish"=>"3", "qualify"=>"1", "id"=> re3.to_param}, 
+                              { "0"=>{"finish"=>"1", "dnf"=>"false", "qualify"=>"3", "dnq" => "true", "id"=> re1.to_param}, 
+                                "1"=>{"finish"=>"2", "dnf"=>"false", "qualify"=>"2", "dnq" => "true", "id"=> re2.to_param}, 
+                                "2"=>{"finish"=>"3", "dnf"=>"true",  "qualify"=>"1", "dnq" => "false","id"=> re3.to_param}, 
                               }
                             }, 
                             "commit" => "Update", 
@@ -120,6 +120,8 @@ describe RacesController do
             RaceEntry.find(re1.id).qualify.should == 3
             RaceEntry.find(re2.id).qualify.should == 2
             RaceEntry.find(re3.id).qualify.should == 1
+            RaceEntry.find(re1.id).dnf.should be_false
+            RaceEntry.find(re1.id).dnq.should be_true
           end
           it "sets the flash notice" do
             post 'update', params

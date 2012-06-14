@@ -9,7 +9,9 @@
         <th>Driver</th>
         <th>Team</th>
         <th>Finished</th>
+        <th>Dnf?</th>
         <th>Qualified</th>
+        <th>Dnq?</th>
       </tr>
       <% @race.race_entries.order(:finish).each do |re| %>
         <%= f.fields_for :race_entries, re do |re_fields| %>
@@ -17,7 +19,9 @@
             <td><%= re.driver.name %></td>
             <td><%= re.team.name %></td>
             <td><%= re_fields.text_field :finish %></td>
+            <td><%= re_fields.check_box(:dnf, {}, "true", "false") %></td>
             <td><%= re_fields.text_field :qualify %></td>
+            <td><%= re_fields.check_box(:dnq, {}, "true", "false") %></td>
           </tr>
         <% end %>
       <% end %>

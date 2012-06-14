@@ -43,9 +43,9 @@ describe RaceEntry do
   it "initially is nil for qualifying place" do
     @re.qualify.should be_nil
   end
-  it "can mass assign finish and qualify" do
+  it "can mass assign finish, dnf, dnq, and qualify" do
     expect {
-      @re.update_attributes( "finish" => 1, "qualify" => 3 )
+      @re.update_attributes( "finish" => 1, "dnf" => false, "qualify" => 3, "dnq" => true )
     }.to_not raise_error
   end
   describe "#driver" do
