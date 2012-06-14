@@ -20,7 +20,7 @@ class RaceEntry < ActiveRecord::Base
     end
   end
   def qualifying_points
-    if self.dnq != false
+    if self.dnq
       0
     else
       self.race.points_for_finishing(self.qualify)

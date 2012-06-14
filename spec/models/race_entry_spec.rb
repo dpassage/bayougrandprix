@@ -107,6 +107,14 @@ describe RaceEntry do
         @re.race = race
         @re.qualifying_points.should == 0
       end
+      it "asks the race what the place is worth if dnq is nil" do
+        @re.qualify = 1
+        @re.dnq = nil
+        race = mock_model('Race')
+        race.should_receive(:points_for_finishing).with(1).and_return(9)
+        @re.race = race
+        @re.qualifying_points.should == 9
+      end 
     end
   end
 end
