@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604224200) do
+ActiveRecord::Schema.define(:version => 20120710211918) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20120604224200) do
     t.string   "country",    :limit => 100, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "number",                    :null => false
   end
 
 end

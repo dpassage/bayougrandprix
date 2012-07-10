@@ -23,6 +23,7 @@ FactoryGirl.define do
     association :defaultteam, factory: :team
   end
   factory :track do
+    sequence (:number) { |n| n }
     name "Embarcadero"
     country "California"
   end
