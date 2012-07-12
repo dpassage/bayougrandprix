@@ -1,7 +1,8 @@
 .bundle
 .env
 db/*.sqlite3
-log/*.log
+log/*.log*
 tmp/**/*
 coverage
 .DS_Store
+*.dump
