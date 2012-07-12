@@ -161,6 +161,26 @@ describe RacesController do
           end
         end
       end
+      context "setting the writeup" do
+        before (:each) do
+          @writeup = "this is a race writeup"
+          @params = { "race" => { "writeup" => @writeup }, 
+              "commit" => "Update", 
+              "season_id" => race.season.to_param, 
+              "id" => race.to_param 
+            }
+          post 'update', @params
+        end
+        it "updates the race with the writeup info" do
+          Race.find(race.id).writeup.should == @writeup
+        end
+        it "sets the flash notice" do
+          flash[:notice].should_not be_nil
+        end
+        it "redirects to the race page" do
+          response.should redirect_to(season_race_path(race.season, race))
+        end
+      end
     end
   end
 end

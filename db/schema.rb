@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710211918) do
+ActiveRecord::Schema.define(:version => 20120710211919) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20120710211918) do
     t.integer  "season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "writeup"
   end
 
   create_table "schedule", :id => false, :force => true do |t|

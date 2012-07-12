@@ -7,7 +7,8 @@ describe Race do
     @race = Race.new(
       :track_id => track.id,
       :season_id => season.id,
-      :date => Date.today)
+      :date => Date.today,
+      :writeup => "This is a writeup")
   end
   it "is valid with valid parameters" do
     @race.should be_valid
@@ -23,6 +24,10 @@ describe Race do
   it "is invalid without a date" do
     @race.date = nil
     @race.should_not be_valid
+  end
+  it "is valid without a writeup" do
+    @race.writeup = nil
+    @race.should be_valid
   end
   describe "#destroy" do
     let (:race) { FactoryGirl.create(:race) }
