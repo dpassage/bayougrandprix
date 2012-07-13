@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710211919) do
+ActiveRecord::Schema.define(:version => 20120713190206) do
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -25,13 +25,6 @@ ActiveRecord::Schema.define(:version => 20120710211919) do
     t.string   "email",      :limit => 100
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "qualresults", :id => false, :force => true do |t|
-    t.integer "race",   :null => false
-    t.integer "driver", :null => false
-    t.integer "place",  :null => false
-    t.boolean "dnf",    :null => false
   end
 
   create_table "race_entries", :force => true do |t|
@@ -48,13 +41,6 @@ ActiveRecord::Schema.define(:version => 20120710211919) do
 
   add_index "race_entries", ["race_id", "finish"], :name => "index_race_entries_on_race_id_and_finish", :unique => true
 
-  create_table "raceresults", :id => false, :force => true do |t|
-    t.integer "race",                      :null => false
-    t.integer "driver",                    :null => false
-    t.integer "place",                     :null => false
-    t.boolean "dnf",    :default => false, :null => false
-  end
-
   create_table "races", :force => true do |t|
     t.integer  "track_id",   :null => false
     t.date     "date",       :null => false
@@ -62,17 +48,6 @@ ActiveRecord::Schema.define(:version => 20120710211919) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "writeup"
-  end
-
-  create_table "schedule", :id => false, :force => true do |t|
-    t.integer "season", :null => false
-    t.integer "race",   :null => false
-  end
-
-  create_table "scoring", :id => false, :force => true do |t|
-    t.integer "place",  :null => false
-    t.integer "points", :null => false
-    t.integer "scheme"
   end
 
   create_table "scoring_schemes", :force => true do |t|
