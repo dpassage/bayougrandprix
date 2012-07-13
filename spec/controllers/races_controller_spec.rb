@@ -79,6 +79,19 @@ describe RacesController do
       assigns[:season].should == season
     end
   end
+  describe "GET 'edit'" do
+    let (:race) { FactoryGirl.create(:race, :season => season) }
+    let (:params) { { "season_id" => season.to_param,
+                      "id" => race.to_param } }
+    it "passes the race" do
+      get 'edit', params
+      assigns[:race].should == race
+    end
+    it "passes the season" do
+      get 'edit', params
+      assigns[:season].should == season
+    end
+  end  
   describe "POST 'update'" do
     let (:race) { FactoryGirl.create(:race,) }
     context "when the user is not an admin" do

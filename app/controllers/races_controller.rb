@@ -16,6 +16,10 @@ class RacesController < ApplicationController
     @race = Race.find(params[:id])
     @season = Season.find_by_name(params[:season_id])
   end
+  def edit
+    @race = Race.find(params[:id])
+    @season = Season.find_by_name(params[:season_id])
+  end
   def update
     season = Season.find_by_name(params[:season_id])
     race = Race.find(params[:id])

@@ -1,55 +1,33 @@
 <h1>Season <%= @season.name %>, Race <%= @season.races.order(:date).index(@race) +1 %>: <%= @race.track.name %></h1>
 <p>Date: <%= @race.date %></p>
 
-<h3>Entrants</h3>
-<%= form_for @race, :url => { :season_id => @season.to_param } do |f| %>
-  <fieldset>
-    <table id="races_race_entries">
-      <tr>
-        <th>Driver</th>
-        <th>Team</th>
-        <th>Finished</th>
-        <th>Dnf?</th>
-        <th>Qualified</th>
-        <th>Dnq?</th>
-      </tr>
-      <% @race.race_entries.order(:finish).each do |re| %>
-        <%= f.fields_for :race_entries, re do |re_fields| %>
-          <tr style="background-color: <%= re.team.color %>;">
-            <td><%= link_to re.driver.name, driver_path(re.driver) %></td>
-            <td><%= link_to re.team.name, team_path(re.team) %></td>
-            <td><%= re_fields.text_field(:finish, :size => 3) %></td>
-            <td><%= re_fields.check_box(:dnf, {}, "true", "false") %></td>
-            <td><%= re_fields.text_field(:qualify, :size => 3) %></td>
-            <td><%= re_fields.check_box(:dnq, {}, "true", "false") %></td>
-          </tr>
-        <% end %>
-      <% end %>
-    </table>
-    <% if admin? %>
-      <%= f.submit "Update" %>
-    <% end %>
-  </fieldset>
-<% end %>
-
-<% if admin? %>
-<h3>Add Drivers</h3>
-  <% @season.season_entries.each do |se| %>
-    <% unless @race.race_entries.exists?(:season_entry_id => se.id) %>
-        <%= form_tag(season_race_race_entries_path(@season, @race), :method => "post") do %>
-          <%= se.driver.name %>
-          <% if se.defaultteam.fake? %>
-            <%= select_tag "race_entry[team_id]", options_from_collection_for_select(Team.where(fake: false).order("name ASC"), "id", "name") %>
-          <% else %>
-            <%= se.defaultteam.name %>
-            <%= hidden_field_tag("race_entry[team_id]", se.defaultteam.id) %>
-          <% end %>
-          <%= hidden_field_tag("race_entry[season_entry_id]", se.id) %>
-          <%= hidden_field_tag("race_entry[race_id]", @race.id) %>
-          <%= submit_tag("Add") %>
-        <% end %>  
-    <% end %>    
+<h3>Entrants and Results</h3>
+<table id="races_race_entries">
+  <tr>
+    <th>Driver</th>
+    <th>Team</th>
+    <th>Finished</th>
+    <th>Dnf?</th>
+    <th>Qualified</th>
+    <th>Dnq?</th>
+  </tr>
+  <% @race.race_entries.order(:finish).each do |re| %>
+    <tr style="background-color: <%= re.team.color %>;">
+      <td><%= link_to re.driver.name, driver_path(re.driver) %></td>
+      <td><%= link_to re.team.name, team_path(re.team) %></td>
+      <td><%= re.finish %></td>
+      <td><%= re.dnf %></td>
+      <td><%= re.qualify %></td>
+      <td><%= re.dnq %></td>
+    </tr>
   <% end %>
+</table>
+<% if @race.writeup? %>
+  <h3>Writeup</h3>
+  <%= @race.writeup %>
+<% end %>
+<% if admin? %>
+<%= link_to 'Edit Race', edit_season_race_path(@season, @race) %>
 <% end %>
 <br />
 <%= link_to 'Season', season_path(@season) %>
