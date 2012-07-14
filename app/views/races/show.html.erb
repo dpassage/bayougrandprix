@@ -24,7 +24,7 @@
 </table>
 <% if @race.writeup? %>
   <h3>Writeup</h3>
-  <%= raw markdown_render(@race.writeup) %>
+  <%= markdown_render(@race.writeup) %>
 <% end %>
 <% if admin? %>
 <%= link_to 'Edit Race', edit_season_race_path(@season, @race) %>
