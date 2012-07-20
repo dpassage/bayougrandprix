@@ -12,6 +12,15 @@ describe SessionsController do
     end
   end
   describe "POST create" do
+    before(:each) do
+      ENV['BGP_ADMIN_PASSWORD'] = "foobar"
+    end
+    it "gets the admin password from the environment" do
+      ENV['BGP_ADMIN_PASSWORD'] = "gobbledygook"
+      post :create, :password => "gobbledygook", :originpath => '/drivers'
+      session[:role].should == "admin"
+    end
+
     describe "when the password is correct" do
       let(:password) { "foobar" }
       let(:originpath) { "/drivers" }
