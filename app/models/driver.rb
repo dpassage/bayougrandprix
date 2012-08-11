@@ -2,7 +2,7 @@ class Driver < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :player
   belongs_to :player
-  has_many :driver_entries, :dependent => :restrict
+  has_many :season_entries, :dependent => :restrict_with_exception
   has_many :race_entries
   attr_accessible :name, :player_id
 

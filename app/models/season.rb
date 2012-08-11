@@ -1,6 +1,6 @@
 class Season < ActiveRecord::Base
-  has_many :driver_entries, :dependent => :restrict
-  has_many :races, :dependent => :restrict
+  has_many :season_entries, :dependent => :restrict_with_exception
+  has_many :races, :dependent => :restrict_with_exception
   belongs_to :scoring_scheme
   validates_presence_of :name
   validates_presence_of :scoring_scheme_id
