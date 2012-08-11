@@ -47,10 +47,10 @@ describe DriverEntriesController do
                                              :driver => driver,
                                              :defaultteam => team},
                                              :without_protection => true) }
-        it "does not create a new driver_entry" do
-          before_entries = season.driver_entries.all.length
-          post 'create', post_params
-          season.driver_entries.all.length.should == before_entries
+        it "does not create a new season_entry" do
+          expect {
+            post 'create', post_params
+          }.to change(season.season_entries, :count).by(0)
         end
         it "sets the error flash" do
           post 'create', post_params
