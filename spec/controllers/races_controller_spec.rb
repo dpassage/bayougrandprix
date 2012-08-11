@@ -100,7 +100,7 @@ describe RacesController do
       end
       it_should_behave_like "an unauthorized operation" do
         before(:each) do
-          post 'update', {id: race.to_param}
+          post 'update', {id: race.to_param, season_id: season.to_param}
         end
       end
     end

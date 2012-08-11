@@ -7,9 +7,11 @@ describe RaceEntriesController do
   let (:team) { FactoryGirl.create(:team) }
   let (:race_entry_params) {
     { "race_entry" => { :season_entry_id => season_entry.to_param,
-      :race_id => race.to_param,
-      :team_id => team.to_param
-    } }
+                        :race_id => race.to_param,
+                        :team_id => team.to_param }, 
+      "season_id" => season.to_param,
+      "race_id" => race.to_param
+    }
   }
 
   describe "POST 'create'" do
