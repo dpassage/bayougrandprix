@@ -52,9 +52,9 @@ describe RacesController do
         end
       end
       it "adds a race to the season" do
-        before = season.races.all.length
-        post 'create', create_params
-        season.races.all.length.should == before + 1
+        expect {
+          post 'create', create_params
+        }.to change(season.races,:count).by(1)
       end
       it "redirects to the season page" do
         post 'create', create_params

@@ -24,10 +24,10 @@ describe DriverEntriesController do
         user_is_admin
       end
       context "with an unused driver" do
-        it "creates a new driver_entry" do
-          season.driver_entries.all.length.should == 0
-          post 'create', post_params
-          season.driver_entries.all.length.should == 1
+        it "creates a new season_entry" do
+          expect {
+            post 'create', post_params
+          }.to change(season.season_entries, :count).by(1)
         end
         it "sets the notice flash" do
           post 'create', post_params

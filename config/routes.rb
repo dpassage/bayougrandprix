@@ -1,7 +1,8 @@
 Bayougrandprix::Application.routes.draw do
 
-  match "login" => "sessions#create", :as => :login
-  match "logout" => "sessions#destroy", :as => :logout
+  get "login" => "sessions#create", :as => :login
+  post "login" => "sessions#create", :as => :login
+  get "logout" => "sessions#destroy", :as => :logout
 
 # index, new, create, show, edit, update, destroy
   resources :teams

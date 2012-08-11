@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 ruby "1.9.3"
 
-# gem 'rails', '3.2.6'
+# gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 gem 'active_record_deprecated_finders', :git => 'git://github.com/rails/active_record_deprecated_finders.git'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'pg'
 gem 'unicorn'
 gem 'redcarpet'
@@ -13,8 +14,8 @@ gem 'redcarpet'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+#  gem 'sass-rails'
+#  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
