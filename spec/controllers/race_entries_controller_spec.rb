@@ -39,9 +39,9 @@ describe RaceEntriesController do
           post 'create', race_entry_params
         }.to change(RaceEntry,:count).by(1)
       end
-      it "redirects to the race page" do
+      it "redirects to the race edit page" do
         post 'create', race_entry_params
-        response.should redirect_to(season_race_path(season_entry.season, race))
+        response.should redirect_to(edit_season_race_path(season_entry.season, race))
       end
       it "sets the flash notice" do
         post 'create', race_entry_params
