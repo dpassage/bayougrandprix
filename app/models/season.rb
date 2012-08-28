@@ -46,7 +46,6 @@ class Season < ActiveRecord::Base
       te.season_entry = se 
       te
     }
-    debugger
     table.sort
   end
 
