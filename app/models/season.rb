@@ -18,8 +18,36 @@ class Season < ActiveRecord::Base
   end
 
   class TableEntry
+    include Comparable
+
     attr_accessor :entrant
     attr_accessor :points
+    attr_accessor :season_entry
+
+    def entrant
+      if @entrant
+        @entrant
+      else
+        @season_entry.driver
+      end
+    end
+
+
+    def <=>(other_te)
+      self.points ||= self.season_entry.finish_points
+      other_te.points ||= other_te.season_entry.finish_points
+      -(self.points <=> other_te.points)
+    end
+  end
+
+  def driver_results_table_by_finish_points
+    table = self.season_entries.collect { |se| 
+      te = TableEntry.new
+      te.season_entry = se 
+      te
+    }
+    debugger
+    table.sort
   end
 
   def results_table_by_points(entrant_type, points_type)
@@ -52,7 +80,7 @@ class Season < ActiveRecord::Base
     self.results_table_by_points(:team, :finish_points)
   end
   def drivers_by_points
-    self.results_table_by_points(:driver, :finish_points)
+    self.driver_results_table_by_finish_points
   end
   def drivers_by_qualifying_points
     self.results_table_by_points(:driver, :qualifying_points)

@@ -50,6 +50,27 @@ describe "Season" do
       results.length.should == 12
       results[0].entrant.should == drivers(:schumacher)
       results[0].points.should == 47
+      puts results
+    end
+    it "counts number of wins if tied on points" do
+      pending
+      scheme = FactoryGirl.create(:scoring_scheme, name: "9-6-4-3-2-1")
+      season = FactoryGirl.create(:season, scoring_scheme: scheme)
+      alice = FactoryGirl.create(:driver, name: "alice")
+      bob = FactoryGirl.create(:driver, name: "bob")
+      bob_se = FactoryGirl.create(:season_entry, season: season, driver: bob)
+      alice_se = FactoryGirl.create(:season_entry, season: season, driver: alice)
+      race1 = FactoryGirl.create(:race, season: season)
+      FactoryGirl.create(:race_entry, race: race1, season_entry: alice_se, finish: 1)
+      FactoryGirl.create(:race_entry, race: race1, season_entry: bob_se,   finish: 2)
+      race2 = FactoryGirl.create(:race, season: season)
+      FactoryGirl.create(:race_entry, race: race2, season_entry: alice_se, finish: 10)
+      FactoryGirl.create(:race_entry, race: race2, season_entry: bob_se,   finish: 4)
+
+      results = season.drivers_by_points
+      results.length.should == 2
+      results[0].entrant.id.should == alice.id
+      results[1].entrant.id.should == bob.id
     end
   end
   describe "#to_param" do
