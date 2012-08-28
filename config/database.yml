@@ -4,6 +4,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: bgpdev
+  host: localhost
   pool: 5
   username: dpassage
   password: 
@@ -18,3 +19,4 @@ test:
   pool: 5
   username: dpassage
   password: 
+  host: localhost
