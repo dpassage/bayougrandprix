@@ -22,7 +22,16 @@ class Season < ActiveRecord::Base
 
     attr_accessor :entrant
     attr_accessor :points
+    attr_accessor :finishes
     attr_accessor :entry
+
+    def finishes
+      @finishes ||= []
+    end
+
+    def points
+      @points ||= self.entry.finish_points
+    end
 
     def entrant
       if @entrant
@@ -32,11 +41,45 @@ class Season < ActiveRecord::Base
       end
     end
 
-
     def <=>(other_te)
-      self.points ||= self.entry.finish_points
-      other_te.points ||= other_te.entry.finish_points
-      -(self.points <=> other_te.points)
+      if self.points == other_te.points
+        (1..10).each do |i|
+          if self.finishes[i].nil?
+            self.finishes[i] = self.entry.finishes_in_place(i)
+          end
+          if other_te.finishes[i].nil?
+            other_te.finishes[i] = other_te.entry.finishes_in_place(i)
+          end
+          return -(self.finishes[i] <=> other_te.finishes[i]) unless self.finishes[i] == other_te.finishes[i]
+        end
+        return 0
+      else
+        -(self.points <=> other_te.points)
+      end
+    end
+
+    def points_description
+      result = points.to_s
+      if finishes
+        (1..10).each do |i|
+          if finishes[i]
+            result = result + ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? "" : "s"}"
+          end
+        end
+      end
+      result
+    end
+
+    def ordinal(pos)
+      if pos == 1
+        "win"
+      elsif pos == 2
+        "2nd"
+      elsif pos == 3
+        "3rd"
+      else
+        "#{pos}th"
+      end
     end
   end
 

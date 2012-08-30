@@ -52,4 +52,15 @@ describe DriverEntry do
       @de.finish_points
     end
   end
+  describe "#finishes_in_place" do
+    it "returns 0 when the driver has not been entered into a race" do
+      [1..10].each do |n|
+        @de.finishes_in_place(n).should == 0
+      end
+    end
+    it "returns 2 if the driver won two races" do
+      2.times { FactoryGirl.create(:race_entry, race: FactoryGirl.create(:race), driver_entry: @de, finish: 1) }
+      @de.finishes_in_place(1).should == 2
+    end
+  end
 end

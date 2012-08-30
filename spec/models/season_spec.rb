@@ -52,7 +52,6 @@ describe "Season" do
       results[0].points.should == 47
     end
     it "counts number of wins if tied on points" do
-      pending
       scheme = FactoryGirl.create(:scoring_scheme, name: "9-6-4-3-2-1")
       season = FactoryGirl.create(:season, scoring_scheme: scheme)
       alice = FactoryGirl.create(:driver, name: "alice")
@@ -65,7 +64,6 @@ describe "Season" do
       race2 = FactoryGirl.create(:race, season: season)
       FactoryGirl.create(:race_entry, race: race2, driver_entry: alice_se, finish: 10)
       FactoryGirl.create(:race_entry, race: race2, driver_entry: bob_se,   finish: 4)
-
       results = season.drivers_by_points
       results.length.should == 2
       results[0].entrant.id.should == alice.id
@@ -102,6 +100,21 @@ describe "Season" do
       scheme.should_receive(:points_for_finishing).with(1).and_return(9)
       @season.scoring_scheme = scheme
       @season.points_for_finishing(1).should == 9
+    end
+  end
+  describe Season::TableEntry do
+    describe "#points_description" do
+      it "returns just points if finishes not used in sort" do
+        te = Season::TableEntry.new
+        te.points = 4
+        te.points_description.should eql("4")
+      end
+      it "returns points and some finishes if finishes in sort" do
+        te = Season::TableEntry.new
+        te.points = 4
+        te.finishes = [nil, 1, 0, 4]
+        te.points_description.should eql("4, 1 win, 0 2nds, 4 3rds")
+      end
     end
   end
 end
