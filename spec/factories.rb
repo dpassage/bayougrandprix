@@ -17,7 +17,7 @@ FactoryGirl.define do
     name "Team Name"
     color Team::Colors["White"]
   end
-  factory :season_entry do
+  factory :driver_entry do
     season
     driver
     association :defaultteam, factory: :team
@@ -34,7 +34,7 @@ FactoryGirl.define do
   end
   factory :race_entry do
     race
-    season_entry
+    driver_entry
     team
     finish nil
     qualify nil

@@ -31,10 +31,10 @@ describe Race do
   end
   describe "#destroy" do
     let (:race) { FactoryGirl.create(:race) }
-    let (:season_entry) { FactoryGirl.create(:season_entry) }
+    let (:driver_entry) { FactoryGirl.create(:driver_entry) }
     let (:team) { FactoryGirl.create(:team) }
     it "cannot be destroyed if someone has entered the race" do
-      re = RaceEntry.create!({ race: race, season_entry: season_entry, team: team }, :without_protection => true)
+      re = RaceEntry.create!({ race: race, driver_entry: driver_entry, team: team }, :without_protection => true)
       expect {
         race.destroy
       }.to raise_error

@@ -22,7 +22,7 @@
       <th />
     <% end %>
   </tr>
-  <% @season.season_entries.joins(:defaultteam).order("teams.name").each do |entry| %>
+  <% @season.driver_entries.joins(:defaultteam).order("teams.name").each do |entry| %>
     <tr bgcolor="<%= entry.defaultteam.color %>">
       <td><%= link_to entry.driver.player.name, player_path(entry.driver.player) %></td>
       <td><%= link_to entry.driver.name, driver_path(entry.driver) %></td>
@@ -33,7 +33,7 @@
       <% end %>
       <% if admin? %>
         <td>
-          <%= link_to 'Remove', season_season_entry_path(@season, entry.id), :confirm => 'Are you sure?', :method => :delete %>
+          <%= link_to 'Remove', season_driver_entry_path(@season, entry.id), :confirm => 'Are you sure?', :method => :delete %>
         </td>
       <% end %>
     </tr>
@@ -41,10 +41,10 @@
 </table><br />
 
 <% if admin? %>
-  <%= form_tag(season_season_entries_path(@season)) do %>
+  <%= form_tag(season_driver_entries_path(@season)) do %>
     <%= hidden_field_tag(:season_id, @season.id) %>
-    <%= collection_select :season_entry, :driver_id, @drivers, :id, :name %>  
-    <%= collection_select :season_entry, :defaultteam_id, Team.order(:name), :id, :name %>
+    <%= collection_select :driver_entry, :driver_id, @drivers, :id, :name %>  
+    <%= collection_select :driver_entry, :defaultteam_id, Team.order(:name), :id, :name %>
     <%= submit_tag("Add Driver")%>
   <% end %>
 <% end %>

@@ -8,7 +8,7 @@ class SeasonsController < ApplicationController
   # GET /seasons/1
   def show
     @season = Season.find_by_name(params[:id])
-    @season_entries = @season.season_entries
+    @driver_entries = @season.driver_entries
     @races = @season.races
     if admin?
       @drivers = Driver.order(:name)

@@ -3,10 +3,10 @@ require 'spec_helper'
 describe RaceEntriesController do
   let (:season) { FactoryGirl.create(:season) }
   let (:race) { FactoryGirl.create(:race, season: season) }
-  let (:season_entry) { FactoryGirl.create(:season_entry, season: season) }
+  let (:driver_entry) { FactoryGirl.create(:driver_entry, season: season) }
   let (:team) { FactoryGirl.create(:team) }
   let (:race_entry_params) {
-    { "race_entry" => { :season_entry_id => season_entry.to_param,
+    { "race_entry" => { :driver_entry_id => driver_entry.to_param,
                         :race_id => race.to_param,
                         :team_id => team.to_param }, 
       "season_id" => season.to_param,
@@ -41,7 +41,7 @@ describe RaceEntriesController do
       end
       it "redirects to the race edit page" do
         post 'create', race_entry_params
-        response.should redirect_to(edit_season_race_path(season_entry.season, race))
+        response.should redirect_to(edit_season_race_path(driver_entry.season, race))
       end
       it "sets the flash notice" do
         post 'create', race_entry_params

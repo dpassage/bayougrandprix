@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe SeasonEntriesController do
+describe DriverEntriesController do
   describe "POST create" do
     let(:season) { FactoryGirl.create(:season) }
     let(:driver) { FactoryGirl.create(:driver) }
     let(:team) { FactoryGirl.create(:team) }
     let(:post_params) { { "season_id" => season.to_param,
-                          "season_entry" => {
+                          "driver_entry" => {
                             "driver_id" => driver.to_param,
                             "defaultteam_id" => team.to_param } } }
     context "when the user is not an admin" do
@@ -24,10 +24,10 @@ describe SeasonEntriesController do
         user_is_admin
       end
       context "with an unused driver" do
-        it "creates a new season_entry" do
-          season.season_entries.all.length.should == 0
+        it "creates a new driver_entry" do
+          season.driver_entries.all.length.should == 0
           post 'create', post_params
-          season.season_entries.all.length.should == 1
+          season.driver_entries.all.length.should == 1
         end
         it "sets the notice flash" do
           post 'create', post_params
@@ -43,14 +43,14 @@ describe SeasonEntriesController do
         end
       end
       context "with a used driver" do
-        before(:each) { SeasonEntry.create({ :season => season,
+        before(:each) { DriverEntry.create({ :season => season,
                                              :driver => driver,
                                              :defaultteam => team},
                                              :without_protection => true) }
-        it "does not create a new season_entry" do
-          before_entries = season.season_entries.all.length
+        it "does not create a new driver_entry" do
+          before_entries = season.driver_entries.all.length
           post 'create', post_params
-          season.season_entries.all.length.should == before_entries
+          season.driver_entries.all.length.should == before_entries
         end
         it "sets the error flash" do
           post 'create', post_params
@@ -65,8 +65,8 @@ describe SeasonEntriesController do
   end
   describe "DELETE destroy" do
     let(:season) { FactoryGirl.create(:season) }
-    let(:season_entry) { FactoryGirl.create(:season_entry, { :season => season }) }
-    let(:delete_params) { { id: season_entry.to_param, season_id: season.to_param }}
+    let(:driver_entry) { FactoryGirl.create(:driver_entry, { :season => season }) }
+    let(:delete_params) { { id: driver_entry.to_param, season_id: season.to_param }}
     context "when the user is not an admin" do
       before(:each) do
         user_is_guest
@@ -84,7 +84,7 @@ describe SeasonEntriesController do
       it "removes the season entry" do
         delete 'destroy', delete_params
         expect { 
-          SeasonEntry.find(season_entry.id)
+          DriverEntry.find(driver_entry.id)
         }.to raise_error(ActiveRecord::RecordNotFound)
       end
       it "does not set the error flash" do
@@ -100,21 +100,21 @@ describe SeasonEntriesController do
         before(:each) do
           FactoryGirl.create(:race_entry, 
                              race: race,
-                             season_entry: season_entry,
-                             team: season_entry.defaultteam) 
+                             driver_entry: driver_entry,
+                             team: driver_entry.defaultteam) 
         end
         it "does not remove the season entry" do
-          delete 'destroy', { :id => season_entry.id,
+          delete 'destroy', { :id => driver_entry.id,
                               :season_id => season.to_param }
-          SeasonEntry.find(season_entry.id).should == season_entry
+          DriverEntry.find(driver_entry.id).should == driver_entry
         end
         it "sets the error flash" do
-          delete 'destroy', { :id => season_entry.id,
+          delete 'destroy', { :id => driver_entry.id,
                               :season_id => season.to_param }
           flash[:error].should_not be_nil
         end
         it "redirects to the season" do
-          delete 'destroy', { :id => season_entry.id,
+          delete 'destroy', { :id => driver_entry.id,
                               :season_id => season.to_param }
           response.should redirect_to(season_path(season))
         end

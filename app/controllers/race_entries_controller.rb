@@ -4,7 +4,7 @@ class RaceEntriesController < ApplicationController
   def create
     @re = RaceEntry.new(params[:race_entry])
     @re.save!
-    flash[:notice] = "Driver #{@re.season_entry.driver.name} now entered!"
+    flash[:notice] = "Driver #{@re.driver_entry.driver.name} now entered!"
     redirect_to edit_season_race_path(@re.race.season, @re.race)
   end
 end

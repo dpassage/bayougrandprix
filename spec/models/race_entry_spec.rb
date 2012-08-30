@@ -3,11 +3,11 @@ require 'spec_helper'
 describe RaceEntry do
   let(:season) { FactoryGirl.create(:season) }
   let(:race) { FactoryGirl.create(:race, season: season) }
-  let(:se) { FactoryGirl.create(:season_entry, season: season) }
+  let(:se) { FactoryGirl.create(:driver_entry, season: season) }
   let(:team) { FactoryGirl.create(:team) }
   before(:each) do
     @re = RaceEntry.new(race_id: race.to_param,
-                        season_entry_id: se.to_param,
+                        driver_entry_id: se.to_param,
                         team_id: team.to_param)
   end
   it "is valid with valid parameters" do
@@ -22,11 +22,11 @@ describe RaceEntry do
     @re.should_not be_valid
   end
   it "is invalid without a season entry" do
-    @re.season_entry_id = nil
+    @re.driver_entry_id = nil
     @re.should_not be_valid
   end
   it "is invalid with an invalid season entry" do
-    @re.season_entry_id = SeasonEntry.maximum("id") + 1
+    @re.driver_entry_id = DriverEntry.maximum("id") + 1
     @re.should_not be_valid
   end
   it "is invalid without a team" do
@@ -50,8 +50,8 @@ describe RaceEntry do
   end
   describe "#driver" do
     let(:driver) { FactoryGirl.create(:driver) }
-    let(:se) { FactoryGirl.create(:season_entry, driver: driver) }
-    let(:re) { FactoryGirl.create(:race_entry, season_entry: se) }
+    let(:se) { FactoryGirl.create(:driver_entry, driver: driver) }
+    let(:re) { FactoryGirl.create(:race_entry, driver_entry: se) }
     it "returns the driver from the season entry" do
       re.driver.should == driver
     end

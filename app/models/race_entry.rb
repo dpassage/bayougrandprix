@@ -1,15 +1,15 @@
 class RaceEntry < ActiveRecord::Base
   belongs_to :race
-  belongs_to :season_entry
+  belongs_to :driver_entry
   belongs_to :team
   validates_presence_of :race
-  validates_presence_of :season_entry
+  validates_presence_of :driver_entry
   validates_presence_of :team
   validates :finish, :uniqueness => {:scope => :race_id}, :allow_nil => true
-  attr_accessible :race_id, :season_entry_id, :team_id, :finish, :dnf, :qualify, :dnq
+  attr_accessible :race_id, :driver_entry_id, :team_id, :finish, :dnf, :qualify, :dnq
   
   def driver
-    season_entry.driver
+    driver_entry.driver
   end
   
   def finish_points

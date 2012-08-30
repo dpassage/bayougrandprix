@@ -9,7 +9,7 @@ race_entries_001:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_002:
   race_id: 1
   team_id: 2
@@ -20,7 +20,7 @@ race_entries_002:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_003:
   race_id: 1
   team_id: 3
@@ -31,7 +31,7 @@ race_entries_003:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_004:
   race_id: 1
   team_id: 4
@@ -42,7 +42,7 @@ race_entries_004:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_005:
   race_id: 1
   team_id: 1
@@ -53,7 +53,7 @@ race_entries_005:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_006:
   race_id: 1
   team_id: 4
@@ -64,7 +64,7 @@ race_entries_006:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_007:
   race_id: 1
   team_id: 2
@@ -75,7 +75,7 @@ race_entries_007:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_008:
   race_id: 1
   team_id: 5
@@ -86,7 +86,7 @@ race_entries_008:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_009:
   race_id: 1
   team_id: 5
@@ -97,7 +97,7 @@ race_entries_009:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_010:
   race_id: 1
   team_id: 3
@@ -108,7 +108,7 @@ race_entries_010:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_011:
   race_id: 8
   team_id: 3
@@ -119,7 +119,7 @@ race_entries_011:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_012:
   race_id: 8
   team_id: 5
@@ -130,7 +130,7 @@ race_entries_012:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_013:
   race_id: 8
   team_id: 2
@@ -141,7 +141,7 @@ race_entries_013:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_014:
   race_id: 8
   team_id: 3
@@ -152,7 +152,7 @@ race_entries_014:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_015:
   race_id: 8
   team_id: 2
@@ -163,7 +163,7 @@ race_entries_015:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_016:
   race_id: 8
   team_id: 4
@@ -174,7 +174,7 @@ race_entries_016:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_017:
   race_id: 8
   team_id: 1
@@ -185,7 +185,7 @@ race_entries_017:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_018:
   race_id: 8
   team_id: 5
@@ -196,7 +196,7 @@ race_entries_018:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_019:
   race_id: 8
   team_id: 1
@@ -207,7 +207,7 @@ race_entries_019:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_020:
   race_id: 8
   team_id: 4
@@ -218,7 +218,7 @@ race_entries_020:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_021:
   race_id: 9
   team_id: 4
@@ -229,7 +229,7 @@ race_entries_021:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_022:
   race_id: 9
   team_id: 2
@@ -240,7 +240,7 @@ race_entries_022:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_023:
   race_id: 9
   team_id: 2
@@ -251,7 +251,7 @@ race_entries_023:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_024:
   race_id: 9
   team_id: 5
@@ -262,7 +262,7 @@ race_entries_024:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_025:
   race_id: 9
   team_id: 3
@@ -273,7 +273,7 @@ race_entries_025:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_026:
   race_id: 9
   team_id: 4
@@ -284,7 +284,7 @@ race_entries_026:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_027:
   race_id: 9
   team_id: 1
@@ -295,7 +295,7 @@ race_entries_027:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_028:
   race_id: 9
   team_id: 3
@@ -306,7 +306,7 @@ race_entries_028:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_029:
   race_id: 9
   team_id: 1
@@ -317,7 +317,7 @@ race_entries_029:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_030:
   race_id: 9
   team_id: 5
@@ -328,7 +328,7 @@ race_entries_030:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_031:
   race_id: 10
   team_id: 2
@@ -339,7 +339,7 @@ race_entries_031:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_032:
   race_id: 10
   team_id: 4
@@ -350,7 +350,7 @@ race_entries_032:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_033:
   race_id: 10
   team_id: 2
@@ -361,7 +361,7 @@ race_entries_033:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_034:
   race_id: 10
   team_id: 4
@@ -372,7 +372,7 @@ race_entries_034:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_035:
   race_id: 10
   team_id: 3
@@ -383,7 +383,7 @@ race_entries_035:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_036:
   race_id: 10
   team_id: 3
@@ -394,7 +394,7 @@ race_entries_036:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_037:
   race_id: 10
   team_id: 5
@@ -405,7 +405,7 @@ race_entries_037:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_038:
   race_id: 10
   team_id: 5
@@ -416,7 +416,7 @@ race_entries_038:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_039:
   race_id: 10
   team_id: 1
@@ -427,7 +427,7 @@ race_entries_039:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_040:
   race_id: 10
   team_id: 1
@@ -438,7 +438,7 @@ race_entries_040:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_041:
   race_id: 11
   team_id: 3
@@ -449,7 +449,7 @@ race_entries_041:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_042:
   race_id: 11
   team_id: 4
@@ -460,7 +460,7 @@ race_entries_042:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_043:
   race_id: 11
   team_id: 2
@@ -471,7 +471,7 @@ race_entries_043:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_044:
   race_id: 11
   team_id: 5
@@ -482,7 +482,7 @@ race_entries_044:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_045:
   race_id: 11
   team_id: 4
@@ -493,7 +493,7 @@ race_entries_045:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_046:
   race_id: 11
   team_id: 1
@@ -504,7 +504,7 @@ race_entries_046:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_047:
   race_id: 11
   team_id: 2
@@ -515,7 +515,7 @@ race_entries_047:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_048:
   race_id: 11
   team_id: 1
@@ -526,7 +526,7 @@ race_entries_048:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_049:
   race_id: 11
   team_id: 5
@@ -537,7 +537,7 @@ race_entries_049:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_050:
   race_id: 11
   team_id: 3
@@ -548,7 +548,7 @@ race_entries_050:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_051:
   race_id: 12
   team_id: 2
@@ -559,7 +559,7 @@ race_entries_051:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_052:
   race_id: 12
   team_id: 3
@@ -570,7 +570,7 @@ race_entries_052:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_053:
   race_id: 12
   team_id: 3
@@ -581,7 +581,7 @@ race_entries_053:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_054:
   race_id: 12
   team_id: 5
@@ -592,7 +592,7 @@ race_entries_054:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_055:
   race_id: 12
   team_id: 2
@@ -603,7 +603,7 @@ race_entries_055:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_056:
   race_id: 12
   team_id: 4
@@ -614,7 +614,7 @@ race_entries_056:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_057:
   race_id: 12
   team_id: 4
@@ -625,7 +625,7 @@ race_entries_057:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_058:
   race_id: 12
   team_id: 5
@@ -636,7 +636,7 @@ race_entries_058:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_059:
   race_id: 12
   team_id: 1
@@ -647,7 +647,7 @@ race_entries_059:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_060:
   race_id: 13
   team_id: 4
@@ -658,7 +658,7 @@ race_entries_060:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_061:
   race_id: 13
   team_id: 2
@@ -669,7 +669,7 @@ race_entries_061:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_062:
   race_id: 13
   team_id: 3
@@ -680,7 +680,7 @@ race_entries_062:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_063:
   race_id: 13
   team_id: 4
@@ -691,7 +691,7 @@ race_entries_063:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_064:
   race_id: 13
   team_id: 2
@@ -702,7 +702,7 @@ race_entries_064:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_065:
   race_id: 13
   team_id: 5
@@ -713,7 +713,7 @@ race_entries_065:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_066:
   race_id: 13
   team_id: 1
@@ -724,7 +724,7 @@ race_entries_066:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_067:
   race_id: 13
   team_id: 1
@@ -735,7 +735,7 @@ race_entries_067:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_068:
   race_id: 13
   team_id: 5
@@ -746,7 +746,7 @@ race_entries_068:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_069:
   race_id: 14
   team_id: 3
@@ -757,7 +757,7 @@ race_entries_069:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_070:
   race_id: 14
   team_id: 2
@@ -768,7 +768,7 @@ race_entries_070:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_071:
   race_id: 14
   team_id: 4
@@ -779,7 +779,7 @@ race_entries_071:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_072:
   race_id: 14
   team_id: 4
@@ -790,7 +790,7 @@ race_entries_072:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 9
+  driver_entry_id: 9
 race_entries_073:
   race_id: 14
   team_id: 1
@@ -801,7 +801,7 @@ race_entries_073:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_074:
   race_id: 14
   team_id: 3
@@ -812,7 +812,7 @@ race_entries_074:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_075:
   race_id: 14
   team_id: 5
@@ -823,7 +823,7 @@ race_entries_075:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_076:
   race_id: 14
   team_id: 2
@@ -834,7 +834,7 @@ race_entries_076:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_077:
   race_id: 14
   team_id: 1
@@ -845,7 +845,7 @@ race_entries_077:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_078:
   race_id: 14
   team_id: 5
@@ -856,7 +856,7 @@ race_entries_078:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_079:
   race_id: 15
   team_id: 2
@@ -867,7 +867,7 @@ race_entries_079:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_080:
   race_id: 15
   team_id: 5
@@ -878,7 +878,7 @@ race_entries_080:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_081:
   race_id: 15
   team_id: 4
@@ -889,7 +889,7 @@ race_entries_081:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_082:
   race_id: 15
   team_id: 5
@@ -900,7 +900,7 @@ race_entries_082:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_083:
   race_id: 15
   team_id: 1
@@ -911,7 +911,7 @@ race_entries_083:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 12
+  driver_entry_id: 12
 race_entries_084:
   race_id: 15
   team_id: 2
@@ -922,7 +922,7 @@ race_entries_084:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_085:
   race_id: 15
   team_id: 3
@@ -933,7 +933,7 @@ race_entries_085:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_086:
   race_id: 15
   team_id: 4
@@ -944,7 +944,7 @@ race_entries_086:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 9
+  driver_entry_id: 9
 race_entries_087:
   race_id: 15
   team_id: 3
@@ -955,7 +955,7 @@ race_entries_087:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_088:
   race_id: 15
   team_id: 1
@@ -966,7 +966,7 @@ race_entries_088:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_089:
   race_id: 16
   team_id: 4
@@ -977,7 +977,7 @@ race_entries_089:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_090:
   race_id: 16
   team_id: 5
@@ -988,7 +988,7 @@ race_entries_090:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_091:
   race_id: 16
   team_id: 5
@@ -999,7 +999,7 @@ race_entries_091:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_092:
   race_id: 16
   team_id: 3
@@ -1010,7 +1010,7 @@ race_entries_092:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_093:
   race_id: 16
   team_id: 2
@@ -1021,7 +1021,7 @@ race_entries_093:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_094:
   race_id: 16
   team_id: 1
@@ -1032,7 +1032,7 @@ race_entries_094:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_095:
   race_id: 16
   team_id: 1
@@ -1043,7 +1043,7 @@ race_entries_095:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_096:
   race_id: 16
   team_id: 2
@@ -1054,7 +1054,7 @@ race_entries_096:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_097:
   race_id: 16
   team_id: 3
@@ -1065,7 +1065,7 @@ race_entries_097:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_098:
   race_id: 16
   team_id: 4
@@ -1076,7 +1076,7 @@ race_entries_098:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 9
+  driver_entry_id: 9
 race_entries_099:
   race_id: 17
   team_id: 3
@@ -1087,7 +1087,7 @@ race_entries_099:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_100:
   race_id: 17
   team_id: 4
@@ -1098,7 +1098,7 @@ race_entries_100:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 9
+  driver_entry_id: 9
 race_entries_101:
   race_id: 17
   team_id: 2
@@ -1109,7 +1109,7 @@ race_entries_101:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_102:
   race_id: 17
   team_id: 5
@@ -1120,7 +1120,7 @@ race_entries_102:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_103:
   race_id: 17
   team_id: 3
@@ -1131,7 +1131,7 @@ race_entries_103:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_104:
   race_id: 17
   team_id: 2
@@ -1142,7 +1142,7 @@ race_entries_104:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_105:
   race_id: 17
   team_id: 1
@@ -1153,7 +1153,7 @@ race_entries_105:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 4
+  driver_entry_id: 4
 race_entries_106:
   race_id: 17
   team_id: 5
@@ -1164,7 +1164,7 @@ race_entries_106:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_107:
   race_id: 17
   team_id: 4
@@ -1175,7 +1175,7 @@ race_entries_107:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_108:
   race_id: 17
   team_id: 1
@@ -1186,7 +1186,7 @@ race_entries_108:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1
 race_entries_109:
   race_id: 18
   team_id: 4
@@ -1197,7 +1197,7 @@ race_entries_109:
   updated_at: 
   qualify: 3
   dnq: false
-  season_entry_id: 9
+  driver_entry_id: 9
 race_entries_110:
   race_id: 18
   team_id: 1
@@ -1208,7 +1208,7 @@ race_entries_110:
   updated_at: 
   qualify: 1
   dnq: false
-  season_entry_id: 7
+  driver_entry_id: 7
 race_entries_111:
   race_id: 18
   team_id: 5
@@ -1219,7 +1219,7 @@ race_entries_111:
   updated_at: 
   qualify: 4
   dnq: false
-  season_entry_id: 11
+  driver_entry_id: 11
 race_entries_112:
   race_id: 18
   team_id: 2
@@ -1230,7 +1230,7 @@ race_entries_112:
   updated_at: 
   qualify: 8
   dnq: false
-  season_entry_id: 2
+  driver_entry_id: 2
 race_entries_113:
   race_id: 18
   team_id: 5
@@ -1241,7 +1241,7 @@ race_entries_113:
   updated_at: 
   qualify: 6
   dnq: false
-  season_entry_id: 10
+  driver_entry_id: 10
 race_entries_114:
   race_id: 18
   team_id: 4
@@ -1252,7 +1252,7 @@ race_entries_114:
   updated_at: 
   qualify: 5
   dnq: false
-  season_entry_id: 8
+  driver_entry_id: 8
 race_entries_115:
   race_id: 18
   team_id: 2
@@ -1263,7 +1263,7 @@ race_entries_115:
   updated_at: 
   qualify: 9
   dnq: false
-  season_entry_id: 3
+  driver_entry_id: 3
 race_entries_116:
   race_id: 18
   team_id: 3
@@ -1274,7 +1274,7 @@ race_entries_116:
   updated_at: 
   qualify: 10
   dnq: false
-  season_entry_id: 5
+  driver_entry_id: 5
 race_entries_117:
   race_id: 18
   team_id: 3
@@ -1285,7 +1285,7 @@ race_entries_117:
   updated_at: 
   qualify: 2
   dnq: false
-  season_entry_id: 6
+  driver_entry_id: 6
 race_entries_118:
   race_id: 18
   team_id: 1
@@ -1296,4 +1296,4 @@ race_entries_118:
   updated_at: 
   qualify: 7
   dnq: false
-  season_entry_id: 1
+  driver_entry_id: 1

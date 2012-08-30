@@ -1,60 +1,60 @@
 ---
-season_entries_001:
+driver_entries_001:
   season_id: 1
   driver_id: 1
   defaultteam_id: 1
   id: 1
-season_entries_002:
+driver_entries_002:
   season_id: 1
   driver_id: 2
   defaultteam_id: 2
   id: 2
-season_entries_003:
+driver_entries_003:
   season_id: 1
   driver_id: 3
   defaultteam_id: 2
   id: 3
-season_entries_004:
+driver_entries_004:
   season_id: 1
   driver_id: 4
   defaultteam_id: 1
   id: 4
-season_entries_005:
+driver_entries_005:
   season_id: 1
   driver_id: 5
   defaultteam_id: 3
   id: 5
-season_entries_006:
+driver_entries_006:
   season_id: 1
   driver_id: 6
   defaultteam_id: 3
   id: 6
-season_entries_007:
+driver_entries_007:
   season_id: 1
   driver_id: 7
   defaultteam_id: 4
   id: 7
-season_entries_008:
+driver_entries_008:
   season_id: 1
   driver_id: 8
   defaultteam_id: 4
   id: 8
-season_entries_009:
+driver_entries_009:
   season_id: 1
   driver_id: 9
   defaultteam_id: 4
   id: 9
-season_entries_010:
+driver_entries_010:
   season_id: 1
   driver_id: 10
   defaultteam_id: 5
   id: 10
-season_entries_011:
+driver_entries_011:
   season_id: 1
   driver_id: 11
   defaultteam_id: 5
   id: 11
-season_entries_012:
+driver_entries_012:
   season_id: 1
   driver_id: 13
   defaultteam_id: 1

@@ -35,8 +35,8 @@
 
 <% if admin? %>
   <h3>Add Drivers</h3>
-    <% @season.season_entries.each do |se| %>
-      <% unless @race.race_entries.exists?(:season_entry_id => se.id) %>
+    <% @season.driver_entries.each do |se| %>
+      <% unless @race.race_entries.exists?(:driver_entry_id => se.id) %>
           <%= form_tag(season_race_race_entries_path(@season, @race), :method => "post") do %>
             <%= se.driver.name %>
             <% if se.defaultteam.fake? %>
@@ -45,7 +45,7 @@
               <%= se.defaultteam.name %>
               <%= hidden_field_tag("race_entry[team_id]", se.defaultteam.id) %>
             <% end %>
-            <%= hidden_field_tag("race_entry[season_entry_id]", se.id) %>
+            <%= hidden_field_tag("race_entry[driver_entry_id]", se.id) %>
             <%= hidden_field_tag("race_entry[race_id]", @race.id) %>
             <%= submit_tag("Add") %>
           <% end %>  

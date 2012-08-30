@@ -1,5 +1,5 @@
 class Season < ActiveRecord::Base
-  has_many :season_entries, :dependent => :restrict
+  has_many :driver_entries, :dependent => :restrict
   has_many :races, :dependent => :restrict
   belongs_to :scoring_scheme
   validates_presence_of :name
@@ -22,28 +22,28 @@ class Season < ActiveRecord::Base
 
     attr_accessor :entrant
     attr_accessor :points
-    attr_accessor :season_entry
+    attr_accessor :entry
 
     def entrant
       if @entrant
         @entrant
       else
-        @season_entry.driver
+        @entry.driver
       end
     end
 
 
     def <=>(other_te)
-      self.points ||= self.season_entry.finish_points
-      other_te.points ||= other_te.season_entry.finish_points
+      self.points ||= self.entry.finish_points
+      other_te.points ||= other_te.entry.finish_points
       -(self.points <=> other_te.points)
     end
   end
 
   def driver_results_table_by_finish_points
-    table = self.season_entries.collect { |se| 
+    table = self.driver_entries.collect { |de| 
       te = TableEntry.new
-      te.season_entry = se 
+      te.entry = de 
       te
     }
     table.sort

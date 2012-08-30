@@ -70,7 +70,7 @@ describe SeasonsController do
     shared_examples "always passes some variables" do
       it "should pass an array of season entries" do
         get 'show', show_params
-        assigns[:season_entries].should_not == nil
+        assigns[:driver_entries].should_not == nil
       end
       it "should pass a list of races in the season" do
         get 'show', show_params

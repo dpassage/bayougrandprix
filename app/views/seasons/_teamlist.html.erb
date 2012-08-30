@@ -5,7 +5,7 @@
     <th>Driver</th>
     <th>Team</th>
   </tr>
-  <% teamlist.season_entries.joins(:defaultteam).select("*, teams.name").order("teams.name").each do |entry| %>
+  <% teamlist.driver_entries.joins(:defaultteam).select("*, teams.name").order("teams.name").each do |entry| %>
     <tr bgcolor="<%= entry.defaultteam.color %>">
       <td><%= link_to entry.driver.player.name, player_path(entry.driver.player) %></td>
       <td><%= link_to entry.driver.name, driver_path(entry.driver) %></td>

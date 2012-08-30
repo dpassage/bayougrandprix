@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120713190206) do
+ActiveRecord::Schema.define(:version => 20120828235157) do
+
+  create_table "driver_entries", :force => true do |t|
+    t.integer "season_id",      :null => false
+    t.integer "driver_id",      :null => false
+    t.integer "defaultteam_id", :null => false
+  end
+
+  add_index "driver_entries", ["season_id", "driver_id"], :name => "index_season_entries_on_season_id_and_driver_id", :unique => true
 
   create_table "drivers", :force => true do |t|
     t.integer  "player_id",                 :null => false
@@ -36,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20120713190206) do
     t.datetime "updated_at"
     t.integer  "qualify"
     t.boolean  "dnq"
-    t.integer  "season_entry_id"
+    t.integer  "driver_entry_id"
   end
 
   add_index "race_entries", ["race_id", "finish"], :name => "index_race_entries_on_race_id_and_finish", :unique => true
@@ -55,14 +63,6 @@ ActiveRecord::Schema.define(:version => 20120713190206) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "season_entries", :force => true do |t|
-    t.integer "season_id",      :null => false
-    t.integer "driver_id",      :null => false
-    t.integer "defaultteam_id", :null => false
-  end
-
-  add_index "season_entries", ["season_id", "driver_id"], :name => "index_season_entries_on_season_id_and_driver_id", :unique => true
 
   create_table "seasons", :force => true do |t|
     t.string   "name",              :limit => 100,                :null => false

@@ -123,9 +123,9 @@ describe TeamsController do
           flash[:notice].should_not be_nil 
         }
       end
-      context "when the team is used in a season_entry" do
+      context "when the team is used in a driver_entry" do
         before (:each) do
-          se = FactoryGirl.create(:season_entry, defaultteam: team) 
+          de = FactoryGirl.create(:driver_entry, defaultteam: team) 
           delete 'destroy', delete_params 
         end
         it("is not deleted") { Team.find(team.id).should == team }
@@ -135,8 +135,8 @@ describe TeamsController do
       context "when the team is used in a race_entry" do
         before (:each) do
           otherteam = FactoryGirl.create(:team) 
-          se = FactoryGirl.create(:season_entry, defaultteam: otherteam)
-          re = FactoryGirl.create(:race_entry, season_entry: se, team: team)
+          de = FactoryGirl.create(:driver_entry, defaultteam: otherteam)
+          re = FactoryGirl.create(:race_entry, driver_entry: de, team: team)
           delete 'destroy', delete_params 
         end
         it("is not deleted") { Team.find(team.id).should == team }
