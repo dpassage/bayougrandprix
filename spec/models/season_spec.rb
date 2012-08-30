@@ -113,7 +113,7 @@ describe "Season" do
         te = Season::TableEntry.new
         te.points = 4
         te.finishes = [nil, 1, 0, 4]
-        te.points_description.should eql("4, 1 win, 0 2nds, 4 3rds")
+        te.points_description.should eql("4, 1 win, 4 3rds")
       end
     end
   end

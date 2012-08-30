@@ -62,7 +62,7 @@ class Season < ActiveRecord::Base
       result = points.to_s
       if finishes
         (1..10).each do |i|
-          if finishes[i]
+          if finishes[i] && finishes[i] > 0
             result = result + ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? "" : "s"}"
           end
         end
