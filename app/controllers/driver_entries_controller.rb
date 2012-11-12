@@ -13,7 +13,7 @@ class DriverEntriesController < ApplicationController
 
   def create
     season = Season.where(:name=>params[:season_id]).first
-    @de = DriverEntry.new(params[:driver_entry])
+    @de = DriverEntry.new(safe_params)
     @de.season = season
     begin
       @de.save!
@@ -23,5 +23,11 @@ class DriverEntriesController < ApplicationController
     flash[:notice] = "#{@de.driver.name} added to #{@de.season.name} season" unless
       flash[:error]
     redirect_to season_path(season)
-  end  
+  end
+
+  private
+
+  def safe_params
+    params.require(:driver_entry).permit(:driver_id, :defaultteam_id)
+  end
 end

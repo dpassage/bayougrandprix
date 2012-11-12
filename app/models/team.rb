@@ -13,5 +13,4 @@ class Team < ActiveRecord::Base
   validates_inclusion_of :color, :in => Colors.values
   has_many :season_entries, :foreign_key => "defaultteam_id", :dependent => :restrict_with_exception
   has_many :race_entries, :dependent => :restrict_with_exception
-  attr_accessible :name, :fake, :color
 end

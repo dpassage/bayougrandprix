@@ -6,7 +6,6 @@ class DriverEntry < ActiveRecord::Base
   validates_presence_of :defaultteam
   validates_presence_of :driver
   validates_presence_of :season
-  attr_accessible :defaultteam_id, :driver_id, :season_id
 
   def finish_points
     self.race_entries.inject(0) do |sum, re|

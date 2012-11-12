@@ -43,11 +43,10 @@ describe DriverEntriesController do
         end
       end
       context "with a used driver" do
-        before(:each) { DriverEntry.create({ :season => season,
-                                             :driver => driver,
-                                             :defaultteam => team},
-                                             :without_protection => true) }
-        it "does not create a new season_entry" do
+        before(:each) { DriverEntry.create(:season => season,
+                                           :driver => driver,
+                                           :defaultteam => team) }
+        it "does not create a new driver_entry" do
           expect {
             post 'create', post_params
           }.to change(season.season_entries, :count).by(0)

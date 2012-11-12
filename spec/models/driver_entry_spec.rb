@@ -29,7 +29,7 @@ describe DriverEntry do
     let (:race) { FactoryGirl.create(:race) }
     let (:driver_entry) { FactoryGirl.create(:driver_entry) }
     it "cannot be deleted if the driver has participated in a race that season" do
-      re = RaceEntry.create!( { race: race, driver_entry: driver_entry, team: team}, :without_protection => true)
+      re = RaceEntry.create!(race: race, driver_entry: driver_entry, team: team)
       expect {
         driver_entry.destroy
       }.to raise_error

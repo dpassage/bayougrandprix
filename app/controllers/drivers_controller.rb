@@ -22,9 +22,14 @@ class DriversController < ApplicationController
 
   def update
     @driver = Driver.find(params[:id])
-    @driver.update_attributes!(params[:driver])
+    @driver.update_attributes!(safe_params)
     flash[:notice] = "Driver #{@driver.name} updated"
     redirect_to(drivers_path)
   end
 
+  private
+
+  def safe_params
+    params.require(:driver).permit(:name)
+  end
 end

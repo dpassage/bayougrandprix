@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
     @team = Team.new
   end
   def create
-    @team = Team.new(params[:team])
+    @team = Team.new(safe_params)
     if @team.save
       flash[:notice] = "Team #{@team.name} created"
       redirect_to(teams_path)
@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
   end
   def update
     @team = Team.find(params[:id])
-    @team.update_attributes!(params[:team])
+    @team.update_attributes!(safe_params)
     redirect_to(team_path(@team))
   end
   def destroy
@@ -37,5 +37,11 @@ class TeamsController < ApplicationController
       flash[:error] = "Team #{name} in use, not deleted"
     end
     redirect_to(teams_path)
+  end
+
+  private
+
+  def safe_params
+    params[:team].permit(:name, :color, :fake)
   end
 end

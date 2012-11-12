@@ -4,7 +4,6 @@ class Season < ActiveRecord::Base
   belongs_to :scoring_scheme
   validates_presence_of :name
   validates_presence_of :scoring_scheme_id
-  attr_accessible :name, :scoring_scheme_id
   validate :scoring_scheme_must_exist
   
   def scoring_scheme_must_exist

@@ -37,14 +37,14 @@ describe Team do
     let (:driver) { FactoryGirl.create(:driver) }
     let (:race) { FactoryGirl.create(:race) }
     it "cannot be removed if used in a season entry" do
-      de = DriverEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
+      de = DriverEntry.create!(defaultteam: team, season: season, driver: driver)
       expect {
         team.destroy
       }.to raise_error
     end
     it "cannot be removed if used in a race entry" do
-      de = DriverEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
-      re = RaceEntry.create!( { race: race, driver_entry: de, team: otherteam}, :without_protection => true)
+      de = DriverEntry.create!(defaultteam: team, season: season, driver: driver)
+      re = RaceEntry.create!(race: race, driver_entry: de, team: otherteam)
       expect {
         otherteam.destroy
       }.to raise_error

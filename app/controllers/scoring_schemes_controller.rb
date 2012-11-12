@@ -7,7 +7,7 @@ class ScoringSchemesController < ApplicationController
     @scoring_scheme = ScoringScheme.new
   end
   def create
-    @scoring_scheme = ScoringScheme.new(params[:scoring_scheme])
+    @scoring_scheme = ScoringScheme.new(safe_params)
     begin
       @scoring_scheme.save!
       flash[:notice] = "Scoring scheme #{@scoring_scheme.name} created"
@@ -16,5 +16,11 @@ class ScoringSchemesController < ApplicationController
       flash[:error] = "Scoring scheme not created"
       render action: "new"
     end
+  end
+
+  private
+
+  def safe_params
+    params[:scoring_scheme].permit(:name)
   end
 end

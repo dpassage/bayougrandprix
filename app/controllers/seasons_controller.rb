@@ -37,12 +37,18 @@ class SeasonsController < ApplicationController
   # POST /seasons
   # POST /seasons.xml
   def create
-    @season = Season.new(params[:season])
+    @season = Season.new(safe_params)
 
     if @season.save
       redirect_to seasons_path
     else
       render :action => "new"
     end
+  end
+
+  private
+
+  def safe_params
+    params[:season].permit(:name, :scoring_scheme_id)
   end
 end

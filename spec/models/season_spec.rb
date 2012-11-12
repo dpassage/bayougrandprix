@@ -31,13 +31,13 @@ describe "Season" do
     let (:team) { FactoryGirl.create(:team) }
     let (:driver) { FactoryGirl.create(:driver)}
     it "cannot be removed if there are races in the season" do
-      race = Race.create!({track: track, season: season, date:Time.new }, :without_protection => true)
+      race = Race.create!(track: track, season: season, date: Time.new)
       expect {
         season.destroy
       }.to raise_error
     end
     it "cannot be removed if there are drivers entered in the season" do
-      de = DriverEntry.create!({ defaultteam: team, season: season, driver: driver }, :without_protection => true)
+      de = DriverEntry.create!(defaultteam: team, season: season, driver: driver)
       expect {
         season.destroy
       }.to raise_error

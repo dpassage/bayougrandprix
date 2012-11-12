@@ -24,7 +24,7 @@ describe PlayersController do
   end
   describe "POST 'create'" do
     let(:create_params) { { player: { name: "Joe", email: "joe@example.com" } } }
-    let(:invalid_params) { { team: {}}}
+    let(:invalid_params) { { player: { name: nil, email: nil }}}
     describe "when user is not an admin" do
       before(:each) do
         user_is_guest
@@ -34,7 +34,7 @@ describe PlayersController do
           post 'create', create_params
         end
       end
-      it "should not create the team" do
+      it "should not create the player" do
         expect {
           post 'create', create_params
         }.to change(Player, :count).by(0)

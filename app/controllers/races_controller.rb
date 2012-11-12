@@ -2,7 +2,7 @@ class RacesController < ApplicationController
   before_filter :authorize, :only => [:create, :update, :destroy]
   def create
     season = Season.find_by_name(params[:season_id])
-    @race = Race.new(params[:race])
+    @race = Race.new(safe_params)
     @race.season = season
     begin
       @race.save!
@@ -24,11 +24,18 @@ class RacesController < ApplicationController
     season = Season.find_by_name(params[:season_id])
     race = Race.find(params[:id])
     begin
-      race.update_attributes!(params[:race])
+      race.update_attributes!(safe_params)
       flash[:notice] = "Race results updated"
     rescue ActiveRecord::RecordNotUnique
       flash[:error] = "Finishing and qualifying places must be unique"
     end
     redirect_to season_race_path(season, race)
+  end
+
+  private
+
+  def safe_params
+    params[:race].permit(:track_id, :date, :writeup,
+      race_entries_attributes: [:finish, :qualify, :dnf, :dnq, :id])
   end
 end
