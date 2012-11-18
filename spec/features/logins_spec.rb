@@ -7,7 +7,7 @@ describe "Logins" do
       current_path.should == login_path
       fill_in('password', :with => 'foobar')
       click_button 'Login'
-    end      
+    end
     it "logs in from home page" do
       visit root_path
       login
