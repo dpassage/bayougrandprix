@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'thin'
+gem 'unicorn'
 gem 'redcarpet'
 
 # Gems used only for assets and not required
@@ -25,9 +25,6 @@ end
 gem 'jquery-rails'
 
 gem 'simplecov', :require => false, :group => :test
-
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -48,6 +45,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem "factory_girl_rails", "~> 3.0"
-  gem 'debugger'
+#  gem 'debugger'
   gem 'fuubar'
 end
