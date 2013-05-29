@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `players` (
 
 INSERT INTO `players` (`id`, `name`, `email`) VALUES
 (1, 'Jeshua Rosestone', 'jeshuarosestone@hotmail.com'),
-(2, 'David Paschich', 'dpassage@flophouse.com'),
+(2, 'David Paschich', 'dpassage@balveda.com'),
 (3, 'Phil Sacks', ''),
 (4, 'Peter Koning', ''),
 (5, 'Andy Harris', ''),
