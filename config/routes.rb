@@ -1,7 +1,6 @@
 Bayougrandprix::Application.routes.draw do
 
-  get "login" => "sessions#create", :as => :login
-  post "login" => "sessions#create", :as => :login
+  match 'login' => 'sessions#create', :via => [:get, :post], :as => :login
   get "logout" => "sessions#destroy", :as => :logout
 
 # index, new, create, show, edit, update, destroy

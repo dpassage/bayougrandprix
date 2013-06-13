@@ -4,9 +4,9 @@ ruby "1.9.3"
 # gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
-gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'journey', :git => 'git://github.com/rails/journey.git'
+#gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
+gem 'rails', '4.0.0.rc2'
+#gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'pg'
 gem 'unicorn'
 gem 'redcarpet'
