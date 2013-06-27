@@ -34,7 +34,9 @@ describe Race do
     let (:driver_entry) { FactoryGirl.create(:driver_entry) }
     let (:team) { FactoryGirl.create(:team) }
     it "cannot be destroyed if someone has entered the race" do
-      re = RaceEntry.create!(race: race, driver_entry: driver_entry, team: team)
+      re = RaceEntry.create!(race: race,
+                             driver_entry: driver_entry,
+                             team: team)
       expect {
         race.destroy
       }.to raise_error

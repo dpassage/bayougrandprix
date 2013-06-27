@@ -14,7 +14,8 @@ describe TeamsController do
       get 'show', params
     end
     it ("should be successful") { response.should be_success }
-    it ("should render the show template") { response.should render_template("show") }
+    it ("should render the show template") {
+      response.should render_template("show") }
     it ("should pass the team") { assigns[:team].should == team }
   end
   describe "GET 'edit'" do
@@ -22,12 +23,15 @@ describe TeamsController do
       get 'edit', params
     end
     it ("should be successful") { response.should be_success }
-    it ("should render the edit template") { response.should render_template("edit") }
+    it ("should render the edit template") {
+      response.should render_template("edit") }
     it ("should pass the team") { assigns[:team].should == team }
   end
   describe "POST 'update'" do
     let (:update_params) { { "id"=> team.to_param, 
-                             "team"=>{"name"=>"Foo!", "color"=>team.color, "fake"=>team.fake } } }
+                             "team"=>{"name"=>"Foo!",
+                                      "color"=>team.color,
+                                      "fake"=>team.fake } } }
     context "the user is not an admin" do
       before(:each) do
         user_is_guest
@@ -46,13 +50,17 @@ describe TeamsController do
       before(:each) { user_is_admin }
       context "with valid params" do
         before(:each) { post 'update', update_params }
-        it("should redirect to the show template") { response.should redirect_to(team_path(team)) }
-        it("should change the team name") { Team.find(team.id).name.should == "Foo!" }
+        it("should redirect to the show template") {
+          response.should redirect_to(team_path(team)) }
+        it("should change the team name") {
+          Team.find(team.id).name.should == "Foo!" }
       end
     end
   end
   describe "POST 'create'" do
-    let (:create_params) { { team: { name: "New Team", color: Team::Colors["Pink"], fake: false } } }
+    let (:create_params) { { team: { name: "New Team", 
+                                     color: Team::Colors["Pink"],
+                                     fake: false } } }
     let(:invalid_params) { { team: {}}}
     describe "when user is not an admin" do
       before(:each) do
@@ -129,7 +137,8 @@ describe TeamsController do
           delete 'destroy', delete_params 
         end
         it("is not deleted") { Team.find(team.id).should == team }
-        it("redirects to teams page") { response.should redirect_to(teams_path) }
+        it("redirects to teams page") {
+          response.should redirect_to(teams_path) }
         it("sets the error flash") { flash[:error].should_not be_nil }
       end
       context "when the team is used in a race_entry" do
@@ -140,7 +149,8 @@ describe TeamsController do
           delete 'destroy', delete_params 
         end
         it("is not deleted") { Team.find(team.id).should == team }
-        it("redirects to teams page") { response.should redirect_to(teams_path) }
+        it("redirects to teams page") {
+          response.should redirect_to(teams_path) }
         it("sets the error flash") { flash[:error].should_not be_nil }
       end
     end

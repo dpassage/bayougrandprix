@@ -64,8 +64,10 @@ describe DriverEntriesController do
   end
   describe "DELETE destroy" do
     let(:season) { FactoryGirl.create(:season) }
-    let(:driver_entry) { FactoryGirl.create(:driver_entry, { :season => season }) }
-    let(:delete_params) { { id: driver_entry.to_param, season_id: season.to_param }}
+    let(:driver_entry) {
+      FactoryGirl.create(:driver_entry, { :season => season }) }
+    let(:delete_params) {
+      { id: driver_entry.to_param, season_id: season.to_param }}
     context "when the user is not an admin" do
       before(:each) do
         user_is_guest

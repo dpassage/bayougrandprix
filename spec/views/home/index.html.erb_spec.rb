@@ -32,7 +32,8 @@ describe "home/index" do
       end
       it "links the 2001 season to its results page" do
         render
-        rendered.should have_link "2001", href: results_season_path(@season2001)
+        rendered.should have_link "2001", 
+          href: results_season_path(@season2001)
       end
     end
     

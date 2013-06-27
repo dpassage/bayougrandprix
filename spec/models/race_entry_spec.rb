@@ -45,7 +45,8 @@ describe RaceEntry do
   end
   it "can mass assign finish, dnf, dnq, and qualify" do
     expect {
-      @re.update_attributes( "finish" => 1, "dnf" => false, "qualify" => 3, "dnq" => true )
+      @re.update_attributes( "finish" => 1, 
+                             "dnf" => false, "qualify" => 3, "dnq" => true )
     }.to_not raise_error
   end
   describe "#driver" do

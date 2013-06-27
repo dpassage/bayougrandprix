@@ -2,7 +2,7 @@ require 'spec_helper'
 # Processing by RacesController#create as HTML
 #   Parameters: {"utf8"=>"✓", 
 #     "authenticity_token"=>"ukzMw26fDREoMvVYpPKXt2zvtU2UU2b3+6PHNy986/k=", 
-#     "season_id"=>"2011", "date"=>{"year"=>"2012", "month"=>"4", "day"=>"10"}, 
+#     "season_id"=>"2011", "date"=>{"year"=>"2012", "month"=>"4", "day"=>"10"},
 #     "race"=>{"track_id"=>"33"}, "commit"=>"Add Race"}
 # Completed 500 Internal Server Error in 3ms
 
@@ -115,9 +115,15 @@ describe RacesController do
         context "finishing places are unique" do
           let (:params) { { "race" => 
                             { "race_entries_attributes" =>
-                              { "0"=>{"finish"=>"1", "dnf"=>"false", "qualify"=>"3", "dnq" => "true", "id"=> re1.to_param}, 
-                                "1"=>{"finish"=>"2", "dnf"=>"false", "qualify"=>"2", "dnq" => "true", "id"=> re2.to_param}, 
-                                "2"=>{"finish"=>"3", "dnf"=>"true",  "qualify"=>"1", "dnq" => "false","id"=> re3.to_param}, 
+                              { "0"=>{"finish"=>"1", "dnf"=>"false",
+                                      "qualify"=>"3", "dnq" => "true",
+                                      "id"=> re1.to_param}, 
+                                "1"=>{"finish"=>"2", "dnf"=>"false",
+                                      "qualify"=>"2", "dnq" => "true",
+                                      "id"=> re2.to_param}, 
+                                "2"=>{"finish"=>"3", 
+                                      "dnf"=>"true",  "qualify"=>"1",
+                                      "dnq" => "false","id"=> re3.to_param}, 
                               }
                             }, 
                             "commit" => "Update", 
@@ -148,8 +154,10 @@ describe RacesController do
         context "finishing places conflict" do
           let (:params) { { "race" => 
                             { "race_entries_attributes" =>
-                              { "0"=>{"finish"=>"1", "qualify"=>"3", "id"=> re1.to_param}, 
-                                "1"=>{"finish"=>"1", "qualify"=>"2", "id"=> re2.to_param}, 
+                              { "0"=>{"finish"=>"1",
+                                      "qualify"=>"3", "id"=> re1.to_param}, 
+                                "1"=>{"finish"=>"1", 
+                                      "qualify"=>"2", "id"=> re2.to_param}, 
                               }
                             }, 
                             "commit" => "Update", 

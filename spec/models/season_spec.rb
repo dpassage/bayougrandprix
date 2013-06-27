@@ -37,7 +37,9 @@ describe "Season" do
       }.to raise_error
     end
     it "cannot be removed if there are drivers entered in the season" do
-      de = DriverEntry.create!(defaultteam: team, season: season, driver: driver)
+      de = DriverEntry.create!(defaultteam: team,
+                               season: season,
+                               driver: driver)
       expect {
         season.destroy
       }.to raise_error
@@ -57,13 +59,18 @@ describe "Season" do
       alice = FactoryGirl.create(:driver, name: "alice")
       bob = FactoryGirl.create(:driver, name: "bob")
       bob_se = FactoryGirl.create(:driver_entry, season: season, driver: bob)
-      alice_se = FactoryGirl.create(:driver_entry, season: season, driver: alice)
+      alice_se = FactoryGirl.create(:driver_entry, 
+                                    season: season, driver: alice)
       race1 = FactoryGirl.create(:race, season: season)
-      FactoryGirl.create(:race_entry, race: race1, driver_entry: alice_se, finish: 1)
-      FactoryGirl.create(:race_entry, race: race1, driver_entry: bob_se,   finish: 2)
+      FactoryGirl.create(:race_entry,
+                         race: race1, driver_entry: alice_se, finish: 1)
+      FactoryGirl.create(:race_entry,
+                         race: race1, driver_entry: bob_se,   finish: 2)
       race2 = FactoryGirl.create(:race, season: season)
-      FactoryGirl.create(:race_entry, race: race2, driver_entry: alice_se, finish: 10)
-      FactoryGirl.create(:race_entry, race: race2, driver_entry: bob_se,   finish: 4)
+      FactoryGirl.create(:race_entry,
+                         race: race2, driver_entry: alice_se, finish: 10)
+      FactoryGirl.create(:race_entry,
+                         race: race2, driver_entry: bob_se,   finish: 4)
       results = season.drivers_by_points
       results.length.should == 2
       results[0].entrant.id.should == alice.id

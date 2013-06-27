@@ -23,7 +23,8 @@ describe PlayersController do
     end
   end
   describe "POST 'create'" do
-    let(:create_params) { { player: { name: "Joe", email: "joe@example.com" } } }
+    let(:create_params) { { player: { name: "Joe",
+                                      email: "joe@example.com" } } }
     let(:invalid_params) { { player: { name: nil, email: nil }}}
     describe "when user is not an admin" do
       before(:each) do

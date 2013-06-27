@@ -4,7 +4,9 @@ describe SeasonsController do
   describe "POST create" do
     let(:name) { "2035" }
     let(:ss) { FactoryGirl.create(:scoring_scheme) }
-    let(:create_params) { { "season" => { "name" => name, "scoring_scheme_id" => ss.to_param } } }
+    let(:create_params) { { "season" =>
+                            { "name" => name, 
+                              "scoring_scheme_id" => ss.to_param } } }
     context "when the user is not an admin" do
       before (:each) do 
         user_is_guest
@@ -31,7 +33,9 @@ describe SeasonsController do
         end
       end
       context "with invalid name" do
-        let(:invalid_params) { { "season" => { "name" => nil, "scoring_scheme_id" => ss.to_param } } }
+        let(:invalid_params) { { "season" => 
+                                 { "name" => nil,
+                                   "scoring_scheme_id" => ss.to_param } } }
         it "does not create a new season" do
           expect {
             post :create, invalid_params
@@ -47,7 +51,11 @@ describe SeasonsController do
         end
       end
       # context "with invalid scheme" do
-      #   let(:invalid_params) { { "season" => { "name" => "name", "scoring_scheme_id" => ss.to_param + "4" } } }
+      #   let(:invalid_params) { { "season" => 
+                                   # { "name" => "name", 
+                                   #   "scoring_scheme_id" => 
+                                          # ss.to_param + "4" }
+                                   # } }
       #   it "does not create a new season" do
       #     expect {
       #       post :create, invalid_params

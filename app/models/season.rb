@@ -49,7 +49,9 @@ class Season < ActiveRecord::Base
           if other_te.finishes[i].nil?
             other_te.finishes[i] = other_te.entry.finishes_in_place(i)
           end
-          return -(self.finishes[i] <=> other_te.finishes[i]) unless self.finishes[i] == other_te.finishes[i]
+          unless self.finishes[i] == other_te.finishes[i]
+            return -(self.finishes[i] <=> other_te.finishes[i])
+          end
         end
         return 0
       else
@@ -62,7 +64,8 @@ class Season < ActiveRecord::Base
       if finishes
         (1..10).each do |i|
           if finishes[i] && finishes[i] > 0
-            result = result + ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? "" : "s"}"
+            result = result +
+              ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? "" : "s"}"
           end
         end
       end

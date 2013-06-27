@@ -27,7 +27,8 @@ describe DriversController do
       get 'edit', { "id" => driver.to_param }
     end
     it ("should be successful") { response.should be_success }
-    it ("should render the edit template") { response.should render_template("edit") }
+    it ("should render the edit template") {
+      response.should render_template("edit") }
     it ("should pass the team") { assigns[:driver].should == driver }
   end
   describe "POST 'update'" do
@@ -51,8 +52,10 @@ describe DriversController do
       before(:each) { user_is_admin }
       context "with valid params" do
         before(:each) { post 'update', update_params }
-        it("should redirect to the drivers list") { response.should redirect_to(drivers_path) }
-        it("should change the team name") { Driver.find(update_params["id"]).name.should == "Foo!" }
+        it("should redirect to the drivers list") {
+          response.should redirect_to(drivers_path) }
+        it("should change the team name") {
+          Driver.find(update_params["id"]).name.should == "Foo!" }
         it("should set the notice flash") { flash[:notice].should_not be_nil }
       end
     end

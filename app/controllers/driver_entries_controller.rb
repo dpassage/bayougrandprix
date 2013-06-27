@@ -4,9 +4,11 @@ class DriverEntriesController < ApplicationController
     de = DriverEntry.find(params[:id])
     begin
       de.destroy
-      flash[:notice] = "Driver #{de.driver.name} removed from season #{de.season.name}"
+      flash[:notice] = "Driver #{de.driver.name} removed from season " +
+                       "#{de.season.name}"
     rescue ActiveRecord::DeleteRestrictionError
-      flash[:error] = "Cannot delete season entry; driver #{de.driver.name} is entered in a race"
+      flash[:error] = "Cannot delete season entry; driver #{de.driver.name} " +
+                      "is entered in a race"
     end
     redirect_to season_path(de.season)
   end
@@ -18,10 +20,12 @@ class DriverEntriesController < ApplicationController
     begin
       @de.save!
     rescue ActiveRecord::RecordNotUnique
-      flash[:error] = "#{@de.driver.name} already entred in #{@de.season.name} season"
+      flash[:error] =
+        "#{@de.driver.name} already entred in #{@de.season.name} season"
     end
-    flash[:notice] = "#{@de.driver.name} added to #{@de.season.name} season" unless
-      flash[:error]
+    unless flash[:error]
+      flash[:notice] = "#{@de.driver.name} added to #{@de.season.name} season" 
+    end
     redirect_to season_path(season)
   end
 

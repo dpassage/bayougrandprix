@@ -28,8 +28,9 @@ describe DriverEntry do
   describe "#destroy" do
     let (:race) { FactoryGirl.create(:race) }
     let (:driver_entry) { FactoryGirl.create(:driver_entry) }
-    it "cannot be deleted if the driver has participated in a race that season" do
-      re = RaceEntry.create!(race: race, driver_entry: driver_entry, team: team)
+    it "can't be deleted if the driver has finished a race that season" do
+      re = RaceEntry.create!(race: race,
+                             driver_entry: driver_entry, team: team)
       expect {
         driver_entry.destroy
       }.to raise_error
@@ -40,7 +41,8 @@ describe DriverEntry do
       @de.finish_points.should == 0
     end
     it "asks each race entry how many points it's worth" do
-      # create an array of 2 mock race entries; they should receive finish_points
+      # create an array of 2 mock race entries; 
+      # they should receive finish_points
       re1 = stub_model(RaceEntry)
       re1.should_receive(:finish_points).and_return(1)
       re2 = stub_model(RaceEntry)
@@ -59,7 +61,9 @@ describe DriverEntry do
       end
     end
     it "returns 2 if the driver won two races" do
-      2.times { FactoryGirl.create(:race_entry, race: FactoryGirl.create(:race), driver_entry: @de, finish: 1) }
+      2.times { FactoryGirl.create(:race_entry, 
+                                   race: FactoryGirl.create(:race),
+                                   driver_entry: @de, finish: 1) }
       @de.finishes_in_place(1).should == 2
     end
   end

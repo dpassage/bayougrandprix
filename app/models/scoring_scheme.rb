@@ -1,7 +1,8 @@
 class ScoringScheme < ActiveRecord::Base
   has_many :seasons, :dependent => :restrict_with_exception
-  validates :name, :presence => true, :format => { :with => /\A[0-9]+(-[0-9]+)+\z/,
-      :message => "must be of the form '5-4-3-2-1'" }
+  validates :name, :presence => true, :format =>
+      { :with => /\A[0-9]+(-[0-9]+)+\z/,
+        :message => "must be of the form '5-4-3-2-1'" }
 
   def points_for_finishing(place)
     if place.nil?
