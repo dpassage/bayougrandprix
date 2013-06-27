@@ -27,7 +27,7 @@ describe DriverEntriesController do
         it "creates a new season_entry" do
           expect {
             post 'create', post_params
-          }.to change(season.season_entries, :count).by(1)
+          }.to change(season.driver_entries, :count).by(1)
         end
         it "sets the notice flash" do
           post 'create', post_params
@@ -49,7 +49,7 @@ describe DriverEntriesController do
         it "does not create a new driver_entry" do
           expect {
             post 'create', post_params
-          }.to change(season.season_entries, :count).by(0)
+          }.to change(season.driver_entries, :count).by(0)
         end
         it "sets the error flash" do
           post 'create', post_params
