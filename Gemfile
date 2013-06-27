@@ -5,7 +5,7 @@ ruby "2.0.0"
 
 # Bundle edge Rails instead:
 #gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
-gem 'rails', '4.0.0.rc2'
+gem 'rails', '4.0.0'
 #gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'pg'
 gem 'unicorn'
