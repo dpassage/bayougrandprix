@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @seasons }
+      format.xml  { render xml: @seasons }
     end
   end
 

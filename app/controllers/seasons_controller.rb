@@ -1,5 +1,5 @@
 class SeasonsController < ApplicationController
-  before_filter :authorize, :only => [:create, :update, :destroy]
+  before_filter :authorize, only: [:create, :update, :destroy]
   # GET /seasons
   def index
     @seasons = Season.order(:name)
@@ -42,7 +42,7 @@ class SeasonsController < ApplicationController
     if @season.save
       redirect_to seasons_path
     else
-      render :action => "new"
+      render action: 'new'
     end
   end
 

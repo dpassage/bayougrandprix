@@ -1,5 +1,5 @@
 class DriversController < ApplicationController
-  before_filter :authorize, :only => [:create, :update, :destroy]
+  before_filter :authorize, only: [:create, :update, :destroy]
 
   # GET /drivers
   def index

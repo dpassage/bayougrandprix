@@ -5,12 +5,12 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in_as
 
   def authorize
-    unless admin?
-      flash[:error] = "unauthorized access"
+    if admin?
+      true
+    else
+      flash[:error] = 'unauthorized access'
       redirect_to root_path
       false
-    else
-      true
     end
   end
 
@@ -20,9 +20,9 @@ class ApplicationController < ActionController::Base
 
   def logged_in_as
     if admin?
-      "admin"
+      'admin'
     else
-      "guest"
+      'guest'
     end
   end
 end

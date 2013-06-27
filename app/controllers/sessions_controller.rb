@@ -1,11 +1,8 @@
 class SessionsController < ApplicationController
 
-
   def create
     @originpath = params[:originpath]
-    if !@originpath
-      @originpath = root_path
-    end
+    @originpath = root_path unless @originpath
     return unless params[:password]
     if params[:password] == password
       session[:role] = 'admin'
@@ -29,6 +26,7 @@ class SessionsController < ApplicationController
   end
 
   private
+
   def password
     ENV['BGP_ADMIN_PASSWORD']
   end

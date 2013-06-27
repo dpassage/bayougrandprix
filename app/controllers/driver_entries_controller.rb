@@ -1,5 +1,5 @@
 class DriverEntriesController < ApplicationController
-  before_filter :authorize, :only => [:create, :update, :destroy]
+  before_filter :authorize, only: [:create, :update, :destroy]
   def destroy
     de = DriverEntry.find(params[:id])
     begin
@@ -8,15 +8,14 @@ class DriverEntriesController < ApplicationController
                        "#{de.season.name}"
     rescue ActiveRecord::DeleteRestrictionError
       flash[:error] = "Cannot delete season entry; driver #{de.driver.name} " +
-                      "is entered in a race"
+                      'is entered in a race'
     end
     redirect_to season_path(de.season)
   end
 
   def create
-    season = Season.where(:name=>params[:season_id]).first
-    @de = DriverEntry.new(safe_params)
-    @de.season = season
+    season = Season.where(name: params[:season_id]).first
+    @de = DriverEntry.new(safe_params.merge(season: season))
     begin
       @de.save!
     rescue ActiveRecord::RecordNotUnique
