@@ -48,7 +48,7 @@ describe Team do
       de = DriverEntry.create!(defaultteam: team,
                                season: season,
                                driver: driver)
-      re = RaceEntry.create!(race: race, driver_entry: de, team: otherteam)
+      RaceEntry.create!(race: race, driver_entry: de, team: otherteam)
       expect {
         otherteam.destroy
       }.to raise_error

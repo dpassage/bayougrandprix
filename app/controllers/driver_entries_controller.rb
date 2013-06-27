@@ -24,7 +24,7 @@ class DriverEntriesController < ApplicationController
         "#{@de.driver.name} already entred in #{@de.season.name} season"
     end
     unless flash[:error]
-      flash[:notice] = "#{@de.driver.name} added to #{@de.season.name} season" 
+      flash[:notice] = "#{@de.driver.name} added to #{@de.season.name} season"
     end
     redirect_to season_path(season)
   end

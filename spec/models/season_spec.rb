@@ -59,7 +59,7 @@ describe "Season" do
       alice = FactoryGirl.create(:driver, name: "alice")
       bob = FactoryGirl.create(:driver, name: "bob")
       bob_se = FactoryGirl.create(:driver_entry, season: season, driver: bob)
-      alice_se = FactoryGirl.create(:driver_entry, 
+      alice_se = FactoryGirl.create(:driver_entry,
                                     season: season, driver: alice)
       race1 = FactoryGirl.create(:race, season: season)
       FactoryGirl.create(:race_entry,

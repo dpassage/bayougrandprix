@@ -26,7 +26,7 @@ describe Track do
   describe "#destroy" do
     let (:track) { FactoryGirl.create(:track) }
     it "cannot be removed if track has been used in a race" do
-      race = FactoryGirl.create(:race, track: track)
+      FactoryGirl.create(:race, track: track)
       expect { track.destroy }.to raise_error
     end
     it "can be removed if track hasn't been used in a race" do

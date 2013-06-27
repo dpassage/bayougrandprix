@@ -6,3 +6,5 @@ AllCops:
     - script/**
     - db/**
     - config/**
+    - tmp/**
+    - log/**

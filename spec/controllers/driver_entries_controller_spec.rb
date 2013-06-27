@@ -84,7 +84,7 @@ describe DriverEntriesController do
       end
       it "removes the season entry" do
         delete 'destroy', delete_params
-        expect { 
+        expect {
           DriverEntry.find(driver_entry.id)
         }.to raise_error(ActiveRecord::RecordNotFound)
       end
@@ -99,10 +99,10 @@ describe DriverEntriesController do
       context "when the driver has been entered in a race that season" do
         let(:race) { FactoryGirl.create(:race, season: season) }
         before(:each) do
-          FactoryGirl.create(:race_entry, 
+          FactoryGirl.create(:race_entry,
                              race: race,
                              driver_entry: driver_entry,
-                             team: driver_entry.defaultteam) 
+                             team: driver_entry.defaultteam)
         end
         it "does not remove the season entry" do
           delete 'destroy', { :id => driver_entry.id,

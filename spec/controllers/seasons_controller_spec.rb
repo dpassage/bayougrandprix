@@ -5,10 +5,10 @@ describe SeasonsController do
     let(:name) { "2035" }
     let(:ss) { FactoryGirl.create(:scoring_scheme) }
     let(:create_params) { { "season" =>
-                            { "name" => name, 
+                            { "name" => name,
                               "scoring_scheme_id" => ss.to_param } } }
     context "when the user is not an admin" do
-      before (:each) do 
+      before (:each) do
         user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do
@@ -33,7 +33,7 @@ describe SeasonsController do
         end
       end
       context "with invalid name" do
-        let(:invalid_params) { { "season" => 
+        let(:invalid_params) { { "season" =>
                                  { "name" => nil,
                                    "scoring_scheme_id" => ss.to_param } } }
         it "does not create a new season" do
@@ -51,9 +51,9 @@ describe SeasonsController do
         end
       end
       # context "with invalid scheme" do
-      #   let(:invalid_params) { { "season" => 
-                                   # { "name" => "name", 
-                                   #   "scoring_scheme_id" => 
+      #   let(:invalid_params) { { "season" =>
+                                   # { "name" => "name",
+                                   #   "scoring_scheme_id" =>
                                           # ss.to_param + "4" }
                                    # } }
       #   it "does not create a new season" do
@@ -83,7 +83,7 @@ describe SeasonsController do
       it "should pass a list of races in the season" do
         get 'show', show_params
         assigns[:races].should_not == nil
-      end      
+      end
     end
     context "when the user is an admin" do
       before (:each) { user_is_admin }

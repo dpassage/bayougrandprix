@@ -9,11 +9,10 @@ describe "drivers/index" do
     end
     context "with an example driver" do
       let(:player) { stub_model(Player, :name => "David") }
-      let(:driver) { stub_model(Driver, 
+      let(:driver) { stub_model(Driver,
                                 :name => "Mario",
                                 :player => player) }
-      let(:drivers) { [ driver ] }            
-                    
+      let(:drivers) { [ driver ] }
       it "links the driver name to the driver page" do
         assign(:drivers, drivers)
         render

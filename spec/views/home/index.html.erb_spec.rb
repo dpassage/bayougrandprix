@@ -14,7 +14,6 @@ describe "home/index" do
       render
       rendered.should have_link("Teams", :href => teams_path)
     end
-    
     it "shows a table of seasons" do
       assign(:seasons, [])
       render
@@ -32,11 +31,10 @@ describe "home/index" do
       end
       it "links the 2001 season to its results page" do
         render
-        rendered.should have_link "2001", 
+        rendered.should have_link "2001",
           href: results_season_path(@season2001)
       end
     end
-    
   end
   context "when the user is not an admin" do
     before(:each) do

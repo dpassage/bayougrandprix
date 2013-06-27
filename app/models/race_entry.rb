@@ -6,11 +6,11 @@ class RaceEntry < ActiveRecord::Base
   validates_presence_of :driver_entry
   validates_presence_of :team
   validates :finish, :uniqueness => {:scope => :race_id}, :allow_nil => true
-  
+
   def driver
     driver_entry.driver
   end
-  
+
   def finish_points
     if self.dnf
       0

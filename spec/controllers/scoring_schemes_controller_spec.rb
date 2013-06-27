@@ -11,7 +11,7 @@ describe ScoringSchemesController do
     let(:create_params) { { "scoring_scheme" => { "name" => "9-6-4-3-2-1" } } }
     let(:invalid_params) { { "scoring_scheme" => {} } }
     context "when the user is not an admin" do
-      before (:each) do 
+      before (:each) do
         user_is_guest
       end
       it_should_behave_like "an unauthorized operation" do

@@ -49,7 +49,7 @@ describe ApplicationController do
       user_is_admin
       controller.logged_in_as.should == 'admin'
     end
-    it "returns 'guest' when the user is not an admin" do 
+    it "returns 'guest' when the user is not an admin" do
       user_is_guest
       controller.logged_in_as.should == 'guest'
     end

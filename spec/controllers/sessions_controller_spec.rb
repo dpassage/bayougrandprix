@@ -54,7 +54,6 @@ describe SessionsController do
         flash[:error].should_not be_nil
       end
     end
-    
   end
   describe "GET destroy" do
     let(:originpath) { "/drivers" }

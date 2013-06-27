@@ -8,7 +8,7 @@ describe RaceEntriesController do
   let (:race_entry_params) {
     { "race_entry" => { :driver_entry_id => driver_entry.to_param,
                         :race_id => race.to_param,
-                        :team_id => team.to_param }, 
+                        :team_id => team.to_param },
       "season_id" => season.to_param,
       "race_id" => race.to_param
     }
@@ -33,7 +33,7 @@ describe RaceEntriesController do
     context "when the user is an admin" do
       before(:each) do
         user_is_admin
-      end      
+      end
       it "adds a driver to the race" do
         expect {
           post 'create', race_entry_params

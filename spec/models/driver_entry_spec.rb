@@ -41,7 +41,7 @@ describe DriverEntry do
       @de.finish_points.should == 0
     end
     it "asks each race entry how many points it's worth" do
-      # create an array of 2 mock race entries; 
+      # create an array of 2 mock race entries;
       # they should receive finish_points
       re1 = stub_model(RaceEntry)
       re1.should_receive(:finish_points).and_return(1)
@@ -61,7 +61,7 @@ describe DriverEntry do
       end
     end
     it "returns 2 if the driver won two races" do
-      2.times { FactoryGirl.create(:race_entry, 
+      2.times { FactoryGirl.create(:race_entry,
                                    race: FactoryGirl.create(:race),
                                    driver_entry: @de, finish: 1) }
       @de.finishes_in_place(1).should == 2

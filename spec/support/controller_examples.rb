@@ -42,7 +42,7 @@ shared_examples "standard create CRUD" do
     it "sets the notice flash" do
       post 'create', create_params
       flash[:notice].should_not be_nil
-    end        
+    end
     it "redirects to the correct page" do
       post 'create', create_params
       response.should redirect_to(redirect_path)

@@ -5,7 +5,7 @@ class Season < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :scoring_scheme_id
   validate :scoring_scheme_must_exist
-  
+
   def scoring_scheme_must_exist
     if !ScoringScheme.exists?(scoring_scheme_id)
       errors.add(:scoring_scheme_id, "must exist")
@@ -86,9 +86,9 @@ class Season < ActiveRecord::Base
   end
 
   def driver_results_table_by_finish_points
-    table = self.driver_entries.collect { |de| 
+    table = self.driver_entries.collect { |de|
       te = TableEntry.new
-      te.entry = de 
+      te.entry = de
       te
     }
     table.sort
@@ -129,7 +129,7 @@ class Season < ActiveRecord::Base
   def drivers_by_qualifying_points
     self.results_table_by_points(:driver, :qualifying_points)
   end
-  
+
   def points_for_finishing(place)
     self.scoring_scheme.points_for_finishing(place)
   end

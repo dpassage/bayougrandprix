@@ -45,7 +45,7 @@ describe RaceEntry do
   end
   it "can mass assign finish, dnf, dnq, and qualify" do
     expect {
-      @re.update_attributes( "finish" => 1, 
+      @re.update_attributes( "finish" => 1,
                              "dnf" => false, "qualify" => 3, "dnq" => true )
     }.to_not raise_error
   end
@@ -115,7 +115,7 @@ describe RaceEntry do
         race.should_receive(:points_for_finishing).with(1).and_return(9)
         @re.race = race
         @re.qualifying_points.should == 9
-      end 
+      end
     end
   end
 end

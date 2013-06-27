@@ -28,7 +28,7 @@ describe TeamsController do
     it ("should pass the team") { assigns[:team].should == team }
   end
   describe "POST 'update'" do
-    let (:update_params) { { "id"=> team.to_param, 
+    let (:update_params) { { "id"=> team.to_param,
                              "team"=>{"name"=>"Foo!",
                                       "color"=>team.color,
                                       "fake"=>team.fake } } }
@@ -41,7 +41,7 @@ describe TeamsController do
           post 'update', update_params
         end
       end
-      it ("should not change the team") do 
+      it ("should not change the team") do
         post 'update', update_params
         team.name.should_not == "Foo!"
       end
@@ -58,7 +58,7 @@ describe TeamsController do
     end
   end
   describe "POST 'create'" do
-    let (:create_params) { { team: { name: "New Team", 
+    let (:create_params) { { team: { name: "New Team",
                                      color: Team::Colors["Pink"],
                                      fake: false } } }
     let(:invalid_params) { { team: {}}}
@@ -112,29 +112,29 @@ describe TeamsController do
       end
     end
     context "when the user is an admin" do
-      before(:each) do 
+      before(:each) do
         user_is_admin
       end
       context "when the team is not used" do
         before (:each) do
-          delete 'destroy', delete_params 
+          delete 'destroy', delete_params
         end
-        it("deletes the team") { 
+        it("deletes the team") {
           expect {
             Team.find(team.id)
           }.to raise_error ActiveRecord::RecordNotFound
         }
-        it("redirects to teams page") { 
-          response.should redirect_to(teams_path) 
+        it("redirects to teams page") {
+          response.should redirect_to(teams_path)
         }
-        it("sets the notify flash") { 
-          flash[:notice].should_not be_nil 
+        it("sets the notify flash") {
+          flash[:notice].should_not be_nil
         }
       end
       context "when the team is used in a driver_entry" do
         before (:each) do
-          de = FactoryGirl.create(:driver_entry, defaultteam: team) 
-          delete 'destroy', delete_params 
+          de = FactoryGirl.create(:driver_entry, defaultteam: team)
+          delete 'destroy', delete_params
         end
         it("is not deleted") { Team.find(team.id).should == team }
         it("redirects to teams page") {
@@ -143,10 +143,10 @@ describe TeamsController do
       end
       context "when the team is used in a race_entry" do
         before (:each) do
-          otherteam = FactoryGirl.create(:team) 
+          otherteam = FactoryGirl.create(:team)
           de = FactoryGirl.create(:driver_entry, defaultteam: otherteam)
           re = FactoryGirl.create(:race_entry, driver_entry: de, team: team)
-          delete 'destroy', delete_params 
+          delete 'destroy', delete_params
         end
         it("is not deleted") { Team.find(team.id).should == team }
         it("redirects to teams page") {

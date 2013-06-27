@@ -1,11 +1,10 @@
 require 'spec_helper'
 # Processing by RacesController#create as HTML
-#   Parameters: {"utf8"=>"✓", 
-#     "authenticity_token"=>"ukzMw26fDREoMvVYpPKXt2zvtU2UU2b3+6PHNy986/k=", 
+#   Parameters: {"utf8"=>"✓",
+#     "authenticity_token"=>"ukzMw26fDREoMvVYpPKXt2zvtU2UU2b3+6PHNy986/k=",
 #     "season_id"=>"2011", "date"=>{"year"=>"2012", "month"=>"4", "day"=>"10"},
 #     "race"=>{"track_id"=>"33"}, "commit"=>"Add Race"}
 # Completed 500 Internal Server Error in 3ms
-
 
 describe RacesController do
   let (:season) { FactoryGirl.create(:season) }
@@ -21,7 +20,7 @@ describe RacesController do
       } }
     }
     let(:invalid_params) { { "season_id" => season.to_param, "race" => {} } }
-    
+
     context "when the user is not an admin" do
       before(:each) do
         user_is_guest
@@ -40,11 +39,11 @@ describe RacesController do
     context "when the user is an admin" do
       before(:each) do
         user_is_admin
-      end   
+      end
       it_should_behave_like "standard create CRUD" do
         let(:klass) { Race }
         let(:redirect_path) { season_path(season) }
-      end     
+      end
       describe "with invalid parameters" do
         it "renders the new template" do
           post 'create', invalid_params
@@ -58,7 +57,7 @@ describe RacesController do
       end
       it "redirects to the season page" do
         post 'create', create_params
-        response.should 
+        response.should
       end
       it "sets the flash notice" do
         post 'create', create_params
@@ -91,7 +90,7 @@ describe RacesController do
       get 'edit', params
       assigns[:season].should == season
     end
-  end  
+  end
   describe "POST 'update'" do
     let (:race) { FactoryGirl.create(:race,) }
     context "when the user is not an admin" do
@@ -113,23 +112,23 @@ describe RacesController do
         let (:re2) { FactoryGirl.create(:race_entry, race: race) }
         let (:re3) { FactoryGirl.create(:race_entry, race: race) }
         context "finishing places are unique" do
-          let (:params) { { "race" => 
+          let (:params) { { "race" =>
                             { "race_entries_attributes" =>
                               { "0"=>{"finish"=>"1", "dnf"=>"false",
                                       "qualify"=>"3", "dnq" => "true",
-                                      "id"=> re1.to_param}, 
+                                      "id"=> re1.to_param},
                                 "1"=>{"finish"=>"2", "dnf"=>"false",
                                       "qualify"=>"2", "dnq" => "true",
-                                      "id"=> re2.to_param}, 
-                                "2"=>{"finish"=>"3", 
+                                      "id"=> re2.to_param},
+                                "2"=>{"finish"=>"3",
                                       "dnf"=>"true",  "qualify"=>"1",
-                                      "dnq" => "false","id"=> re3.to_param}, 
+                                      "dnq" => "false","id"=> re3.to_param},
                               }
-                            }, 
-                            "commit" => "Update", 
-                            "season_id" => race.season.to_param, 
-                            "id" => race.to_param 
-                          } 
+                            },
+                            "commit" => "Update",
+                            "season_id" => race.season.to_param,
+                            "id" => race.to_param
+                          }
                         }
           it "updates the dependent race entries with the new data" do
             post 'update', params
@@ -152,18 +151,18 @@ describe RacesController do
           end
         end
         context "finishing places conflict" do
-          let (:params) { { "race" => 
+          let (:params) { { "race" =>
                             { "race_entries_attributes" =>
                               { "0"=>{"finish"=>"1",
-                                      "qualify"=>"3", "id"=> re1.to_param}, 
-                                "1"=>{"finish"=>"1", 
-                                      "qualify"=>"2", "id"=> re2.to_param}, 
+                                      "qualify"=>"3", "id"=> re1.to_param},
+                                "1"=>{"finish"=>"1",
+                                      "qualify"=>"2", "id"=> re2.to_param},
                               }
-                            }, 
-                            "commit" => "Update", 
-                            "season_id" => race.season.to_param, 
-                            "id" => race.to_param 
-                          } 
+                            },
+                            "commit" => "Update",
+                            "season_id" => race.season.to_param,
+                            "id" => race.to_param
+                          }
                         }
           it "does not change the race entries" do
             post 'update', params
@@ -185,10 +184,10 @@ describe RacesController do
       context "setting the writeup" do
         before (:each) do
           @writeup = "this is a race writeup"
-          @params = { "race" => { "writeup" => @writeup }, 
-              "commit" => "Update", 
-              "season_id" => race.season.to_param, 
-              "id" => race.to_param 
+          @params = { "race" => { "writeup" => @writeup },
+              "commit" => "Update",
+              "season_id" => race.season.to_param,
+              "id" => race.to_param
             }
           post 'update', @params
         end

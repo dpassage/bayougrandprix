@@ -32,7 +32,7 @@ describe DriversController do
     it ("should pass the team") { assigns[:driver].should == driver }
   end
   describe "POST 'update'" do
-    let (:update_params) { { "id"=> driver.to_param, 
+    let (:update_params) { { "id"=> driver.to_param,
                              "driver"=>{"name"=>"Foo!" } } }
     context "the user is not an admin" do
       before(:each) do
@@ -43,9 +43,9 @@ describe DriversController do
           post 'update', update_params
         end
       end
-      it ("should not change the team") do 
+      it ("should not change the team") do
         post 'update', update_params
-        Driver.find(update_params["id"]).name.should_not == "Foo!" 
+        Driver.find(update_params["id"]).name.should_not == "Foo!"
       end
     end
     context "the user is an admin" do
@@ -60,5 +60,4 @@ describe DriversController do
       end
     end
   end
-  
 end

@@ -16,4 +16,3 @@ end
 def user_is_guest
   controller.stub(:admin?).and_return(false)
 end
-  
