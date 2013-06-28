@@ -14,8 +14,9 @@ describe TeamsController do
       get 'show', params
     end
     it ('should be successful') { response.should be_success }
-    it ('should render the show template') {
-      response.should render_template('show') }
+    it ('should render the show template') do
+      response.should render_template('show')
+    end
     it ('should pass the team') { assigns[:team].should == team }
   end
   describe 'GET edit' do
@@ -23,15 +24,18 @@ describe TeamsController do
       get 'edit', params
     end
     it ('should be successful') { response.should be_success }
-    it ('should render the edit template') {
-      response.should render_template('edit') }
+    it ('should render the edit template') do
+      response.should render_template('edit')
+    end
     it ('should pass the team') { assigns[:team].should == team }
   end
   describe 'POST update' do
-    let (:update_params) { { 'id'=> team.to_param,
-                             'team'=>{'name'=>'Foo!',
-                                      'color'=>team.color,
-                                      'fake'=>team.fake } } }
+    let (:update_params) do
+      { 'id' => team.to_param,
+        'team' => { 'name' => 'Foo!',
+                    'color' => team.color,
+                    'fake' => team.fake } }
+    end
     context 'the user is not an admin' do
       before(:each) do
         user_is_guest
@@ -50,18 +54,22 @@ describe TeamsController do
       before(:each) { user_is_admin }
       context 'with valid params' do
         before(:each) { post 'update', update_params }
-        it('should redirect to the show template') {
-          response.should redirect_to(team_path(team)) }
-        it('should change the team name') {
-          Team.find(team.id).name.should == 'Foo!' }
+        it('should redirect to the show template') do
+          response.should redirect_to(team_path(team))
+        end
+        it('should change the team name') do
+          Team.find(team.id).name.should == 'Foo!'
+        end
       end
     end
   end
   describe 'POST create' do
-    let (:create_params) { { team: { name: 'New Team',
-                                     color: Team::COLORS['Pink'],
-                                     fake: false } } }
-    let(:invalid_params) { { team: {}}}
+    let (:create_params) do
+      { team: { name: 'New Team',
+                color: Team::COLORS['Pink'],
+                fake: false } }
+    end
+    let(:invalid_params) { { team: { } } }
     describe 'when user is not an admin' do
       before(:each) do
         user_is_guest
@@ -72,9 +80,7 @@ describe TeamsController do
         end
       end
       it 'should not create the team' do
-        expect {
-          post 'create', create_params
-        }.to change(Team, :count).by(0)
+        expect { post 'create', create_params }.to change(Team, :count).by(0)
       end
     end
     describe 'when the user is an admin' do
@@ -98,9 +104,7 @@ describe TeamsController do
   describe 'DELETE destroy' do
     let (:delete_params) { { 'id' => team.to_param } }
     context 'when the user is not an admin' do
-      before(:each) {
-        user_is_guest
-      }
+      before(:each) { user_is_guest }
       it_should_behave_like 'an unauthorized operation' do
         before(:each) do
           delete 'destroy', delete_params
@@ -119,38 +123,40 @@ describe TeamsController do
         before (:each) do
           delete 'destroy', delete_params
         end
-        it('deletes the team') {
-          expect {
+        it('deletes the team') do
+          expect do
             Team.find(team.id)
-          }.to raise_error ActiveRecord::RecordNotFound
-        }
-        it('redirects to teams page') {
+          end.to raise_error ActiveRecord::RecordNotFound
+        end
+        it('redirects to teams page') do
           response.should redirect_to(teams_path)
-        }
-        it('sets the notify flash') {
+        end
+        it('sets the notify flash') do
           flash[:notice].should_not be_nil
-        }
+        end
       end
       context 'when the team is used in a driver_entry' do
         before (:each) do
-          de = FactoryGirl.create(:driver_entry, defaultteam: team)
+          FactoryGirl.create(:driver_entry, defaultteam: team)
           delete 'destroy', delete_params
         end
         it('is not deleted') { Team.find(team.id).should == team }
-        it('redirects to teams page') {
-          response.should redirect_to(teams_path) }
+        it('redirects to teams page') do
+          response.should redirect_to(teams_path)
+        end
         it('sets the error flash') { flash[:error].should_not be_nil }
       end
       context 'when the team is used in a race_entry' do
         before (:each) do
           otherteam = FactoryGirl.create(:team)
           de = FactoryGirl.create(:driver_entry, defaultteam: otherteam)
-          re = FactoryGirl.create(:race_entry, driver_entry: de, team: team)
+          FactoryGirl.create(:race_entry, driver_entry: de, team: team)
           delete 'destroy', delete_params
         end
         it('is not deleted') { Team.find(team.id).should == team }
-        it('redirects to teams page') {
-          response.should redirect_to(teams_path) }
+        it('redirects to teams page') do
+          response.should redirect_to(teams_path)
+        end
         it('sets the error flash') { flash[:error].should_not be_nil }
       end
     end

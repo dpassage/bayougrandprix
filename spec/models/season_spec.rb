@@ -1,63 +1,59 @@
 require 'spec_helper'
 
-describe "Season" do
+describe 'Season' do
   fixtures :all
   let(:ss) { FactoryGirl.create(:scoring_scheme) }
   before(:each) do
     @season = Season.new(
-      :scoring_scheme_id => ss.to_param,
-      :name => "1999"
+      scoring_scheme_id: ss.to_param,
+      name: '1999'
     )
   end
-  it "is valid with valid parameters" do
+  it 'is valid with valid parameters' do
     @season.should be_valid
   end
-  it "is not valid without a name" do
+  it 'is not valid without a name' do
     @season.name = nil
     @season.should_not be_valid
   end
-  it "is not valid without a scoring scheme" do
+  it 'is not valid without a scoring scheme' do
     @season.scoring_scheme_id = nil
     @season.should_not be_valid
   end
-  it "is not valid if the scoring scheme id does not exist" do
-    invalid_id = ScoringScheme.maximum("id") + 1
+  it 'is not valid if the scoring scheme id does not exist' do
+    invalid_id = ScoringScheme.maximum('id') + 1
     @season.scoring_scheme_id = invalid_id
     @season.should_not be_valid
   end
-  describe "#destroy" do
+  describe '#destroy' do
     let (:season) { FactoryGirl.create(:season) }
     let (:track) { FactoryGirl.create(:track) }
     let (:team) { FactoryGirl.create(:team) }
-    let (:driver) { FactoryGirl.create(:driver)}
-    it "cannot be removed if there are races in the season" do
-      race = Race.create!(track: track, season: season, date: Time.new)
-      expect {
-        season.destroy
-      }.to raise_error
+    let (:driver) { FactoryGirl.create(:driver) }
+    it 'cannot be removed if there are races in the season' do
+      Race.create!(track: track, season: season, date: Time.new)
+      expect { season.destroy }.to raise_error
     end
-    it "cannot be removed if there are drivers entered in the season" do
-      de = DriverEntry.create!(defaultteam: team,
-                               season: season,
-                               driver: driver)
-      expect {
-        season.destroy
-      }.to raise_error
+    it 'cannot be removed if there are drivers entered in the season' do
+      DriverEntry.create!(defaultteam: team,
+                          season: season,
+                          driver: driver)
+      expect { season.destroy }.to raise_error
     end
   end
-  describe "#drivers_by_points" do
-    it "returns an array of driver entries sorted by points scored" do
+  describe '#drivers_by_points' do
+    it 'returns an array of driver entries sorted by points scored' do
       season = seasons(:season_2002)
       results = season.drivers_by_points
-      results.length.should == 12
-      results[0].entrant.should == drivers(:schumacher)
+      expect(results.length).to eq(12)
+      expect(results[0].entrant).to eq(drivers(:schumacher))
       results[0].points.should == 47
     end
-    it "counts number of wins if tied on points" do
-      scheme = FactoryGirl.create(:scoring_scheme, name: "9-6-4-3-2-1")
+    it 'counts number of wins if tied on points' do
+      scheme = FactoryGirl.create(:scoring_scheme, name: '9-6-4-3-2-1')
       season = FactoryGirl.create(:season, scoring_scheme: scheme)
-      alice = FactoryGirl.create(:driver, name: "alice")
-      bob = FactoryGirl.create(:driver, name: "bob")
+      alice = FactoryGirl.create(:driver, name: 'alice')
+      bob = FactoryGirl.create(:driver, name: 'bob')
       bob_se = FactoryGirl.create(:driver_entry, season: season, driver: bob)
       alice_se = FactoryGirl.create(:driver_entry,
                                     season: season, driver: alice)
@@ -72,36 +68,36 @@ describe "Season" do
       FactoryGirl.create(:race_entry,
                          race: race2, driver_entry: bob_se,   finish: 4)
       results = season.drivers_by_points
-      results.length.should == 2
-      results[0].entrant.id.should == alice.id
-      results[1].entrant.id.should == bob.id
+      results.length.should be == 2
+      expect(results[0].entrant.id).to eq(alice.id)
+      results[1].entrant.id.should be == bob.id
     end
   end
-  describe "#to_param" do
-    it "returns its name" do
+  describe '#to_param' do
+    it 'returns its name' do
       @season.to_param.should == @season.name
     end
   end
-  describe "#teams_by_points" do
-    it "returns an array of team entries sorted by points scored" do
+  describe '#teams_by_points' do
+    it 'returns an array of team entries sorted by points scored' do
       season = seasons(:season_2002)
       results = season.teams_by_points
-      results.length.should == 5
-      results[0].entrant.should == teams(:mclaren)
-      results[0].points.should == 85
+      results.length.should be == 5
+      results[0].entrant.should be == teams(:mclaren)
+      results[0].points.should be == 85
     end
   end
-  describe "#drivers_by_qualifying_points" do
-    it "returns an array of driver entries by qualifying points" do
+  describe '#drivers_by_qualifying_points' do
+    it 'returns an array of driver entries by qualifying points' do
       season = seasons(:season_2002)
       results = season.drivers_by_qualifying_points
-      results.length.should == 12
-      results[0].entrant.should == drivers(:schumacher)
-      results[0].points.should == 67
+      results.length.should be == 12
+      results[0].entrant.should be == drivers(:schumacher)
+      results[0].points.should be == 67
     end
   end
-  describe "#points_for_finishing" do
-    it "asks the scoring scheme what the place is worth" do
+  describe '#points_for_finishing' do
+    it 'asks the scoring scheme what the place is worth' do
       @season = Season.new
       scheme = mock_model('ScoringScheme')
       scheme.should_receive(:points_for_finishing).with(1).and_return(9)
@@ -110,17 +106,17 @@ describe "Season" do
     end
   end
   describe Season::TableEntry do
-    describe "#points_description" do
-      it "returns just points if finishes not used in sort" do
+    describe '#points_description' do
+      it 'returns just points if finishes not used in sort' do
         te = Season::TableEntry.new
         te.points = 4
-        te.points_description.should eql("4")
+        te.points_description.should eql('4')
       end
-      it "returns points and some finishes if finishes in sort" do
+      it 'returns points and some finishes if finishes in sort' do
         te = Season::TableEntry.new
         te.points = 4
         te.finishes = [nil, 1, 0, 4]
-        te.points_description.should eql("4, 1 win, 4 3rds")
+        te.points_description.should eql('4, 1 win, 4 3rds')
       end
     end
   end

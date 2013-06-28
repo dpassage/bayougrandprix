@@ -11,9 +11,9 @@ require 'spec_helper'
 #   end
 # end
 describe ApplicationHelper do
-  describe "#markdown_render" do
-    it "returns text rendered in html using markdown" do
-      @before = "This is *bongos*, indeed."
+  describe '#markdown_render' do
+    it 'returns text rendered in html using markdown' do
+      @before = 'This is *bongos*, indeed.'
       markdown_render(@before).should ==
         "<p>This is <em>bongos</em>, indeed.</p>\n"
     end
