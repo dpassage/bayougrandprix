@@ -59,7 +59,7 @@ describe TeamsController do
   end
   describe "POST 'create'" do
     let (:create_params) { { team: { name: "New Team",
-                                     color: Team::Colors["Pink"],
+                                     color: Team::COLORS["Pink"],
                                      fake: false } } }
     let(:invalid_params) { { team: {}}}
     describe "when user is not an admin" do

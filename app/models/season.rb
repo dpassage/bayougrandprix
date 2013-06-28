@@ -1,14 +1,14 @@
 class Season < ActiveRecord::Base
-  has_many :driver_entries, :dependent => :restrict_with_exception
-  has_many :races, :dependent => :restrict_with_exception
+  has_many :driver_entries, dependent: :restrict_with_exception
+  has_many :races, dependent: :restrict_with_exception
   belongs_to :scoring_scheme
   validates_presence_of :name
   validates_presence_of :scoring_scheme_id
   validate :scoring_scheme_must_exist
 
   def scoring_scheme_must_exist
-    if !ScoringScheme.exists?(scoring_scheme_id)
-      errors.add(:scoring_scheme_id, "must exist")
+    unless ScoringScheme.exists?(scoring_scheme_id)
+      errors.add(:scoring_scheme_id, 'must exist')
     end
   end
 
@@ -40,22 +40,22 @@ class Season < ActiveRecord::Base
       end
     end
 
-    def <=>(other_te)
-      if self.points == other_te.points
+    def <=>(other)
+      if self.points == other.points
         (1..10).each do |i|
           if self.finishes[i].nil?
             self.finishes[i] = self.entry.finishes_in_place(i)
           end
-          if other_te.finishes[i].nil?
-            other_te.finishes[i] = other_te.entry.finishes_in_place(i)
+          if other.finishes[i].nil?
+            other.finishes[i] = other.entry.finishes_in_place(i)
           end
-          unless self.finishes[i] == other_te.finishes[i]
-            return -(self.finishes[i] <=> other_te.finishes[i])
+          unless self.finishes[i] == other.finishes[i]
+            return -(self.finishes[i] <=> other.finishes[i])
           end
         end
         return 0
       else
-        -(self.points <=> other_te.points)
+        -(self.points <=> other.points)
       end
     end
 
@@ -74,11 +74,11 @@ class Season < ActiveRecord::Base
 
     def ordinal(pos)
       if pos == 1
-        "win"
+        'win'
       elsif pos == 2
-        "2nd"
+        '2nd'
       elsif pos == 3
-        "3rd"
+        '3rd'
       else
         "#{pos}th"
       end
@@ -86,11 +86,11 @@ class Season < ActiveRecord::Base
   end
 
   def driver_results_table_by_finish_points
-    table = self.driver_entries.collect { |de|
+    table = self.driver_entries.map do |de|
       te = TableEntry.new
       te.entry = de
       te
-    }
+    end
     table.sort
   end
 
@@ -123,9 +123,11 @@ class Season < ActiveRecord::Base
   def teams_by_points
     self.results_table_by_points(:team, :finish_points)
   end
+
   def drivers_by_points
     self.driver_results_table_by_finish_points
   end
+
   def drivers_by_qualifying_points
     self.results_table_by_points(:driver, :qualifying_points)
   end

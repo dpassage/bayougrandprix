@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Team do
   before(:each) do
-    @team = Team.new(:name => "McLaren", :color => Team::Colors["Blue"])
+    @team = Team.new(:name => "McLaren", :color => Team::COLORS["Blue"])
   end
   it "is valid with valid parameters" do
     @team.should be_valid
@@ -20,8 +20,8 @@ describe Team do
     @team.should_not be_valid
   end
   it "has a hash of valid colors" do
-    Team::Colors.should_not == nil
-    Team::Colors["Blue"].should_not == nil
+    Team::COLORS.should_not == nil
+    Team::COLORS["Blue"].should_not == nil
   end
   it "is not fake by default" do
     @team.fake.should_not == true

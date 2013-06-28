@@ -33,18 +33,18 @@ describe "drivers/index" do
     include_examples "driver common admin and guest"
     it "does not have a new driver link" do
       render
-      rendered.should_not have_link("New Driver")
+      rendered.should_not have_link('New Driver')
     end
   end
-  context "when the user is an administrator" do
+  context 'when the user is an administrator' do
     before(:each) do
       assign(:drivers, [])
       view.stub(:admin?) { true }
     end
-    include_examples "driver common admin and guest"
-    it "has a new driver link" do
+    include_examples 'driver common admin and guest'
+    it 'has a new driver link' do
       render
-      rendered.should have_link("New Driver", :href => new_driver_path)
+      rendered.should have_link('New Driver', :href => new_driver_path)
     end
   end
 end

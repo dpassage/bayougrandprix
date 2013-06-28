@@ -15,7 +15,7 @@ FactoryGirl.define do
   end
   factory :team do
     name "Team Name"
-    color Team::Colors["White"]
+    color Team::COLORS["White"]
   end
   factory :driver_entry do
     season
