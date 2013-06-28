@@ -1,11 +1,11 @@
 module SeasonsHelper
   def ordinal(pos)
     if pos == 1
-      "Winner"
+      'Winner'
     elsif pos == 2
-      "2nd"
+      '2nd'
     elsif pos == 3
-      "3rd"
+      '3rd'
     else
       "#{pos}th"
     end
