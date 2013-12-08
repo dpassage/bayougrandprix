@@ -17,6 +17,6 @@ test:
   encoding: unicode
   database: bgptest
   pool: 5
-  username: postgres
+  username: <%= ENV['TRAVIS_BRANCH'] ? 'postgres' : ENV['USER'] %>
   password: 
   host: localhost
