@@ -17,6 +17,6 @@ test:
   encoding: unicode
   database: bgptest
   pool: 5
-  username: dpassage
+  username: postgres
   password: 
   host: localhost
