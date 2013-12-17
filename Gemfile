@@ -27,7 +27,8 @@ gem 'rails_12factor', group: :production
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec', '~> 2.99.0.beta1'
+  gem 'rspec-rails', '~> 2.99.0.beta1'
   gem 'capybara'
   gem "factory_girl_rails"
   gem 'byebug'

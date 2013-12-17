@@ -8,7 +8,7 @@ describe ApplicationController do
       end
       it 'returns true' do
         result = controller.authorize
-        result.should be_true
+        result.should be_truthy
       end
       it 'does not set the error flash' do
         controller.authorize
@@ -22,7 +22,7 @@ describe ApplicationController do
       end
       it 'returns false' do
         result = controller.authorize
-        result.should be_false
+        result.should be_falsey
       end
       it 'sets the error flash' do
         controller.authorize
@@ -37,11 +37,11 @@ describe ApplicationController do
   describe '#admin?' do
     it 'returns true when the session role is admin' do
       session[:role] = 'admin'
-      controller.admin?.should be_true
+      controller.admin?.should be_truthy
     end
     it 'returns false when the session role is something else' do
       session[:role] = 'joe bob'
-      controller.admin?.should be_false
+      controller.admin?.should be_falsey
     end
   end
   describe '#logged_in_as' do
