@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby "2.0.0"
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.5'
 gem 'pg'
 gem 'unicorn'
 gem 'redcarpet'
