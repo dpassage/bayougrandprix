@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ApplicationController do
   describe '#authorize' do
     context 'when the user is the admin' do
-      before (:each) do
+      before(:each) do
         user_is_admin
       end
       it 'returns true' do
@@ -16,7 +16,7 @@ describe ApplicationController do
       end
     end
     context 'when the user is not the admin' do
-      before (:each) do
+      before(:each) do
         user_is_guest
         controller.stub(:redirect_to)
       end
