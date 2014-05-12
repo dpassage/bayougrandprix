@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby "2.1.2"
 
-gem 'rails', '4.0.5'
+gem 'rails', '4.1.1'
 gem 'pg'
 gem 'unicorn'
 gem 'redcarpet'
@@ -9,7 +9,7 @@ gem 'redcarpet'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
- gem 'sass-rails'
+# gem 'sass-rails'
  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -29,7 +29,7 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem "factory_girl_rails", "~> 3.0"
+  gem "factory_girl_rails"
 #  gem 'debugger'
   gem 'fuubar'
 end
