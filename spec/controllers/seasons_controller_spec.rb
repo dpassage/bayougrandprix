@@ -10,17 +10,17 @@ describe SeasonsController do
           'scoring_scheme_id' => ss.to_param } }
     end
     context 'when the user is not an admin' do
-      before (:each) do
+      before(:each) do
         user_is_guest
       end
       it_should_behave_like 'an unauthorized operation' do
-        before (:each) do
+        before(:each) do
           post :create, create_params
         end
       end
     end
     context 'when user is admin' do
-      before (:each) do
+      before(:each) do
         user_is_admin
       end
       context 'with valid params' do
@@ -82,27 +82,27 @@ describe SeasonsController do
     shared_examples 'always passes some variables' do
       it 'should pass an array of season entries' do
         get 'show', show_params
-        assigns[:driver_entries].should_not == nil
+        assigns[:driver_entries].should_not be_nil
       end
       it 'should pass a list of races in the season' do
         get 'show', show_params
-        assigns[:races].should_not == nil
+        assigns[:races].should_not be_nil
       end
     end
     context 'when the user is an admin' do
-      before (:each) { user_is_admin }
+      before(:each) { user_is_admin }
       include_examples 'always passes some variables'
       it 'should pass an array of drivers' do
         get 'show', show_params
-        assigns[:drivers].should_not == nil
+        assigns[:drivers].should_not be_nil
       end
       it 'should pass a list of all tracks' do
         get 'show', show_params
-        assigns[:tracks].should_not == nil
+        assigns[:tracks].should_not be_nil
       end
     end
     context 'when the user is not an admin' do
-      before (:each) { user_is_guest }
+      before(:each) { user_is_guest }
       include_examples 'always passes some variables'
       it 'should not pass an array of drivers' do
         get 'show', show_params

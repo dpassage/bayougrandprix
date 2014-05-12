@@ -4,7 +4,7 @@ describe DriverEntry do
   let(:season) { FactoryGirl.create(:season) }
   let(:team) { FactoryGirl.create(:team) }
   let(:driver) { FactoryGirl.create(:driver) }
-  before (:each) do
+  before(:each) do
     @de = DriverEntry.new(
       season_id: season.id,
       defaultteam_id: team.id,
@@ -26,8 +26,8 @@ describe DriverEntry do
     @de.should_not be_valid
   end
   describe '#destroy' do
-    let (:race) { FactoryGirl.create(:race) }
-    let (:driver_entry) { FactoryGirl.create(:driver_entry) }
+    let(:race) { FactoryGirl.create(:race) }
+    let(:driver_entry) { FactoryGirl.create(:driver_entry) }
     it 'can not be deleted if the driver has finished a race that season' do
       RaceEntry.create!(race: race,
                         driver_entry: driver_entry, team: team)

@@ -26,10 +26,10 @@ describe 'Season' do
     @season.should_not be_valid
   end
   describe '#destroy' do
-    let (:season) { FactoryGirl.create(:season) }
-    let (:track) { FactoryGirl.create(:track) }
-    let (:team) { FactoryGirl.create(:team) }
-    let (:driver) { FactoryGirl.create(:driver) }
+    let(:season) { FactoryGirl.create(:season) }
+    let(:track) { FactoryGirl.create(:track) }
+    let(:team) { FactoryGirl.create(:team) }
+    let(:driver) { FactoryGirl.create(:driver) }
     it 'cannot be removed if there are races in the season' do
       Race.create!(track: track, season: season, date: Time.new)
       expect { season.destroy }.to raise_error

@@ -25,8 +25,8 @@ describe Driver do
     @driver.should_not be_valid
   end
   describe '#destroy' do
-    let (:season) { FactoryGirl.create(:season) }
-    let (:driver) { FactoryGirl.create(:driver) }
+    let(:season) { FactoryGirl.create(:season) }
+    let(:driver) { FactoryGirl.create(:driver) }
     it 'cannot be removed if the driver has entered a season' do
       FactoryGirl.create(:driver_entry, driver: driver, season: season)
       expect { driver.destroy }.to raise_error
@@ -47,8 +47,8 @@ describe Driver do
       driver = FactoryGirl.create(:driver, player: player)
       team = FactoryGirl.create(:team)
       FactoryGirl.create(:driver_entry, season: season,
-                         driver: driver,
-                         defaultteam: team)
+                                        driver: driver,
+                                        defaultteam: team)
       driver.default_team_for_season(season).should == team
     end
   end

@@ -3,7 +3,7 @@ FactoryGirl.define do
     name '9-6-4-3-2-1'
   end
   factory :season do
-    sequence (:name) { |n| "Season #{n}" }
+    sequence(:name) { |n| "Season #{n}" }
     scoring_scheme
   end
   factory :player do
@@ -23,7 +23,7 @@ FactoryGirl.define do
     association :defaultteam, factory: :team
   end
   factory :track do
-    sequence (:number) { |n| n }
+    sequence(:number) { |n| n }
     name 'Embarcadero'
     country 'California'
   end

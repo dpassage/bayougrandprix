@@ -24,7 +24,7 @@ describe 'ScoringScheme' do
     @ss.should be_valid
   end
   describe '#destroy' do
-    let (:scoring_scheme) { FactoryGirl.create(:scoring_scheme) }
+    let(:scoring_scheme) { FactoryGirl.create(:scoring_scheme) }
     it 'cannot be removed if it is in use in a season' do
       Season.create!(scoring_scheme: scoring_scheme, name: '2037')
       expect { scoring_scheme.destroy }.to raise_error

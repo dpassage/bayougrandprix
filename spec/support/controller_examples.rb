@@ -27,7 +27,7 @@ shared_examples 'standard index CRUD' do |model_name_plural|
   end
   it 'should pass an array of objects' do
     get 'index'
-    assigns[model_name_plural].should_not == nil
+    assigns[model_name_plural].should_not be_nil
   end
 end
 

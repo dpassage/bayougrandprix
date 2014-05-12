@@ -30,9 +30,9 @@ describe Race do
     @race.should be_valid
   end
   describe '#destroy' do
-    let (:race) { FactoryGirl.create(:race) }
-    let (:driver_entry) { FactoryGirl.create(:driver_entry) }
-    let (:team) { FactoryGirl.create(:team) }
+    let(:race) { FactoryGirl.create(:race) }
+    let(:driver_entry) { FactoryGirl.create(:driver_entry) }
+    let(:team) { FactoryGirl.create(:team) }
     it 'cannot be destroyed if someone has entered the race' do
       RaceEntry.create!(race: race,
                         driver_entry: driver_entry,

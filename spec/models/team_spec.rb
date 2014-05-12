@@ -21,7 +21,7 @@ describe Team do
   end
   it 'has a hash of valid colors' do
     expect { Team::COLORS }.to_not be_nil
-    Team::COLORS['Blue'].should_not == nil
+    Team::COLORS['Blue'].should_not be_nil
   end
   it 'is not fake by default' do
     @team.fake.should_not == true
@@ -31,11 +31,11 @@ describe Team do
     @team.should_not be_valid
   end
   describe '#destroy' do
-    let (:team) { FactoryGirl.create(:team) }
-    let (:otherteam) { FactoryGirl.create(:team) }
-    let (:season) { FactoryGirl.create(:season) }
-    let (:driver) { FactoryGirl.create(:driver) }
-    let (:race) { FactoryGirl.create(:race) }
+    let(:team) { FactoryGirl.create(:team) }
+    let(:otherteam) { FactoryGirl.create(:team) }
+    let(:season) { FactoryGirl.create(:season) }
+    let(:driver) { FactoryGirl.create(:driver) }
+    let(:race) { FactoryGirl.create(:race) }
     it 'cannot be removed if used in a season entry' do
       DriverEntry.create!(defaultteam: team,
                           season: season,
@@ -51,4 +51,3 @@ describe Team do
     end
   end
 end
-
