@@ -6,6 +6,6 @@ class Race < ActiveRecord::Base
   accepts_nested_attributes_for :race_entries
 
   def points_for_finishing(place)
-    self.season.points_for_finishing(place)
+    season.points_for_finishing(place)
   end
 end

@@ -6,8 +6,8 @@ class ScoringScheme < ActiveRecord::Base
 
   def points_for_finishing(place)
     return 0 if place.nil?
-    points_by_place = self.name.split('-')
+    points_by_place = name.split('-')
     points = points_by_place[place - 1]
-    (points == nil ? 0 : points.to_i)
+    (points.nil? ? 0 : points.to_i)
   end
 end

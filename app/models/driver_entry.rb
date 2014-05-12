@@ -9,13 +9,13 @@ class DriverEntry < ActiveRecord::Base
   validates_presence_of :season
 
   def finish_points
-    self.race_entries.reduce(0) do |sum, re|
+    race_entries.reduce(0) do |sum, re|
       sum + re.finish_points
     end
   end
 
   def finishes_in_place(n)
-    self.race_entries.reduce(0) do |total, re|
+    race_entries.reduce(0) do |total, re|
       total + (re.finish == n ? 1 : 0)
     end
   end

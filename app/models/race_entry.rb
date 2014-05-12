@@ -12,18 +12,18 @@ class RaceEntry < ActiveRecord::Base
   end
 
   def finish_points
-    if self.dnf
+    if dnf
       0
     else
-      self.race.points_for_finishing(self.finish)
+      race.points_for_finishing(finish)
     end
   end
 
   def qualifying_points
-    if self.dnq
+    if dnq
       0
     else
-      self.race.points_for_finishing(self.qualify)
+      race.points_for_finishing(qualify)
     end
   end
 end

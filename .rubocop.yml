@@ -1,14 +1,17 @@
 MethodLength:
   Enabled: false
 
+Documentation:
+  Enabled: false
+
 AllCops:
-  Includes:
+  Include:
     - Rakefile
     - config.ru
-  Excludes:
-    - script/**
-    - db/**
-    - config/**
-    - tmp/**
-    - log/**
+  Exclude:
+    - script/**/*
+    - db/**/*
+    - config/**/*
+    - tmp/**/*
+    - log/**/*
     - spec/spec_helper.rb

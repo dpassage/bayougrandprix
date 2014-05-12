@@ -13,7 +13,7 @@ class Season < ActiveRecord::Base
   end
 
   def to_param
-    self.name
+    name
   end
 
   class TableEntry
@@ -29,7 +29,7 @@ class Season < ActiveRecord::Base
     end
 
     def points
-      @points ||= self.entry.finish_points
+      @points ||= entry.finish_points
     end
 
     def entrant
@@ -41,21 +41,19 @@ class Season < ActiveRecord::Base
     end
 
     def <=>(other)
-      if self.points == other.points
+      if points == other.points
         (1..10).each do |i|
-          if self.finishes[i].nil?
-            self.finishes[i] = self.entry.finishes_in_place(i)
-          end
+          finishes[i] = entry.finishes_in_place(i) if finishes[i].nil?
           if other.finishes[i].nil?
             other.finishes[i] = other.entry.finishes_in_place(i)
           end
-          unless self.finishes[i] == other.finishes[i]
-            return -(self.finishes[i] <=> other.finishes[i])
+          unless finishes[i] == other.finishes[i]
+            return -(finishes[i] <=> other.finishes[i])
           end
         end
         return 0
       else
-        -(self.points <=> other.points)
+        -(points <=> other.points)
       end
     end
 
@@ -64,8 +62,8 @@ class Season < ActiveRecord::Base
       if finishes
         (1..10).each do |i|
           if finishes[i] && finishes[i] > 0
-            result = result +
-              ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? "" : "s"}"
+            result +=
+              ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? '' : 's'}"
           end
         end
       end
@@ -86,7 +84,7 @@ class Season < ActiveRecord::Base
   end
 
   def driver_results_table_by_finish_points
-    table = self.driver_entries.map do |de|
+    table = driver_entries.map do |de|
       te = TableEntry.new
       te.entry = de
       te
@@ -96,12 +94,12 @@ class Season < ActiveRecord::Base
 
   def results_table_by_points(entrant_type, points_type)
     entrant_hash = {}
-    self.races.each do |r|
+    races.each do |r|
       r.race_entries.each do |re|
         entrant = re.send(entrant_type)
         cur = entrant_hash[entrant]
         newpoints = re.send(points_type)
-        if cur == nil
+        if cur.nil?
           entrant_hash[entrant] = newpoints
         else
           entrant_hash[entrant] = cur + newpoints
@@ -121,19 +119,18 @@ class Season < ActiveRecord::Base
   end
 
   def teams_by_points
-    self.results_table_by_points(:team, :finish_points)
+    results_table_by_points(:team, :finish_points)
   end
 
   def drivers_by_points
-    self.driver_results_table_by_finish_points
+    driver_results_table_by_finish_points
   end
 
   def drivers_by_qualifying_points
-    self.results_table_by_points(:driver, :qualifying_points)
+    results_table_by_points(:driver, :qualifying_points)
   end
 
   def points_for_finishing(place)
-    self.scoring_scheme.points_for_finishing(place)
+    scoring_scheme.points_for_finishing(place)
   end
-
 end

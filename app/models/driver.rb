@@ -6,6 +6,6 @@ class Driver < ActiveRecord::Base
   has_many :race_entries
 
   def default_team_for_season(season)
-    self.driver_entries.where(season_id: season.id).first.defaultteam
+    driver_entries.where(season_id: season.id).first.defaultteam
   end
 end
