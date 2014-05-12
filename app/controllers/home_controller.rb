@@ -7,5 +7,4 @@ class HomeController < ApplicationController
       format.xml  { render xml: @seasons }
     end
   end
-
 end

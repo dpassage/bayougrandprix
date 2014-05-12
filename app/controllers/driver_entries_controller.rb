@@ -4,10 +4,10 @@ class DriverEntriesController < ApplicationController
     de = DriverEntry.find(params[:id])
     begin
       de.destroy
-      flash[:notice] = "Driver #{de.driver.name} removed from season " +
+      flash[:notice] = "Driver #{de.driver.name} removed from season " \
                        "#{de.season.name}"
     rescue ActiveRecord::DeleteRestrictionError
-      flash[:error] = "Cannot delete season entry; driver #{de.driver.name} " +
+      flash[:error] = "Cannot delete season entry; driver #{de.driver.name} " \
                       'is entered in a race'
     end
     redirect_to season_path(de.season)

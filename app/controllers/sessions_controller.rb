@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   def create
     @originpath = params[:originpath]
     @originpath = root_path unless @originpath
@@ -30,5 +29,4 @@ class SessionsController < ApplicationController
   def password
     ENV['BGP_ADMIN_PASSWORD']
   end
-
 end
