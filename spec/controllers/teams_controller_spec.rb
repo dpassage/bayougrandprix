@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TeamsController do
+describe TeamsController, :type => :controller do
   let(:team) { FactoryGirl.create(:team) }
   let(:params) { { id: team.to_param } }
   describe 'GET index' do
@@ -13,21 +13,21 @@ describe TeamsController do
     before(:each) do
       get 'show', params
     end
-    it('should be successful') { response.should be_success }
+    it('should be successful') { expect(response).to be_success }
     it('should render the show template') do
-      response.should render_template('show')
+      expect(response).to render_template('show')
     end
-    it('should pass the team') { assigns[:team].should == team }
+    it('should pass the team') { expect(assigns[:team]).to eq(team) }
   end
   describe 'GET edit' do
     before(:each) do
       get 'edit', params
     end
-    it('should be successful') { response.should be_success }
+    it('should be successful') { expect(response).to be_success }
     it('should render the edit template') do
-      response.should render_template('edit')
+      expect(response).to render_template('edit')
     end
-    it('should pass the team') { assigns[:team].should == team }
+    it('should pass the team') { expect(assigns[:team]).to eq(team) }
   end
   describe 'POST update' do
     let(:update_params) do
@@ -47,7 +47,7 @@ describe TeamsController do
       end
       it('should not change the team') do
         post 'update', update_params
-        team.name.should_not == 'Foo!'
+        expect(team.name).not_to eq('Foo!')
       end
     end
     context 'the user is an admin' do
@@ -55,10 +55,10 @@ describe TeamsController do
       context 'with valid params' do
         before(:each) { post 'update', update_params }
         it('should redirect to the show template') do
-          response.should redirect_to(team_path(team))
+          expect(response).to redirect_to(team_path(team))
         end
         it('should change the team name') do
-          Team.find(team.id).name.should == 'Foo!'
+          expect(Team.find(team.id).name).to eq('Foo!')
         end
       end
     end
@@ -96,7 +96,7 @@ describe TeamsController do
       describe 'with invalid parameters' do
         it 'renders the new template' do
           post 'create', invalid_params
-          response.should render_template('new')
+          expect(response).to render_template('new')
         end
       end
     end
@@ -112,7 +112,7 @@ describe TeamsController do
       end
       it('should not delete the team') do
         delete 'destroy', delete_params
-        Team.find(team.id).should_not be_nil
+        expect(Team.find(team.id)).not_to be_nil
       end
     end
     context 'when the user is an admin' do
@@ -129,10 +129,10 @@ describe TeamsController do
           end.to raise_error ActiveRecord::RecordNotFound
         end
         it('redirects to teams page') do
-          response.should redirect_to(teams_path)
+          expect(response).to redirect_to(teams_path)
         end
         it('sets the notify flash') do
-          flash[:notice].should_not be_nil
+          expect(flash[:notice]).not_to be_nil
         end
       end
       context 'when the team is used in a driver_entry' do
@@ -140,11 +140,11 @@ describe TeamsController do
           FactoryGirl.create(:driver_entry, defaultteam: team)
           delete 'destroy', delete_params
         end
-        it('is not deleted') { Team.find(team.id).should == team }
+        it('is not deleted') { expect(Team.find(team.id)).to eq(team) }
         it('redirects to teams page') do
-          response.should redirect_to(teams_path)
+          expect(response).to redirect_to(teams_path)
         end
-        it('sets the error flash') { flash[:error].should_not be_nil }
+        it('sets the error flash') { expect(flash[:error]).not_to be_nil }
       end
       context 'when the team is used in a race_entry' do
         before(:each) do
@@ -153,11 +153,11 @@ describe TeamsController do
           FactoryGirl.create(:race_entry, driver_entry: de, team: team)
           delete 'destroy', delete_params
         end
-        it('is not deleted') { Team.find(team.id).should == team }
+        it('is not deleted') { expect(Team.find(team.id)).to eq(team) }
         it('redirects to teams page') do
-          response.should redirect_to(teams_path)
+          expect(response).to redirect_to(teams_path)
         end
-        it('sets the error flash') { flash[:error].should_not be_nil }
+        it('sets the error flash') { expect(flash[:error]).not_to be_nil }
       end
     end
   end

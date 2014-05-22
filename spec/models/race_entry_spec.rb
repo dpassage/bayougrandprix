@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RaceEntry do
+describe RaceEntry, :type => :model do
   let(:season) { FactoryGirl.create(:season) }
   let(:race) { FactoryGirl.create(:race, season: season) }
   let(:se) { FactoryGirl.create(:driver_entry, season: season) }
@@ -11,37 +11,37 @@ describe RaceEntry do
                         team_id: team.to_param)
   end
   it 'is valid with valid parameters' do
-    @re.should be_valid
+    expect(@re).to be_valid
   end
   it 'is invalid without a race' do
     @re.race_id = nil
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'is invalid with an invalid race' do
     @re.race_id = Race.maximum('id') + 1
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'is invalid without a season entry' do
     @re.driver_entry_id = nil
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'is invalid with an invalid season entry' do
     @re.driver_entry_id = DriverEntry.maximum('id') + 1
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'is invalid without a team' do
     @re.team_id = nil
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'is invalid without a valid team' do
     @re.team_id = Team.maximum('id') + 1
-    @re.should_not be_valid
+    expect(@re).not_to be_valid
   end
   it 'initially is nil for finishing place' do
-    @re.finish.should be_nil
+    expect(@re.finish).to be_nil
   end
   it 'initially is nil for qualifying place' do
-    @re.qualify.should be_nil
+    expect(@re.qualify).to be_nil
   end
   it 'can mass assign finish, dnf, dnq, and qualify' do
     expect do
@@ -54,7 +54,7 @@ describe RaceEntry do
     let(:se) { FactoryGirl.create(:driver_entry, driver: driver) }
     let(:re) { FactoryGirl.create(:race_entry, driver_entry: se) }
     it 'returns the driver from the season entry' do
-      re.driver.should == driver
+      expect(re.driver).to eq(driver)
     end
   end
   describe 'enforces uniqueness of finishing places' do
@@ -63,14 +63,14 @@ describe RaceEntry do
       @re.finish = 1
       @re.save
       re2.finish = 1
-      re2.should_not be_valid
+      expect(re2).not_to be_valid
     end
     it 'alows same finishing place for different races' do
       @re.finish = 1
       @re.save
       re2.finish = 1
       re2.race = FactoryGirl.create(:race)
-      re2.should be_valid
+      expect(re2).to be_valid
     end
   end
   describe 'knows how to compute points for finishes' do
@@ -78,17 +78,17 @@ describe RaceEntry do
       it 'asks the race what the place is worth' do
         @re.finish = 1
         race = mock_model('Race')
-        race.should_receive(:points_for_finishing).with(1).and_return(9)
+        expect(race).to receive(:points_for_finishing).with(1).and_return(9)
         @re.race = race
-        @re.finish_points.should == 9
+        expect(@re.finish_points).to eq(9)
       end
       it 'returns 0 without asking the race if the driver did not finish' do
         @re.finish = 1
         @re.dnf = true
         race = mock_model('Race')
-        race.should_not_receive(:points_for_finishing)
+        expect(race).not_to receive(:points_for_finishing)
         @re.race = race
-        @re.finish_points.should == 0
+        expect(@re.finish_points).to eq(0)
       end
     end
     describe '#qualifying_points' do
@@ -96,25 +96,25 @@ describe RaceEntry do
         @re.qualify = 1
         @re.dnq = false
         race = mock_model('Race')
-        race.should_receive(:points_for_finishing).with(1).and_return(9)
+        expect(race).to receive(:points_for_finishing).with(1).and_return(9)
         @re.race = race
-        @re.qualifying_points.should == 9
+        expect(@re.qualifying_points).to eq(9)
       end
       it 'returns 0 without asking the race if racer did not qualify' do
         @re.qualify = 1
         @re.dnq = true
         race = mock_model('Race')
-        race.should_not_receive(:points_for_finishing)
+        expect(race).not_to receive(:points_for_finishing)
         @re.race = race
-        @re.qualifying_points.should == 0
+        expect(@re.qualifying_points).to eq(0)
       end
       it 'asks the race what the place is worth if dnq is nil' do
         @re.qualify = 1
         @re.dnq = nil
         race = mock_model('Race')
-        race.should_receive(:points_for_finishing).with(1).and_return(9)
+        expect(race).to receive(:points_for_finishing).with(1).and_return(9)
         @re.race = race
-        @re.qualifying_points.should == 9
+        expect(@re.qualifying_points).to eq(9)
       end
     end
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DriversController do
+describe DriversController, :type => :controller do
   let(:driver) { FactoryGirl.create(:driver) }
   describe 'GET index' do
     it_should_behave_like 'standard index CRUD', :drivers
@@ -11,26 +11,26 @@ describe DriversController do
   describe 'GET show' do
     it 'should be successful for a real driver' do
       get 'show', id: driver.to_param
-      response.should be_success
+      expect(response).to be_success
     end
     it 'should render the show template' do
       get 'show', id: driver.to_param
-      response.should render_template('show')
+      expect(response).to render_template('show')
     end
     it 'should pass the driver to the template' do
       get 'show', id: driver.to_param
-      assigns[:driver].should == driver
+      expect(assigns[:driver]).to eq(driver)
     end
   end
   describe 'GET edit' do
     before(:each) do
       get 'edit', 'id' => driver.to_param
     end
-    it('should be successful') { response.should be_success }
+    it('should be successful') { expect(response).to be_success }
     it 'should render the edit template' do
-      response.should render_template('edit')
+      expect(response).to render_template('edit')
     end
-    it('should pass the team') { assigns[:driver].should == driver }
+    it('should pass the team') { expect(assigns[:driver]).to eq(driver) }
   end
   describe 'POST update' do
     let(:update_params) do
@@ -48,7 +48,7 @@ describe DriversController do
       end
       it 'should not change the team' do
         post 'update', update_params
-        Driver.find(update_params['id']).name.should_not == 'Foo!'
+        expect(Driver.find(update_params['id']).name).not_to eq('Foo!')
       end
     end
     context 'the user is an admin' do
@@ -56,12 +56,12 @@ describe DriversController do
       context 'with valid params' do
         before(:each) { post 'update', update_params }
         it 'should redirect to the drivers list' do
-          response.should redirect_to(drivers_path)
+          expect(response).to redirect_to(drivers_path)
         end
         it 'should change the team name' do
-          Driver.find(update_params['id']).name.should == 'Foo!'
+          expect(Driver.find(update_params['id']).name).to eq('Foo!')
         end
-        it('should set the notice flash') { flash[:notice].should_not be_nil }
+        it('should set the notice flash') { expect(flash[:notice]).not_to be_nil }
       end
     end
   end

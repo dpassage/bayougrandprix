@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DriverEntriesController do
+describe DriverEntriesController, :type => :controller do
   describe 'POST create' do
     let(:season) { FactoryGirl.create(:season) }
     let(:driver) { FactoryGirl.create(:driver) }
@@ -35,15 +35,15 @@ describe DriverEntriesController do
         end
         it 'sets the notice flash' do
           post 'create', post_params
-          flash[:notice].should_not be_nil
+          expect(flash[:notice]).not_to be_nil
         end
         it 'does not set the error flash' do
           post 'create', post_params
-          flash[:error].should be_nil
+          expect(flash[:error]).to be_nil
         end
         it 'redirects to the season' do
           post 'create', post_params
-          response.should redirect_to(season_path(season))
+          expect(response).to redirect_to(season_path(season))
         end
       end
       context 'with a used driver' do
@@ -59,11 +59,11 @@ describe DriverEntriesController do
         end
         it 'sets the error flash' do
           post 'create', post_params
-          flash[:error].should_not be_nil
+          expect(flash[:error]).not_to be_nil
         end
         it 'redirects to the season' do
           post 'create', post_params
-          response.should redirect_to(season_path(season))
+          expect(response).to redirect_to(season_path(season))
         end
       end
     end
@@ -98,11 +98,11 @@ describe DriverEntriesController do
       end
       it 'does not set the error flash' do
         delete 'destroy', delete_params
-        flash[:error].should be_nil
+        expect(flash[:error]).to be_nil
       end
       it 'redirects to the season' do
         delete 'destroy', delete_params
-        response.should redirect_to(season_path(season))
+        expect(response).to redirect_to(season_path(season))
       end
       context 'when the driver has been entered in a race that season' do
         let(:race) { FactoryGirl.create(:race, season: season) }
@@ -114,15 +114,15 @@ describe DriverEntriesController do
         end
         it 'does not remove the season entry' do
           delete 'destroy', id: driver_entry.id, season_id: season.to_param
-          DriverEntry.find(driver_entry.id).should == driver_entry
+          expect(DriverEntry.find(driver_entry.id)).to eq(driver_entry)
         end
         it 'sets the error flash' do
           delete 'destroy', id: driver_entry.id, season_id: season.to_param
-          flash[:error].should_not be_nil
+          expect(flash[:error]).not_to be_nil
         end
         it 'redirects to the season' do
           delete 'destroy', id: driver_entry.id, season_id: season.to_param
-          response.should redirect_to(season_path(season))
+          expect(response).to redirect_to(season_path(season))
         end
       end
     end

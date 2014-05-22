@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Driver do
+describe Driver, :type => :model do
   let(:player) { FactoryGirl.create(:player) }
   before(:each) do
     @driver = Driver.new(
@@ -9,20 +9,20 @@ describe Driver do
     )
   end
   it 'is valid with valid parameters' do
-    @driver.should be_valid
+    expect(@driver).to be_valid
   end
   it 'is not valid without a name' do
     @driver.name = nil
-    @driver.should_not be_valid
+    expect(@driver).not_to be_valid
   end
   it 'is not valid without a player' do
     @driver.player_id = nil
-    @driver.should_not be_valid
+    expect(@driver).not_to be_valid
   end
   it 'is not valid if the player id does not exist' do
     invalid_id = Player.maximum('id') + 1
     @driver.player_id = invalid_id
-    @driver.should_not be_valid
+    expect(@driver).not_to be_valid
   end
   describe '#destroy' do
     let(:season) { FactoryGirl.create(:season) }
@@ -49,7 +49,7 @@ describe Driver do
       FactoryGirl.create(:driver_entry, season: season,
                                         driver: driver,
                                         defaultteam: team)
-      driver.default_team_for_season(season).should == team
+      expect(driver.default_team_for_season(season)).to eq(team)
     end
   end
 end

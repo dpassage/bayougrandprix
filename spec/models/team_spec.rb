@@ -1,34 +1,34 @@
 require 'spec_helper'
 
-describe Team do
+describe Team, :type => :model do
   before(:each) do
     @team = Team.new(name: 'McLaren', color: Team::COLORS['Blue'])
   end
   it 'is valid with valid parameters' do
-    @team.should be_valid
+    expect(@team).to be_valid
   end
   it 'is not valid without a name' do
     @team.name = nil
-    @team.should_not be_valid
+    expect(@team).not_to be_valid
   end
   it 'is not valid without a color' do
     @team.color = nil
-    @team.should_not be_valid
+    expect(@team).not_to be_valid
   end
   it 'is not valid with an invalid color' do
     @team.color = 'This is not an HTML color code'
-    @team.should_not be_valid
+    expect(@team).not_to be_valid
   end
   it 'has a hash of valid colors' do
     expect(Team::COLORS).to_not be_nil
-    Team::COLORS['Blue'].should_not be_nil
+    expect(Team::COLORS['Blue']).not_to be_nil
   end
   it 'is not fake by default' do
-    @team.fake.should_not == true
+    expect(@team.fake).not_to eq(true)
   end
   it 'is not valid if fake is not set' do
     @team.fake = nil
-    @team.should_not be_valid
+    expect(@team).not_to be_valid
   end
   describe '#destroy' do
     let(:team) { FactoryGirl.create(:team) }

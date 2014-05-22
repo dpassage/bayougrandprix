@@ -1,23 +1,23 @@
 require 'spec_helper'
 
-describe 'home/index' do
+describe 'home/index', :type => :view do
   shared_examples 'common admin and guest' do
     it 'links to the players page' do
       render
-      rendered.should have_link('Players', href: players_path)
+      expect(rendered).to have_link('Players', href: players_path)
     end
     it 'links to the drivers page' do
       render
-      rendered.should have_link('Drivers', href: drivers_path)
+      expect(rendered).to have_link('Drivers', href: drivers_path)
     end
     it 'links to the teams page' do
       render
-      rendered.should have_link('Teams', href: teams_path)
+      expect(rendered).to have_link('Teams', href: teams_path)
     end
     it 'shows a table of seasons' do
       assign(:seasons, [])
       render
-      rendered.should have_selector('table#results_by_season')
+      expect(rendered).to have_selector('table#results_by_season')
     end
     context 'when there are three seasons' do
       before(:each) do
@@ -31,7 +31,7 @@ describe 'home/index' do
       end
       it 'links the 2001 season to its results page' do
         render
-        rendered.should have_link '2001',
+        expect(rendered).to have_link '2001',
                                   href: results_season_path(@season2001)
       end
     end
@@ -39,23 +39,23 @@ describe 'home/index' do
   context 'when the user is not an admin' do
     before(:each) do
       assign(:seasons, [])
-      view.should_receive(:admin?).and_return(false)
+      expect(view).to receive(:admin?).and_return(false)
     end
     include_examples 'common admin and guest'
     it 'does not have a link to the seasons manager page' do
       render
-      rendered.should_not have_link('Edit Seasons')
+      expect(rendered).not_to have_link('Edit Seasons')
     end
   end
   context 'when the user is an administrator' do
     before(:each) do
       assign(:seasons, [])
-      view.should_receive(:admin?).and_return(true)
+      expect(view).to receive(:admin?).and_return(true)
     end
     include_examples 'common admin and guest'
     it 'has a link to the seasons manager page' do
       render
-      rendered.should have_link('Edit Seasons', href: seasons_path)
+      expect(rendered).to have_link('Edit Seasons', href: seasons_path)
     end
   end
 end

@@ -10,12 +10,13 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe ApplicationHelper do
+describe ApplicationHelper, :type => :helper do
   describe '#markdown_render' do
     it 'returns text rendered in html using markdown' do
       @before = 'This is *bongos*, indeed.'
-      markdown_render(@before).should ==
+      expect(markdown_render(@before)).to eq(
         "<p>This is <em>bongos</em>, indeed.</p>\n"
+      )
     end
   end
 end

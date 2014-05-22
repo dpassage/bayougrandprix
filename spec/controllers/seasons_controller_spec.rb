@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SeasonsController do
+describe SeasonsController, :type => :controller do
   describe 'POST create' do
     let(:name) { '2035' }
     let(:ss) { FactoryGirl.create(:scoring_scheme) }
@@ -31,7 +31,7 @@ describe SeasonsController do
         end
         it 'redirects to index' do
           post :create, create_params
-          response.should redirect_to(seasons_path)
+          expect(response).to redirect_to(seasons_path)
         end
       end
       context 'with invalid name' do
@@ -51,7 +51,7 @@ describe SeasonsController do
         # end
         it 'renders the new page' do
           post :create, invalid_params
-          response.should render_template('new')
+          expect(response).to render_template('new')
         end
       end
       # context 'with invalid scheme' do
@@ -83,11 +83,11 @@ describe SeasonsController do
     shared_examples 'always passes some variables' do
       it 'should pass an array of season entries' do
         get 'show', show_params
-        assigns[:driver_entries].should_not be_nil
+        expect(assigns[:driver_entries]).not_to be_nil
       end
       it 'should pass a list of races in the season' do
         get 'show', show_params
-        assigns[:races].should_not be_nil
+        expect(assigns[:races]).not_to be_nil
       end
     end
     context 'when the user is an admin' do
@@ -95,11 +95,11 @@ describe SeasonsController do
       include_examples 'always passes some variables'
       it 'should pass an array of drivers' do
         get 'show', show_params
-        assigns[:drivers].should_not be_nil
+        expect(assigns[:drivers]).not_to be_nil
       end
       it 'should pass a list of all tracks' do
         get 'show', show_params
-        assigns[:tracks].should_not be_nil
+        expect(assigns[:tracks]).not_to be_nil
       end
     end
     context 'when the user is not an admin' do
@@ -107,11 +107,11 @@ describe SeasonsController do
       include_examples 'always passes some variables'
       it 'should not pass an array of drivers' do
         get 'show', show_params
-        assigns[:drivers].should be_nil
+        expect(assigns[:drivers]).to be_nil
       end
       it 'should not pass a list of all tracks' do
         get 'show', show_params
-        assigns[:tracks].should be_nil
+        expect(assigns[:tracks]).to be_nil
       end
     end
   end
@@ -120,19 +120,19 @@ describe SeasonsController do
     let(:results_params) { { 'id' => season.to_param } }
     it 'passes the season to the view' do
       get 'results', results_params
-      assigns[:season].should == season
+      expect(assigns[:season]).to eq(season)
     end
     it 'passes drivers by points to the view' do
       get 'results', results_params
-      assigns[:drivers_by_points].should_not be_nil
+      expect(assigns[:drivers_by_points]).not_to be_nil
     end
     it 'passes teams by points to the view' do
       get 'results', results_params
-      assigns[:teams_by_points].should_not be_nil
+      expect(assigns[:teams_by_points]).not_to be_nil
     end
     it 'passes drivers by qualifying points to the view' do
       get 'results', results_params
-      assigns[:drivers_by_qualifying_points].should_not be_nil
+      expect(assigns[:drivers_by_qualifying_points]).not_to be_nil
     end
   end
   describe 'GET new' do

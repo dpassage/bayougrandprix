@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RaceEntriesController do
+describe RaceEntriesController, :type => :controller do
   let(:season) { FactoryGirl.create(:season) }
   let(:race) { FactoryGirl.create(:race, season: season) }
   let(:driver_entry) { FactoryGirl.create(:driver_entry, season: season) }
@@ -41,12 +41,12 @@ describe RaceEntriesController do
       end
       it 'redirects to the race edit page' do
         post 'create', race_entry_params
-        response.should redirect_to(edit_season_race_path(driver_entry.season,
+        expect(response).to redirect_to(edit_season_race_path(driver_entry.season,
                                                           race))
       end
       it 'sets the flash notice' do
         post 'create', race_entry_params
-        flash[:notice].should_not be_nil
+        expect(flash[:notice]).not_to be_nil
       end
     end
   end

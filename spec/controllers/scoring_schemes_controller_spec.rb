@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScoringSchemesController do
+describe ScoringSchemesController, :type => :controller do
   describe 'GET index' do
     it_should_behave_like 'standard index CRUD', :scoring_schemes
   end
@@ -31,7 +31,7 @@ describe ScoringSchemesController do
       describe 'with invalid parameters' do
         it 'renders the new template' do
           post 'create', invalid_params
-          response.should render_template('new')
+          expect(response).to render_template('new')
         end
       end
     end

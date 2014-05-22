@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Scoring Schemes' do
+describe 'Scoring Schemes', :type => :feature do
   def login
     click_link 'Log In'
     expect(current_path).to eq login_path
@@ -20,6 +20,6 @@ describe 'Scoring Schemes' do
     click_button 'Create Scoring scheme'
     expect(current_path).to eq scoring_schemes_path
 
-    page.should have_content '9-6-4-3-2-1'
+    expect(page).to have_content '9-6-4-3-2-1'
   end
 end

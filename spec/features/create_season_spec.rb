@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Seasons' do
+describe 'Seasons', :type => :feature do
   def login
     click_link 'Log In'
     expect(current_path).to eq login_path
@@ -24,9 +24,9 @@ describe 'Seasons' do
     click_button 'Create Season'
     expect(current_path).to eq seasons_path
 
-    page.should have_content '2025'
+    expect(page).to have_content '2025'
 
     page.find(:xpath, '//tr[contains(., "2025")]').find_link('Manage').click
-    current_path.should == '/seasons/2025'
+    expect(current_path).to eq('/seasons/2025')
   end
 end

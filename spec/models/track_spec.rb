@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Track do
+describe Track, :type => :model do
   before(:each) do
     @track = Track.new(
       name: 'Beachfront Mambo',
@@ -9,19 +9,19 @@ describe Track do
     )
   end
   it 'is valid with valid parameters' do
-    @track.should be_valid
+    expect(@track).to be_valid
   end
   it 'is not valid without a name' do
     @track.name = nil
-    @track.should_not be_valid
+    expect(@track).not_to be_valid
   end
   it 'is not valid without a number' do
     @track.number = nil
-    @track.should_not be_valid
+    expect(@track).not_to be_valid
   end
   it 'is valid without a country' do
     @track.country = nil
-    @track.should be_valid
+    expect(@track).to be_valid
   end
   describe '#destroy' do
     let(:track) { FactoryGirl.create(:track) }

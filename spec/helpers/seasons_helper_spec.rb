@@ -10,19 +10,19 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe SeasonsHelper do
+describe SeasonsHelper, :type => :helper do
   describe '#ordinal' do
     it 'returns Winner for 1' do
-      helper.ordinal(1).should == 'Winner'
+      expect(helper.ordinal(1)).to eq('Winner')
     end
     it 'returns 2nd for 2' do
-      helper.ordinal(2).should == '2nd'
+      expect(helper.ordinal(2)).to eq('2nd')
     end
     it 'returns 3rd for 3' do
-      helper.ordinal(3).should == '3rd'
+      expect(helper.ordinal(3)).to eq('3rd')
     end
     it 'returns 4th for 4' do
-      helper.ordinal(4).should == '4th'
+      expect(helper.ordinal(4)).to eq('4th')
     end
   end
 end

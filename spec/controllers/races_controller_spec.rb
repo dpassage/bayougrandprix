@@ -6,7 +6,7 @@ require 'spec_helper'
 #     'race'=>{'track_id'=>'33'}, 'commit'=>'Add Race'}
 # Completed 500 Internal Server Error in 3ms
 
-describe RacesController do
+describe RacesController, :type => :controller do
   let(:season) { FactoryGirl.create(:season) }
   let(:track) { FactoryGirl.create(:track) }
   describe 'POST create' do
@@ -47,7 +47,7 @@ describe RacesController do
       describe 'with invalid parameters' do
         it 'renders the new template' do
           post 'create', invalid_params
-          response.should redirect_to(season_path(season))
+          expect(response).to redirect_to(season_path(season))
         end
       end
       it 'adds a race to the season' do
@@ -57,11 +57,11 @@ describe RacesController do
       end
       it 'redirects to the season page' do
         post 'create', create_params
-        response.should
+        expect(response).to redirect_to(season_path(season))
       end
       it 'sets the flash notice' do
         post 'create', create_params
-        flash[:notice].should_not be_nil
+        expect(flash[:notice]).not_to be_nil
       end
     end
   end
@@ -73,11 +73,11 @@ describe RacesController do
     end
     it 'passes the race' do
       get 'show', params
-      assigns[:race].should == race
+      expect(assigns[:race]).to eq(race)
     end
     it 'passes the season' do
       get 'show', params
-      assigns[:season].should == season
+      expect(assigns[:season]).to eq(season)
     end
   end
   describe 'GET edit' do
@@ -88,11 +88,11 @@ describe RacesController do
     end
     it 'passes the race' do
       get 'edit', params
-      assigns[:race].should == race
+      expect(assigns[:race]).to eq(race)
     end
     it 'passes the season' do
       get 'edit', params
-      assigns[:season].should == season
+      expect(assigns[:season]).to eq(season)
     end
   end
   describe 'POST update' do
@@ -143,16 +143,16 @@ describe RacesController do
             expect(RaceEntry.find(re1.id).qualify).to be 3
             expect(RaceEntry.find(re2.id).qualify).to be 2
             expect(RaceEntry.find(re3.id).qualify).to be 1
-            RaceEntry.find(re1.id).dnf.should be_falsey
-            RaceEntry.find(re1.id).dnq.should be_truthy
+            expect(RaceEntry.find(re1.id).dnf).to be_falsey
+            expect(RaceEntry.find(re1.id).dnq).to be_truthy
           end
           it 'sets the flash notice' do
             post 'update', params
-            flash[:notice].should_not be_nil
+            expect(flash[:notice]).not_to be_nil
           end
           it 'redirects to the race page' do
             post 'update', params
-            response.should redirect_to(season_race_path(race.season, race))
+            expect(response).to redirect_to(season_race_path(race.season, race))
           end
         end
         context 'finishing places conflict' do
@@ -176,16 +176,16 @@ describe RacesController do
             post 'update', params
             myre1 =  RaceEntry.find(re1.id)
             myre2 =  RaceEntry.find(re2.id)
-            myre1.finish.should be_nil
-            myre2.finish.should be_nil
+            expect(myre1.finish).to be_nil
+            expect(myre2.finish).to be_nil
           end
           it 'sets the flash error' do
             post 'update', params
-            flash[:error].should_not be_nil
+            expect(flash[:error]).not_to be_nil
           end
           it 'redirects to the race page' do
             post 'update', params
-            response.should redirect_to(season_race_path(race.season, race))
+            expect(response).to redirect_to(season_race_path(race.season, race))
           end
         end
       end
@@ -200,13 +200,13 @@ describe RacesController do
           post 'update', @params
         end
         it 'updates the race with the writeup info' do
-          Race.find(race.id).writeup.should == @writeup
+          expect(Race.find(race.id).writeup).to eq(@writeup)
         end
         it 'sets the flash notice' do
-          flash[:notice].should_not be_nil
+          expect(flash[:notice]).not_to be_nil
         end
         it 'redirects to the race page' do
-          response.should redirect_to(season_race_path(race.season, race))
+          expect(response).to redirect_to(season_race_path(race.season, race))
         end
       end
     end

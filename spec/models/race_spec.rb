@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Race do
+describe Race, :type => :model do
   let(:track) { FactoryGirl.create(:track) }
   let(:season) { FactoryGirl.create(:season) }
   before(:each) do
@@ -11,23 +11,23 @@ describe Race do
       writeup: 'This is a writeup')
   end
   it 'is valid with valid parameters' do
-    @race.should be_valid
+    expect(@race).to be_valid
   end
   it 'is invalid without a season' do
     @race.season_id = nil
-    @race.should_not be_valid
+    expect(@race).not_to be_valid
   end
   it 'is invalid without a track' do
     @race.track_id = nil
-    @race.should_not be_valid
+    expect(@race).not_to be_valid
   end
   it 'is invalid without a date' do
     @race.date = nil
-    @race.should_not be_valid
+    expect(@race).not_to be_valid
   end
   it 'is valid without a writeup' do
     @race.writeup = nil
-    @race.should be_valid
+    expect(@race).to be_valid
   end
   describe '#destroy' do
     let(:race) { FactoryGirl.create(:race) }
@@ -43,9 +43,9 @@ describe Race do
   describe '#points_for_finishing' do
     it 'asks the season what the place is worth' do
       season = mock_model('Season')
-      season.should_receive(:points_for_finishing).with(1).and_return(9)
+      expect(season).to receive(:points_for_finishing).with(1).and_return(9)
       @race.season = season
-      @race.points_for_finishing(1).should == 9
+      expect(@race.points_for_finishing(1)).to eq(9)
     end
   end
 end

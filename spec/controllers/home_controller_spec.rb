@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe HomeController do
+describe HomeController, :type => :controller do
   describe "GET 'index'" do
     it 'should be successful' do
       get 'index'
-      response.should be_success
+      expect(response).to be_success
     end
     it 'should render the index template' do
       get 'index'
-      response.should render_template('index')
+      expect(response).to render_template('index')
     end
     it 'should pass an array of seasons' do
       get 'index'
-      assigns[:seasons].should_not be_nil
+      expect(assigns[:seasons]).not_to be_nil
     end
     context 'when there are three seasons' do
       before(:each) do
@@ -22,7 +22,7 @@ describe HomeController do
       end
       it 'should pass all the seasons in the array' do
         get 'index'
-        assigns[:seasons].length.should == 3
+        expect(assigns[:seasons].length).to eq(3)
       end
       it 'should pass an array sorted by name' do
         get 'index'
