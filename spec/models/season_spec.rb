@@ -9,6 +9,19 @@ describe 'Season' do
       name: '1999'
     )
   end
+  # Unloads all the fixtures loaded at the top of this spec
+  # The order is important due to dependencies
+  after(:all) do
+    RaceEntry.destroy_all
+    DriverEntry.destroy_all
+    Driver.destroy_all
+    Player.destroy_all
+    Race.destroy_all
+    Season.destroy_all
+    ScoringScheme.destroy_all
+    Team.destroy_all
+    Track.destroy_all
+  end
   it 'is valid with valid parameters' do
     @season.should be_valid
   end
