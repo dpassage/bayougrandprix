@@ -56,10 +56,11 @@ describe SeasonsController do
       end
       # context 'with invalid scheme' do
       #   let(:invalid_params) { { 'season' =>
-                                   # { 'name' => 'name',
-                                   #   'scoring_scheme_id' =>
-                                          # ss.to_param + '4' }
-                                   # } }
+      #                            { 'name' => 'name',
+      #                              'scoring_scheme_id' =>
+      #                               ss.to_param + '4' }
+      #                          }
+      #   }
       #   it 'does not create a new season' do
       #     expect {
       #       post :create, invalid_params

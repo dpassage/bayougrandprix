@@ -10,10 +10,9 @@ class SeasonsController < ApplicationController
     @season = Season.find_by_name(params[:id])
     @driver_entries = @season.driver_entries
     @races = @season.races
-    if admin?
-      @drivers = Driver.order(:name)
-      @tracks = Track.all
-    end
+    return unless admin?
+    @drivers = Driver.order(:name)
+    @tracks = Track.all
   end
 
   # GET /seasons/2002/results

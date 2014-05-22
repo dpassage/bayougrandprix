@@ -7,9 +7,8 @@ class Season < ActiveRecord::Base
   validate :scoring_scheme_must_exist
 
   def scoring_scheme_must_exist
-    unless ScoringScheme.exists?(scoring_scheme_id)
-      errors.add(:scoring_scheme_id, 'must exist')
-    end
+    return if ScoringScheme.exists?(scoring_scheme_id)
+    errors.add(:scoring_scheme_id, 'must exist')
   end
 
   def to_param
@@ -47,9 +46,8 @@ class Season < ActiveRecord::Base
           if other.finishes[i].nil?
             other.finishes[i] = other.entry.finishes_in_place(i)
           end
-          unless finishes[i] == other.finishes[i]
-            return -(finishes[i] <=> other.finishes[i])
-          end
+          next if finishes[i] == other.finishes[i]
+          return -(finishes[i] <=> other.finishes[i])
         end
         return 0
       else
@@ -61,10 +59,9 @@ class Season < ActiveRecord::Base
       result = points.to_s
       if finishes
         (1..10).each do |i|
-          if finishes[i] && finishes[i] > 0
-            result +=
-              ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? '' : 's'}"
-          end
+          next unless finishes[i] && finishes[i] > 0
+          result +=
+            ", #{finishes[i]} #{ordinal(i)}#{finishes[i] == 1 ? '' : 's'}"
         end
       end
       result
