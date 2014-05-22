@@ -20,7 +20,7 @@ describe Team do
     @team.should_not be_valid
   end
   it 'has a hash of valid colors' do
-    expect { Team::COLORS }.to_not be_nil
+    expect(Team::COLORS).to_not be_nil
     Team::COLORS['Blue'].should_not be_nil
   end
   it 'is not fake by default' do

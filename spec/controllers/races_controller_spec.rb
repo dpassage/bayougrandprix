@@ -143,8 +143,8 @@ describe RacesController do
             expect(RaceEntry.find(re1.id).qualify).to be 3
             expect(RaceEntry.find(re2.id).qualify).to be 2
             expect(RaceEntry.find(re3.id).qualify).to be 1
-            RaceEntry.find(re1.id).dnf.should be_false
-            RaceEntry.find(re1.id).dnq.should be_true
+            RaceEntry.find(re1.id).dnf.should be_falsey
+            RaceEntry.find(re1.id).dnq.should be_truthy
           end
           it 'sets the flash notice' do
             post 'update', params
