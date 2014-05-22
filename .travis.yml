@@ -1,5 +1,5 @@
 before_script:
-  - psql -c 'create database bgptest;' -U postgres
+  - RAILS_ENV=test bundle exec rake db:setup
 language: ruby
 rvm:
   - 2.1.2
