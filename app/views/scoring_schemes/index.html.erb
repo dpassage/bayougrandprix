@@ -8,14 +8,14 @@
     <% end %>
   </tr>
 
-<% @scoring_schemes.each do |scoring_scheme| %>
-  <tr>
-    <td><%= scoring_scheme.name %></td>
-    <% if admin? %>
-    <td><%= link_to 'Destroy', scoring_scheme, :data => { :confirm => 'Are you sure?' }, method: :delete %></td>
-    <% end %>
-  </tr>
-<% end %>
+  <% @scoring_schemes.each do |scoring_scheme| %>
+    <tr>
+      <td><%= scoring_scheme.name %></td>
+      <% if admin? %>
+        <td><%= link_to 'Destroy', scoring_scheme, :data => { :confirm => 'Are you sure?' }, method: :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
 </table>
 
 <br />

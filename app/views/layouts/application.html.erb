@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-<% if Rails.env.production? %>
-  <title>Bayou Grand Prix</title>
-<% else %>
-  <title>DEVINSTANCE Bayou Grand Prix</title>
-<% end %>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="header">
-  <%= link_to "Bayou Grand Prix", root_path %>
-</div>
+  <head>
+    <% if Rails.env.production? %>
+      <title>Bayou Grand Prix</title>
+    <% else %>
+      <title>DEVINSTANCE Bayou Grand Prix</title>
+    <% end %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="header">
+      <%= link_to "Bayou Grand Prix", root_path %>
+    </div>
 
-<% if flash[:notice] %>
-  <p id="notice" class="notice"><%= flash[:notice] %></p>
-<% end %>
-<% if flash[:error] %>
-  <p id="error" class="error"><%= flash[:error] %></p>
-<% end %>
+    <% if flash[:notice] %>
+      <p id="notice" class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p id="error" class="error"><%= flash[:error] %></p>
+    <% end %>
 
-<%= yield %>
+    <%= yield %>
 
-<div class="footer">
-<p>Logged in as: <%= logged_in_as %></p>
-<p><% if admin? %>
-  <%= link_to "Log Out", logout_path + "?originpath=" + request.path %>
-<% else %>
-  <%= link_to "Log In", login_path + "?originpath=" + request.path %>
-<% end %></p>
-</div>
-</body>
-<% if Rails.env.production? %>
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '4fcd2b89613f5d38ba000046');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
-<% end %>
+    <div class="footer">
+      <p>Logged in as: <%= logged_in_as %></p>
+      <p><% if admin? %>
+           <%= link_to "Log Out", logout_path + "?originpath=" + request.path %>
+         <% else %>
+           <%= link_to "Log In", login_path + "?originpath=" + request.path %>
+         <% end %></p>
+    </div>
+  </body>
 </html>

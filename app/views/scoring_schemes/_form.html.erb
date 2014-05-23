@@ -4,9 +4,9 @@
       <h2><%= pluralize(@scoring_scheme.errors.count, "error") %> prohibited this scoring_scheme from being saved:</h2>
 
       <ul>
-      <% @scoring_scheme.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @scoring_scheme.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

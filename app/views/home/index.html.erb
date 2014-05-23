@@ -4,11 +4,11 @@
     <th>Results by Season</th>
   </tr>
 
-<% @seasons.each do |season| %>
-  <tr>
-    <td><%= link_to season.name, results_season_path(season) %></td>
-  </tr>
-<% end %>
+  <% @seasons.each do |season| %>
+    <tr>
+      <td><%= link_to season.name, results_season_path(season) %></td>
+    </tr>
+  <% end %>
 </table>
 
 <% if admin? %>

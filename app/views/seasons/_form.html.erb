@@ -4,9 +4,9 @@
       <h2><%= pluralize(@season.errors.count, "error") %> prohibited this season from being saved:</h2>
 
       <ul>
-      <% @season.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @season.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

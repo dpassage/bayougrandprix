@@ -4,9 +4,9 @@
       <h2><%= pluralize(@driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
 
       <ul>
-      <% @driver.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @driver.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

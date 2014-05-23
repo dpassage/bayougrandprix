@@ -4,9 +4,9 @@
       <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
 
       <ul>
-      <% @player.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @player.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

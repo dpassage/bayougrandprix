@@ -6,13 +6,13 @@
 </p>
 
 <% if admin? %>
-<p>
-  <b>Email:</b>
-  <%= @player.email %>
-</p>
+  <p>
+    <b>Email:</b>
+    <%= @player.email %>
+  </p>
 <% end %>
 
 <% if admin? %>
- <%= link_to 'Edit', edit_player_path(@player) %> |
+  <%= link_to 'Edit', edit_player_path(@player) %> |
 <% end %>
 <%= link_to 'Back', players_path %>
