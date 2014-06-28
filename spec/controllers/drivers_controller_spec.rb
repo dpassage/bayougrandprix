@@ -61,7 +61,9 @@ describe DriversController, type: :controller do
         it 'should change the team name' do
           expect(Driver.find(update_params['id']).name).to eq('Foo!')
         end
-        it('should set the notice flash') { expect(flash[:notice]).not_to be_nil }
+        it 'should set the notice flash' do
+          expect(flash[:notice]).not_to be_nil
+        end
       end
     end
   end

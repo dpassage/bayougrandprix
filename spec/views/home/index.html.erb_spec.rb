@@ -32,7 +32,7 @@ describe 'home/index', type: :view do
       it 'links the 2001 season to its results page' do
         render
         expect(rendered).to have_link '2001',
-                                  href: results_season_path(@season2001)
+                                      href: results_season_path(@season2001)
       end
     end
   end
