@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TeamsController, :type => :controller do
+describe TeamsController, type: :controller do
   let(:team) { FactoryGirl.create(:team) }
   let(:params) { { id: team.to_param } }
   describe 'GET index' do

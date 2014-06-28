@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ApplicationController, :type => :controller do
+describe ApplicationController, type: :controller do
   describe '#authorize' do
     context 'when the user is the admin' do
       before(:each) do

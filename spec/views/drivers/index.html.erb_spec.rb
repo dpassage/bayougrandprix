@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'drivers/index', :type => :view do
+describe 'drivers/index', type: :view do
   shared_examples 'driver common admin and guest' do
     it 'shows a table of drivers' do
       assign(:drivers, [])

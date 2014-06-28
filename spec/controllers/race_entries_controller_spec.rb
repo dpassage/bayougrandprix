@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RaceEntriesController, :type => :controller do
+describe RaceEntriesController, type: :controller do
   let(:season) { FactoryGirl.create(:season) }
   let(:race) { FactoryGirl.create(:race, season: season) }
   let(:driver_entry) { FactoryGirl.create(:driver_entry, season: season) }

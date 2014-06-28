@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'ScoringScheme', :type => :model do
+describe 'ScoringScheme', type: :model do
   before(:each) do
     @ss = ScoringScheme.new(name: '9-6-4-3-2-1')
   end

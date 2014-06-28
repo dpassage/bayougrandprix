@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DriverEntriesController, :type => :controller do
+describe DriverEntriesController, type: :controller do
   describe 'POST create' do
     let(:season) { FactoryGirl.create(:season) }
     let(:driver) { FactoryGirl.create(:driver) }

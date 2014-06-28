@@ -10,7 +10,7 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe ApplicationHelper, :type => :helper do
+describe ApplicationHelper, type: :helper do
   describe '#markdown_render' do
     it 'returns text rendered in html using markdown' do
       @before = 'This is *bongos*, indeed.'

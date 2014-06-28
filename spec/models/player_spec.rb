@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Player, :type => :model do
+describe Player, type: :model do
   before(:each) do
     @player = Player.new(name: 'David', email: 'david@example.com')
   end

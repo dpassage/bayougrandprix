@@ -6,7 +6,7 @@ require 'spec_helper'
 #     'race'=>{'track_id'=>'33'}, 'commit'=>'Add Race'}
 # Completed 500 Internal Server Error in 3ms
 
-describe RacesController, :type => :controller do
+describe RacesController, type: :controller do
   let(:season) { FactoryGirl.create(:season) }
   let(:track) { FactoryGirl.create(:track) }
   describe 'POST create' do

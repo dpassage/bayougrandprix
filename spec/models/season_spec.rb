@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Season', :type => :model do
+describe 'Season', type: :model do
   fixtures :all
   let(:ss) { FactoryGirl.create(:scoring_scheme) }
   before(:each) do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Seasons', :type => :feature do
+describe 'Seasons', type: :feature do
   def login
     click_link 'Log In'
     expect(current_path).to eq login_path

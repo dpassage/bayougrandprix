@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Logins', :type => :feature do
+describe 'Logins', type: :feature do
   describe 'GET /logins' do
     def login
       click_link 'Log In'

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Team, :type => :model do
+describe Team, type: :model do
   before(:each) do
     @team = Team.new(name: 'McLaren', color: Team::COLORS['Blue'])
   end

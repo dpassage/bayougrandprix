@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SeasonsController, :type => :controller do
+describe SeasonsController, type: :controller do
   describe 'POST create' do
     let(:name) { '2035' }
     let(:ss) { FactoryGirl.create(:scoring_scheme) }

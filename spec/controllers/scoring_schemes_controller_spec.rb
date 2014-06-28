@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScoringSchemesController, :type => :controller do
+describe ScoringSchemesController, type: :controller do
   describe 'GET index' do
     it_should_behave_like 'standard index CRUD', :scoring_schemes
   end

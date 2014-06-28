@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DriverEntry, :type => :model do
+describe DriverEntry, type: :model do
   let(:season) { FactoryGirl.create(:season) }
   let(:team) { FactoryGirl.create(:team) }
   let(:driver) { FactoryGirl.create(:driver) }

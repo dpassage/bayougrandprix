@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Driver, :type => :model do
+describe Driver, type: :model do
   let(:player) { FactoryGirl.create(:player) }
   before(:each) do
     @driver = Driver.new(

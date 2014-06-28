@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SessionsController, :type => :controller do
+describe SessionsController, type: :controller do
   describe 'GET create' do
     it 'passes the origin path from the query string to the view' do
       get :create, originpath: '/drivers'

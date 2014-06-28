@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Track, :type => :model do
+describe Track, type: :model do
   before(:each) do
     @track = Track.new(
       name: 'Beachfront Mambo',

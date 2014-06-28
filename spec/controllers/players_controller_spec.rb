@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PlayersController, :type => :controller do
+describe PlayersController, type: :controller do
   describe 'GET index' do
     it_should_behave_like 'standard index CRUD', :players
   end

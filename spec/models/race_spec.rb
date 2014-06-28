@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Race, :type => :model do
+describe Race, type: :model do
   let(:track) { FactoryGirl.create(:track) }
   let(:season) { FactoryGirl.create(:season) }
   before(:each) do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'home/index', :type => :view do
+describe 'home/index', type: :view do
   shared_examples 'common admin and guest' do
     it 'links to the players page' do
       render

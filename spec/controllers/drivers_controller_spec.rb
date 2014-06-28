@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DriversController, :type => :controller do
+describe DriversController, type: :controller do
   let(:driver) { FactoryGirl.create(:driver) }
   describe 'GET index' do
     it_should_behave_like 'standard index CRUD', :drivers
