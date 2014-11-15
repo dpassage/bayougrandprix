@@ -1,4 +1,4 @@
-== Bayou Grand Prix
+# Bayou Grand Prix
 
 This project exists for two purposes. Mostly, it's so I can play with Ruby on Rails and
 get back into coding after a long professional layoff.
