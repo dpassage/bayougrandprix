@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-activemodel-mocks'
   gem 'capybara'
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
   gem 'byebug'
+  gem 'rack-mini-profiler'
 end
