@@ -27,9 +27,20 @@ class DriversController < ApplicationController
     redirect_to(drivers_path)
   end
 
+  def create
+    @driver = Driver.new(safe_params)
+    if @driver.save
+      flash[:notice] = "Driver #{@driver.name} created"
+      redirect_to(drivers_path)
+    else
+      flash[:error] = 'Driver could not be created'
+      render action: 'new'
+    end
+  end
+
   private
 
   def safe_params
-    params.require(:driver).permit(:name)
+    params[:driver].permit(:name, :player_id)
   end
 end

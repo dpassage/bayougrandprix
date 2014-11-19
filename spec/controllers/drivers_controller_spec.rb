@@ -67,4 +67,40 @@ describe DriversController, type: :controller do
       end
     end
   end
+  describe 'POST create' do
+    let(:player) { FactoryGirl.create(:player) }
+    let(:create_params) do
+      { 'driver' => { 'name' => 'Hank Stinkfinger',
+                      'player_id' => player.to_param }
+      }
+    end
+    let(:invalid_params) { { driver: {} } }
+    context 'the user is not an admin' do
+      before(:each) do
+        user_is_guest
+      end
+      it_should_behave_like 'an unauthorized operation' do
+        before(:each) do
+          post 'create', create_params
+        end
+      end
+    end
+    context 'when the user is an admin' do
+      before(:each) do
+        @create_params = create_params
+        @drivers_path = drivers_path
+        user_is_admin
+      end
+      it_should_behave_like 'standard create CRUD' do
+        let(:klass) { Driver }
+        let(:redirect_path) { drivers_path }
+      end
+      describe 'with invalid parameters' do
+        it 'renders the new template' do
+          post 'create', invalid_params
+          expect(response).to render_template('new')
+        end
+      end
+    end
+  end
 end
