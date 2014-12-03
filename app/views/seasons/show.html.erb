@@ -20,6 +20,7 @@
     <th>Team</th>
     <% if admin? %>
       <th />
+      <th />
     <% end %>
   </tr>
   <% @season.driver_entries.joins(:defaultteam).order("teams.name").each do |entry| %>
@@ -34,6 +35,9 @@
       <% if admin? %>
         <td>
           <%= link_to 'Remove', season_driver_entry_path(@season, entry.id), :confirm => 'Are you sure?', :method => :delete %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_season_driver_entry_path(@season, entry.id) %>
         </td>
       <% end %>
     </tr>

@@ -14,7 +14,7 @@ Bayougrandprix::Application.routes.draw do
     resources :races, :only => [ :create, :show, :update, :edit ] do
       resources :race_entries, :only => [ :create ]
     end
-    resources :driver_entries, :only => [ :create, :destroy ]
+    resources :driver_entries, :only => [ :create, :destroy, :edit ]
     get 'results', :on => :member
   end
 

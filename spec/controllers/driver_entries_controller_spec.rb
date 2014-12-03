@@ -127,4 +127,16 @@ describe DriverEntriesController, type: :controller do
       end
     end
   end
+  describe 'GET edit' do
+    let (:season) { FactoryGirl.create(:season) }
+    let (:driver_entry) { FactoryGirl.create(:driver_entry, season: season) }
+    before(:each) do
+      get 'edit', 'season_id' => season.to_param, 'id' => driver_entry.to_param
+    end
+    it('should be successful') { expect(response).to be_success }
+    it 'should render the edit template' do
+      expect(response).to render_template('edit')
+    end
+    it('should pass the entry') { expect(assigns[:driver_entry]).to eq(driver_entry) }
+  end
 end

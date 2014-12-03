@@ -28,6 +28,10 @@ class DriverEntriesController < ApplicationController
     redirect_to season_path(season)
   end
 
+  def edit
+    @driver_entry = DriverEntry.find(params[:id])
+  end
+
   private
 
   def safe_params
