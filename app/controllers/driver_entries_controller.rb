@@ -32,6 +32,14 @@ class DriverEntriesController < ApplicationController
     @driver_entry = DriverEntry.find(params[:id])
   end
 
+  def update
+    @driver_entry = DriverEntry.find(params[:id])
+    @driver_entry.update_attributes!(safe_params)
+    flash[:notice] = "Entry for driver #{@driver_entry.driver.name} updated"
+    season = Season.where(name: params[:season_id]).first
+    redirect_to season_path(season)
+  end
+
   private
 
   def safe_params

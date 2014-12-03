@@ -139,4 +139,43 @@ describe DriverEntriesController, type: :controller do
     end
     it('should pass the entry') { expect(assigns[:driver_entry]).to eq(driver_entry) }
   end
+  describe 'POST update' do
+    let (:season) { FactoryGirl.create(:season) }
+    let (:driver_entry) { FactoryGirl.create(:driver_entry, season: season) }
+    let (:new_team) { FactoryGirl.create(:team, name: 'The New Team') }
+    let(:update_params) do
+      { 'id' => driver_entry.to_param,
+        'season_id' => season.to_param,
+        'driver_entry' => {'defaultteam_id' => new_team.to_param } }
+    end
+    context 'the user is not an admin' do
+      before(:each) do
+        user_is_guest
+      end
+      it_should_behave_like 'an unauthorized operation' do
+        before(:each) do
+          post 'update', update_params
+        end
+      end
+      it 'should not change the team' do
+        post 'update', update_params
+        expect(DriverEntry.find(update_params['id']).defaultteam.name).not_to eq('The New Team')
+      end
+    end
+    context 'the user is an admin' do
+      before(:each) { user_is_admin }
+      context 'with valid params' do
+        before(:each) { post 'update', update_params }
+        it 'should redirect to the season' do
+          expect(response).to redirect_to(season_path(season))
+        end
+        it 'should change the team name' do
+          expect(DriverEntry.find(update_params['id']).defaultteam.name).to eq('The New Team')
+        end
+        it 'should set the notice flash' do
+          expect(flash[:notice]).not_to be_nil
+        end
+      end
+    end
+  end
 end

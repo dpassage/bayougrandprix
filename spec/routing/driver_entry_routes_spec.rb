@@ -10,4 +10,11 @@ describe 'Driver Entry Routes', type: :routing do
                   season_id: season.id.to_s,
                   id: driver_entry.id.to_s)
   end
+  it 'routes to an update action' do
+    expect(put: season_driver_entry_path(season.id, driver_entry.id)).
+      to route_to(controller: 'driver_entries',
+                  action: 'update',
+                  season_id: season.id.to_s,
+                  id: driver_entry.id.to_s)
+  end
 end
