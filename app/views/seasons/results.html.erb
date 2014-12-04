@@ -1,6 +1,10 @@
 <h1>Bayou Grand Prix <%= @season.name %> Results</h1>
 <p id="notice"><%= notice %></p>
 
+ <% if admin? %>
+  <p><%= link_to 'Manage this season', @season %></p>
+<% end %>
+
 <%= render(:partial => "teamlist", :object => @season) %>
 
 <h2>Race Winners</h2>
