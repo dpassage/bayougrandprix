@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   before_filter :authorize, only: [:update, :destroy, :create]
 
   def index
-    @teams = Team.all
+    @teams = Team.order(:name)
   end
 
   def show
