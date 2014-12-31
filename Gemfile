@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.1.5'
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.0'
 gem 'pg'
 gem 'unicorn'
 gem 'redcarpet'
@@ -34,4 +34,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'byebug'
   gem 'rack-mini-profiler'
+  gem 'web-console', '~> 2.0'
 end
